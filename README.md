@@ -1,5 +1,5 @@
 # web-research Luka Verhoeven
-## Daily work
+## Logbook
 
 -Zoeken naar programma’s/software die gebruikt worden voor interactive videomapping <br />
 -Juiste Keywoorden zoeken: <br />
@@ -21,3 +21,6 @@ Eerste try out Touchdesigner
 
 Use of Camera in Touchdesigner
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/cameraUse.png)
+
+-Opzoeken info GLSL / Shaders --> Hiervoor heb je de Pro versie nodig.
+==> Opzoek gaan naar een gratis pro versie

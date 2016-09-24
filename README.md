@@ -16,21 +16,21 @@
 *	Kinect
 *	Touchdesigner + kinect!
 
-20/09
+20/09<br />
 Eerste try out Touchdesigner
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/TutorialTry1.JPG)
 
-22/09
+22/09<br />
 Use of Camera in Touchdesigner
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/cameraUse.png)
 
-23/09
--Opzoeken info GLSL / Shaders --> Hiervoor heb je de Pro versie nodig.
-==> Opzoek gaan naar een gratis pro versie
+23/09<br />
+-Opzoeken info GLSL / Shaders --> Hiervoor heb je de Pro versie nodig.<br />
+==> Opzoek gaan naar een gratis pro versie<br />
 
-24/09
-Er is geen gratis pro versie te vinden.
-Zoeken naar alternative software = VVVV (of v4).
-(https://www.youtube.com/watch?v=k-ZLZ9GLLNw) music responsive
-Eerste test met vvvv https://youtu.be/4BdZJS_Hq2Q audio responsive visuals
+24/09<br />
+Er is geen gratis pro versie te vinden.<br />
+Zoeken naar alternative software = VVVV (of v4).<br />
+(https://www.youtube.com/watch?v=k-ZLZ9GLLNw) music responsive<br />
+Eerste test met vvvv https://youtu.be/4BdZJS_Hq2Q audio responsive visuals<br />
 

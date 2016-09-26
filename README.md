@@ -1,6 +1,6 @@
 # web-research Luka Verhoeven
 ## Logbook
-19/09
+19/09<br />
 -Zoeken naar programma’s/software die gebruikt worden voor interactive videomapping <br />
 -Juiste Keywoorden zoeken: <br />
 *	Motion tracking ( after effects )
@@ -34,3 +34,7 @@ Zoeken naar alternative software = VVVV (of v4).<br />
 (https://www.youtube.com/watch?v=k-ZLZ9GLLNw) music responsive<br />
 Eerste test met vvvv https://youtu.be/4BdZJS_Hq2Q audio responsive visuals<br />
 
+### VVVV
+26/09
+Video Input gebruiken.
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/videoInput.JPG)

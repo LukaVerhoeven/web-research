@@ -31,10 +31,15 @@ Use of Camera in Touchdesigner
 24/09<br />
 Er is geen gratis pro versie te vinden.<br />
 Zoeken naar alternative software = VVVV (of v4).<br />
-(https://www.youtube.com/watch?v=k-ZLZ9GLLNw) music responsive<br />
+music responsive interessante video (https://www.youtube.com/watch?v=k-ZLZ9GLLNw) <br />
 Eerste test met vvvv https://youtu.be/4BdZJS_Hq2Q audio responsive visuals<br />
 
 ### VVVV
 26/09
 Video Input gebruiken.
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/videoInput.JPG)
+
+### VVVV
+27/09
+Motion tracking.
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Motioncapture1.png)

@@ -35,11 +35,10 @@ music responsive interessante video (https://www.youtube.com/watch?v=k-ZLZ9GLLNw
 Eerste test met vvvv https://youtu.be/4BdZJS_Hq2Q audio responsive visuals<br />
 
 ### VVVV
-26/09
+26/09<br />
 Video Input gebruiken.
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/videoInput.JPG)
 
-### VVVV
-27/09
+27/09<br />
 Motion tracking.
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Motioncapture1.png)

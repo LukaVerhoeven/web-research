@@ -43,8 +43,10 @@ Video Input gebruiken.
 Motion tracking.
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Motioncapture1.png)
 
-27/09<br />
+29/09<br />
 Visuals maken door het bewegen voor de camera
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Visuals.png)
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Visuals2.png)
 
+Mouse interactive
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/mouse.png)

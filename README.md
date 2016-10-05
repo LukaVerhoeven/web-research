@@ -48,5 +48,9 @@ Visuals maken door het bewegen voor de camera
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Visuals.png)
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/Visuals2.png)
 
+1/10<br />
 Mouse interactive
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/mouse.png)
+
+5/10<br />
+Info zoeken over tracking in vvvv

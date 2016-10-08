@@ -54,3 +54,7 @@ Mouse interactive
 
 5/10<br />
 Info zoeken over tracking in vvvv
+
+8/10 <br />
+Link tussen interactivity met mouse en camera bestuderen.
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/link.png)

@@ -57,4 +57,8 @@ Info zoeken over tracking in vvvv
 
 8/10 <br />
 Link tussen interactivity met mouse en camera bestuderen.
-![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/link.png)
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/link-between.png)
+
+11/10 <br />
+Camera motion detection vervangen als input van de muis en gebruiken om interactie te creëren met de video.
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/camera-video-interaction.png)

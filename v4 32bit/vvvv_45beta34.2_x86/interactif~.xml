@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Luka\Desktop\v4 32bit\vvvv_45beta34.2_x86\interactif.v4p" componentmode="InAWindow" scrollx="5190" scrolly="-360" systemname="interactif" filename="C:\Users\Luka\Desktop\v4 32bit\interactif.v4p">
-   <BOUNDS height="16380" left="-120" top="-120" type="Window" width="28980">
+   <PATCH nodename="C:\Users\Luka\Desktop\v4 32bit\vvvv_45beta34.2_x86\interactif.v4p" componentmode="InAWindow" scrollx="6810" scrolly="0" systemname="interactif" filename="C:\Users\Luka\Desktop\v4 32bit\interactif.v4p">
+   <BOUNDS height="13575" left="6780" top="1020" type="Window" width="20685">
    </BOUNDS>
    <NODE id="36" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <BOUNDS height="0" left="6375" top="3855" type="Node" width="0">
@@ -81,7 +81,7 @@
    <NODE componentmode="InAWindow" id="24" nodename="RENDERER (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="0" left="4005" top="8535" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="9690" left="15495" top="2415" type="Window" width="12705">
+   <BOUNDS height="9690" left="0" top="3225" type="Window" width="12705">
    </BOUNDS>
    <BOUNDS height="1800" left="4005" top="8535" type="Box" width="2400">
    </BOUNDS>

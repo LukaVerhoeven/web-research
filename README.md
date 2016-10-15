@@ -62,3 +62,7 @@ Link tussen interactivity met mouse en camera bestuderen.
 11/10 <br />
 Camera motion detection vervangen als input van de muis en gebruiken om interactie te creëren met de video.
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/camera-video-interaction.png)
+
+15/10 <br />
+Texturesharing leren voor het exporteren van videomatteriaal
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/mapping.JPG)

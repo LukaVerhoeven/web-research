@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1138.5096">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <PlatformDependency Id="3" Location="./TDx.TDxInput.dll.vlimport" />
+  <DocumentDependency Id="4" Location="./TDxUtils.vl" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Node Bounds="100,200" Id="7">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="8" Name="SpaceMouse" Category="Devices">
+          <Slot Id="9" Name="Device">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="DeviceClass" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Patch Id="10" Name="Create" ParticipatingElements="33" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="11" Name="Update" ParticipatingElements="35,39,51,57,61,65,142,214" IsFragment="true">
+            <Pin Id="12" Name="Enabled" Kind="InputPin" />
+            <Pin Id="13" Name="Position" Kind="OutputPin" />
+            <Pin Id="14" Name="Rotation" Kind="OutputPin" />
+            <Pin Id="15" Name="Angle" Kind="OutputPin" />
+            <Pin Id="16" Name="Keys" Kind="OutputPin" />
+            <Pin Id="17" Name="DeviceType" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="18" Name="Destroy" ParticipatingElements="43,47,172,216">
+            <p:Info />
+          </Patch>
+          <Canvas Id="19" Position="100,200">
+            <Pad Id="20" Comment="comment" Bounds="663,819,710,13" ShowValueBox="true" isIOBox="true" Value="&quot;However, in the 3DConnexion properties, the 'speed' can be changed for each value independently, so there might be much bigger / smaller values too&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="21" Comment="comment" Bounds="663,793,353,13" ShowValueBox="true" isIOBox="true" Value="&quot;The values received are usually in the range +/- 4000 (of an arbitrary unit)&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="22" Comment="comment" Bounds="662,855,296,13" ShowValueBox="true" isIOBox="true" Value="&quot;for rotation and translation, 3DConnexion uses arbitrary units.&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="23" Comment="comment" Bounds="662,875,556,13" ShowValueBox="true" isIOBox="true" Value="&quot;To read more about how 3DConnexion supplies data, the Documentation in 3DxWare SDK provides useful information&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="24" Comment="Comment" Bounds="-167,750,711,10" ShowValueBox="true" isIOBox="true" Value="&quot;We won't always need to Connect in Create - whoever wants that, should do it right after instanciating. In Destroy, we want to Disconnect in every case.&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="25" Comment="Comment" Bounds="-172,770,584,10" ShowValueBox="true" isIOBox="true" Value="&quot;This is important, as the Default type (eg in the Split node) sometimes connects without having called connect (weird? yeah.)&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="26" Comment="comment" Bounds="-164,85,339,13" ShowValueBox="true" isIOBox="true" Value="&quot;SpaceMouse (VVVV.Devices) is the vvvvrapper for SpaceMouse (Devices)&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="27" Comment="comment" Bounds="-163,60,416,13" ShowValueBox="true" isIOBox="true" Value="&quot;Also, never trust the Is Connected - it might stay true even if the device is disconnected!&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="28" Comment="comment" Bounds="-164,34,339,13" ShowValueBox="true" isIOBox="true" Value="&quot;Therefore, I will pass values, and the device, only when 'Enabled' is true.&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="29" Comment="comment" Bounds="-164,9,476,13" ShowValueBox="true" isIOBox="true" Value="&quot;For some reason the device also gives us values when 'Is Connected' is false, after calling Disconnect.&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="30" SlotId="9" Bounds="0,505" />
+            <Pad Id="31" SlotId="9" Bounds="606,-26" />
+            <Pad Id="32" SlotId="9" Bounds="-13,347" />
+            <Node Bounds="-9,297,51,22" Id="33">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                <CategoryReference Kind="Category" Name="DeviceClass" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="34" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="612,12,73,13" Id="35">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ShareInstance (KillTheSystemsExpectations)" />
+              </p:NodeReference>
+              <Pin Id="36" Name="Instance" Kind="InputPin" />
+              <Pin Id="37" Name="Output 1" Kind="OutputPin" />
+              <Pin Id="38" Name="Output 2" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="612,41,59,13" Id="39">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="IsAssigned" />
+              </p:NodeReference>
+              <Pin Id="40" Name="X" Kind="InputPin" />
+              <Pin Id="41" Name="Result" Kind="OutputPin" />
+              <Pin Id="42" Name="Not Assigned" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="5,572,59,13" Id="43">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="IsAssigned" />
+              </p:NodeReference>
+              <Pin Id="44" Name="X" Kind="InputPin" />
+              <Pin Id="45" Name="Result" Kind="OutputPin" />
+              <Pin Id="46" Name="Not Assigned" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="5,543,73,13" Id="47">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ShareInstance (KillTheSystemsExpectations)" />
+              </p:NodeReference>
+              <Pin Id="48" Name="Instance" Kind="InputPin" />
+              <Pin Id="49" Name="Output 1" Kind="OutputPin" />
+              <Pin Id="50" Name="Output 2" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="616,394,50,13" Id="51">
+              <p:NodeReference LastCategoryFullName="Control.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="52" Name="Input" Kind="InputPin" />
+              <Pin Id="53" Name="Input 2" Kind="InputPin" />
+              <Pin Id="54" Name="Enabled" Kind="InputPin" />
+              <Pin Id="55" Name="Input 3" Kind="InputPin" />
+              <Pin Id="56" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="671,459,40,13" Id="57">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                <Choice Kind="OperationNode" Name="Sensor" />
+                <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="58" Name="Input" Kind="InputPin" />
+              <Pin Id="59" Name="Output" Kind="OutputPin" />
+              <Pin Id="60" Name="Sensor" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1000,459,53,13" Id="61">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                <Choice Kind="OperationNode" Name="Keyboard" />
+                <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="62" Name="Input" Kind="InputPin" />
+              <Pin Id="63" Name="Output" Kind="OutputPin" />
+              <Pin Id="64" Name="Keyboard" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="652,420,846,282" Id="65">
+              <p:NodeReference>
+                <Choice Kind="If" Name="If" />
+              </p:NodeReference>
+              <Pin Id="66" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="67" Bounds="665,426" Name="Position" Alignment="Top" />
+              <ControlPoint Id="68" Bounds="793,426" Name="Rotation" Alignment="Top" />
+              <ControlPoint Id="69" Bounds="880,426" Name="Angle" Alignment="Top" />
+              <ControlPoint Id="70" Bounds="1042,426" Name="Keys" Alignment="Top" />
+              <ControlPoint Id="71" Bounds="1276,426" Name="DeviceType" Alignment="Top" />
+              <ControlPoint Id="72" Bounds="1387,426" Name="Is Connected" Alignment="Top" />
+              <ControlPoint Id="73" Bounds="665,695" Name="Position" Alignment="Bottom" />
+              <ControlPoint Id="74" Bounds="793,695" Name="Rotation" Alignment="Bottom" />
+              <ControlPoint Id="75" Bounds="880,695" Name="Angle" Alignment="Bottom" />
+              <ControlPoint Id="76" Bounds="1042,695" Name="Keys" Alignment="Bottom" />
+              <ControlPoint Id="77" Bounds="1290,695" Name="DeviceType" Alignment="Bottom" />
+              <ControlPoint Id="78" Bounds="1430,695" Name="Is Connected" Alignment="Bottom" />
+              <Patch Id="79" Name="Then">
+                <Pad Id="80" Comment="First Key" Bounds="1201,501,40,15" ShowValueBox="true" isIOBox="true" Value="1">
+                  <p:ValueBoxSettings />
+                  <p:TypeAnnotation ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="81" Comment="Scalar" Bounds="677,621" ShowValueBox="true" isIOBox="true" Value="4000.0">
+                  <p:ValueBoxSettings />
+                  <p:TypeAnnotation ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="82" Comment="Scalar" Bounds="900,617" ShowValueBox="true" isIOBox="true" Value="4000.0">
+                  <p:ValueBoxSettings />
+                  <p:TypeAnnotation ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="1264,459,31,13" Id="83">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="Type" />
+                    <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="84" Name="Input" Kind="InputPin" />
+                  <Pin Id="85" Name="Output" Kind="OutputPin" />
+                  <Pin Id="86" Name="Type" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1001,499,30,13" Id="87">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.IKeyboard" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="Keys" />
+                    <CategoryReference Kind="Category" Name="IKeyboard" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="88" Name="Input" Kind="InputPin" />
+                  <Pin Id="89" Name="Output" Kind="OutputPin" />
+                  <Pin Id="90" Name="Keys" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="670,584,73,13" Id="91">
+                  <p:NodeReference LastCategoryFullName="Devices.SpaceMouse" LastSymbolSource="TDxUtils.vl">
+                    <Choice Kind="OperationNode" Name="ToVector3" />
+                    <CategoryReference Kind="Category" Name="SpaceMouse" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="92" Name="IVector3D" Kind="InputPin" />
+                  <Pin Id="93" Name="Vector3" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="672,545,61,13" Id="94">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.ISensor" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="Translation" />
+                    <CategoryReference Kind="Category" Name="ISensor" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="95" Name="Input" Kind="InputPin" />
+                  <Pin Id="96" Name="Output" Kind="OutputPin" />
+                  <Pin Id="97" Name="Translation" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="669,653,35,13" Id="98">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="/ (Scale)" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="99" Name="Input" Kind="InputPin" />
+                  <Pin Id="100" Name="Scalar" Kind="InputPin" />
+                  <Pin Id="101" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="102" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="816,587,73,13" Id="103">
+                  <p:NodeReference LastCategoryFullName="Devices.SpaceMouse" LastSymbolSource="TDxUtils.vl">
+                    <Choice Kind="OperationNode" Name="ToVector3 (AngleAxis)" />
+                  </p:NodeReference>
+                  <Pin Id="104" Name="IAngleAxis" Kind="InputPin" />
+                  <Pin Id="105" Name="Rotation" Kind="OutputPin" />
+                  <Pin Id="106" Name="Angle" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="799,543,48,13" Id="107">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.ISensor" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="Rotation" />
+                    <CategoryReference Kind="Category" Name="ISensor" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="108" Name="Input" Kind="InputPin" />
+                  <Pin Id="109" Name="Output" Kind="OutputPin" />
+                  <Pin Id="110" Name="Rotation" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="884,646,35,13" Id="111">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="/ (Scale)" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="112" Name="Input" Kind="InputPin" />
+                  <Pin Id="113" Name="Scalar" Kind="InputPin" />
+                  <Pin Id="114" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="115" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1366,459,66,13" Id="116">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="IsConnected" />
+                    <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="117" Name="Input" Kind="InputPin" />
+                  <Pin Id="118" Name="Output" Kind="OutputPin" />
+                  <Pin Id="119" Name="Is Connected" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1024,536,232,130" Id="120">
+                  <p:NodeReference>
+                    <Choice Kind="ForLoop" Name="Loop" />
+                  </p:NodeReference>
+                  <Pin Id="121" Name="Iteration Count" Kind="InputPin" />
+                  <ControlPoint Id="122" Bounds="1032,542" Name="IKeyboard" Alignment="Top" />
+                  <ControlPoint Id="123" Bounds="1153,542" Name="i" Alignment="Top" />
+                  <ControlPoint Id="124" Bounds="1034,659" Name="IKeyboard" Alignment="Bottom" />
+                  <ControlPoint Id="125" Bounds="1155,659" Name="i" Alignment="Bottom" />
+                  <ControlPoint Id="126" Bounds="1049,659" Name="Output" Alignment="Bottom" />
+                  <Pin Id="127" Name="Break" Kind="OutputPin" />
+                  <Patch Id="128">
+                    <Pad Id="129" Comment="one" Bounds="1170,583,40,15" ShowValueBox="true" isIOBox="true" Value="1">
+                      <p:ValueBoxSettings />
+                      <p:TypeAnnotation ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Integer32" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                      </p:TypeAnnotation>
+                    </Pad>
+                    <Node Bounds="1066,580,59,22" Id="130">
+                      <p:NodeReference LastCategoryFullName="TDx.TDxInput.IKeyboard" LastSymbolSource="TDxInput.dll">
+                        <CategoryReference Kind="Category" Name="IKeyboard" />
+                        <Choice Kind="OperationNode" Name="IsKeyDown" />
+                      </p:NodeReference>
+                      <Pin Id="131" Name="Input" Kind="InputPin" />
+                      <Pin Id="132" Name="Key" Kind="InputPin" />
+                      <Pin Id="133" Name="Output" Kind="OutputPin" />
+                      <Pin Id="134" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="1156,617,50,13" Id="135">
+                      <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                        <Choice Kind="OperationNode" Name="+" />
+                        <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="136" Name="Input" Kind="InputPin" />
+                      <Pin Id="137" Name="Input 2" Kind="InputPin" />
+                      <Pin Id="138" Name="Enabled" Kind="InputPin" />
+                      <Pin Id="139" Name="Input 3" Kind="InputPin" />
+                      <Pin Id="140" Name="Output" Kind="OutputPin" />
+                    </Node>
+                    <Patch Id="141" Name="Update" ParticipatingElements="130,135" />
+                  </Patch>
+                </Node>
+              </Patch>
+            </Node>
+            <Node Bounds="675,63,202,290" Id="142">
+              <p:NodeReference>
+                <Choice Kind="If" Name="If" />
+              </p:NodeReference>
+              <Pin Id="143" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="144" Bounds="710,69" Name="Device" Alignment="Top" />
+              <ControlPoint Id="145" Bounds="710,346" Name="Device" Alignment="Bottom" />
+              <Patch Id="146" Name="Then">
+                <Node Bounds="687,102,66,13" Id="147">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="IsConnected" />
+                    <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="148" Name="Input" Kind="InputPin" />
+                  <Pin Id="149" Name="Output" Kind="OutputPin" />
+                  <Pin Id="150" Name="Is Connected" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="747,128,20,13" Id="151">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="!=" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="152" Name="Input" Kind="InputPin" />
+                  <Pin Id="153" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="154" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="743,168,122,149" Id="155">
+                  <p:NodeReference>
+                    <Choice Kind="If" Name="If" />
+                  </p:NodeReference>
+                  <Pin Id="156" Name="Condition" Kind="InputPin" />
+                  <ControlPoint Id="157" Bounds="753,174" Name="SpaceMouse" Alignment="Top" />
+                  <ControlPoint Id="158" Bounds="753,310" Name="SpaceMouse" Alignment="Bottom" />
+                  <Patch Id="159" Name="Then">
+                    <Node Bounds="824,236,29,13" Id="160">
+                      <p:NodeReference LastCategoryFullName="Control.Boolean" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                        <Choice Kind="OperationNode" Name="NOT" />
+                      </p:NodeReference>
+                      <Pin Id="161" Name="Input" Kind="InputPin" />
+                      <Pin Id="162" Name="Enabled" Kind="InputPin" />
+                      <Pin Id="163" Name="Output" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="755,207,51,22" Id="164">
+                      <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                        <Choice Kind="OperationNode" Name="Connect" />
+                        <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="165" Name="Input" Kind="InputPin" />
+                      <Pin Id="166" Name="Enabled" Kind="InputPin" />
+                      <Pin Id="167" Name="Output" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="755,259,60,22" Id="168">
+                      <p:NodeReference LastCategoryFullName="TDx.TDxInput.DeviceClass" LastSymbolSource="TDxInput.dll">
+                        <Choice Kind="OperationNode" Name="Disconnect" />
+                        <CategoryReference Kind="Category" Name="DeviceClass" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="169" Name="Input" Kind="InputPin" />
+                      <Pin Id="170" Name="Enabled" Kind="InputPin" />
+                      <Pin Id="171" Name="Output" Kind="OutputPin" />
+                    </Node>
+                  </Patch>
+                </Node>
+              </Patch>
+            </Node>
+            <Node Bounds="5,598,90,126" Id="172">
+              <p:NodeReference>
+                <Choice Kind="If" Name="If" />
+              </p:NodeReference>
+              <Pin Id="173" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="174" Bounds="19,604" Name="ISimpleDevice" Alignment="Top" />
+              <ControlPoint Id="175" Bounds="20,717" Name="ISimpleDevice" Alignment="Bottom" />
+              <Patch Id="176" Name="Then">
+                <Node Bounds="18,666,60,22" Id="177">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.ISimpleDevice" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="Disconnect" />
+                    <CategoryReference Kind="Category" Name="ISimpleDevice" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="178" Name="Input" Kind="InputPin" />
+                  <Pin Id="179" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="180" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="17,637,66,13" Id="181">
+                  <p:NodeReference LastCategoryFullName="TDx.TDxInput.ISimpleDevice" LastSymbolSource="TDxInput.dll">
+                    <Choice Kind="OperationNode" Name="IsConnected" />
+                    <CategoryReference Kind="Category" Name="ISimpleDevice" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="182" Name="Input" Kind="InputPin" />
+                  <Pin Id="183" Name="Output" Kind="OutputPin" />
+                  <Pin Id="184" Name="Is Connected" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="185" Bounds="882,8" />
+            <ControlPoint Id="186" Bounds="662,739" />
+            <ControlPoint Id="187" Bounds="789,739" />
+            <ControlPoint Id="188" Bounds="875,739" />
+            <ControlPoint Id="189" Bounds="1036,739" />
+            <ControlPoint Id="190" Bounds="1289,739" />
+            <ControlPoint Id="191" Bounds="881,376" />
+            <ControlPoint Id="192" Bounds="627,382" />
+          </Canvas>
+          <Link Id="193" Ids="67,73" IsFeedback="true" />
+          <Link Id="194" Ids="68,74" IsFeedback="true" />
+          <Link Id="195" Ids="69,75" IsFeedback="true" />
+          <Link Id="196" Ids="70,76" IsFeedback="true" />
+          <Link Id="197" Ids="71,77" IsFeedback="true" />
+          <Link Id="198" Ids="72,78" IsFeedback="true" />
+          <Link Id="199" Ids="122,124" IsFeedback="true" />
+          <Link Id="200" Ids="123,125" IsFeedback="true" />
+          <Link Id="201" Ids="144,145" IsFeedback="true" />
+          <Link Id="202" Ids="157,158" IsFeedback="true" />
+          <Link Id="203" Ids="174,175" IsFeedback="true" />
+          <Link Id="204" Ids="12,185" IsHidden="true" />
+          <Link Id="205" Ids="186,13" IsHidden="true" />
+          <Link Id="206" Ids="187,14" IsHidden="true" />
+          <Link Id="207" Ids="188,15" IsHidden="true" />
+          <Link Id="208" Ids="189,16" IsHidden="true" />
+          <Link Id="209" Ids="190,17" IsHidden="true" />
+          <Link Id="210" Ids="77,190" />
+          <Link Id="211" Ids="76,189" />
+          <Link Id="212" Ids="73,186" />
+          <Link Id="213" Ids="74,187" />
+          <Link Id="214" Ids="31,36" />
+          <Link Id="215" Ids="41,143" />
+          <Link Id="216" Ids="30,48" />
+          <Link Id="217" Ids="45,173" />
+          <Link Id="218" Ids="49,44" />
+          <Link Id="219" Ids="50,174" />
+          <Link Id="220" Ids="75,188" />
+          <Link Id="221" Ids="185,153" />
+          <Link Id="222" Ids="185,166" />
+          <Link Id="223" Ids="185,161" />
+          <Link Id="224" Ids="38,144" />
+          <Link Id="225" Ids="56,66" />
+          <Link Id="226" Ids="59,62" />
+          <Link Id="227" Ids="63,84" />
+          <Link Id="228" Ids="37,40" />
+          <Link Id="229" Ids="145,58" />
+          <Link Id="230" Ids="60,95" />
+          <Link Id="231" Ids="64,88" />
+          <Link Id="232" Ids="41,52" />
+          <Link Id="233" Ids="185,191,192,53" />
+          <Link Id="234" Ids="34,32" />
+          <Link Id="235" Ids="80,123" />
+          <Link Id="236" Ids="81,100" />
+          <Link Id="237" Ids="82,113" />
+          <Link Id="238" Ids="89,122" />
+          <Link Id="239" Ids="90,121" />
+          <Link Id="240" Ids="93,99" />
+          <Link Id="241" Ids="97,92" />
+          <Link Id="242" Ids="110,104" />
+          <Link Id="243" Ids="86,77" />
+          <Link Id="244" Ids="126,76" />
+          <Link Id="245" Ids="102,73" />
+          <Link Id="246" Ids="85,117" />
+          <Link Id="247" Ids="119,78" />
+          <Link Id="248" Ids="106,112" />
+          <Link Id="249" Ids="105,74" />
+          <Link Id="250" Ids="115,75" />
+          <Link Id="251" Ids="96,108" />
+          <Link Id="252" Ids="134,126" />
+          <Link Id="253" Ids="123,132" />
+          <Link Id="254" Ids="123,136" />
+          <Link Id="255" Ids="129,137" />
+          <Link Id="256" Ids="140,125" />
+          <Link Id="257" Ids="122,131" />
+          <Link Id="258" Ids="133,124" />
+          <Link Id="259" Ids="150,152" />
+          <Link Id="260" Ids="154,156" />
+          <Link Id="261" Ids="149,157" />
+          <Link Id="262" Ids="144,148" />
+          <Link Id="263" Ids="158,145" />
+          <Link Id="264" Ids="163,170" />
+          <Link Id="265" Ids="157,165" />
+          <Link Id="266" Ids="167,169" />
+          <Link Id="267" Ids="171,158" />
+          <Link Id="268" Ids="183,178" />
+          <Link Id="269" Ids="184,179" />
+          <Link Id="270" Ids="180,175" />
+          <Link Id="271" Ids="174,182" />
+          <p:Info />
+          <p:Interfaces>
+            <TypeReference ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Disposable" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </TypeReference>
+          </p:Interfaces>
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <p:Info Summary="Retrieves values from 3DConnexion SpaceMouse" Authors="dominikKoller, vvvv Group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+</Document>

@@ -1,0 +1,2232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.39">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.36.54" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.36.54" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.36.54" />
+  <NugetDependency Id="5" Location="VL.EditingFramework" Version="0.36.118-alpha-gd4e0de94f9" />
+  <Patch Id="6">
+    <Canvas Id="7">
+      <Node Bounds="135,134" Id="8">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="9" Name="BezierEditor (2d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="10" Name="Create" ParticipatingElements="44">
+            <p:Info />
+          </Patch>
+          <Patch Id="11" Name="Update" ParticipatingElements="45">
+            <Pin Id="12" Name="Knots To Add" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="13" Name="Add Knot" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="14" Name="Smooth Added Knots" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="15" Name="Clear" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="16" Name="BezierEditorControls" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="17" Name="Pick Size" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="18" Name="View Projection" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="19" Name="Data" Kind="InputPin" Bounds="35,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="20" Name="Load" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="21" Name="Save" Kind="InputPin" Bounds="35,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="22" Name="Step Size" Kind="InputPin" Bounds="35,0" />
+            <Pin Id="23" Name="BezierEditorState" Kind="OutputPin" Bounds="35,0" />
+            <Pin Id="24" Name="BezierSpline" Kind="OutputPin" Bounds="35,0" />
+            <Pin Id="25" Name="Data" Kind="OutputPin" Bounds="35,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="26" Name="Idle" Kind="OutputPin" Bounds="35,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="27" Position="135,134">
+            <Node Bounds="393,218,155,13" Id="28">
+              <p:NodeReference LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <FullNameCategoryReference ID="Editors.2D.Bezier" />
+                <Choice Kind="ProcessNode" Name="BezierEditor" />
+              </p:NodeReference>
+              <Pin Id="29" Name="Knots To Add" Kind="InputPin" />
+              <Pin Id="30" Name="Add Knots" Kind="InputPin" />
+              <Pin Id="31" Name="Add and Smooth" Kind="InputPin" />
+              <Pin Id="32" Name="Clear" Kind="InputPin" />
+              <Pin Id="33" Name="BezierEditorControls" Kind="InputPin" />
+              <Pin Id="34" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="35" Name="Step Size" Kind="InputPin" />
+              <Pin Id="36" Name="ViewProjection" Kind="InputPin" />
+              <Pin Id="37" Name="Data" Kind="InputPin" />
+              <Pin Id="38" Name="Load" Kind="InputPin" />
+              <Pin Id="39" Name="Save" Kind="InputPin" />
+              <Pin Id="40" Name="BezierEditorState" Kind="OutputPin" />
+              <Pin Id="41" Name="BezierSpline" Kind="OutputPin" />
+              <Pin Id="42" Name="Data" Kind="OutputPin" />
+              <Pin Id="43" Name="Idle" Kind="OutputPin" />
+              <NodeFragment Id="44" NameOfOperation="Create" />
+              <NodeFragment Id="45" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="46" Bounds="62,104" />
+            <ControlPoint Id="47" Bounds="154,104" />
+            <ControlPoint Id="48" Bounds="237,104" />
+            <ControlPoint Id="49" Bounds="383,104" />
+            <ControlPoint Id="50" Bounds="446,104" />
+            <ControlPoint Id="51" Bounds="587,104" />
+            <ControlPoint Id="52" Bounds="799,104" />
+            <ControlPoint Id="53" Bounds="895,104" />
+            <ControlPoint Id="54" Bounds="951,104" />
+            <ControlPoint Id="55" Bounds="997,104" />
+            <ControlPoint Id="56" Bounds="686,104" />
+            <ControlPoint Id="57" Bounds="277,262" />
+            <ControlPoint Id="58" Bounds="437,262" />
+            <ControlPoint Id="59" Bounds="516,262" />
+            <ControlPoint Id="60" Bounds="566,262" />
+          </Canvas>
+          <Link Id="61" Ids="12,46" IsHidden="true" />
+          <Link Id="62" Ids="13,47" IsHidden="true" />
+          <Link Id="63" Ids="14,48" IsHidden="true" />
+          <Link Id="64" Ids="15,49" IsHidden="true" />
+          <Link Id="65" Ids="16,50" IsHidden="true" />
+          <Link Id="66" Ids="17,51" IsHidden="true" />
+          <Link Id="67" Ids="18,52" IsHidden="true" />
+          <Link Id="68" Ids="19,53" IsHidden="true" />
+          <Link Id="69" Ids="20,54" IsHidden="true" />
+          <Link Id="70" Ids="21,55" IsHidden="true" />
+          <Link Id="71" Ids="22,56" IsHidden="true" />
+          <Link Id="72" Ids="57,23" IsHidden="true" />
+          <Link Id="73" Ids="58,24" IsHidden="true" />
+          <Link Id="74" Ids="59,25" IsHidden="true" />
+          <Link Id="75" Ids="60,26" IsHidden="true" />
+          <Link Id="76" Ids="51,34" />
+          <Link Id="77" Ids="52,36" />
+          <Link Id="78" Ids="43,60" />
+          <Link Id="79" Ids="50,33" />
+          <Link Id="80" Ids="47,30" />
+          <Link Id="81" Ids="46,29" />
+          <Link Id="82" Ids="40,57" />
+          <Link Id="83" Ids="49,32" />
+          <Link Id="84" Ids="53,37" />
+          <Link Id="85" Ids="54,38" />
+          <Link Id="86" Ids="55,39" />
+          <Link Id="87" Ids="42,59" />
+          <Link Id="88" Ids="48,31" />
+          <Link Id="89" Ids="41,58" />
+          <Link Id="90" Ids="56,35" />
+          <ProcessDefinition Id="1297">
+            <Fragment Id="1298" Patch="10" Enabled="true" />
+            <Fragment Id="1299" Patch="11" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="588,136" Id="91">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="92" Name="BezierEditor (3d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="93" Name="Create" ParticipatingElements="127">
+            <p:Info />
+          </Patch>
+          <Patch Id="94" Name="Update" ParticipatingElements="128">
+            <Pin Id="95" Name="Knots To Add" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="96" Name="Add Knot" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="97" Name="Add and Smooth" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="98" Name="Clear" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="99" Name="BezierEditorControls" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="100" Name="Pick Size" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="101" Name="Step Size" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="102" Name="View Projection" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="103" Name="Data" Kind="InputPin" Bounds="138,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="104" Name="Load" Kind="InputPin" Bounds="138,0" />
+            <Pin Id="105" Name="Save" Kind="InputPin" Bounds="138,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="106" Name="BezierEditorState" Kind="OutputPin" Bounds="138,0" />
+            <Pin Id="107" Name="BezierSpline" Kind="OutputPin" Bounds="138,0" />
+            <Pin Id="108" Name="Data" Kind="OutputPin" Bounds="138,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="109" Name="Idle" Kind="OutputPin" Bounds="138,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="110" Position="588,136">
+            <Node Bounds="456,226,155,13" Id="111">
+              <p:NodeReference LastCategoryFullName="Editors.3D.Bezier" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+                <Choice Kind="ProcessNode" Name="BezierEditor" />
+              </p:NodeReference>
+              <Pin Id="112" Name="Knots To Add" Kind="InputPin" />
+              <Pin Id="113" Name="Add Knot" Kind="InputPin" />
+              <Pin Id="114" Name="Add and Smooth" Kind="InputPin" />
+              <Pin Id="115" Name="Clear" Kind="InputPin" />
+              <Pin Id="116" Name="BezierEditorControls" Kind="InputPin" />
+              <Pin Id="117" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="118" Name="Step Size" Kind="InputPin" />
+              <Pin Id="119" Name="ViewProjection" Kind="InputPin" />
+              <Pin Id="120" Name="Data" Kind="InputPin" />
+              <Pin Id="121" Name="Load" Kind="InputPin" />
+              <Pin Id="122" Name="Save" Kind="InputPin" />
+              <Pin Id="123" Name="BezierEditorState" Kind="OutputPin" />
+              <Pin Id="124" Name="BezierSpline" Kind="OutputPin" />
+              <Pin Id="125" Name="Data" Kind="OutputPin" />
+              <Pin Id="126" Name="Idle" Kind="OutputPin" />
+              <NodeFragment Id="127" NameOfOperation="Create" />
+              <NodeFragment Id="128" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="129" Bounds="-4,104" />
+            <ControlPoint Id="130" Bounds="88,104" />
+            <ControlPoint Id="131" Bounds="171,104" />
+            <ControlPoint Id="132" Bounds="317,104" />
+            <ControlPoint Id="133" Bounds="380,104" />
+            <ControlPoint Id="134" Bounds="526,104" />
+            <ControlPoint Id="135" Bounds="609,104" />
+            <ControlPoint Id="136" Bounds="704,104" />
+            <ControlPoint Id="137" Bounds="800,104" />
+            <ControlPoint Id="138" Bounds="856,104" />
+            <ControlPoint Id="139" Bounds="902,104" />
+            <ControlPoint Id="140" Bounds="332,271" />
+            <ControlPoint Id="141" Bounds="502,271" />
+            <ControlPoint Id="142" Bounds="579,271" />
+            <ControlPoint Id="143" Bounds="629,271" />
+          </Canvas>
+          <Link Id="144" Ids="95,129" IsHidden="true" />
+          <Link Id="145" Ids="96,130" IsHidden="true" />
+          <Link Id="146" Ids="97,131" IsHidden="true" />
+          <Link Id="147" Ids="98,132" IsHidden="true" />
+          <Link Id="148" Ids="99,133" IsHidden="true" />
+          <Link Id="149" Ids="100,134" IsHidden="true" />
+          <Link Id="150" Ids="101,135" IsHidden="true" />
+          <Link Id="151" Ids="102,136" IsHidden="true" />
+          <Link Id="152" Ids="103,137" IsHidden="true" />
+          <Link Id="153" Ids="104,138" IsHidden="true" />
+          <Link Id="154" Ids="105,139" IsHidden="true" />
+          <Link Id="155" Ids="140,106" IsHidden="true" />
+          <Link Id="156" Ids="141,107" IsHidden="true" />
+          <Link Id="157" Ids="142,108" IsHidden="true" />
+          <Link Id="158" Ids="143,109" IsHidden="true" />
+          <Link Id="159" Ids="126,143" />
+          <Link Id="160" Ids="125,142" />
+          <Link Id="161" Ids="123,140" />
+          <Link Id="162" Ids="131,114" />
+          <Link Id="163" Ids="132,115" />
+          <Link Id="164" Ids="134,117" />
+          <Link Id="165" Ids="136,119" />
+          <Link Id="166" Ids="137,120" />
+          <Link Id="167" Ids="138,121" />
+          <Link Id="168" Ids="139,122" />
+          <Link Id="169" Ids="130,113" />
+          <Link Id="170" Ids="129,112" />
+          <Link Id="171" Ids="124,141" />
+          <Link Id="172" Ids="135,118" />
+          <Link Id="173" Ids="133,116" />
+          <ProcessDefinition Id="1300">
+            <Fragment Id="1301" Patch="93" Enabled="true" />
+            <Fragment Id="1302" Patch="94" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="1010,139" Id="174">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="175" Name="BezierEditorControls (Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="176" Name="Create" ParticipatingElements="190">
+            <p:Info />
+          </Patch>
+          <Patch Id="177" Name="Update" ParticipatingElements="191">
+            <Pin Id="178" Name="Mouse" Kind="InputPin" Bounds="210,0" />
+            <Pin Id="179" Name="Keyboard" Kind="InputPin" Bounds="210,0" />
+            <Pin Id="180" Name="Enabled" Kind="InputPin" Bounds="210,0" />
+            <Pin Id="181" Name="BezierEditorControls" Kind="OutputPin" Bounds="210,0" />
+            <Pin Id="182" Name="Insert Point" Kind="OutputPin" Bounds="369,299" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="183" Position="1010,139">
+            <Node Bounds="253,255,104,13" Id="184">
+              <p:NodeReference LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <FullNameCategoryReference ID="Editors" />
+                <Choice Kind="ProcessNode" Name="BezierEditorControls" />
+              </p:NodeReference>
+              <Pin Id="185" Name="Keyboard" Kind="InputPin" />
+              <Pin Id="186" Name="Mouse" Kind="InputPin" />
+              <Pin Id="187" Name="Enabled" Kind="InputPin" />
+              <Pin Id="188" Name="BezierEditorControl" Kind="OutputPin" />
+              <NodeFragment Id="190" NameOfOperation="Create" />
+              <NodeFragment Id="191" NameOfOperation="Join" />
+              <Pin Id="189" Name="Insert Point" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="192" Bounds="183,187" />
+            <ControlPoint Id="193" Bounds="251,187" />
+            <ControlPoint Id="194" Bounds="343,187" />
+            <ControlPoint Id="195" Bounds="250,300" />
+            <ControlPoint Id="196" Bounds="369,299" />
+          </Canvas>
+          <Link Id="197" Ids="178,192" IsHidden="true" />
+          <Link Id="198" Ids="179,193" IsHidden="true" />
+          <Link Id="199" Ids="180,194" IsHidden="true" />
+          <Link Id="200" Ids="195,181" IsHidden="true" />
+          <Link Id="202" Ids="193,185" />
+          <Link Id="203" Ids="192,186" />
+          <Link Id="204" Ids="194,187" />
+          <Link Id="205" Ids="188,195" />
+          <Link Id="201" Ids="189,196" />
+          <Link Id="206" Ids="196,182" IsHidden="true" />
+          <ProcessDefinition Id="1303">
+            <Fragment Id="1304" Patch="176" Enabled="true" />
+            <Fragment Id="1305" Patch="177" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Canvas Id="207" Name="BezierEditorState" Position="590,190" DefaultCategory="VVVV.EditingFramework">
+        <Node Id="208">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="209" Name="BezierEditorState (Split 3d)">
+            <Pin Id="210" Name="BezierPointEditorState" Kind="InputPin" />
+            <Pin Id="211" Name="EditableBezierKnots" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="212" Name="Pick Size" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="213" Name="Translation" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="214" Name="Rotation" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="215" Name="Scaling" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="216" Name="Offset" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="217" Name="Point on Curve" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="218" Name="Looking for Point" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="219" Name="Editing" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="1232,323" Id="220">
+              <p:NodeReference LastCategoryFullName="Editors.BezierEditorState" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="221" Name="Input" Kind="InputPin" />
+              <Pin Id="222" Name="Output" Kind="OutputPin" />
+              <Pin Id="223" Name="BezierKnots" Kind="OutputPin" />
+              <Pin Id="224" Name="Pick Size" Kind="OutputPin" />
+              <Pin Id="225" Name="Offset" Kind="OutputPin" />
+              <Pin Id="226" Name="Translation" Kind="OutputPin" />
+              <Pin Id="227" Name="Rotation" Kind="OutputPin" />
+              <Pin Id="228" Name="Scaling" Kind="OutputPin" />
+              <Pin Id="229" Name="Point on Curve" Kind="OutputPin" />
+              <Pin Id="230" Name="Looking for Point" Kind="OutputPin" />
+              <Pin Id="231" Name="Editing" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="232" Bounds="1229,283" />
+            <ControlPoint Id="233" Bounds="1082,415" />
+            <ControlPoint Id="234" Bounds="1220,415" />
+            <ControlPoint Id="235" Bounds="1298,415" />
+            <ControlPoint Id="236" Bounds="1377,415" />
+            <ControlPoint Id="237" Bounds="1440,415" />
+            <ControlPoint Id="238" Bounds="1498,415" />
+            <ControlPoint Id="239" Bounds="1553,415" />
+            <ControlPoint Id="240" Bounds="1650,415" />
+            <ControlPoint Id="241" Bounds="1759,415" />
+            <Link Id="242" Ids="232,221" />
+            <Link Id="243" Ids="225,238" />
+            <Link Id="244" Ids="226,235" />
+            <Link Id="245" Ids="227,236" />
+            <Link Id="246" Ids="228,237" />
+            <Link Id="247" Ids="229,239" />
+            <Link Id="248" Ids="230,240" />
+            <Link Id="249" Ids="224,234" />
+            <Link Id="250" Ids="231,241" />
+            <Link Id="251" Ids="223,233" />
+            <Link Id="252" Ids="210,232" IsHidden="true" />
+            <Link Id="253" Ids="233,211" IsHidden="true" />
+            <Link Id="254" Ids="234,212" IsHidden="true" />
+            <Link Id="255" Ids="235,213" IsHidden="true" />
+            <Link Id="256" Ids="236,214" IsHidden="true" />
+            <Link Id="257" Ids="237,215" IsHidden="true" />
+            <Link Id="258" Ids="238,216" IsHidden="true" />
+            <Link Id="259" Ids="239,217" IsHidden="true" />
+            <Link Id="260" Ids="240,218" IsHidden="true" />
+            <Link Id="261" Ids="241,219" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="262">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="263" Name="BezierEditorState (Split 2d)">
+            <Pin Id="264" Name="BezierEditorState" Kind="InputPin" />
+            <Pin Id="265" Name="EditableBezierKnots" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="266" Name="Pick Size" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="267" Name="Translation" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="268" Name="Rotation" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="269" Name="Scaling" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="270" Name="Offset" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="271" Name="Point on Curve" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="272" Name="Looking for Point" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="273" Name="Editing" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="410,338" Id="274">
+              <p:NodeReference LastCategoryFullName="Editors.BezierEditorState" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="275" Name="Input" Kind="InputPin" />
+              <Pin Id="276" Name="Output" Kind="OutputPin" />
+              <Pin Id="277" Name="BezierKnots" Kind="OutputPin" />
+              <Pin Id="278" Name="Pick Size" Kind="OutputPin" />
+              <Pin Id="279" Name="Offset" Kind="OutputPin" />
+              <Pin Id="280" Name="Translation" Kind="OutputPin" />
+              <Pin Id="281" Name="Rotation" Kind="OutputPin" />
+              <Pin Id="282" Name="Scaling" Kind="OutputPin" />
+              <Pin Id="283" Name="Point on Curve" Kind="OutputPin" />
+              <Pin Id="284" Name="Looking for Point" Kind="OutputPin" />
+              <Pin Id="285" Name="Editing" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="286" Bounds="407,298" />
+            <ControlPoint Id="287" Bounds="151,432" />
+            <ControlPoint Id="288" Bounds="307,432" />
+            <ControlPoint Id="289" Bounds="365,432" />
+            <ControlPoint Id="290" Bounds="444,432" />
+            <ControlPoint Id="291" Bounds="507,432" />
+            <ControlPoint Id="292" Bounds="566,432" />
+            <ControlPoint Id="293" Bounds="622,432" />
+            <ControlPoint Id="294" Bounds="729,432" />
+            <ControlPoint Id="295" Bounds="834,432" />
+            <Link Id="296" Ids="286,275" />
+            <Link Id="297" Ids="279,292" />
+            <Link Id="298" Ids="280,289" />
+            <Link Id="299" Ids="281,290" />
+            <Link Id="300" Ids="282,291" />
+            <Link Id="301" Ids="283,293" />
+            <Link Id="302" Ids="284,294" />
+            <Link Id="303" Ids="278,288" />
+            <Link Id="304" Ids="285,295" />
+            <Link Id="305" Ids="277,287" />
+            <Link Id="306" Ids="264,286" IsHidden="true" />
+            <Link Id="307" Ids="287,265" IsHidden="true" />
+            <Link Id="308" Ids="288,266" IsHidden="true" />
+            <Link Id="309" Ids="289,267" IsHidden="true" />
+            <Link Id="310" Ids="290,268" IsHidden="true" />
+            <Link Id="311" Ids="291,269" IsHidden="true" />
+            <Link Id="312" Ids="292,270" IsHidden="true" />
+            <Link Id="313" Ids="293,271" IsHidden="true" />
+            <Link Id="314" Ids="294,272" IsHidden="true" />
+            <Link Id="315" Ids="295,273" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="316">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="317" Name="BezierEditorState (Join 2d Internal)">
+            <Pin Id="318" Name="EditableBezierKnots" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="319" Name="Pick Size" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="320" Name="Translation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="321" Name="Rotation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="322" Name="Scaling" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="323" Name="Offset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="324" Name="Point on Curve" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="325" Name="Looking for Point" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="326" Name="Editing" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="327" Name="BezierEditorState" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierEditorState" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="406,183" Id="328">
+              <p:NodeReference LastCategoryFullName="Editors.BezierEditorState" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="329" Name="Input" Kind="InputPin" />
+              <Pin Id="330" Name="BezierKnots" Kind="InputPin" />
+              <Pin Id="331" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="332" Name="Offset" Kind="InputPin" />
+              <Pin Id="333" Name="Translation" Kind="InputPin" />
+              <Pin Id="334" Name="Rotation" Kind="InputPin" />
+              <Pin Id="335" Name="Scaling" Kind="InputPin" />
+              <Pin Id="336" Name="Point on Curve" Kind="InputPin" />
+              <Pin Id="337" Name="Looking for Point" Kind="InputPin" />
+              <Pin Id="338" Name="Editing" Kind="InputPin" />
+              <Pin Id="339" Name="Enabled" Kind="InputPin" />
+              <Pin Id="340" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="341" Bounds="148,102" />
+            <ControlPoint Id="342" Bounds="272,102" />
+            <ControlPoint Id="343" Bounds="332,102" />
+            <ControlPoint Id="344" Bounds="407,102" />
+            <ControlPoint Id="345" Bounds="471,102" />
+            <ControlPoint Id="346" Bounds="528,102" />
+            <ControlPoint Id="347" Bounds="586,102" />
+            <ControlPoint Id="348" Bounds="692,102" />
+            <ControlPoint Id="349" Bounds="798,102" />
+            <ControlPoint Id="350" Bounds="403,222" />
+            <Link Id="351" Ids="340,350" />
+            <Link Id="352" Ids="342,331" />
+            <Link Id="353" Ids="346,332" />
+            <Link Id="354" Ids="343,333" />
+            <Link Id="355" Ids="344,334" />
+            <Link Id="356" Ids="345,335" />
+            <Link Id="357" Ids="347,336" />
+            <Link Id="358" Ids="348,337" />
+            <Link Id="359" Ids="349,338" />
+            <Link Id="360" Ids="341,330" />
+            <Link Id="361" Ids="318,341" IsHidden="true" />
+            <Link Id="362" Ids="319,342" IsHidden="true" />
+            <Link Id="363" Ids="320,343" IsHidden="true" />
+            <Link Id="364" Ids="321,344" IsHidden="true" />
+            <Link Id="365" Ids="322,345" IsHidden="true" />
+            <Link Id="366" Ids="323,346" IsHidden="true" />
+            <Link Id="367" Ids="324,347" IsHidden="true" />
+            <Link Id="368" Ids="325,348" IsHidden="true" />
+            <Link Id="369" Ids="326,349" IsHidden="true" />
+            <Link Id="370" Ids="350,327" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="371">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="372" Name="BezierEditorState (Join 3d Internal)">
+            <Pin Id="373" Name="EditableBezierKnots" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="374" Name="Pick Size" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="375" Name="Translation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="376" Name="Rotation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="377" Name="Scaling" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="378" Name="Offset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="379" Name="Point on Curve" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="380" Name="Looking for Point" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="381" Name="Editing" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="382" Name="BezierEditorState" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierEditorState" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="1233,166" Id="383">
+              <p:NodeReference LastCategoryFullName="Editors.BezierEditorState" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="384" Name="Input" Kind="InputPin" />
+              <Pin Id="385" Name="BezierKnots" Kind="InputPin" />
+              <Pin Id="386" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="387" Name="Offset" Kind="InputPin" />
+              <Pin Id="388" Name="Translation" Kind="InputPin" />
+              <Pin Id="389" Name="Rotation" Kind="InputPin" />
+              <Pin Id="390" Name="Scaling" Kind="InputPin" />
+              <Pin Id="391" Name="Point on Curve" Kind="InputPin" />
+              <Pin Id="392" Name="Looking for Point" Kind="InputPin" />
+              <Pin Id="393" Name="Editing" Kind="InputPin" />
+              <Pin Id="394" Name="Enabled" Kind="InputPin" />
+              <Pin Id="395" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="396" Bounds="965,97" />
+            <ControlPoint Id="397" Bounds="1099,97" />
+            <ControlPoint Id="398" Bounds="1159,97" />
+            <ControlPoint Id="399" Bounds="1234,97" />
+            <ControlPoint Id="400" Bounds="1298,97" />
+            <ControlPoint Id="401" Bounds="1355,97" />
+            <ControlPoint Id="402" Bounds="1413,97" />
+            <ControlPoint Id="403" Bounds="1519,97" />
+            <ControlPoint Id="404" Bounds="1625,97" />
+            <ControlPoint Id="405" Bounds="1231,212" />
+            <Link Id="406" Ids="397,386" />
+            <Link Id="407" Ids="398,388" />
+            <Link Id="408" Ids="399,389" />
+            <Link Id="409" Ids="400,390" />
+            <Link Id="410" Ids="401,387" />
+            <Link Id="411" Ids="402,391" />
+            <Link Id="412" Ids="403,392" />
+            <Link Id="413" Ids="404,393" />
+            <Link Id="414" Ids="395,405" />
+            <Link Id="415" Ids="396,385" />
+            <Link Id="416" Ids="373,396" IsHidden="true" />
+            <Link Id="417" Ids="374,397" IsHidden="true" />
+            <Link Id="418" Ids="375,398" IsHidden="true" />
+            <Link Id="419" Ids="376,399" IsHidden="true" />
+            <Link Id="420" Ids="377,400" IsHidden="true" />
+            <Link Id="421" Ids="378,401" IsHidden="true" />
+            <Link Id="422" Ids="379,402" IsHidden="true" />
+            <Link Id="423" Ids="380,403" IsHidden="true" />
+            <Link Id="424" Ids="381,404" IsHidden="true" />
+            <Link Id="425" Ids="405,382" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="426" Name="BezierKnot" Position="599,249" DefaultCategory="VVVV.2d">
+        <Node Bounds="195,69,319,150" Id="427">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="428" Name="BezierKnot (Join Controls)">
+            <Pin Id="429" Name="Point" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="430" Name="Contol1" Kind="InputPin" Bounds="42,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="431" Name="Control2" Kind="InputPin" Bounds="93,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="432" Name="Mode" Kind="InputPin" Bounds="148,4" />
+            <Pin Id="433" Name="BezierKnot" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="281,157,80,22" Id="434">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierKnot" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="435" Name="Input" Kind="InputPin" />
+              <Pin Id="436" Name="Point" Kind="InputPin" />
+              <Pin Id="437" Name="Control1" Kind="InputPin" />
+              <Pin Id="438" Name="Control2" Kind="InputPin" />
+              <Pin Id="439" Name="Mode" Kind="InputPin" />
+              <Pin Id="440" Name="Enabled" Kind="InputPin" />
+              <Pin Id="441" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="442" Bounds="210,86" />
+            <ControlPoint Id="443" Bounds="307,86" />
+            <ControlPoint Id="444" Bounds="398,86" />
+            <ControlPoint Id="445" Bounds="469,86" />
+            <ControlPoint Id="446" Bounds="279,201" />
+            <Link Id="447" Ids="442,436" />
+            <Link Id="448" Ids="443,437" />
+            <Link Id="449" Ids="444,438" />
+            <Link Id="450" Ids="441,446" />
+            <Link Id="451" Ids="445,439" />
+            <Link Id="452" Ids="429,442" IsHidden="true" />
+            <Link Id="453" Ids="430,443" IsHidden="true" />
+            <Link Id="454" Ids="431,444" IsHidden="true" />
+            <Link Id="455" Ids="432,445" IsHidden="true" />
+            <Link Id="456" Ids="446,433" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="249,285,200,124" Id="457">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="458" Name="BezierKnot (Join)">
+            <Pin Id="459" Name="Point" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="460" Name="Mode" Kind="InputPin" Bounds="42,4" />
+            <Pin Id="461" Name="BezierKnot" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="266,347,80,22" Id="462">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierKnot" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="463" Name="Input" Kind="InputPin" />
+              <Pin Id="464" Name="Point" Kind="InputPin" />
+              <Pin Id="465" Name="Control1" Kind="InputPin" />
+              <Pin Id="466" Name="Control2" Kind="InputPin" />
+              <Pin Id="467" Name="Mode" Kind="InputPin" />
+              <Pin Id="468" Name="Enabled" Kind="InputPin" />
+              <Pin Id="469" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="470" Bounds="294,302" />
+            <ControlPoint Id="471" Bounds="404,302" />
+            <ControlPoint Id="472" Bounds="264,391" />
+            <Link Id="473" Ids="469,472" />
+            <Link Id="474" Ids="470,464" />
+            <Link Id="475" Ids="470,465" />
+            <Link Id="476" Ids="470,466" />
+            <Link Id="477" Ids="471,467" />
+            <Link Id="478" Ids="459,470" IsHidden="true" />
+            <Link Id="479" Ids="460,471" IsHidden="true" />
+            <Link Id="480" Ids="472,461" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="616,69,299,137" Id="481">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="482" Name="BezierKnot (Split)">
+            <Pin Id="483" Name="BezierKnot" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="484" Name="Point" Kind="OutputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="485" Name="Control1" Kind="OutputPin" Bounds="42,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="486" Name="Control2" Kind="OutputPin" Bounds="97,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="487" Name="Mode" Kind="OutputPin" Bounds="152,4" />
+            <Node Bounds="699,128,50,22" Id="488">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="BezierKnot" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="489" Name="Input" Kind="InputPin" />
+              <Pin Id="490" Name="Point" Kind="OutputPin" />
+              <Pin Id="491" Name="Control1" Kind="OutputPin" />
+              <Pin Id="492" Name="Control2" Kind="OutputPin" />
+              <Pin Id="493" Name="Mode" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="494" Bounds="696,86" />
+            <ControlPoint Id="495" Bounds="631,188" />
+            <ControlPoint Id="496" Bounds="711,188" />
+            <ControlPoint Id="497" Bounds="796,188" />
+            <ControlPoint Id="498" Bounds="870,188" />
+            <Link Id="499" Ids="494,489" />
+            <Link Id="500" Ids="490,495" />
+            <Link Id="501" Ids="491,496" />
+            <Link Id="502" Ids="492,497" />
+            <Link Id="503" Ids="493,498" />
+            <Link Id="504" Ids="483,494" IsHidden="true" />
+            <Link Id="505" Ids="495,484" IsHidden="true" />
+            <Link Id="506" Ids="496,485" IsHidden="true" />
+            <Link Id="507" Ids="497,486" IsHidden="true" />
+            <Link Id="508" Ids="498,487" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="509" Name="BezierKnot" Position="800,250" DefaultCategory="VVVV.3d">
+        <Node Bounds="264,291,199,119" Id="510">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="511" Name="BezierKnot (Join)">
+            <Pin Id="512" Name="Point" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="513" Name="Mode" Kind="InputPin" Bounds="42,4" />
+            <Pin Id="514" Name="BezierKnot" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="281,348,80,22" Id="515">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierKnot" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="516" Name="Input" Kind="InputPin" />
+              <Pin Id="517" Name="Point" Kind="InputPin" />
+              <Pin Id="518" Name="Control1" Kind="InputPin" />
+              <Pin Id="519" Name="Control2" Kind="InputPin" />
+              <Pin Id="520" Name="Mode" Kind="InputPin" />
+              <Pin Id="521" Name="Enabled" Kind="InputPin" />
+              <Pin Id="522" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="523" Bounds="308,308" />
+            <ControlPoint Id="524" Bounds="418,308" />
+            <ControlPoint Id="525" Bounds="279,392" />
+            <Link Id="526" Ids="523,517" />
+            <Link Id="527" Ids="523,518" />
+            <Link Id="528" Ids="523,519" />
+            <Link Id="529" Ids="522,525" />
+            <Link Id="530" Ids="524,520" />
+            <Link Id="531" Ids="512,523" IsHidden="true" />
+            <Link Id="532" Ids="513,524" IsHidden="true" />
+            <Link Id="533" Ids="525,514" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="209,75,319,150" Id="534">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="535" Name="BezierKnot (Join Controls)">
+            <Pin Id="536" Name="Point" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="537" Name="Contol1" Kind="InputPin" Bounds="42,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="538" Name="Control2" Kind="InputPin" Bounds="93,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="539" Name="Mode" Kind="InputPin" Bounds="148,4" />
+            <Pin Id="540" Name="BezierKnot" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="295,163,80,22" Id="541">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierKnot" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="542" Name="Input" Kind="InputPin" />
+              <Pin Id="543" Name="Point" Kind="InputPin" />
+              <Pin Id="544" Name="Control1" Kind="InputPin" />
+              <Pin Id="545" Name="Control2" Kind="InputPin" />
+              <Pin Id="546" Name="Mode" Kind="InputPin" />
+              <Pin Id="547" Name="Enabled" Kind="InputPin" />
+              <Pin Id="548" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="549" Bounds="224,92" />
+            <ControlPoint Id="550" Bounds="321,92" />
+            <ControlPoint Id="551" Bounds="412,92" />
+            <ControlPoint Id="552" Bounds="483,92" />
+            <ControlPoint Id="553" Bounds="293,207" />
+            <Link Id="554" Ids="549,543" />
+            <Link Id="555" Ids="550,544" />
+            <Link Id="556" Ids="551,545" />
+            <Link Id="557" Ids="548,553" />
+            <Link Id="558" Ids="552,546" />
+            <Link Id="559" Ids="536,549" IsHidden="true" />
+            <Link Id="560" Ids="537,550" IsHidden="true" />
+            <Link Id="561" Ids="538,551" IsHidden="true" />
+            <Link Id="562" Ids="539,552" IsHidden="true" />
+            <Link Id="563" Ids="553,540" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="630,75,299,137" Id="564">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="565" Name="BezierKnot (Split)">
+            <Pin Id="566" Name="BezierKnot" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="567" Name="Point" Kind="OutputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="568" Name="Control1" Kind="OutputPin" Bounds="42,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="569" Name="Control2" Kind="OutputPin" Bounds="97,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="570" Name="Mode" Kind="OutputPin" Bounds="152,4" />
+            <Node Bounds="713,134,50,22" Id="571">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierKnot" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="BezierKnot" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="572" Name="Input" Kind="InputPin" />
+              <Pin Id="573" Name="Point" Kind="OutputPin" />
+              <Pin Id="574" Name="Control1" Kind="OutputPin" />
+              <Pin Id="575" Name="Control2" Kind="OutputPin" />
+              <Pin Id="576" Name="Mode" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="577" Bounds="710,92" />
+            <ControlPoint Id="578" Bounds="645,194" />
+            <ControlPoint Id="579" Bounds="725,194" />
+            <ControlPoint Id="580" Bounds="810,194" />
+            <ControlPoint Id="581" Bounds="884,194" />
+            <Link Id="582" Ids="573,578" />
+            <Link Id="583" Ids="577,572" />
+            <Link Id="584" Ids="574,579" />
+            <Link Id="585" Ids="575,580" />
+            <Link Id="586" Ids="576,581" />
+            <Link Id="587" Ids="566,577" IsHidden="true" />
+            <Link Id="588" Ids="578,567" IsHidden="true" />
+            <Link Id="589" Ids="579,568" IsHidden="true" />
+            <Link Id="590" Ids="580,569" IsHidden="true" />
+            <Link Id="591" Ids="581,570" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="592" Name="EditableBezierKnot" Position="593,305" DefaultCategory="VVVV.EditingFramework">
+        <Node Id="593">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="594" Name="EditableBezierKnot (Split 2d)">
+            <Pin Id="595" Name="BezierKnot" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="596" Name="Point" Kind="OutputPin" />
+            <Pin Id="597" Name="Control1" Kind="OutputPin" />
+            <Pin Id="598" Name="Control2" Kind="OutputPin" />
+            <Pin Id="599" Name="Mode" Kind="OutputPin" />
+            <Node Bounds="518,102" Id="600">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" />
+              </p:NodeReference>
+              <Pin Id="601" Name="Input" Kind="InputPin" />
+              <Pin Id="602" Name="Point" Kind="OutputPin" />
+              <Pin Id="603" Name="Control1" Kind="OutputPin" />
+              <Pin Id="604" Name="Control2" Kind="OutputPin" />
+              <Pin Id="605" Name="Mode" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="606" Bounds="514,42" />
+            <ControlPoint Id="607" Bounds="415,149" />
+            <ControlPoint Id="608" Bounds="475,149" />
+            <ControlPoint Id="609" Bounds="549,149" />
+            <ControlPoint Id="610" Bounds="622,149" />
+            <Link Id="611" Ids="602,607" />
+            <Link Id="612" Ids="603,608" />
+            <Link Id="613" Ids="604,609" />
+            <Link Id="614" Ids="606,601" />
+            <Link Id="615" Ids="605,610" />
+            <Link Id="616" Ids="595,606" IsHidden="true" />
+            <Link Id="617" Ids="607,596" IsHidden="true" />
+            <Link Id="618" Ids="608,597" IsHidden="true" />
+            <Link Id="619" Ids="609,598" IsHidden="true" />
+            <Link Id="620" Ids="610,599" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="621">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="622" Name="EditableBezierKnot (Split 3d)">
+            <Pin Id="623" Name="BezierKnot" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="624" Name="Point" Kind="OutputPin" />
+            <Pin Id="625" Name="Control1" Kind="OutputPin" />
+            <Pin Id="626" Name="Control2" Kind="OutputPin" />
+            <Pin Id="627" Name="Mode" Kind="OutputPin" />
+            <Node Bounds="504,276" Id="628">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="629" Name="Input" Kind="InputPin" />
+              <Pin Id="630" Name="Point" Kind="OutputPin" />
+              <Pin Id="631" Name="Control1" Kind="OutputPin" />
+              <Pin Id="632" Name="Control2" Kind="OutputPin" />
+              <Pin Id="633" Name="Mode" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="634" Bounds="502,231" />
+            <ControlPoint Id="635" Bounds="430,329" />
+            <ControlPoint Id="636" Bounds="489,329" />
+            <ControlPoint Id="637" Bounds="568,329" />
+            <ControlPoint Id="638" Bounds="642,329" />
+            <Link Id="639" Ids="630,635" />
+            <Link Id="640" Ids="631,636" />
+            <Link Id="641" Ids="632,637" />
+            <Link Id="642" Ids="634,629" />
+            <Link Id="643" Ids="633,638" />
+            <Link Id="644" Ids="623,634" IsHidden="true" />
+            <Link Id="645" Ids="635,624" IsHidden="true" />
+            <Link Id="646" Ids="636,625" IsHidden="true" />
+            <Link Id="647" Ids="637,626" IsHidden="true" />
+            <Link Id="648" Ids="638,627" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="649">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="650" Name="EditableBezierKnot (Join 2d Controls)">
+            <Pin Id="651" Name="Point" Kind="InputPin" />
+            <Pin Id="652" Name="Contol1" Kind="InputPin" />
+            <Pin Id="653" Name="Control2" Kind="InputPin" />
+            <Pin Id="654" Name="Mode" Kind="InputPin" />
+            <Pin Id="655" Name="BezierKnot" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="948,102" Id="656">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" />
+              </p:NodeReference>
+              <Pin Id="657" Name="Input" Kind="InputPin" />
+              <Pin Id="658" Name="Point" Kind="InputPin" />
+              <Pin Id="659" Name="Contol1" Kind="InputPin" />
+              <Pin Id="660" Name="Control2" Kind="InputPin" />
+              <Pin Id="661" Name="Mode" Kind="InputPin" />
+              <Pin Id="662" Name="Enabled" Kind="InputPin" />
+              <Pin Id="663" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="664" Bounds="859,42" />
+            <ControlPoint Id="665" Bounds="927,42" />
+            <ControlPoint Id="666" Bounds="1048,42" />
+            <ControlPoint Id="667" Bounds="1110,42" />
+            <ControlPoint Id="668" Bounds="944,149" />
+            <Link Id="669" Ids="663,668" />
+            <Link Id="670" Ids="664,658" />
+            <Link Id="671" Ids="666,660" />
+            <Link Id="672" Ids="665,659" />
+            <Link Id="673" Ids="667,661" />
+            <Link Id="674" Ids="651,664" IsHidden="true" />
+            <Link Id="675" Ids="652,665" IsHidden="true" />
+            <Link Id="676" Ids="653,666" IsHidden="true" />
+            <Link Id="677" Ids="654,667" IsHidden="true" />
+            <Link Id="678" Ids="668,655" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="679">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="680" Name="EditableBezierKnot (Join 2d)">
+            <Pin Id="681" Name="Point" Kind="InputPin" />
+            <Pin Id="682" Name="Mode" Kind="InputPin" />
+            <Pin Id="683" Name="BezierKnot" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="1376,102" Id="684">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" />
+              </p:NodeReference>
+              <Pin Id="685" Name="Input" Kind="InputPin" />
+              <Pin Id="686" Name="Point" Kind="InputPin" />
+              <Pin Id="687" Name="Contol1" Kind="InputPin" />
+              <Pin Id="688" Name="Control2" Kind="InputPin" />
+              <Pin Id="689" Name="Mode" Kind="InputPin" />
+              <Pin Id="690" Name="Enabled" Kind="InputPin" />
+              <Pin Id="691" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="692" Bounds="1399,42" />
+            <ControlPoint Id="693" Bounds="1459,42" />
+            <ControlPoint Id="694" Bounds="1373,149" />
+            <Link Id="695" Ids="691,694" />
+            <Link Id="696" Ids="692,686" />
+            <Link Id="697" Ids="692,687" />
+            <Link Id="698" Ids="692,688" />
+            <Link Id="699" Ids="693,689" />
+            <Link Id="700" Ids="681,692" IsHidden="true" />
+            <Link Id="701" Ids="682,693" IsHidden="true" />
+            <Link Id="702" Ids="694,683" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="703">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="704" Name="EditableBezierKnot (Join 3d Controls)">
+            <Pin Id="705" Name="Point" Kind="InputPin" />
+            <Pin Id="706" Name="Contol1" Kind="InputPin" />
+            <Pin Id="707" Name="Control2" Kind="InputPin" />
+            <Pin Id="708" Name="Mode" Kind="InputPin" />
+            <Pin Id="709" Name="BezierKnot" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="934,313" Id="710">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" />
+              </p:NodeReference>
+              <Pin Id="711" Name="Input" Kind="InputPin" />
+              <Pin Id="712" Name="Point" Kind="InputPin" />
+              <Pin Id="713" Name="Contol1" Kind="InputPin" />
+              <Pin Id="714" Name="Control2" Kind="InputPin" />
+              <Pin Id="715" Name="Mode" Kind="InputPin" />
+              <Pin Id="716" Name="Enabled" Kind="InputPin" />
+              <Pin Id="717" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="718" Bounds="836,231" />
+            <ControlPoint Id="719" Bounds="904,231" />
+            <ControlPoint Id="720" Bounds="1024,231" />
+            <ControlPoint Id="721" Bounds="1105,231" />
+            <ControlPoint Id="722" Bounds="932,372" />
+            <Link Id="723" Ids="718,712" />
+            <Link Id="724" Ids="719,713" />
+            <Link Id="725" Ids="720,714" />
+            <Link Id="726" Ids="717,722" />
+            <Link Id="727" Ids="721,715" />
+            <Link Id="728" Ids="705,718" IsHidden="true" />
+            <Link Id="729" Ids="706,719" IsHidden="true" />
+            <Link Id="730" Ids="707,720" IsHidden="true" />
+            <Link Id="731" Ids="708,721" IsHidden="true" />
+            <Link Id="732" Ids="722,709" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="733">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="734" Name="EditableBezierKnot (Join 3d)">
+            <Pin Id="735" Name="Point" Kind="InputPin" />
+            <Pin Id="736" Name="Mode" Kind="InputPin" />
+            <Pin Id="737" Name="BezierKnot" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditableBezierKnot" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="1356,276" Id="738">
+              <p:NodeReference LastCategoryFullName="Editors.EditableBezierKnot" LastSymbolSource="VL.BezierEditor.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="EditableBezierKnot" />
+              </p:NodeReference>
+              <Pin Id="739" Name="Input" Kind="InputPin" />
+              <Pin Id="740" Name="Point" Kind="InputPin" />
+              <Pin Id="741" Name="Contol1" Kind="InputPin" />
+              <Pin Id="742" Name="Control2" Kind="InputPin" />
+              <Pin Id="743" Name="Mode" Kind="InputPin" />
+              <Pin Id="744" Name="Enabled" Kind="InputPin" />
+              <Pin Id="745" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="746" Bounds="1378,231" />
+            <ControlPoint Id="747" Bounds="1439,231" />
+            <ControlPoint Id="748" Bounds="1352,335" />
+            <Link Id="749" Ids="745,748" />
+            <Link Id="750" Ids="746,740" />
+            <Link Id="751" Ids="746,741" />
+            <Link Id="752" Ids="746,742" />
+            <Link Id="753" Ids="747,743" />
+            <Link Id="754" Ids="735,746" IsHidden="true" />
+            <Link Id="755" Ids="736,747" IsHidden="true" />
+            <Link Id="756" Ids="748,737" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="757" Name="EditablePoint" Position="133,294" DefaultCategory="VVVV.EditingFramework">
+        <Node Id="758">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="759" Name="EditablePoint (Split 3d)">
+            <Pin Id="760" Name="EditablePoint" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditablePoint" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="761" Name="Position" Kind="OutputPin" />
+            <Pin Id="762" Name="Locked" Kind="OutputPin" />
+            <Pin Id="763" Name="Selected" Kind="OutputPin" />
+            <Pin Id="764" Name="Hovered" Kind="OutputPin" />
+            <Pin Id="765" Name="SelectionModifier" Kind="OutputPin" />
+            <Pin Id="766" Name="Id" Kind="OutputPin" />
+            <Node Bounds="776,310" Id="767">
+              <p:NodeReference LastCategoryFullName="Editors.EditablePoint" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="EditablePoint" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="768" Name="Input" Kind="InputPin" />
+              <Pin Id="769" Name="Position" Kind="OutputPin" />
+              <Pin Id="770" Name="Locked" Kind="OutputPin" />
+              <Pin Id="771" Name="Selected" Kind="OutputPin" />
+              <Pin Id="772" Name="Hovered" Kind="OutputPin" />
+              <Pin Id="773" Name="SelectionModifier" Kind="OutputPin" />
+              <Pin Id="774" Name="Id" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="775" Bounds="774,216" />
+            <ControlPoint Id="776" Bounds="774,416" />
+            <ControlPoint Id="777" Bounds="840,416" />
+            <ControlPoint Id="778" Bounds="901,416" />
+            <ControlPoint Id="779" Bounds="968,416" />
+            <ControlPoint Id="780" Bounds="1031,416" />
+            <ControlPoint Id="781" Bounds="1135,416" />
+            <Link Id="782" Ids="775,768" />
+            <Link Id="783" Ids="769,776" />
+            <Link Id="784" Ids="770,777" />
+            <Link Id="785" Ids="771,778" />
+            <Link Id="786" Ids="772,779" />
+            <Link Id="787" Ids="773,780" />
+            <Link Id="788" Ids="774,781" />
+            <Link Id="789" Ids="760,775" IsHidden="true" />
+            <Link Id="790" Ids="776,761" IsHidden="true" />
+            <Link Id="791" Ids="777,762" IsHidden="true" />
+            <Link Id="792" Ids="778,763" IsHidden="true" />
+            <Link Id="793" Ids="779,764" IsHidden="true" />
+            <Link Id="794" Ids="780,765" IsHidden="true" />
+            <Link Id="795" Ids="781,766" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="796">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="797" Name="EditablePoint (Split 2d)">
+            <Pin Id="798" Name="EditablePoint" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditablePoint" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="799" Name="Position" Kind="OutputPin" />
+            <Pin Id="800" Name="Locked" Kind="OutputPin" />
+            <Pin Id="801" Name="Selected" Kind="OutputPin" />
+            <Pin Id="802" Name="Hovered" Kind="OutputPin" />
+            <Pin Id="803" Name="SelectionModifier" Kind="OutputPin" />
+            <Pin Id="804" Name="Id" Kind="OutputPin" />
+            <Node Bounds="773,622" Id="805">
+              <p:NodeReference LastCategoryFullName="Editors.EditablePoint" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="EditablePoint" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="806" Name="Input" Kind="InputPin" />
+              <Pin Id="807" Name="Position" Kind="OutputPin" />
+              <Pin Id="808" Name="Locked" Kind="OutputPin" />
+              <Pin Id="809" Name="Selected" Kind="OutputPin" />
+              <Pin Id="810" Name="Hovered" Kind="OutputPin" />
+              <Pin Id="811" Name="SelectionModifier" Kind="OutputPin" />
+              <Pin Id="812" Name="Id" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="813" Bounds="772,532" />
+            <ControlPoint Id="814" Bounds="771,732" />
+            <ControlPoint Id="815" Bounds="837,732" />
+            <ControlPoint Id="816" Bounds="898,732" />
+            <ControlPoint Id="817" Bounds="965,732" />
+            <ControlPoint Id="818" Bounds="1028,732" />
+            <ControlPoint Id="819" Bounds="1143,732" />
+            <Link Id="820" Ids="813,806" />
+            <Link Id="821" Ids="807,814" />
+            <Link Id="822" Ids="808,815" />
+            <Link Id="823" Ids="809,816" />
+            <Link Id="824" Ids="810,817" />
+            <Link Id="825" Ids="811,818" />
+            <Link Id="826" Ids="812,819" />
+            <Link Id="827" Ids="798,813" IsHidden="true" />
+            <Link Id="828" Ids="814,799" IsHidden="true" />
+            <Link Id="829" Ids="815,800" IsHidden="true" />
+            <Link Id="830" Ids="816,801" IsHidden="true" />
+            <Link Id="831" Ids="817,802" IsHidden="true" />
+            <Link Id="832" Ids="818,803" IsHidden="true" />
+            <Link Id="833" Ids="819,804" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="834">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="835" Name="EditablePoint (Join 2d)">
+            <Pin Id="836" Name="Position" Kind="InputPin" />
+            <Pin Id="837" Name="Locked" Kind="InputPin" />
+            <Pin Id="838" Name="Selected" Kind="InputPin" />
+            <Pin Id="839" Name="Hovered" Kind="InputPin" />
+            <Pin Id="840" Name="SelectionModifier" Kind="InputPin" />
+            <Pin Id="841" Name="Id" Kind="InputPin" />
+            <Pin Id="842" Name="EditablePoint" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditablePoint" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="290,626" Id="843">
+              <p:NodeReference LastCategoryFullName="Editors.EditablePoint" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="EditablePoint" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="844" Name="Input" Kind="InputPin" />
+              <Pin Id="845" Name="Position" Kind="InputPin" />
+              <Pin Id="846" Name="Locked" Kind="InputPin" />
+              <Pin Id="847" Name="Selected" Kind="InputPin" />
+              <Pin Id="848" Name="Hovered" Kind="InputPin" />
+              <Pin Id="849" Name="SelectionModifier" Kind="InputPin" />
+              <Pin Id="850" Name="Id" Kind="InputPin" />
+              <Pin Id="851" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="852" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="853" Bounds="302,541" />
+            <ControlPoint Id="854" Bounds="366,541" />
+            <ControlPoint Id="855" Bounds="425,541" />
+            <ControlPoint Id="856" Bounds="485,541" />
+            <ControlPoint Id="857" Bounds="554,541" />
+            <ControlPoint Id="858" Bounds="660,541" />
+            <ControlPoint Id="859" Bounds="287,692" />
+            <Link Id="860" Ids="853,845" />
+            <Link Id="861" Ids="854,846" />
+            <Link Id="862" Ids="855,847" />
+            <Link Id="863" Ids="856,848" />
+            <Link Id="864" Ids="852,859" />
+            <Link Id="865" Ids="857,849" />
+            <Link Id="866" Ids="858,850" />
+            <Link Id="867" Ids="836,853" IsHidden="true" />
+            <Link Id="868" Ids="837,854" IsHidden="true" />
+            <Link Id="869" Ids="838,855" IsHidden="true" />
+            <Link Id="870" Ids="839,856" IsHidden="true" />
+            <Link Id="871" Ids="840,857" IsHidden="true" />
+            <Link Id="872" Ids="841,858" IsHidden="true" />
+            <Link Id="873" Ids="859,842" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="874">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="875" Name="EditablePoint (Join 3d)">
+            <Pin Id="876" Name="Position" Kind="InputPin" />
+            <Pin Id="877" Name="Locked" Kind="InputPin" />
+            <Pin Id="878" Name="Selected" Kind="InputPin" />
+            <Pin Id="879" Name="Hovered" Kind="InputPin" />
+            <Pin Id="880" Name="SelectionModifier" Kind="InputPin" />
+            <Pin Id="881" Name="Id" Kind="InputPin" />
+            <Pin Id="882" Name="EditablePoint" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="EditablePoint" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="292,298" Id="883">
+              <p:NodeReference LastCategoryFullName="Editors.EditablePoint" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="EditablePoint" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="884" Name="Input" Kind="InputPin" />
+              <Pin Id="885" Name="Position" Kind="InputPin" />
+              <Pin Id="886" Name="Locked" Kind="InputPin" />
+              <Pin Id="887" Name="Selected" Kind="InputPin" />
+              <Pin Id="888" Name="Hovered" Kind="InputPin" />
+              <Pin Id="889" Name="SelectionModifier" Kind="InputPin" />
+              <Pin Id="890" Name="Id" Kind="InputPin" />
+              <Pin Id="891" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="892" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="893" Bounds="304,221" />
+            <ControlPoint Id="894" Bounds="368,221" />
+            <ControlPoint Id="895" Bounds="427,221" />
+            <ControlPoint Id="896" Bounds="487,221" />
+            <ControlPoint Id="897" Bounds="554,221" />
+            <ControlPoint Id="898" Bounds="660,221" />
+            <ControlPoint Id="899" Bounds="289,376" />
+            <Link Id="900" Ids="893,885" />
+            <Link Id="901" Ids="894,886" />
+            <Link Id="902" Ids="895,887" />
+            <Link Id="903" Ids="896,888" />
+            <Link Id="904" Ids="892,899" />
+            <Link Id="905" Ids="897,889" />
+            <Link Id="906" Ids="898,890" />
+            <Link Id="907" Ids="876,893" IsHidden="true" />
+            <Link Id="908" Ids="877,894" IsHidden="true" />
+            <Link Id="909" Ids="878,895" IsHidden="true" />
+            <Link Id="910" Ids="879,896" IsHidden="true" />
+            <Link Id="911" Ids="880,897" IsHidden="true" />
+            <Link Id="912" Ids="881,898" IsHidden="true" />
+            <Link Id="913" Ids="899,882" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Node Bounds="594,77" Id="914">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="915" Name="PointEditor (3d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="916" Name="Create" ParticipatingElements="952">
+            <p:Info />
+          </Patch>
+          <Patch Id="917" Name="Update" ParticipatingElements="953">
+            <Pin Id="918" Name="Points To Add" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="919" Name="Add" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="920" Name="Clear" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="921" Name="Locked" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="922" Name="PointEditor Controls" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="923" Name="View Projection" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="924" Name="Pick Size" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="925" Name="Step Size" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="926" Name="Data" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="927" Name="Save" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="928" Name="Load" Kind="InputPin" Bounds="-206,0" />
+            <Pin Id="929" Name="PointEditor State" Kind="OutputPin" Bounds="-206,0" />
+            <Pin Id="930" Name="Points" Kind="OutputPin" Bounds="-206,0" />
+            <Pin Id="931" Name="Idle" Kind="OutputPin" Bounds="-206,0" />
+            <Pin Id="932" Name="Data" Kind="OutputPin" Bounds="-206,0" />
+            <Pin Id="933" Name="Ids" Kind="OutputPin" Bounds="-206,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="934" Position="594,77">
+            <Node Bounds="202,359,155,13" Id="935">
+              <p:NodeReference LastCategoryFullName="Editors.3D" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="ProcessNode" Name="PointEditor" />
+                <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Editors" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="936" Name="Points To Add" Kind="InputPin" />
+              <Pin Id="937" Name="Add" Kind="InputPin" />
+              <Pin Id="938" Name="Clear" Kind="InputPin" />
+              <Pin Id="939" Name="Locked" Kind="InputPin" />
+              <Pin Id="940" Name="PointEditor Controls" Kind="InputPin" />
+              <Pin Id="941" Name="View Projection" Kind="InputPin" />
+              <Pin Id="942" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="943" Name="Step Size" Kind="InputPin" />
+              <Pin Id="944" Name="Data" Kind="InputPin" />
+              <Pin Id="945" Name="Load" Kind="InputPin" />
+              <Pin Id="946" Name="Save" Kind="InputPin" />
+              <Pin Id="947" Name="PointEditor State" Kind="OutputPin" />
+              <Pin Id="948" Name="Points" Kind="OutputPin" />
+              <Pin Id="949" Name="Ids" Kind="OutputPin" />
+              <Pin Id="950" Name="Idle" Kind="OutputPin" />
+              <Pin Id="951" Name="Data" Kind="OutputPin" />
+              <NodeFragment Id="952" NameOfOperation="Create" />
+              <NodeFragment Id="953" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="954" Bounds="203,204" />
+            <ControlPoint Id="955" Bounds="303,204" />
+            <ControlPoint Id="956" Bounds="355,204" />
+            <ControlPoint Id="957" Bounds="407,204" />
+            <ControlPoint Id="958" Bounds="509,204" />
+            <ControlPoint Id="959" Bounds="632,204" />
+            <ControlPoint Id="960" Bounds="740,204" />
+            <ControlPoint Id="961" Bounds="808,204" />
+            <ControlPoint Id="962" Bounds="887,204" />
+            <ControlPoint Id="963" Bounds="937,204" />
+            <ControlPoint Id="964" Bounds="982,204" />
+            <ControlPoint Id="965" Bounds="101,437" />
+            <ControlPoint Id="966" Bounds="223,437" />
+            <ControlPoint Id="967" Bounds="396,437" />
+            <ControlPoint Id="968" Bounds="537,437" />
+            <ControlPoint Id="969" Bounds="306,437" />
+          </Canvas>
+          <Link Id="970" Ids="918,954" IsHidden="true" />
+          <Link Id="971" Ids="919,955" IsHidden="true" />
+          <Link Id="972" Ids="920,956" IsHidden="true" />
+          <Link Id="973" Ids="921,957" IsHidden="true" />
+          <Link Id="974" Ids="922,958" IsHidden="true" />
+          <Link Id="975" Ids="923,959" IsHidden="true" />
+          <Link Id="976" Ids="924,960" IsHidden="true" />
+          <Link Id="977" Ids="925,961" IsHidden="true" />
+          <Link Id="978" Ids="926,962" IsHidden="true" />
+          <Link Id="979" Ids="927,963" IsHidden="true" />
+          <Link Id="980" Ids="928,964" IsHidden="true" />
+          <Link Id="981" Ids="965,929" IsHidden="true" />
+          <Link Id="982" Ids="966,930" IsHidden="true" />
+          <Link Id="983" Ids="967,931" IsHidden="true" />
+          <Link Id="984" Ids="968,932" IsHidden="true" />
+          <Link Id="985" Ids="969,933" IsHidden="true" />
+          <Link Id="986" Ids="948,966" />
+          <Link Id="987" Ids="950,967" />
+          <Link Id="988" Ids="954,936" />
+          <Link Id="989" Ids="955,937" />
+          <Link Id="990" Ids="956,938" />
+          <Link Id="991" Ids="959,941" />
+          <Link Id="992" Ids="960,942" />
+          <Link Id="993" Ids="951,968" />
+          <Link Id="994" Ids="963,946" />
+          <Link Id="995" Ids="964,945" />
+          <Link Id="996" Ids="962,944" />
+          <Link Id="997" Ids="958,940" />
+          <Link Id="998" Ids="957,939" />
+          <Link Id="999" Ids="947,965" />
+          <Link Id="1000" Ids="961,943" />
+          <Link Id="1001" Ids="949,969" />
+          <ProcessDefinition Id="1306">
+            <Fragment Id="1307" Patch="916" Enabled="true" />
+            <Fragment Id="1308" Patch="917" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="137,76" Id="1002">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="1003" Name="PointEditor (2d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="1004" Name="Create" ParticipatingElements="1040">
+            <p:Info />
+          </Patch>
+          <Patch Id="1005" Name="Update" ParticipatingElements="1041">
+            <Pin Id="1006" Name="Points To Add" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1007" Name="Add" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1008" Name="Clear" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1009" Name="Locked" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1010" Name="PointEditor Controls" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1011" Name="View" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1012" Name="Pick Size" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1013" Name="Step Size" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1014" Name="Data" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1015" Name="Save" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1016" Name="Load" Kind="InputPin" Bounds="37,0" />
+            <Pin Id="1017" Name="PointEditor State" Kind="OutputPin" Bounds="37,0" />
+            <Pin Id="1018" Name="Points" Kind="OutputPin" Bounds="37,0" />
+            <Pin Id="1019" Name="Ids" Kind="OutputPin" Bounds="37,0" />
+            <Pin Id="1020" Name="Data" Kind="OutputPin" Bounds="37,0" />
+            <Pin Id="1021" Name="Idle" Kind="OutputPin" Bounds="37,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1022" Position="137,76">
+            <Node Bounds="306,274,155,13" Id="1023">
+              <p:NodeReference LastCategoryFullName="Editors.2D" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="ProcessNode" Name="PointEditor" />
+                <CategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Editors" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="1024" Name="Points To Add" Kind="InputPin" />
+              <Pin Id="1025" Name="Add" Kind="InputPin" />
+              <Pin Id="1026" Name="Clear" Kind="InputPin" />
+              <Pin Id="1027" Name="Locked" Kind="InputPin" />
+              <Pin Id="1028" Name="PointEditorControls" Kind="InputPin" />
+              <Pin Id="1029" Name="View" Kind="InputPin" />
+              <Pin Id="1030" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="1031" Name="Step Size" Kind="InputPin" />
+              <Pin Id="1032" Name="Data" Kind="InputPin" />
+              <Pin Id="1033" Name="Save" Kind="InputPin" />
+              <Pin Id="1034" Name="Load" Kind="InputPin" />
+              <Pin Id="1035" Name="PointEditor State" Kind="OutputPin" />
+              <Pin Id="1036" Name="Points" Kind="OutputPin" />
+              <Pin Id="1037" Name="Ids" Kind="OutputPin" />
+              <Pin Id="1038" Name="Idle" Kind="OutputPin" />
+              <Pin Id="1039" Name="Data" Kind="OutputPin" />
+              <NodeFragment Id="1040" NameOfOperation="Create" />
+              <NodeFragment Id="1041" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="1042" Bounds="263,142" />
+            <ControlPoint Id="1043" Bounds="357,142" />
+            <ControlPoint Id="1044" Bounds="397,142" />
+            <ControlPoint Id="1045" Bounds="448,142" />
+            <ControlPoint Id="1046" Bounds="502,142" />
+            <ControlPoint Id="1047" Bounds="634,142" />
+            <ControlPoint Id="1048" Bounds="703,142" />
+            <ControlPoint Id="1049" Bounds="777,142" />
+            <ControlPoint Id="1050" Bounds="849,142" />
+            <ControlPoint Id="1051" Bounds="899,142" />
+            <ControlPoint Id="1052" Bounds="944,142" />
+            <ControlPoint Id="1053" Bounds="203,356" />
+            <ControlPoint Id="1054" Bounds="309,356" />
+            <ControlPoint Id="1055" Bounds="381,356" />
+            <ControlPoint Id="1056" Bounds="460,356" />
+            <ControlPoint Id="1057" Bounds="556,356" />
+          </Canvas>
+          <Link Id="1058" Ids="1006,1042" IsHidden="true" />
+          <Link Id="1059" Ids="1007,1043" IsHidden="true" />
+          <Link Id="1060" Ids="1008,1044" IsHidden="true" />
+          <Link Id="1061" Ids="1009,1045" IsHidden="true" />
+          <Link Id="1062" Ids="1010,1046" IsHidden="true" />
+          <Link Id="1063" Ids="1011,1047" IsHidden="true" />
+          <Link Id="1064" Ids="1012,1048" IsHidden="true" />
+          <Link Id="1065" Ids="1013,1049" IsHidden="true" />
+          <Link Id="1066" Ids="1014,1050" IsHidden="true" />
+          <Link Id="1067" Ids="1015,1051" IsHidden="true" />
+          <Link Id="1068" Ids="1016,1052" IsHidden="true" />
+          <Link Id="1069" Ids="1053,1017" IsHidden="true" />
+          <Link Id="1070" Ids="1054,1018" IsHidden="true" />
+          <Link Id="1071" Ids="1055,1019" IsHidden="true" />
+          <Link Id="1072" Ids="1056,1020" IsHidden="true" />
+          <Link Id="1073" Ids="1057,1021" IsHidden="true" />
+          <Link Id="1074" Ids="1036,1054" />
+          <Link Id="1075" Ids="1048,1030" />
+          <Link Id="1076" Ids="1047,1029" />
+          <Link Id="1077" Ids="1044,1026" />
+          <Link Id="1078" Ids="1043,1025" />
+          <Link Id="1079" Ids="1042,1024" />
+          <Link Id="1080" Ids="1038,1057" />
+          <Link Id="1081" Ids="1050,1032" />
+          <Link Id="1082" Ids="1052,1034" />
+          <Link Id="1083" Ids="1051,1033" />
+          <Link Id="1084" Ids="1046,1028" />
+          <Link Id="1085" Ids="1039,1056" />
+          <Link Id="1086" Ids="1045,1027" />
+          <Link Id="1087" Ids="1035,1053" />
+          <Link Id="1088" Ids="1049,1031" />
+          <Link Id="1089" Ids="1037,1055" />
+          <ProcessDefinition Id="1309">
+            <Fragment Id="1310" Patch="1004" Enabled="true" />
+            <Fragment Id="1311" Patch="1005" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="137,451" Id="1090">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="1091" Name="PointEditorControls (Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="1092" Name="Create" ParticipatingElements="1104">
+            <p:Info />
+          </Patch>
+          <Patch Id="1093" Name="Update" ParticipatingElements="1105">
+            <Pin Id="1094" Name="Mouse Device" Kind="InputPin" Bounds="-313,0" />
+            <Pin Id="1095" Name="Keyboard Device" Kind="InputPin" Bounds="-313,0" />
+            <Pin Id="1096" Name="Enabled" Kind="InputPin" Bounds="-313,0" />
+            <Pin Id="1097" Name="PointEditor Controls" Kind="OutputPin" Bounds="-313,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1098" Position="137,451">
+            <Node Bounds="215,257,99,13" Id="1099">
+              <p:NodeReference LastCategoryFullName="Editors" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="ProcessNode" Name="PointEditorControls" />
+                <CategoryReference Kind="Category" Name="Editors" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1100" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="1101" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="1102" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1103" Name="PointEditor Controls" Kind="OutputPin" />
+              <NodeFragment Id="1104" NameOfOperation="Create" />
+              <NodeFragment Id="1105" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="1106" Bounds="187,195" />
+            <ControlPoint Id="1107" Bounds="276,195" />
+            <ControlPoint Id="1108" Bounds="390,195" />
+            <ControlPoint Id="1109" Bounds="212,305" />
+          </Canvas>
+          <Link Id="1110" Ids="1094,1106" IsHidden="true" />
+          <Link Id="1111" Ids="1095,1107" IsHidden="true" />
+          <Link Id="1112" Ids="1096,1108" IsHidden="true" />
+          <Link Id="1113" Ids="1109,1097" IsHidden="true" />
+          <Link Id="1114" Ids="1106,1100" />
+          <Link Id="1115" Ids="1107,1101" />
+          <Link Id="1116" Ids="1103,1109" />
+          <Link Id="1117" Ids="1108,1102" />
+          <ProcessDefinition Id="1312">
+            <Fragment Id="1313" Patch="1092" Enabled="true" />
+            <Fragment Id="1314" Patch="1093" Enabled="true" />
+          </ProcessDefinition>
+          <p:Info />
+        </Patch>
+      </Node>
+      <Canvas Id="1118" Name="PointEditorState" Position="134,197" DefaultCategory="VVVV.EditingFramework">
+        <Node Id="1119">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="1120" Name="PointEditorState (Split 3d)">
+            <Pin Id="1121" Name="PointEditor State" Kind="InputPin" />
+            <Pin Id="1122" Name="EditablePoints" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditablePoint" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1123" Name="Pick Size" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1124" Name="Editing" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1125" Name="Offset" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1126" Name="Scale" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1127" Name="Rotate" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1128" Name="Translate" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="656,320" Id="1129">
+              <p:NodeReference LastCategoryFullName="Editors.PointEditorState" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="PointEditorState" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="1130" Name="Input" Kind="InputPin" />
+              <Pin Id="1131" Name="Output" Kind="OutputPin" />
+              <Pin Id="1132" Name="EditablePoints" Kind="OutputPin" />
+              <Pin Id="1133" Name="Pick Size" Kind="OutputPin" />
+              <Pin Id="1134" Name="Editing" Kind="OutputPin" />
+              <Pin Id="1135" Name="Scaling" Kind="OutputPin" />
+              <Pin Id="1136" Name="Rotation" Kind="OutputPin" />
+              <Pin Id="1137" Name="Translation" Kind="OutputPin" />
+              <Pin Id="1138" Name="Offset" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1139" Bounds="654,248" />
+            <ControlPoint Id="1140" Bounds="652,441" />
+            <ControlPoint Id="1141" Bounds="746,441" />
+            <ControlPoint Id="1142" Bounds="816,441" />
+            <ControlPoint Id="1143" Bounds="894,441" />
+            <ControlPoint Id="1144" Bounds="950,441" />
+            <ControlPoint Id="1145" Bounds="1003,441" />
+            <ControlPoint Id="1146" Bounds="1066,441" />
+            <Link Id="1147" Ids="1139,1130" />
+            <Link Id="1148" Ids="1132,1140" />
+            <Link Id="1149" Ids="1137,1146" />
+            <Link Id="1150" Ids="1136,1145" />
+            <Link Id="1151" Ids="1135,1144" />
+            <Link Id="1152" Ids="1138,1143" />
+            <Link Id="1153" Ids="1134,1142" />
+            <Link Id="1154" Ids="1133,1141" />
+            <Link Id="1155" Ids="1121,1139" IsHidden="true" />
+            <Link Id="1156" Ids="1140,1122" IsHidden="true" />
+            <Link Id="1157" Ids="1141,1123" IsHidden="true" />
+            <Link Id="1158" Ids="1142,1124" IsHidden="true" />
+            <Link Id="1159" Ids="1143,1125" IsHidden="true" />
+            <Link Id="1160" Ids="1144,1126" IsHidden="true" />
+            <Link Id="1161" Ids="1145,1127" IsHidden="true" />
+            <Link Id="1162" Ids="1146,1128" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="1163">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="1164" Name="PointEditorState (Split 2d)">
+            <Pin Id="1165" Name="PointEditor State" Kind="InputPin" />
+            <Pin Id="1166" Name="EditablePoints" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditablePoint" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1167" Name="Pick Size" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1168" Name="Editing" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1169" Name="Offset" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1170" Name="Scale" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1171" Name="Rotate" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1172" Name="Translate" Kind="OutputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="196,324" Id="1173">
+              <p:NodeReference LastCategoryFullName="Editors.PointEditorState" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <CategoryReference Kind="Category" Name="PointEditorState" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="1174" Name="Input" Kind="InputPin" />
+              <Pin Id="1175" Name="Output" Kind="OutputPin" />
+              <Pin Id="1176" Name="EditablePoints" Kind="OutputPin" />
+              <Pin Id="1177" Name="Pick Size" Kind="OutputPin" />
+              <Pin Id="1178" Name="Editing" Kind="OutputPin" />
+              <Pin Id="1179" Name="Scaling" Kind="OutputPin" />
+              <Pin Id="1180" Name="Rotation" Kind="OutputPin" />
+              <Pin Id="1181" Name="Translation" Kind="OutputPin" />
+              <Pin Id="1182" Name="Offset" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1183" Bounds="194,241" />
+            <ControlPoint Id="1184" Bounds="132,422" />
+            <ControlPoint Id="1185" Bounds="225,422" />
+            <ControlPoint Id="1186" Bounds="290,422" />
+            <ControlPoint Id="1187" Bounds="350,422" />
+            <ControlPoint Id="1188" Bounds="410,422" />
+            <ControlPoint Id="1189" Bounds="462,422" />
+            <ControlPoint Id="1190" Bounds="519,422" />
+            <Link Id="1191" Ids="1183,1174" />
+            <Link Id="1192" Ids="1176,1184" />
+            <Link Id="1193" Ids="1181,1190" />
+            <Link Id="1194" Ids="1180,1189" />
+            <Link Id="1195" Ids="1179,1188" />
+            <Link Id="1196" Ids="1182,1187" />
+            <Link Id="1197" Ids="1178,1186" />
+            <Link Id="1198" Ids="1177,1185" />
+            <Link Id="1199" Ids="1165,1183" IsHidden="true" />
+            <Link Id="1200" Ids="1184,1166" IsHidden="true" />
+            <Link Id="1201" Ids="1185,1167" IsHidden="true" />
+            <Link Id="1202" Ids="1186,1168" IsHidden="true" />
+            <Link Id="1203" Ids="1187,1169" IsHidden="true" />
+            <Link Id="1204" Ids="1188,1170" IsHidden="true" />
+            <Link Id="1205" Ids="1189,1171" IsHidden="true" />
+            <Link Id="1206" Ids="1190,1172" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="1207">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="1208" Name="PointEditorState (Join 3d Internal)">
+            <Pin Id="1209" Name="EditablePoints" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditablePoint" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1210" Name="Pick Size" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1211" Name="Editing" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1212" Name="Offset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector3" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1213" Name="Scaling" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1214" Name="Rotation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1215" Name="Translation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1216" Name="PointEditorState" Kind="OutputPin" />
+            <Node Bounds="654,107" Id="1217">
+              <p:NodeReference LastCategoryFullName="Editors.PointEditorState" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="PointEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1218" Name="Input" Kind="InputPin" />
+              <Pin Id="1219" Name="EditablePoints" Kind="InputPin" />
+              <Pin Id="1220" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="1221" Name="Editing" Kind="InputPin" />
+              <Pin Id="1222" Name="Scaling" Kind="InputPin" />
+              <Pin Id="1223" Name="Rotation" Kind="InputPin" />
+              <Pin Id="1224" Name="Translation" Kind="InputPin" />
+              <Pin Id="1225" Name="Offset" Kind="InputPin" />
+              <Pin Id="1226" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1227" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1228" Bounds="621,34" />
+            <ControlPoint Id="1229" Bounds="715,34" />
+            <ControlPoint Id="1230" Bounds="781,34" />
+            <ControlPoint Id="1231" Bounds="843,34" />
+            <ControlPoint Id="1232" Bounds="901,34" />
+            <ControlPoint Id="1233" Bounds="956,34" />
+            <ControlPoint Id="1234" Bounds="1021,34" />
+            <ControlPoint Id="1235" Bounds="653,157" />
+            <Link Id="1236" Ids="1227,1235" />
+            <Link Id="1237" Ids="1228,1219" />
+            <Link Id="1238" Ids="1230,1221" />
+            <Link Id="1239" Ids="1231,1225" />
+            <Link Id="1240" Ids="1234,1224" />
+            <Link Id="1241" Ids="1233,1223" />
+            <Link Id="1242" Ids="1232,1222" />
+            <Link Id="1243" Ids="1229,1220" />
+            <Link Id="1244" Ids="1209,1228" IsHidden="true" />
+            <Link Id="1245" Ids="1210,1229" IsHidden="true" />
+            <Link Id="1246" Ids="1211,1230" IsHidden="true" />
+            <Link Id="1247" Ids="1212,1231" IsHidden="true" />
+            <Link Id="1248" Ids="1213,1232" IsHidden="true" />
+            <Link Id="1249" Ids="1214,1233" IsHidden="true" />
+            <Link Id="1250" Ids="1215,1234" IsHidden="true" />
+            <Link Id="1251" Ids="1235,1216" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Id="1252">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="1253" Name="PointEditorState (Join 2d Internal)">
+            <Pin Id="1254" Name="EditablePoints" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="EditablePoint" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1255" Name="Pick Size" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1256" Name="Editing" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1257" Name="Offset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1258" Name="Scaling" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1259" Name="Rotation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1260" Name="Translation" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1261" Name="PointEditorState" Kind="OutputPin" />
+            <Node Bounds="198,128" Id="1262">
+              <p:NodeReference LastCategoryFullName="Editors.PointEditorState" LastSymbolSource="VL.Editors.vl" LastPackageId="VL.EditingFramework">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="PointEditorState" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1263" Name="Input" Kind="InputPin" />
+              <Pin Id="1264" Name="EditablePoints" Kind="InputPin" />
+              <Pin Id="1265" Name="Pick Size" Kind="InputPin" />
+              <Pin Id="1266" Name="Editing" Kind="InputPin" />
+              <Pin Id="1267" Name="Scaling" Kind="InputPin" />
+              <Pin Id="1268" Name="Rotation" Kind="InputPin" />
+              <Pin Id="1269" Name="Translation" Kind="InputPin" />
+              <Pin Id="1270" Name="Offset" Kind="InputPin" />
+              <Pin Id="1271" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1272" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1273" Bounds="95,27" />
+            <ControlPoint Id="1274" Bounds="188,27" />
+            <ControlPoint Id="1275" Bounds="260,27" />
+            <ControlPoint Id="1276" Bounds="322,27" />
+            <ControlPoint Id="1277" Bounds="387,27" />
+            <ControlPoint Id="1278" Bounds="450,27" />
+            <ControlPoint Id="1279" Bounds="516,27" />
+            <ControlPoint Id="1280" Bounds="196,178" />
+            <Link Id="1281" Ids="1273,1264" />
+            <Link Id="1282" Ids="1275,1266" />
+            <Link Id="1283" Ids="1276,1270" />
+            <Link Id="1284" Ids="1279,1269" />
+            <Link Id="1285" Ids="1278,1268" />
+            <Link Id="1286" Ids="1272,1280" />
+            <Link Id="1287" Ids="1277,1267" />
+            <Link Id="1288" Ids="1274,1265" />
+            <Link Id="1289" Ids="1254,1273" IsHidden="true" />
+            <Link Id="1290" Ids="1255,1274" IsHidden="true" />
+            <Link Id="1291" Ids="1256,1275" IsHidden="true" />
+            <Link Id="1292" Ids="1257,1276" IsHidden="true" />
+            <Link Id="1293" Ids="1258,1277" IsHidden="true" />
+            <Link Id="1294" Ids="1259,1278" IsHidden="true" />
+            <Link Id="1295" Ids="1260,1279" IsHidden="true" />
+            <Link Id="1296" Ids="1280,1261" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+</Document>

@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1043.64077">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.36.118" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.36.118" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.36.118" />
+  <NugetDependency Id="5" Location="VL.EditingFramework" Version="0.36.118-alpha-gd4e0de94f9" />
+  <Patch Id="6">
+    <Canvas Id="7">
+      <Node Bounds="512,157" Id="8">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="9" Name="Camera (3d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="10" Name="Create" ParticipatingElements="34" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="11" Name="Update" ParticipatingElements="35" IsFragment="true">
+            <Pin Id="12" Name="Initial Interest" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="13" Name="Initial Longitude" Kind="InputPin" Bounds="412,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="14" Name="Initial Latitude" Kind="InputPin" Bounds="412,0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="15" Name="Initial Distance" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="16" Name="Initial FOV" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="17" Name="Near Plane" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="18" Name="Far Plane" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="19" Name="CameraControls3d" Kind="InputPin" Bounds="412,0" />
+            <Pin Id="20" Name="Camera State" Kind="OutputPin" Bounds="412,0" />
+            <Pin Id="21" Name="Renderer Hovered" Kind="InputPin" Bounds="987,232" />
+            <Pin Id="22" Name="Reset" Kind="InputPin" Bounds="1095,232" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="23" Position="512,157">
+            <Node Bounds="444,362,140,13" Id="24">
+              <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="Camera" />
+                <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="25" Name="Initial Interest" Kind="InputPin" />
+              <Pin Id="26" Name="Initial Longitude" Kind="InputPin" />
+              <Pin Id="27" Name="Initial Latitude" Kind="InputPin" />
+              <Pin Id="28" Name="Initial Distance" Kind="InputPin" />
+              <Pin Id="29" Name="Initial FOV" Kind="InputPin" />
+              <Pin Id="30" Name="Near Plane" Kind="InputPin" />
+              <Pin Id="31" Name="Far Plane" Kind="InputPin" />
+              <Pin Id="32" Name="CameraControls3d" Kind="InputPin" />
+              <Pin Id="33" Name="CameraState3d" Kind="OutputPin" />
+              <NodeFragment Id="34" NameOfOperation="Create" />
+              <NodeFragment Id="35" NameOfOperation="Update" />
+              <Pin Id="36" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="37" Name="Reset" Kind="InputPin" />
+            </Node>
+            <ControlPoint Id="38" Bounds="248,229" />
+            <ControlPoint Id="39" Bounds="354,229" />
+            <ControlPoint Id="40" Bounds="450,229" />
+            <ControlPoint Id="41" Bounds="535,229" />
+            <ControlPoint Id="42" Bounds="627,229" />
+            <ControlPoint Id="43" Bounds="713,229" />
+            <ControlPoint Id="44" Bounds="787,229" />
+            <ControlPoint Id="45" Bounds="875,229" />
+            <ControlPoint Id="46" Bounds="446,404" />
+            <ControlPoint Id="47" Bounds="987,232" />
+            <ControlPoint Id="48" Bounds="1095,232" />
+          </Canvas>
+          <Link Id="49" Ids="12,38" IsHidden="true" />
+          <Link Id="50" Ids="13,39" IsHidden="true" />
+          <Link Id="51" Ids="14,40" IsHidden="true" />
+          <Link Id="52" Ids="15,41" IsHidden="true" />
+          <Link Id="53" Ids="16,42" IsHidden="true" />
+          <Link Id="54" Ids="17,43" IsHidden="true" />
+          <Link Id="55" Ids="18,44" IsHidden="true" />
+          <Link Id="56" Ids="19,45" IsHidden="true" />
+          <Link Id="57" Ids="46,20" IsHidden="true" />
+          <Link Id="58" Ids="38,25" />
+          <Link Id="59" Ids="39,26" />
+          <Link Id="60" Ids="40,27" />
+          <Link Id="61" Ids="41,28" />
+          <Link Id="62" Ids="42,29" />
+          <Link Id="63" Ids="44,31" />
+          <Link Id="64" Ids="43,30" />
+          <Link Id="65" Ids="45,32" />
+          <Link Id="66" Ids="33,46" />
+          <Link Id="67" Ids="47,36" />
+          <Link Id="68" Ids="21,47" IsHidden="true" />
+          <Link Id="69" Ids="48,37" />
+          <Link Id="70" Ids="22,48" IsHidden="true" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="99,151" Id="71">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="72" Name="Camera (2d Internal)" Category="VVVV.EditingFramework">
+          <Patch Id="73" Name="Create" ParticipatingElements="91" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="74" Name="Update" ParticipatingElements="92" IsFragment="true">
+            <Pin Id="75" Name="Initial Interest" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="76" Name="Initial Zoom" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="77" Name="Minimum Zoom" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="78" Name="Maximum Zoom" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="79" Name="Camera Controls" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="80" Name="Camera State" Kind="OutputPin" Bounds="-351,0" />
+            <Pin Id="81" Name="Renderer Hovered" Kind="InputPin" Bounds="723,197" />
+            <Pin Id="82" Name="Reset" Kind="InputPin" Bounds="831,199" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="83" Position="99,151">
+            <Node Bounds="430,260,95,13" Id="84">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="Camera" />
+                <FullNameCategoryReference ID="2D.Transform" />
+              </p:NodeReference>
+              <Pin Id="85" Name="Initial Interest" Kind="InputPin" />
+              <Pin Id="86" Name="Initial Zoom" Kind="InputPin" />
+              <Pin Id="87" Name="Minimum Zoom" Kind="InputPin" />
+              <Pin Id="88" Name="Maximum Zoom" Kind="InputPin" />
+              <Pin Id="89" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="90" Name="CameraState2d" Kind="OutputPin" />
+              <NodeFragment Id="91" NameOfOperation="Create" />
+              <NodeFragment Id="92" NameOfOperation="Update" />
+              <Pin Id="93" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="94" Name="Reset" Kind="InputPin" />
+            </Node>
+            <ControlPoint Id="95" Bounds="237,197" />
+            <ControlPoint Id="96" Bounds="326,197" />
+            <ControlPoint Id="97" Bounds="414,197" />
+            <ControlPoint Id="98" Bounds="510,197" />
+            <ControlPoint Id="99" Bounds="616,197" />
+            <ControlPoint Id="100" Bounds="432,311" />
+            <ControlPoint Id="101" Bounds="723,197" />
+            <ControlPoint Id="102" Bounds="839,197" />
+          </Canvas>
+          <Link Id="103" Ids="75,95" IsHidden="true" />
+          <Link Id="104" Ids="76,96" IsHidden="true" />
+          <Link Id="105" Ids="77,97" IsHidden="true" />
+          <Link Id="106" Ids="78,98" IsHidden="true" />
+          <Link Id="107" Ids="79,99" IsHidden="true" />
+          <Link Id="108" Ids="100,80" IsHidden="true" />
+          <Link Id="109" Ids="95,85" />
+          <Link Id="110" Ids="96,86" />
+          <Link Id="111" Ids="97,87" />
+          <Link Id="112" Ids="98,88" />
+          <Link Id="113" Ids="99,89" />
+          <Link Id="114" Ids="90,100" />
+          <Link Id="115" Ids="101,93" />
+          <Link Id="116" Ids="81,101" IsHidden="true" />
+          <Link Id="117" Ids="102,94" />
+          <Link Id="118" Ids="82,102" IsHidden="true" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Canvas Id="119" Name="CameraState (2d)" Position="96,224" DefaultCategory="VVVV.EditingFramework">
+        <Node Bounds="502,271,373,142" Id="120">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="121" Name="CameraState (Split 2d)">
+            <Node Bounds="577,323,65,22" Id="122">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState2d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState2d" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="123" Name="Input" Kind="InputPin" />
+              <Pin Id="124" Name="View" Kind="OutputPin" />
+              <Pin Id="125" Name="Inverse View" Kind="OutputPin" />
+              <Pin Id="126" Name="Zoom" Kind="OutputPin" />
+              <Pin Id="127" Name="Renderer Hovered" Kind="OutputPin" />
+              <Pin Id="128" Name="Idle" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="129" Bounds="574,288" />
+            <ControlPoint Id="130" Bounds="517,395" />
+            <ControlPoint Id="131" Bounds="575,395" />
+            <ControlPoint Id="132" Bounds="661,395" />
+            <ControlPoint Id="133" Bounds="727,395" />
+            <Link Id="134" Ids="128,133" />
+            <Link Id="135" Ids="126,132" />
+            <Link Id="136" Ids="125,131" />
+            <Link Id="137" Ids="124,130" />
+            <Link Id="138" Ids="129,123" />
+            <Link Id="139" Ids="152,129" IsHidden="true" />
+            <Link Id="140" Ids="130,149" IsHidden="true" />
+            <Link Id="141" Ids="131,148" IsHidden="true" />
+            <Link Id="142" Ids="132,147" IsHidden="true" />
+            <Link Id="143" Ids="133,151" IsHidden="true" />
+            <ControlPoint Id="144" Bounds="772,395" />
+            <Link Id="145" Ids="127,144" />
+            <Link Id="146" Ids="144,150" IsHidden="true" />
+            <Pin Id="147" Name="Zoom" Kind="OutputPin" Bounds="4,4" />
+            <Pin Id="148" Name="Inverse View" Kind="OutputPin" Bounds="45,4" />
+            <Pin Id="149" Name="View" Kind="OutputPin" Bounds="118,4" />
+            <Pin Id="150" Name="Renderer Hovered" Kind="OutputPin" Bounds="154,4" />
+            <Pin Id="151" Name="Idle" Kind="OutputPin" Bounds="252,4" />
+            <Pin Id="152" Name="Camera State" Kind="InputPin" Bounds="4,4" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="503,81,397,152" Id="153">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="154" Name="CameraState (Join 2d Internal)">
+            <Node Bounds="521,150,95,22" Id="155">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState2d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState2d" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="156" Name="Input" Kind="InputPin" />
+              <Pin Id="157" Name="View" Kind="InputPin" />
+              <Pin Id="158" Name="Inverse View" Kind="InputPin" />
+              <Pin Id="159" Name="Zoom" Kind="InputPin" />
+              <Pin Id="160" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="161" Name="Idle" Kind="InputPin" />
+              <Pin Id="162" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="163" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="164" Bounds="533,98" />
+            <ControlPoint Id="165" Bounds="597,98" />
+            <ControlPoint Id="166" Bounds="689,98" />
+            <ControlPoint Id="167" Bounds="751,98" />
+            <ControlPoint Id="168" Bounds="518,215" />
+            <Link Id="169" Ids="163,168" />
+            <Link Id="170" Ids="164,157" />
+            <Link Id="171" Ids="165,158" />
+            <Link Id="172" Ids="166,159" />
+            <Link Id="173" Ids="167,161" />
+            <Link Id="174" Ids="182,164" IsHidden="true" />
+            <Link Id="175" Ids="183,165" IsHidden="true" />
+            <Link Id="176" Ids="184,166" IsHidden="true" />
+            <Link Id="177" Ids="186,167" IsHidden="true" />
+            <Link Id="178" Ids="168,187" IsHidden="true" />
+            <ControlPoint Id="179" Bounds="797,98" />
+            <Link Id="180" Ids="179,160" />
+            <Link Id="181" Ids="185,179" IsHidden="true" />
+            <Pin Id="182" Name="View" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="183" Name="Inverse View" Kind="InputPin" Bounds="40,4" />
+            <Pin Id="184" Name="Zoom" Kind="InputPin" Bounds="113,4" />
+            <Pin Id="185" Name="Renderer Hovered" Kind="InputPin" Bounds="154,4" />
+            <Pin Id="186" Name="Idle" Kind="InputPin" Bounds="252,4" />
+            <Pin Id="187" Name="Camera State" Kind="OutputPin" Bounds="4,4" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="188" Name="CameraState (3d)" Position="513,220" DefaultCategory="VVVV.EditingFramework">
+        <Node Bounds="334,117,859,247" Id="189">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="190" Name="CameraState (Join 3d Internal)">
+            <Node Bounds="542,300,200,22" Id="191">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState3d" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="192" Name="Input" Kind="InputPin" />
+              <Pin Id="193" Name="View Projection" Kind="InputPin" />
+              <Pin Id="194" Name="View" Kind="InputPin" />
+              <Pin Id="195" Name="Projection" Kind="InputPin" />
+              <Pin Id="196" Name="Inverse View" Kind="InputPin" />
+              <Pin Id="197" Name="Position" Kind="InputPin" />
+              <Pin Id="198" Name="Interest" Kind="InputPin" />
+              <Pin Id="199" Name="FOV" Kind="InputPin" />
+              <Pin Id="200" Name="Distance" Kind="InputPin" />
+              <Pin Id="201" Name="Four Rooms" Kind="InputPin" />
+              <Pin Id="202" Name="Active Viewport" Kind="InputPin" />
+              <Pin Id="203" Name="Idle" Kind="InputPin" />
+              <Pin Id="204" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="205" Name="Enabled" Kind="InputPin" />
+              <Pin Id="206" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="207" Bounds="349,135" />
+            <ControlPoint Id="208" Bounds="447,135" />
+            <ControlPoint Id="209" Bounds="496,135" />
+            <ControlPoint Id="210" Bounds="565,135" />
+            <ControlPoint Id="211" Bounds="648,135" />
+            <ControlPoint Id="212" Bounds="711,135" />
+            <ControlPoint Id="213" Bounds="769,135" />
+            <ControlPoint Id="214" Bounds="811,135" />
+            <ControlPoint Id="215" Bounds="869,134" />
+            <ControlPoint Id="216" Bounds="947,135" />
+            <ControlPoint Id="217" Bounds="1046,134" />
+            <ControlPoint Id="218" Bounds="540,346" />
+            <Link Id="219" Ids="206,218" />
+            <Link Id="220" Ids="212,198" />
+            <Link Id="221" Ids="213,199" />
+            <Link Id="222" Ids="214,200" />
+            <Link Id="223" Ids="216,202" />
+            <Link Id="224" Ids="217,203" />
+            <Link Id="225" Ids="215,201" />
+            <Link Id="226" Ids="211,197" />
+            <Link Id="227" Ids="208,194" />
+            <Link Id="228" Ids="209,195" />
+            <Link Id="229" Ids="207,193" />
+            <Link Id="230" Ids="210,196" />
+            <Link Id="231" Ids="246,207" IsHidden="true" />
+            <Link Id="232" Ids="247,208" IsHidden="true" />
+            <Link Id="233" Ids="248,209" IsHidden="true" />
+            <Link Id="234" Ids="249,210" IsHidden="true" />
+            <Link Id="235" Ids="250,211" IsHidden="true" />
+            <Link Id="236" Ids="251,212" IsHidden="true" />
+            <Link Id="237" Ids="252,213" IsHidden="true" />
+            <Link Id="238" Ids="253,214" IsHidden="true" />
+            <Link Id="239" Ids="254,215" IsHidden="true" />
+            <Link Id="240" Ids="255,216" IsHidden="true" />
+            <Link Id="241" Ids="257,217" IsHidden="true" />
+            <Link Id="242" Ids="218,258" IsHidden="true" />
+            <ControlPoint Id="243" Bounds="1090,134" />
+            <Link Id="244" Ids="243,204" />
+            <Link Id="245" Ids="256,243" IsHidden="true" />
+            <Pin Id="246" Name="View Projection" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="247" Name="View" Kind="InputPin" Bounds="90,4" />
+            <Pin Id="248" Name="Projection" Kind="InputPin" Bounds="126,4" />
+            <Pin Id="249" Name="Inverse View" Kind="InputPin" Bounds="187,4" />
+            <Pin Id="250" Name="Position" Kind="InputPin" Bounds="260,4" />
+            <Pin Id="251" Name="Interest" Kind="InputPin" Bounds="312,4" />
+            <Pin Id="252" Name="FOV" Kind="InputPin" Bounds="362,4" />
+            <Pin Id="253" Name="Distance" Kind="InputPin" Bounds="396,4" />
+            <Pin Id="254" Name="Four Rooms" Kind="InputPin" Bounds="451,4" />
+            <Pin Id="255" Name="Active Viewport" Kind="InputPin" Bounds="521,4" />
+            <Pin Id="256" Name="Renderer Hovered" Kind="InputPin" Bounds="608,4" />
+            <Pin Id="257" Name="Idle" Kind="InputPin" Bounds="706,4" />
+            <Pin Id="258" Name="Camera State" Kind="OutputPin" Bounds="4,4" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="333,423,883,273" Id="259">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="260" Name="CameraState (Split 3d)">
+            <Node Bounds="636,490,185,22" Id="261">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState3d" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="262" Name="Input" Kind="InputPin" />
+              <Pin Id="263" Name="Output" Kind="OutputPin" />
+              <Pin Id="264" Name="View Projection" Kind="OutputPin" />
+              <Pin Id="265" Name="View" Kind="OutputPin" />
+              <Pin Id="266" Name="Projection" Kind="OutputPin" />
+              <Pin Id="267" Name="Inverse View" Kind="OutputPin" />
+              <Pin Id="268" Name="Position" Kind="OutputPin" />
+              <Pin Id="269" Name="Interest" Kind="OutputPin" />
+              <Pin Id="270" Name="FOV" Kind="OutputPin" />
+              <Pin Id="271" Name="Distance" Kind="OutputPin" />
+              <Pin Id="272" Name="Four Rooms" Kind="OutputPin" />
+              <Pin Id="273" Name="Active Viewport" Kind="OutputPin" />
+              <Pin Id="274" Name="Idle" Kind="OutputPin" />
+              <Pin Id="275" Name="Renderer Hovered" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="276" Bounds="634,440" />
+            <ControlPoint Id="277" Bounds="348,678" />
+            <ControlPoint Id="278" Bounds="453,678" />
+            <ControlPoint Id="279" Bounds="499,678" />
+            <ControlPoint Id="280" Bounds="570,678" />
+            <ControlPoint Id="281" Bounds="655,678" />
+            <ControlPoint Id="282" Bounds="719,678" />
+            <ControlPoint Id="283" Bounds="777,678" />
+            <ControlPoint Id="284" Bounds="817,678" />
+            <ControlPoint Id="285" Bounds="881,678" />
+            <ControlPoint Id="286" Bounds="976,678" />
+            <ControlPoint Id="287" Bounds="1073,678" />
+            <Link Id="288" Ids="276,262" />
+            <Link Id="289" Ids="272,285" />
+            <Link Id="290" Ids="273,286" />
+            <Link Id="291" Ids="274,287" />
+            <Link Id="292" Ids="264,277" />
+            <Link Id="293" Ids="265,278" />
+            <Link Id="294" Ids="266,279" />
+            <Link Id="295" Ids="267,280" />
+            <Link Id="296" Ids="268,281" />
+            <Link Id="297" Ids="269,282" />
+            <Link Id="298" Ids="270,283" />
+            <Link Id="299" Ids="271,284" />
+            <Link Id="300" Ids="327,276" IsHidden="true" />
+            <Link Id="301" Ids="277,315" IsHidden="true" />
+            <Link Id="302" Ids="278,316" IsHidden="true" />
+            <Link Id="303" Ids="279,317" IsHidden="true" />
+            <Link Id="304" Ids="280,318" IsHidden="true" />
+            <Link Id="305" Ids="281,319" IsHidden="true" />
+            <Link Id="306" Ids="282,320" IsHidden="true" />
+            <Link Id="307" Ids="283,321" IsHidden="true" />
+            <Link Id="308" Ids="284,322" IsHidden="true" />
+            <Link Id="309" Ids="285,323" IsHidden="true" />
+            <Link Id="310" Ids="286,324" IsHidden="true" />
+            <Link Id="311" Ids="287,326" IsHidden="true" />
+            <ControlPoint Id="312" Bounds="1113,678" />
+            <Link Id="313" Ids="275,312" />
+            <Link Id="314" Ids="312,325" IsHidden="true" />
+            <Pin Id="315" Name="View Projection" Kind="OutputPin" Bounds="4,4" />
+            <Pin Id="316" Name="View" Kind="OutputPin" Bounds="90,4" />
+            <Pin Id="317" Name="Projection" Kind="OutputPin" Bounds="126,4" />
+            <Pin Id="318" Name="Inverse View" Kind="OutputPin" Bounds="187,4" />
+            <Pin Id="319" Name="Position" Kind="OutputPin" Bounds="260,4" />
+            <Pin Id="320" Name="Interest" Kind="OutputPin" Bounds="312,4" />
+            <Pin Id="321" Name="FOV" Kind="OutputPin" Bounds="362,4" />
+            <Pin Id="322" Name="Distance" Kind="OutputPin" Bounds="396,4" />
+            <Pin Id="323" Name="Four Rooms" Kind="OutputPin" Bounds="451,4" />
+            <Pin Id="324" Name="Active Viewport" Kind="OutputPin" Bounds="521,4" />
+            <Pin Id="325" Name="Renderer Hovered" Kind="OutputPin" Bounds="608,4" />
+            <Pin Id="326" Name="Idle" Kind="OutputPin" Bounds="706,4" />
+            <Pin Id="327" Name="Camera State" Kind="InputPin" Bounds="4,4" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Node Bounds="99,409" Id="328">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="329" Name="FlatCameraControls" Category="VVVV.EditingFramework">
+          <Patch Id="330" Name="Create" ParticipatingElements="346" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="331" Name="Update" ParticipatingElements="347" IsFragment="true">
+            <Pin Id="332" Name="Camera Controls" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="333" Name="Mouse Device" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="334" Name="Keyboard Device" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="335" Name="Zoom Speed" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="336" Name="Enabled" Kind="InputPin" Bounds="-351,0" />
+            <Pin Id="337" Name="Camera Controls" Kind="OutputPin" Bounds="-351,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="338" Position="99,409">
+            <Node Bounds="238,203" Id="339">
+              <p:NodeReference LastCategoryFullName="Editors" LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="FlatCameraControls" />
+                <CategoryReference Kind="Category" Name="Editors" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="340" Name="CameraControls2d" Kind="InputPin" />
+              <Pin Id="341" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="342" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="343" Name="Zoom Speed" Kind="InputPin" />
+              <Pin Id="344" Name="Enabled" Kind="InputPin" />
+              <Pin Id="345" Name="Camera Controls" Kind="OutputPin" />
+              <NodeFragment Id="346" NameOfOperation="Create" />
+              <NodeFragment Id="347" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="348" Bounds="102,132" />
+            <ControlPoint Id="349" Bounds="227,132" />
+            <ControlPoint Id="350" Bounds="315,132" />
+            <ControlPoint Id="351" Bounds="420,132" />
+            <ControlPoint Id="352" Bounds="503,132" />
+            <ControlPoint Id="353" Bounds="234,266" />
+          </Canvas>
+          <Link Id="354" Ids="332,348" IsHidden="true" />
+          <Link Id="355" Ids="333,349" IsHidden="true" />
+          <Link Id="356" Ids="334,350" IsHidden="true" />
+          <Link Id="357" Ids="335,351" IsHidden="true" />
+          <Link Id="358" Ids="336,352" IsHidden="true" />
+          <Link Id="359" Ids="353,337" IsHidden="true" />
+          <Link Id="360" Ids="349,341" />
+          <Link Id="361" Ids="350,342" />
+          <Link Id="362" Ids="351,343" />
+          <Link Id="363" Ids="345,353" />
+          <Link Id="364" Ids="352,344" />
+          <Link Id="365" Ids="348,340" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,467" Id="366">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="367" Name="OrbitCameraControls" Category="VVVV.EditingFramework">
+          <Patch Id="368" Name="Create" ParticipatingElements="382" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="369" Name="Update" ParticipatingElements="383" IsFragment="true">
+            <Pin Id="370" Name="Camera Controls" Kind="InputPin" Bounds="-700,0" />
+            <Pin Id="371" Name="Mouse Device" Kind="InputPin" Bounds="-700,0" />
+            <Pin Id="372" Name="Keyboard Device" Kind="InputPin" Bounds="-700,0" />
+            <Pin Id="373" Name="Enabled" Kind="InputPin" Bounds="-700,0" />
+            <Pin Id="374" Name="Camera Controls" Kind="OutputPin" Bounds="-700,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="375" Position="100,467">
+            <Node Bounds="220,240" Id="376">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <FullNameCategoryReference ID="Editors" />
+                <Choice Kind="ProcessNode" Name="OrbitCameraControls" />
+              </p:NodeReference>
+              <Pin Id="377" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="378" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="379" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="380" Name="Enabled" Kind="InputPin" />
+              <Pin Id="381" Name="Camera Controls" Kind="OutputPin" />
+              <NodeFragment Id="382" NameOfOperation="Create" />
+              <NodeFragment Id="383" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="384" Bounds="102,173" />
+            <ControlPoint Id="385" Bounds="214,173" />
+            <ControlPoint Id="386" Bounds="358,173" />
+            <ControlPoint Id="387" Bounds="463,173" />
+            <ControlPoint Id="388" Bounds="215,309" />
+          </Canvas>
+          <Link Id="389" Ids="370,384" IsHidden="true" />
+          <Link Id="390" Ids="371,385" IsHidden="true" />
+          <Link Id="391" Ids="372,386" IsHidden="true" />
+          <Link Id="392" Ids="373,387" IsHidden="true" />
+          <Link Id="393" Ids="388,374" IsHidden="true" />
+          <Link Id="394" Ids="385,378" />
+          <Link Id="395" Ids="386,379" />
+          <Link Id="396" Ids="381,388" />
+          <Link Id="397" Ids="387,380" />
+          <Link Id="398" Ids="384,377" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,356" Id="399">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="400" Name="SoftimageCameraControls" Category="VVVV.EditingFramework">
+          <Patch Id="401" Name="Create" ParticipatingElements="415" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="402" Name="Update" ParticipatingElements="416" IsFragment="true">
+            <Pin Id="403" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="404" Name="Keyboard Device" Kind="InputPin" />
+            <Pin Id="405" Name="Enabled" Kind="InputPin" />
+            <Pin Id="406" Name="Camera Controls" Kind="InputPin" />
+            <Pin Id="407" Name="Camera Controls" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="408" Position="100,356">
+            <Node Bounds="267,263" Id="409">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="SoftimageCameraControls" />
+                <FullNameCategoryReference ID="Editors" />
+              </p:NodeReference>
+              <Pin Id="410" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="411" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="412" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="413" Name="Enabled" Kind="InputPin" />
+              <Pin Id="414" Name="Camera Controls" Kind="OutputPin" />
+              <NodeFragment Id="415" NameOfOperation="Create" />
+              <NodeFragment Id="416" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="417" Bounds="263,175" />
+            <ControlPoint Id="418" Bounds="396,175" />
+            <ControlPoint Id="419" Bounds="499,175" />
+            <ControlPoint Id="420" Bounds="148,175" />
+            <ControlPoint Id="421" Bounds="264,339" />
+          </Canvas>
+          <Link Id="422" Ids="403,417" IsHidden="true" />
+          <Link Id="423" Ids="404,418" IsHidden="true" />
+          <Link Id="424" Ids="405,419" IsHidden="true" />
+          <Link Id="425" Ids="406,420" IsHidden="true" />
+          <Link Id="426" Ids="421,407" IsHidden="true" />
+          <Link Id="427" Ids="417,411" />
+          <Link Id="428" Ids="418,412" />
+          <Link Id="429" Ids="414,421" />
+          <Link Id="430" Ids="419,413" />
+          <Link Id="431" Ids="420,410" />
+          <p:Info />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+</Document>

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1138.5096">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.Core" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.CoreLib" Version="0.35.33" />
+  <PlatformDependency Id="4" Location="./src\bin\AnyCPU\Debug\OSCSharp.dll" />
+  <PlatformDependency Id="5" Location="./OSCSharp.dll.vlimport" />
+  <DocumentDependency Id="6" Location="./OSC.Core.vl" />
+  <Patch Id="7">
+    <Canvas Id="8">
+      <Canvas Id="9" Name="OSCUtils" Position="100,200" DefaultCategory="IO.OSC">
+        <Node Bounds="200,38,271,392" Id="10">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="11" Name="OSCMessage (Join)" IsGeneric="true">
+            <Pin Id="12" Name="Address" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="13" Name="Arguments" Kind="InputPin" Bounds="56,4" />
+            <Pin Id="14" Name="Message" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="257,97,55,22" Id="15">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCMessage" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="Create" />
+                <CategoryReference Kind="Category" Name="OSCMessage" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="16" Name="Address" Kind="InputPin" />
+              <Pin Id="17" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="401,88,43,22" Id="18">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="System.Core.dll">
+                <Choice Kind="OperationNode" Name="Cast" />
+              </p:NodeReference>
+              <Pin Id="19" Name="Input" Kind="InputPin" />
+              <Pin Id="20" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="256,214,110,128" Id="21">
+              <p:NodeReference>
+                <Choice Kind="ForEachLoop" Name="ForEach" />
+              </p:NodeReference>
+              <ControlPoint Id="22" Bounds="266,220" Name="Message" Alignment="Top" />
+              <ControlPoint Id="23" Bounds="333,220" Name="Input" Alignment="Top" />
+              <ControlPoint Id="24" Bounds="268,335" Name="Message" Alignment="Bottom" />
+              <Patch Id="25">
+                <Node Bounds="268,261,61,22" Id="26">
+                  <p:NodeReference LastCategoryFullName="IO.OSC.OSCMessage" LastSymbolSource="OSC.Core.vl">
+                    <Choice Kind="OperationNode" Name="Append" />
+                    <CategoryReference Kind="Category" Name="OSCMessage" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="27" Name="Input" Kind="InputPin" />
+                  <Pin Id="28" Name="Value" Kind="InputPin" />
+                  <Pin Id="29" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="30" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Patch Id="31" Name="Update" ParticipatingElements="26" IsGeneric="true" />
+              </Patch>
+              <Pin Id="32" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="33" Bounds="255,55" />
+            <ControlPoint Id="34" Bounds="399,55" />
+            <ControlPoint Id="35" Bounds="307,412" />
+            <Link Id="36" Ids="33,16" />
+            <Link Id="37" Ids="17,22" />
+            <Link Id="38" Ids="24,35" />
+            <Link Id="39" Ids="34,19" />
+            <Link Id="40" Ids="20,23" />
+            <Link Id="41" Ids="22,27" />
+            <Link Id="42" Ids="30,24" />
+            <Link Id="43" Ids="23,28" />
+            <Link Id="44" Ids="12,33" IsHidden="true" />
+            <Link Id="45" Ids="13,34" IsHidden="true" />
+            <Link Id="46" Ids="35,14" IsHidden="true" />
+            <Link Id="47" Ids="22,24" IsFeedback="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="959,113,232,218" Id="48">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="49" Name="OSCBundle (Join)" IsGeneric="true">
+            <Pin Id="50" Name="Input" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="51" Name="Input 2" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="52" Name="Output" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="1052,213,61,22" Id="53">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCBundle" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="Append" />
+                <CategoryReference Kind="Category" Name="OSCBundle" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="54" Name="Input" Kind="InputPin" />
+              <Pin Id="55" Name="Message" Kind="InputPin" />
+              <Pin Id="56" Name="Enabled" Kind="InputPin" />
+              <Pin Id="57" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="971,175,55,22" Id="58">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCBundle" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="Create" />
+                <CategoryReference Kind="Category" Name="OSCBundle" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="59" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1118,260,61,22" Id="60">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCBundle" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="Append" />
+                <CategoryReference Kind="Category" Name="OSCBundle" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="61" Name="Input" Kind="InputPin" />
+              <Pin Id="62" Name="Message" Kind="InputPin" />
+              <Pin Id="63" Name="Enabled" Kind="InputPin" />
+              <Pin Id="64" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="65" Bounds="1070,130" />
+            <ControlPoint Id="66" Bounds="1135,130" />
+            <ControlPoint Id="67" Bounds="1113,313" />
+            <Link Id="68" Ids="59,54" />
+            <Link Id="69" Ids="57,61" />
+            <Link Id="70" Ids="64,67" />
+            <Link Id="71" Ids="65,55" />
+            <Link Id="72" Ids="66,62" />
+            <Link Id="73" Ids="50,65" IsHidden="true" />
+            <Link Id="74" Ids="51,66" IsHidden="true" />
+            <Link Id="75" Ids="67,52" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="608,44,221,146" Id="76">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="77" Name="OSCMessage (Split)" IsGeneric="true">
+            <Pin Id="78" Name="OSCMessage" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="79" Name="Arguments" Kind="OutputPin" Bounds="4,4" />
+            <Pin Id="80" Name="TypeTags" Kind="OutputPin" Bounds="70,4" />
+            <Node Bounds="626,102,92,22" Id="81">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCMessage" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="GetArguments" />
+              </p:NodeReference>
+              <Pin Id="82" Name="Input" Kind="InputPin" />
+              <Pin Id="83" Name="Output" Kind="OutputPin" />
+              <Pin Id="84" Name="Arguments" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="734,100,83,22" Id="85">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCMessage" LastSymbolSource="OSC.Core.vl">
+                <Choice Kind="OperationNode" Name="GetTypetags" />
+              </p:NodeReference>
+              <Pin Id="86" Name="Input" Kind="InputPin" />
+              <Pin Id="87" Name="Output" Kind="OutputPin" />
+              <Pin Id="88" Name="Typetags" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="89" Bounds="625,61" />
+            <ControlPoint Id="90" Bounds="623,172" />
+            <ControlPoint Id="91" Bounds="714,172" />
+            <Link Id="92" Ids="89,82" />
+            <Link Id="93" Ids="89,86" />
+            <Link Id="94" Ids="84,90" />
+            <Link Id="95" Ids="88,91" />
+            <Link Id="96" Ids="78,89" IsHidden="true" />
+            <Link Id="97" Ids="90,79" IsHidden="true" />
+            <Link Id="98" Ids="91,80" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="1335,6,186,254" Id="99">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="100" Name="Match" IsGeneric="true">
+            <Pin Id="101" Name="Input" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="102" Name="Address" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="103" Name="Output" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="1383,57,85,115" Id="104">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationCallFlag" Name="Where" />
+                <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+                <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+              </p:NodeReference>
+              <Pin Id="105" Name="Input" Kind="InputPin" />
+              <Pin Id="106" Name="Enabled" Kind="InputPin" />
+              <Pin Id="107" Name="Output" Kind="OutputPin" />
+              <Patch Id="108" Name="Predicate" IsGeneric="true">
+                <Pin Id="109" Name="Source" Kind="InputPin" />
+                <Pin Id="110" Name="Result" Kind="OutputPin" />
+                <Node Bounds="1395,111,61,22" Id="111">
+                  <p:NodeReference LastCategoryFullName="IO.OSC.OSCMessage" LastSymbolSource="OSC.Core.vl">
+                    <Choice Kind="OperationNode" Name="IsMatch" />
+                    <CategoryReference Kind="Category" Name="OSCMessage" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="112" Name="Input" Kind="InputPin" />
+                  <Pin Id="113" Name="Value" Kind="InputPin" />
+                  <Pin Id="114" Name="Output" Kind="OutputPin" />
+                  <Pin Id="115" Name="Result" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="116" Bounds="1393,64" />
+                <ControlPoint Id="117" Bounds="1393,164" />
+                <p:Info />
+              </Patch>
+            </Node>
+            <ControlPoint Id="118" Bounds="1384,23" />
+            <ControlPoint Id="119" Bounds="1464,23" />
+            <ControlPoint Id="120" Bounds="1389,242" />
+            <Link Id="121" Ids="118,105" />
+            <Link Id="122" Ids="119,113" />
+            <Link Id="123" Ids="107,120" />
+            <Link Id="124" Ids="116,112" />
+            <Link Id="125" Ids="115,117" />
+            <Link Id="126" Ids="101,118" IsHidden="true" />
+            <Link Id="127" Ids="102,119" IsHidden="true" />
+            <Link Id="128" Ids="120,103" IsHidden="true" />
+            <Link Id="129" Ids="109,116" IsHidden="true" />
+            <Link Id="130" Ids="117,110" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+</Document>

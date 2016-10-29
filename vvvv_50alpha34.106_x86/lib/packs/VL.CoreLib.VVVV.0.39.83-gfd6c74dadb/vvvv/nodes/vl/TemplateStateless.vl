@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.808.63974">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <Patch Id="2">
+    <Canvas Id="3" DefaultCategory="VVVV.Value">
+      <Node Bounds="237,140,515,243" Id="4">
+        <p:NodeReference>
+          <Choice Kind="OperationDefinition" Name="Operation" />
+        </p:NodeReference>
+        <Patch Id="5" Name="Template (Stateless)">
+          <ControlPoint Id="6" Bounds="252,366" />
+          <Pin Id="7" Name="Output" Kind="OutputPin" Bounds="4,4" />
+          <Link Id="8" Ids="6,7" IsHidden="true" />
+          <ControlPoint Id="9" Bounds="252,195" />
+          <Pin Id="10" Name="Input" Kind="InputPin" Bounds="4,4">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pin>
+          <Link Id="11" Ids="10,9" IsHidden="true" />
+          <Link Id="12" Ids="9,6" />
+          <Pad Id="13" Bounds="370,190" ShowValueBox="true" Value="&quot;For getting started, see:&quot;">
+            <p:ValueBoxSettings>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              <p:fontsize p:Type="Int32">13</p:fontsize>
+            </p:ValueBoxSettings>
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="14" Bounds="370,224" ShowValueBox="true" Value="&quot;https://vvvv.org/documentation/dynamic-vl-plugin-reference&quot;">
+            <p:ValueBoxSettings>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              <p:fontsize p:Type="Int32">8</p:fontsize>
+            </p:ValueBoxSettings>
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <NugetDependency Id="15" Location="VL.Core" Version="0.38.804-gc102d47f36" />
+  <NugetDependency Id="16" Location="VL.CoreLib" Version="0.38.804-gc102d47f36" />
+  <NugetDependency Id="17" Location="VL.CoreLib.VVVV" Version="0.38.1041-g7fa46df817" />
+  <p:Info Summary="Basic stateless template with one in/out" />
+</Document>

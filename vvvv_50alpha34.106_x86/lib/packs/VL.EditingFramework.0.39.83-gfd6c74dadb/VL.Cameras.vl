@@ -1,0 +1,3481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1116.34312">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.Core" Version="0.36.118" />
+  <NugetDependency Id="3" Location="VL.CoreLib" Version="0.36.118" />
+  <Patch Id="4">
+    <Canvas Id="5">
+      <Node Bounds="100,200" Id="6">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="7" Name="Camera" Category="2D.Transform" IsGeneric="true">
+          <Slot Id="8" Name="Transformation" />
+          <Slot Id="9" Name="Initialize" />
+          <Patch Id="10" Name="Create" ParticipatingElements="130,136,149,197" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="11" Name="Update" ParticipatingElements="30,36,43,48,52,56,62,67,71,77,82,88,94,100,105,110,113,119,131,137,138,139,140,170,171,172,196,198" IsGeneric="true" IsFragment="true">
+            <Pin Id="12" Name="Initial Interest" Kind="InputPin" />
+            <Pin Id="13" Name="Initial Zoom" Kind="InputPin" />
+            <Pin Id="14" Name="Minimum Zoom" Kind="InputPin" />
+            <Pin Id="15" Name="Maximum Zoom" Kind="InputPin" />
+            <Pin Id="16" Name="Camera Controls" Kind="InputPin" />
+            <Pin Id="17" Name="CameraState2d" Kind="OutputPin" />
+            <Pin Id="18" Name="Renderer Hovered" Kind="InputPin" Bounds="1049,98" />
+            <Pin Id="19" Name="Reset" Kind="InputPin" Bounds="1115,97" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="20" Position="100,200">
+            <Pad Id="21" Comment="Zoom" Bounds="787,239" ShowValueBox="true" isIOBox="true" Value="1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="22" Comment="Initialize" Bounds="42,513" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="23" Comment="Initialize" Bounds="45,404" ShowValueBox="true" isIOBox="true" Value="true">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="24" SlotId="8" Bounds="252,203" />
+            <Pad Id="25" SlotId="8" Bounds="123,452" />
+            <Pad Id="26" SlotId="8" Bounds="234,838" />
+            <Pad Id="27" SlotId="9" Bounds="804,376" />
+            <Pad Id="28" SlotId="9" Bounds="40,559" />
+            <Pad Id="29" SlotId="9" Bounds="42,450" />
+            <Node Bounds="384,228,63,13" Id="30">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Decompose" />
+              </p:NodeReference>
+              <Pin Id="31" Name="Input" Kind="InputPin" />
+              <Pin Id="32" Name="Success" Kind="OutputPin" />
+              <Pin Id="33" Name="Scale" Kind="OutputPin" />
+              <Pin Id="34" Name="Rotation" Kind="OutputPin" />
+              <Pin Id="35" Name="Translation" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="372,175,74,13" Id="36">
+              <p:NodeReference LastCategoryFullName="2D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="TransformSRT" />
+                <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="37" Name="Input" Kind="InputPin" />
+              <Pin Id="38" Name="Scaling" Kind="InputPin" />
+              <Pin Id="39" Name="Rotation" Kind="InputPin" />
+              <Pin Id="40" Name="Translation" Kind="InputPin" />
+              <Pin Id="41" Name="Enabled" Kind="InputPin" />
+              <Pin Id="42" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="296,809,63,13" Id="43">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="44" Name="Condition" Kind="InputPin" />
+              <Pin Id="45" Name="False" Kind="InputPin" />
+              <Pin Id="46" Name="True" Kind="InputPin" />
+              <Pin Id="47" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="394,139,39,13" Id="48">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="49" Name="X" Kind="InputPin" />
+              <Pin Id="50" Name="Y" Kind="InputPin" />
+              <Pin Id="51" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="312,880,35,13" Id="52">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Invert" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="53" Name="Input" Kind="InputPin" />
+              <Pin Id="54" Name="Enabled" Kind="InputPin" />
+              <Pin Id="55" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="387,588,50,13" Id="56">
+              <p:NodeReference LastCategoryFullName="2D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Scale (Center)" />
+                <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="57" Name="Input" Kind="InputPin" />
+              <Pin Id="58" Name="Scaling" Kind="InputPin" />
+              <Pin Id="59" Name="Center" Kind="InputPin" />
+              <Pin Id="60" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="61" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="436,679,52,13" Id="62">
+              <p:NodeReference LastCategoryFullName="2D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Translate" />
+                <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="63" Name="Input" Kind="InputPin" />
+              <Pin Id="64" Name="Translation" Kind="InputPin" />
+              <Pin Id="65" Name="Enabled" Kind="InputPin" />
+              <Pin Id="66" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="401,535,39,13" Id="67">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="68" Name="X" Kind="InputPin" />
+              <Pin Id="69" Name="Y" Kind="InputPin" />
+              <Pin Id="70" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="758,280,50,13" Id="71">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="72" Name="Input" Kind="InputPin" />
+              <Pin Id="73" Name="Input 2" Kind="InputPin" />
+              <Pin Id="74" Name="Input 3" Kind="InputPin" />
+              <Pin Id="75" Name="Enabled" Kind="InputPin" />
+              <Pin Id="76" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="468,345,35,13" Id="77">
+              <p:NodeReference LastCategoryFullName="Primitive.Float32" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="/" />
+                <CategoryReference Kind="Category" Name="Float32" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="78" Name="Input" Kind="InputPin" />
+              <Pin Id="79" Name="Input 2" Kind="InputPin" />
+              <Pin Id="80" Name="Enabled" Kind="InputPin" />
+              <Pin Id="81" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="468,394,50,13" Id="82">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Max" />
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="83" Name="Input" Kind="InputPin" />
+              <Pin Id="84" Name="Input 2" Kind="InputPin" />
+              <Pin Id="85" Name="Input 3" Kind="InputPin" />
+              <Pin Id="86" Name="Enabled" Kind="InputPin" />
+              <Pin Id="87" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="401,430,50,13" Id="88">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationNode" Name="Min" />
+              </p:NodeReference>
+              <Pin Id="89" Name="Input" Kind="InputPin" />
+              <Pin Id="90" Name="Input 2" Kind="InputPin" />
+              <Pin Id="91" Name="Input 3" Kind="InputPin" />
+              <Pin Id="92" Name="Enabled" Kind="InputPin" />
+              <Pin Id="93" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="399,346,50,13" Id="94">
+              <p:NodeReference LastCategoryFullName="Primitive.Float32" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="/" />
+                <CategoryReference Kind="Category" Name="Float32" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="95" Name="Input" Kind="InputPin" />
+              <Pin Id="96" Name="Input 2" Kind="InputPin" />
+              <Pin Id="97" Name="Input 3" Kind="InputPin" />
+              <Pin Id="98" Name="Enabled" Kind="InputPin" />
+              <Pin Id="99" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="277,682,57,13" Id="100">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Transform" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="101" Name="Input" Kind="InputPin" />
+              <Pin Id="102" Name="Transformation" Kind="InputPin" />
+              <Pin Id="103" Name="Enabled" Kind="InputPin" />
+              <Pin Id="104" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="276,739,57,13" Id="105">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Transform" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="106" Name="Input" Kind="InputPin" />
+              <Pin Id="107" Name="Transformation" Kind="InputPin" />
+              <Pin Id="108" Name="Enabled" Kind="InputPin" />
+              <Pin Id="109" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="405,262,36,22" Id="110">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="X" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="111" Name="Input" Kind="InputPin" />
+              <Pin Id="112" Name="X" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="832,427,50,13" Id="113">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="114" Name="Input" Kind="InputPin" />
+              <Pin Id="115" Name="Input 2" Kind="InputPin" />
+              <Pin Id="116" Name="Input 3" Kind="InputPin" />
+              <Pin Id="117" Name="Enabled" Kind="InputPin" />
+              <Pin Id="118" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="795,133,77,22" Id="119">
+              <p:NodeReference LastCategoryFullName="Editors.CameraControls2d" LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="CameraControls2d" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="120" Name="Input" Kind="InputPin" />
+              <Pin Id="121" Name="Pan Delta" Kind="OutputPin" />
+              <Pin Id="122" Name="Zoom Delta" Kind="OutputPin" />
+              <Pin Id="123" Name="Zoom Target" Kind="OutputPin" />
+              <Pin Id="124" Name="Reset" Kind="OutputPin" />
+              <Pin Id="125" Name="Idle" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="900,426,49,13" Id="126">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="127" Name="Value" Kind="InputPin" />
+              <Pin Id="128" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="129" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="130" NameOfOperation="Create" />
+              <NodeFragment Id="131" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="839,480,41,13" Id="132">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Toggle" />
+              </p:NodeReference>
+              <Pin Id="133" Name="Flip Enabled" Kind="EnabledPin" />
+              <Pin Id="134" Name="Reset Enabled" Kind="EnabledPin" />
+              <Pin Id="135" Name="Value" Kind="OutputPin" />
+              <NodeFragment Id="136" NameOfOperation="Create" />
+              <NodeFragment Id="137" NameOfOperation="Flip" />
+              <NodeFragment Id="138" NameOfOperation="Reset" />
+              <NodeFragment Id="139" NameOfOperation="GetValue" />
+            </Node>
+            <Node Bounds="282,921,95,22" Id="140">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState2d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState2d" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="141" Name="Input" Kind="InputPin" />
+              <Pin Id="142" Name="View" Kind="InputPin" />
+              <Pin Id="143" Name="Inverse View" Kind="InputPin" />
+              <Pin Id="144" Name="Zoom" Kind="InputPin" />
+              <Pin Id="145" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="146" Name="Idle" Kind="InputPin" />
+              <Pin Id="148" Name="Output" Kind="OutputPin" />
+              <Pin Id="147" Name="Enabled" Kind="EnabledPin" />
+            </Node>
+            <Node Bounds="127,416,44,22" Id="149">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Identity" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="150" Name="Identity" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="151" Bounds="384,91" />
+            <ControlPoint Id="152" Bounds="481,91" />
+            <ControlPoint Id="153" Bounds="568,91" />
+            <ControlPoint Id="154" Bounds="670,91" />
+            <ControlPoint Id="155" Bounds="798,96" />
+            <ControlPoint Id="156" Bounds="286,980" />
+            <ControlPoint Id="157" Bounds="975,93" />
+            <Node Bounds="849,200,35,13" Id="158">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CommonLanguageRuntimeLibrary">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="159" Name="Input" Kind="InputPin" />
+              <Pin Id="160" Name="Input 2" Kind="InputPin" />
+              <Pin Id="161" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="162" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="163" Bounds="1103,91" />
+          </Canvas>
+          <Link Id="164" Ids="12,151" IsHidden="true" />
+          <Link Id="165" Ids="13,152" IsHidden="true" />
+          <Link Id="166" Ids="14,153" IsHidden="true" />
+          <Link Id="167" Ids="15,154" IsHidden="true" />
+          <Link Id="168" Ids="16,155" IsHidden="true" />
+          <Link Id="169" Ids="156,17" IsHidden="true" />
+          <Link Id="170" Ids="21,73" />
+          <Link Id="171" Ids="24,31" />
+          <Link Id="172" Ids="24,102" />
+          <Link Id="173" Ids="151,40" />
+          <Link Id="174" Ids="152,49" />
+          <Link Id="175" Ids="152,50" />
+          <Link Id="176" Ids="153,78" />
+          <Link Id="177" Ids="154,95" />
+          <Link Id="178" Ids="47,26" />
+          <Link Id="179" Ids="33,111" />
+          <Link Id="180" Ids="42,46" />
+          <Link Id="181" Ids="47,53" />
+          <Link Id="182" Ids="51,38" />
+          <Link Id="183" Ids="61,101" />
+          <Link Id="184" Ids="66,106" />
+          <Link Id="185" Ids="70,58" />
+          <Link Id="186" Ids="76,84" />
+          <Link Id="187" Ids="81,83" />
+          <Link Id="188" Ids="87,90" />
+          <Link Id="189" Ids="93,68" />
+          <Link Id="190" Ids="93,69" />
+          <Link Id="191" Ids="99,89" />
+          <Link Id="192" Ids="104,107" />
+          <Link Id="193" Ids="109,45" />
+          <Link Id="194" Ids="112,79" />
+          <Link Id="195" Ids="112,96" />
+          <Link Id="196" Ids="22,28" />
+          <Link Id="197" Ids="23,29" />
+          <Link Id="198" Ids="27,114" />
+          <Link Id="199" Ids="155,120" />
+          <Link Id="200" Ids="121,64" />
+          <Link Id="201" Ids="122,72" />
+          <Link Id="202" Ids="123,59" />
+          <Link Id="203" Ids="129,134" />
+          <Link Id="204" Ids="125,127" />
+          <Link Id="205" Ids="118,133" />
+          <Link Id="206" Ids="135,44" />
+          <Link Id="207" Ids="47,142" />
+          <Link Id="208" Ids="55,143" />
+          <Link Id="209" Ids="112,144" />
+          <Link Id="210" Ids="148,156" />
+          <Link Id="211" Ids="125,146" />
+          <Link Id="212" Ids="150,25" />
+          <Link Id="213" Ids="157,145" />
+          <Link Id="214" Ids="18,157" IsHidden="true" />
+          <Link Id="215" Ids="124,159" />
+          <Link Id="216" Ids="162,115" />
+          <Link Id="217" Ids="163,160" />
+          <Link Id="218" Ids="19,163" IsHidden="true" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="450,200" Id="219">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="220" Name="Camera (Interactive)" Category="2D.Transform" IsGeneric="true">
+          <Patch Id="221" Name="Create" ParticipatingElements="239" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="222" Name="Update" ParticipatingElements="240,243" IsGeneric="true" IsFragment="true">
+            <Pin Id="223" Name="Initial Translate" Kind="InputPin" />
+            <Pin Id="224" Name="Initial Zoom" Kind="InputPin" />
+            <Pin Id="225" Name="Zoom Speed" Kind="InputPin" />
+            <Pin Id="226" Name="Minimum Zoom" Kind="InputPin" />
+            <Pin Id="227" Name="Maximum Zoom" Kind="InputPin" />
+            <Pin Id="228" Name="CameraState2d" Kind="OutputPin" />
+            <Pin Id="229" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="230" Position="450,200">
+            <Pad Id="231" Comment="Constant" Bounds="340,214" ShowValueBox="true" isIOBox="true" Value="&quot;connect mouse and keyboard below&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="301,331,65,13" Id="232">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="Camera" />
+                <FullNameCategoryReference ID="2D.Transform" />
+              </p:NodeReference>
+              <Pin Id="233" Name="Initial Interest" Kind="InputPin" />
+              <Pin Id="234" Name="Initial Zoom" Kind="InputPin" />
+              <Pin Id="235" Name="Minimum Zoom" Kind="InputPin" />
+              <Pin Id="236" Name="Maximum Zoom" Kind="InputPin" />
+              <Pin Id="237" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="238" Name="CameraState2d" Kind="OutputPin" />
+              <NodeFragment Id="239" NameOfOperation="Create" />
+              <NodeFragment Id="240" NameOfOperation="Update" />
+              <Pin Id="241" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="242" Name="Reset" Kind="InputPin" />
+            </Node>
+            <Node Bounds="325,259,80,22" Id="243">
+              <p:NodeReference LastCategoryFullName="Editors.FlatCameraControls" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="FlatCameraControls" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="244" Name="Input" Kind="InputPin" />
+              <Pin Id="245" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="246" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="247" Name="Zoom Speed" Kind="InputPin" />
+              <Pin Id="248" Name="Enabled" Kind="InputPin" />
+              <Pin Id="249" Name="CameraControls2d" Kind="InputPin" />
+              <Pin Id="250" Name="Output" Kind="OutputPin" />
+              <Pin Id="251" Name="Camera Controls" Kind="OutputPin" />
+              <Pin Id="252" Name="Idle" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="253" Bounds="190,161" />
+            <ControlPoint Id="254" Bounds="288,161" />
+            <ControlPoint Id="255" Bounds="387,161" />
+            <ControlPoint Id="256" Bounds="470,161" />
+            <ControlPoint Id="257" Bounds="565,161" />
+            <ControlPoint Id="258" Bounds="298,369" />
+            <ControlPoint Id="259" Bounds="511,369" />
+          </Canvas>
+          <Link Id="260" Ids="223,253" IsHidden="true" />
+          <Link Id="261" Ids="224,254" IsHidden="true" />
+          <Link Id="262" Ids="225,255" IsHidden="true" />
+          <Link Id="263" Ids="226,256" IsHidden="true" />
+          <Link Id="264" Ids="227,257" IsHidden="true" />
+          <Link Id="265" Ids="258,228" IsHidden="true" />
+          <Link Id="266" Ids="259,229" IsHidden="true" />
+          <Link Id="267" Ids="253,233" />
+          <Link Id="268" Ids="254,234" />
+          <Link Id="269" Ids="256,235" />
+          <Link Id="270" Ids="257,236" />
+          <Link Id="271" Ids="255,247" />
+          <Link Id="272" Ids="252,259" />
+          <Link Id="273" Ids="238,258" />
+          <Link Id="274" Ids="251,237" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="800,200" Id="275">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="276" Name="Camera" Category="3D.Transform" IsGeneric="true">
+          <Slot Id="277" Name="Latitude" />
+          <Slot Id="278" Name="Longitude" />
+          <Slot Id="279" Name="FOV" />
+          <Slot Id="280" Name="Distance" />
+          <Slot Id="281" Name="Interest" />
+          <Slot Id="282" Name="Initialize" />
+          <Patch Id="283" Name="Create" ParticipatingElements="411,419,562" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="284" Name="Update" ParticipatingElements="320,324,330,336,342,348,353,358,363,368,374,379,385,388,392,401,412,413,414,420,421,427,443,448,453,456,461,465,468,474,480,485,490,496,501,507,512,518,543,544,545,548,550,551,563,572,582,604,608,609,617,624,627" IsGeneric="true" IsFragment="true">
+            <Pin Id="285" Name="Initial Interest" Kind="InputPin" />
+            <Pin Id="286" Name="Initial Longitude" Kind="InputPin" />
+            <Pin Id="287" Name="Initial Latitude" Kind="InputPin" />
+            <Pin Id="288" Name="Initial Distance" Kind="InputPin" />
+            <Pin Id="289" Name="Initial FOV" Kind="InputPin" />
+            <Pin Id="290" Name="Near Plane" Kind="InputPin" />
+            <Pin Id="291" Name="Far Plane" Kind="InputPin" />
+            <Pin Id="292" Name="CameraControls3d" Kind="InputPin" />
+            <Pin Id="293" Name="CameraState3d" Kind="OutputPin" />
+            <Pin Id="294" Name="Renderer Hovered" Kind="InputPin" Bounds="1071,790" />
+            <Pin Id="295" Name="Reset" Kind="InputPin" Bounds="1214,44" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="296" Position="800,200">
+            <Pad Id="297" Comment="Aspect" Bounds="608,813,51,15" ShowValueBox="true" isIOBox="true" Value="1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="298" Comment="Initialize" Bounds="-22,193" ShowValueBox="true" isIOBox="true" Value="true">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="299" Comment="Initialize" Bounds="-24,303" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="300" Comment="Min" Bounds="160,400" ShowValueBox="true" isIOBox="true" Value="-0.249899909">
+              <p:ValueBoxSettings>
+                <p:precision p:Type="Int32">4</p:precision>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="301" Comment="Max" Bounds="236,399" ShowValueBox="true" isIOBox="true" Value="0.249900028">
+              <p:ValueBoxSettings>
+                <p:precision p:Type="Int32">4</p:precision>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="302" Comment="Active Viewport" Bounds="824,1092" ShowValueBox="true" isIOBox="true" Value="-1">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="303" Bounds="214,205" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="304" Comment="Scalar" Bounds="708,582" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="305" Bounds="367,149" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="306" Comment="Scalar" Bounds="875,305" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="307" SlotId="277" Bounds="124,255" />
+            <Pad Id="308" SlotId="277" Bounds="144,485" />
+            <Pad Id="309" SlotId="278" Bounds="294,255" />
+            <Pad Id="310" SlotId="278" Bounds="302,363" />
+            <Pad Id="311" SlotId="279" Bounds="415,255" />
+            <Pad Id="312" SlotId="279" Bounds="418,363" />
+            <Pad Id="313" SlotId="280" Bounds="553,255" />
+            <Pad Id="314" SlotId="280" Bounds="554,363" />
+            <Pad Id="315" SlotId="281" Bounds="747,255" />
+            <Pad Id="316" SlotId="281" Bounds="737,673" />
+            <Pad Id="317" SlotId="282" Bounds="881,194" />
+            <Pad Id="318" SlotId="282" Bounds="-27,349" />
+            <Pad Id="319" SlotId="282" Bounds="-25,240" />
+            <Node Bounds="659,1022,35,13" Id="320">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Invert" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="321" Name="Input" Kind="InputPin" />
+              <Pin Id="322" Name="Enabled" Kind="InputPin" />
+              <Pin Id="323" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="590,843,61,13" Id="324">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Perspective (FOV)" />
+              </p:NodeReference>
+              <Pin Id="325" Name="FOV" Kind="InputPin" />
+              <Pin Id="326" Name="Aspect" Kind="InputPin" />
+              <Pin Id="327" Name="Z Near" Kind="InputPin" />
+              <Pin Id="328" Name="Z Far" Kind="InputPin" />
+              <Pin Id="329" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="187,336,50,13" Id="330">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="331" Name="Input" Kind="InputPin" />
+              <Pin Id="332" Name="Input 2" Kind="InputPin" />
+              <Pin Id="333" Name="Input 3" Kind="InputPin" />
+              <Pin Id="334" Name="Enabled" Kind="InputPin" />
+              <Pin Id="335" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="324,336,50,13" Id="336">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="337" Name="Input" Kind="InputPin" />
+              <Pin Id="338" Name="Input 2" Kind="InputPin" />
+              <Pin Id="339" Name="Input 3" Kind="InputPin" />
+              <Pin Id="340" Name="Enabled" Kind="InputPin" />
+              <Pin Id="341" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="439,336,50,13" Id="342">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="343" Name="Input" Kind="InputPin" />
+              <Pin Id="344" Name="Input 2" Kind="InputPin" />
+              <Pin Id="345" Name="Input 3" Kind="InputPin" />
+              <Pin Id="346" Name="Enabled" Kind="InputPin" />
+              <Pin Id="347" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="323,301,63,13" Id="348">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="349" Name="Condition" Kind="InputPin" />
+              <Pin Id="350" Name="False" Kind="InputPin" />
+              <Pin Id="351" Name="True" Kind="InputPin" />
+              <Pin Id="352" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="187,301,63,13" Id="353">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="354" Name="Condition" Kind="InputPin" />
+              <Pin Id="355" Name="False" Kind="InputPin" />
+              <Pin Id="356" Name="True" Kind="InputPin" />
+              <Pin Id="357" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="439,301,63,13" Id="358">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="359" Name="Condition" Kind="InputPin" />
+              <Pin Id="360" Name="False" Kind="InputPin" />
+              <Pin Id="361" Name="True" Kind="InputPin" />
+              <Pin Id="362" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="572,301,63,13" Id="363">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="364" Name="Condition" Kind="InputPin" />
+              <Pin Id="365" Name="False" Kind="InputPin" />
+              <Pin Id="366" Name="True" Kind="InputPin" />
+              <Pin Id="367" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="572,336,50,13" Id="368">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="369" Name="Input" Kind="InputPin" />
+              <Pin Id="370" Name="Input 2" Kind="InputPin" />
+              <Pin Id="371" Name="Input 3" Kind="InputPin" />
+              <Pin Id="372" Name="Enabled" Kind="InputPin" />
+              <Pin Id="373" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="770,301,63,13" Id="374">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="375" Name="Condition" Kind="InputPin" />
+              <Pin Id="376" Name="False" Kind="InputPin" />
+              <Pin Id="377" Name="True" Kind="InputPin" />
+              <Pin Id="378" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="774,607,50,13" Id="379">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="380" Name="Input" Kind="InputPin" />
+              <Pin Id="381" Name="Input 2" Kind="InputPin" />
+              <Pin Id="382" Name="Input 3" Kind="InputPin" />
+              <Pin Id="383" Name="Enabled" Kind="InputPin" />
+              <Pin Id="384" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="826,374,57,22" Id="385">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <CategoryReference Kind="Category" Name="Vector2" />
+                <Choice Kind="OperationNode" Name="ToVector3" />
+              </p:NodeReference>
+              <Pin Id="386" Name="Input" Kind="InputPin" />
+              <Pin Id="387" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="589,742,87,13" Id="388">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="CyclesToRadians" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="389" Name="Input" Kind="InputPin" />
+              <Pin Id="390" Name="Enabled" Kind="InputPin" />
+              <Pin Id="391" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="833,95,95,22" Id="392">
+              <p:NodeReference LastCategoryFullName="Editors.CameraControls3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="CameraControls3d" />
+                <Choice Kind="OperationNode" Name="Split" />
+              </p:NodeReference>
+              <Pin Id="393" Name="Input" Kind="InputPin" />
+              <Pin Id="394" Name="Longitude Delta" Kind="OutputPin" />
+              <Pin Id="395" Name="Latitude Delta" Kind="OutputPin" />
+              <Pin Id="396" Name="FOV Delta" Kind="OutputPin" />
+              <Pin Id="397" Name="Interest Delta" Kind="OutputPin" />
+              <Pin Id="398" Name="Distance Delta" Kind="OutputPin" />
+              <Pin Id="399" Name="Reset" Kind="OutputPin" />
+              <Pin Id="400" Name="Idle" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="181,445,50,13" Id="401">
+              <p:NodeReference LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Clamp" />
+                <FullNameCategoryReference ID="Math.Ranges" />
+              </p:NodeReference>
+              <Pin Id="402" Name="Input" Kind="InputPin" />
+              <Pin Id="403" Name="Minimum" Kind="InputPin" />
+              <Pin Id="404" Name="Maximum" Kind="InputPin" />
+              <Pin Id="405" Name="Enabled" Kind="InputPin" />
+              <Pin Id="406" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="893,256,41,13" Id="407">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Toggle" />
+              </p:NodeReference>
+              <Pin Id="408" Name="Flip Enabled" Kind="EnabledPin" />
+              <Pin Id="409" Name="Reset Enabled" Kind="EnabledPin" />
+              <Pin Id="410" Name="Value" Kind="OutputPin" />
+              <NodeFragment Id="411" NameOfOperation="Create" />
+              <NodeFragment Id="412" NameOfOperation="Flip" />
+              <NodeFragment Id="413" NameOfOperation="Reset" />
+              <NodeFragment Id="414" NameOfOperation="GetValue" />
+            </Node>
+            <Node Bounds="950,224,49,13" Id="415">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="416" Name="Value" Kind="InputPin" />
+              <Pin Id="417" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="418" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="419" NameOfOperation="Create" />
+              <NodeFragment Id="420" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="893,223,50,13" Id="421">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="422" Name="Input" Kind="InputPin" />
+              <Pin Id="423" Name="Input 2" Kind="InputPin" />
+              <Pin Id="424" Name="Input 3" Kind="InputPin" />
+              <Pin Id="425" Name="Enabled" Kind="InputPin" />
+              <Pin Id="426" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="614,1136,200,22" Id="427">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraState3d" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="428" Name="Input" Kind="InputPin" />
+              <Pin Id="429" Name="View Projection" Kind="InputPin" />
+              <Pin Id="430" Name="View" Kind="InputPin" />
+              <Pin Id="431" Name="Projection" Kind="InputPin" />
+              <Pin Id="432" Name="Inverse View" Kind="InputPin" />
+              <Pin Id="433" Name="Position" Kind="InputPin" />
+              <Pin Id="434" Name="Interest" Kind="InputPin" />
+              <Pin Id="435" Name="FOV" Kind="InputPin" />
+              <Pin Id="436" Name="Distance" Kind="InputPin" />
+              <Pin Id="437" Name="Four Rooms" Kind="InputPin" />
+              <Pin Id="438" Name="Active Viewport" Kind="InputPin" />
+              <Pin Id="439" Name="Idle" Kind="InputPin" />
+              <Pin Id="440" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="441" Name="Enabled" Kind="InputPin" />
+              <Pin Id="442" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="320,488,39,13" Id="443">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="444" Name="X" Kind="InputPin" />
+              <Pin Id="445" Name="Y" Kind="InputPin" />
+              <Pin Id="446" Name="Z" Kind="InputPin" />
+              <Pin Id="447" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="295,523,38,13" Id="448">
+              <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Rotate" />
+                <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="449" Name="Input" Kind="InputPin" />
+              <Pin Id="450" Name="Rotation" Kind="InputPin" />
+              <Pin Id="451" Name="Enabled" Kind="InputPin" />
+              <Pin Id="452" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="183,869,61,13" Id="453">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Translation" />
+              </p:NodeReference>
+              <Pin Id="454" Name="Translation" Kind="InputPin" />
+              <Pin Id="455" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="464,827,39,13" Id="456">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="457" Name="X" Kind="InputPin" />
+              <Pin Id="458" Name="Y" Kind="InputPin" />
+              <Pin Id="459" Name="Z" Kind="InputPin" />
+              <Pin Id="460" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="295,792,35,13" Id="461">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Invert" />
+                <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="462" Name="Input" Kind="InputPin" />
+              <Pin Id="463" Name="Enabled" Kind="InputPin" />
+              <Pin Id="464" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="168,711,61,13" Id="465">
+              <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Translation" />
+              </p:NodeReference>
+              <Pin Id="466" Name="Translation" Kind="InputPin" />
+              <Pin Id="467" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="167,828,50,13" Id="468">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="469" Name="Input" Kind="InputPin" />
+              <Pin Id="470" Name="Input 2" Kind="InputPin" />
+              <Pin Id="471" Name="Input 3" Kind="InputPin" />
+              <Pin Id="472" Name="Enabled" Kind="InputPin" />
+              <Pin Id="473" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="167,897,50,13" Id="474">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="475" Name="Input" Kind="InputPin" />
+              <Pin Id="476" Name="Input 2" Kind="InputPin" />
+              <Pin Id="477" Name="Input 3" Kind="InputPin" />
+              <Pin Id="478" Name="Enabled" Kind="InputPin" />
+              <Pin Id="479" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="826,421,35,13" Id="480">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+              </p:NodeReference>
+              <Pin Id="481" Name="Input" Kind="InputPin" />
+              <Pin Id="482" Name="Scalar" Kind="InputPin" />
+              <Pin Id="483" Name="Enabled" Kind="InputPin" />
+              <Pin Id="484" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="826,570,57,13" Id="485">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Transform" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="486" Name="Input" Kind="InputPin" />
+              <Pin Id="487" Name="Transform" Kind="InputPin" />
+              <Pin Id="488" Name="Enabled" Kind="InputPin" />
+              <Pin Id="489" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="474,1020,50,13" Id="490">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="491" Name="Input" Kind="InputPin" />
+              <Pin Id="492" Name="Input 2" Kind="InputPin" />
+              <Pin Id="493" Name="Input 3" Kind="InputPin" />
+              <Pin Id="494" Name="Enabled" Kind="InputPin" />
+              <Pin Id="495" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="687,1082,57,13" Id="496">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Transform" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="497" Name="Input" Kind="InputPin" />
+              <Pin Id="498" Name="Transform" Kind="InputPin" />
+              <Pin Id="499" Name="Enabled" Kind="InputPin" />
+              <Pin Id="500" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="200,243,50,13" Id="501">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="502" Name="Input" Kind="InputPin" />
+              <Pin Id="503" Name="Input 2" Kind="InputPin" />
+              <Pin Id="504" Name="Input 3" Kind="InputPin" />
+              <Pin Id="505" Name="Enabled" Kind="InputPin" />
+              <Pin Id="506" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="693,635,35,13" Id="507">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="508" Name="Input" Kind="InputPin" />
+              <Pin Id="509" Name="Scalar" Kind="InputPin" />
+              <Pin Id="510" Name="Enabled" Kind="InputPin" />
+              <Pin Id="511" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="352,176,50,13" Id="512">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="513" Name="Input" Kind="InputPin" />
+              <Pin Id="514" Name="Input 2" Kind="InputPin" />
+              <Pin Id="515" Name="Input 3" Kind="InputPin" />
+              <Pin Id="516" Name="Enabled" Kind="InputPin" />
+              <Pin Id="517" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="857,343,35,13" Id="518">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="519" Name="Input" Kind="InputPin" />
+              <Pin Id="520" Name="Scalar" Kind="InputPin" />
+              <Pin Id="521" Name="Enabled" Kind="InputPin" />
+              <Pin Id="522" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="523" Bounds="139,48" />
+            <ControlPoint Id="524" Bounds="231,48" />
+            <ControlPoint Id="525" Bounds="332,48" />
+            <ControlPoint Id="526" Bounds="426,48" />
+            <ControlPoint Id="527" Bounds="517,48" />
+            <ControlPoint Id="528" Bounds="653,48" />
+            <ControlPoint Id="529" Bounds="737,48" />
+            <ControlPoint Id="530" Bounds="832,48" />
+            <ControlPoint Id="531" Bounds="612,1198" />
+            <ControlPoint Id="532" Bounds="1092,48" />
+            <ControlPoint Id="533" Bounds="1216,48" />
+          </Canvas>
+          <Link Id="534" Ids="285,523" IsHidden="true" />
+          <Link Id="535" Ids="286,524" IsHidden="true" />
+          <Link Id="536" Ids="287,525" IsHidden="true" />
+          <Link Id="537" Ids="288,526" IsHidden="true" />
+          <Link Id="538" Ids="289,527" IsHidden="true" />
+          <Link Id="539" Ids="290,528" IsHidden="true" />
+          <Link Id="540" Ids="291,529" IsHidden="true" />
+          <Link Id="541" Ids="292,530" IsHidden="true" />
+          <Link Id="542" Ids="531,293" IsHidden="true" />
+          <Link Id="543" Ids="297,326" />
+          <Link Id="544" Ids="309,350" />
+          <Link Id="545" Ids="307,355" />
+          <Link Id="546" Ids="525,356" />
+          <Link Id="547" Ids="526,366" />
+          <Link Id="548" Ids="311,360" />
+          <Link Id="549" Ids="527,361" />
+          <Link Id="550" Ids="313,365" />
+          <Link Id="551" Ids="315,376" />
+          <Link Id="552" Ids="528,327" />
+          <Link Id="553" Ids="529,328" />
+          <Link Id="554" Ids="341,310" />
+          <Link Id="555" Ids="347,312" />
+          <Link Id="556" Ids="373,314" />
+          <Link Id="557" Ids="384,316" />
+          <Link Id="558" Ids="352,337" />
+          <Link Id="559" Ids="357,331" />
+          <Link Id="560" Ids="362,343" />
+          <Link Id="561" Ids="367,369" />
+          <Link Id="562" Ids="298,319" />
+          <Link Id="563" Ids="299,318" />
+          <Link Id="564" Ids="347,389" />
+          <Link Id="565" Ids="530,393" />
+          <Link Id="566" Ids="396,344" />
+          <Link Id="567" Ids="398,370" />
+          <Link Id="568" Ids="335,402" />
+          <Link Id="569" Ids="406,308" />
+          <Link Id="570" Ids="400,416" />
+          <Link Id="571" Ids="418,409" />
+          <Link Id="572" Ids="317,422" />
+          <Link Id="573" Ids="399,423" />
+          <Link Id="574" Ids="426,408" />
+          <Link Id="575" Ids="410,375" />
+          <Link Id="576" Ids="410,364" />
+          <Link Id="577" Ids="410,359" />
+          <Link Id="578" Ids="410,349" />
+          <Link Id="579" Ids="410,354" />
+          <Link Id="580" Ids="391,325" />
+          <Link Id="581" Ids="442,531" />
+          <Link Id="582" Ids="302,438" />
+          <Link Id="583" Ids="400,439" />
+          <Link Id="584" Ids="447,450" />
+          <Link Id="585" Ids="460,454" />
+          <Link Id="586" Ids="452,462" />
+          <Link Id="587" Ids="373,459" />
+          <Link Id="588" Ids="406,444" />
+          <Link Id="589" Ids="467,469" />
+          <Link Id="590" Ids="464,470" />
+          <Link Id="591" Ids="455,476" />
+          <Link Id="592" Ids="473,475" />
+          <Link Id="593" Ids="341,445" />
+          <Link Id="594" Ids="387,481" />
+          <Link Id="595" Ids="373,482" />
+          <Link Id="596" Ids="484,486" />
+          <Link Id="597" Ids="452,487" />
+          <Link Id="598" Ids="489,381" />
+          <Link Id="599" Ids="329,492" />
+          <Link Id="600" Ids="479,491" />
+          <Link Id="601" Ids="479,321" />
+          <Link Id="602" Ids="323,498" />
+          <Link Id="603" Ids="523,377" />
+          <Link Id="604" Ids="303,503" />
+          <Link Id="605" Ids="394,338" />
+          <Link Id="606" Ids="395,502" />
+          <Link Id="607" Ids="506,332" />
+          <Link Id="608" Ids="300,403" />
+          <Link Id="609" Ids="301,404" />
+          <Link Id="610" Ids="495,429" />
+          <Link Id="611" Ids="479,430" />
+          <Link Id="612" Ids="329,431" />
+          <Link Id="613" Ids="323,432" />
+          <Link Id="614" Ids="500,433" />
+          <Link Id="615" Ids="347,435" />
+          <Link Id="616" Ids="373,436" />
+          <Link Id="617" Ids="304,509" />
+          <Link Id="618" Ids="384,508" />
+          <Link Id="619" Ids="511,466" />
+          <Link Id="620" Ids="384,434" />
+          <Link Id="621" Ids="378,380" />
+          <Link Id="622" Ids="524,513" />
+          <Link Id="623" Ids="517,351" />
+          <Link Id="624" Ids="305,514" />
+          <Link Id="625" Ids="397,519" />
+          <Link Id="626" Ids="522,386" />
+          <Link Id="627" Ids="306,520" />
+          <Link Id="628" Ids="532,440" />
+          <Link Id="629" Ids="294,532" IsHidden="true" />
+          <Link Id="630" Ids="533,424" />
+          <Link Id="631" Ids="295,533" IsHidden="true" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,250" Id="632">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="633" Name="Camera (Softimage)" Category="3D.Transform" IsGeneric="true">
+          <Patch Id="634" Name="Create" ParticipatingElements="657,668" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="635" Name="Update" ParticipatingElements="658,669" IsGeneric="true" IsFragment="true">
+            <Pin Id="636" Name="Initial Interest" Kind="InputPin" />
+            <Pin Id="637" Name="Initial Yaw" Kind="InputPin" />
+            <Pin Id="638" Name="Initial Pitch" Kind="InputPin" />
+            <Pin Id="639" Name="Initial Distance" Kind="InputPin" />
+            <Pin Id="640" Name="Initial FOV" Kind="InputPin" />
+            <Pin Id="641" Name="Near Plane" Kind="InputPin" />
+            <Pin Id="642" Name="Far Plane" Kind="InputPin" />
+            <Pin Id="643" Name="CameraState3d" Kind="OutputPin" />
+            <Pin Id="644" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="645" Position="100,250">
+            <Pad Id="646" Comment="Constant" Bounds="478,234" ShowValueBox="true" isIOBox="true" Value="&quot;connect mouse and keyboard below&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="282,377,110,13" Id="647">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="Camera" />
+                <FullNameCategoryReference ID="3D.Transform" />
+              </p:NodeReference>
+              <Pin Id="648" Name="Initial Interest" Kind="InputPin" />
+              <Pin Id="649" Name="Initial Longitude" Kind="InputPin" />
+              <Pin Id="650" Name="Initial Latitude" Kind="InputPin" />
+              <Pin Id="651" Name="Initial Distance" Kind="InputPin" />
+              <Pin Id="652" Name="Initial FOV" Kind="InputPin" />
+              <Pin Id="653" Name="Near Plane" Kind="InputPin" />
+              <Pin Id="654" Name="Far Plane" Kind="InputPin" />
+              <Pin Id="655" Name="CameraControls3d" Kind="InputPin" />
+              <Pin Id="656" Name="CameraState3d" Kind="OutputPin" />
+              <NodeFragment Id="657" NameOfOperation="Create" />
+              <NodeFragment Id="658" NameOfOperation="Update" />
+              <Pin Id="659" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="660" Name="Reset" Kind="InputPin" />
+            </Node>
+            <Node Bounds="450,282,130,13" Id="661">
+              <p:NodeReference LastCategoryFullName="Editors" LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="SoftimageCameraControls" />
+              </p:NodeReference>
+              <Pin Id="662" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="663" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="664" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="665" Name="Enabled" Kind="InputPin" />
+              <Pin Id="666" Name="Camera Controls" Kind="OutputPin" />
+              <Pin Id="667" Name="Idle" Kind="OutputPin" />
+              <NodeFragment Id="668" NameOfOperation="Create" />
+              <NodeFragment Id="669" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="670" Bounds="154,135" />
+            <ControlPoint Id="671" Bounds="236,135" />
+            <ControlPoint Id="672" Bounds="305,135" />
+            <ControlPoint Id="673" Bounds="380,135" />
+            <ControlPoint Id="674" Bounds="475,135" />
+            <ControlPoint Id="675" Bounds="675,135" />
+            <ControlPoint Id="676" Bounds="746,135" />
+            <ControlPoint Id="677" Bounds="279,436" />
+            <ControlPoint Id="678" Bounds="698,436" />
+          </Canvas>
+          <Link Id="679" Ids="636,670" IsHidden="true" />
+          <Link Id="680" Ids="637,671" IsHidden="true" />
+          <Link Id="681" Ids="638,672" IsHidden="true" />
+          <Link Id="682" Ids="639,673" IsHidden="true" />
+          <Link Id="683" Ids="640,674" IsHidden="true" />
+          <Link Id="684" Ids="641,675" IsHidden="true" />
+          <Link Id="685" Ids="642,676" IsHidden="true" />
+          <Link Id="686" Ids="677,643" IsHidden="true" />
+          <Link Id="687" Ids="678,644" IsHidden="true" />
+          <Link Id="688" Ids="670,648" />
+          <Link Id="689" Ids="671,649" />
+          <Link Id="690" Ids="672,650" />
+          <Link Id="691" Ids="673,651" />
+          <Link Id="692" Ids="674,652" />
+          <Link Id="693" Ids="675,653" />
+          <Link Id="694" Ids="667,678" />
+          <Link Id="695" Ids="676,654" />
+          <Link Id="696" Ids="666,655" />
+          <Link Id="697" Ids="656,677" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="450,250" Id="698">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="699" Name="Camera (Orbit)" Category="3D.Transform" IsGeneric="true">
+          <Patch Id="700" Name="Create" ParticipatingElements="736,747,753,761,767,772,778,783,822,843" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="701" Name="Update" ParticipatingElements="737,748,754,762,768,773,779,784,785,789,795,801,810,814,823,824,831,867,868,869,870" IsGeneric="true" IsFragment="true">
+            <Pin Id="702" Name="Initial Interest" Kind="InputPin" />
+            <Pin Id="703" Name="Initial Yaw" Kind="InputPin" />
+            <Pin Id="704" Name="Initial Pitch" Kind="InputPin" />
+            <Pin Id="705" Name="Initial Distance" Kind="InputPin" />
+            <Pin Id="706" Name="Initial FOV" Kind="InputPin" />
+            <Pin Id="707" Name="Mouse" Kind="InputPin" />
+            <Pin Id="708" Name="Keyboard" Kind="InputPin" />
+            <Pin Id="709" Name="Near Plane" Kind="InputPin" />
+            <Pin Id="710" Name="Far Plane" Kind="InputPin" />
+            <Pin Id="711" Name="CameraState3d" Kind="OutputPin" />
+            <Pin Id="712" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="713" Position="450,250">
+            <Pad Id="714" Comment="Key Name" Bounds="775,255,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;R&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="715" Comment="Time" Bounds="780,325" ShowValueBox="true" isIOBox="true" Value="0.5">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="716" Comment="Key Name" Bounds="813,448,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;ControlKey&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="717" Bounds="594,563" ShowValueBox="true" isIOBox="true" Value="0.099999994">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="328,672,200,13" Id="718">
+              <p:NodeReference LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="Camera" />
+                <FullNameCategoryReference ID="3D.Transform" />
+              </p:NodeReference>
+              <Pin Id="719" Name="Initial Interest" Kind="InputPin" />
+              <Pin Id="720" Name="Initial Longitude" Kind="InputPin" />
+              <Pin Id="721" Name="Initial Latitude" Kind="InputPin" />
+              <Pin Id="722" Name="Initial Distance" Kind="InputPin" />
+              <Pin Id="723" Name="Initial FOV" Kind="InputPin" />
+              <Pin Id="724" Name="Near Plane" Kind="InputPin" />
+              <Pin Id="725" Name="Far Plane" Kind="InputPin" />
+              <Pin Id="726" Name="CameraControls3d" Kind="InputPin" />
+              <Pin Id="727" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="728" Name="Reset" Kind="InputPin" />
+              <Pin Id="729" Name="CameraState3d" Kind="OutputPin" />
+              <Pin Id="730" Name="Reset" Kind="InputPin" />
+              <Pin Id="731" Name="Yaw Delta" Kind="InputPin" />
+              <Pin Id="732" Name="Pitch Delta" Kind="InputPin" />
+              <Pin Id="733" Name="Distance Delta" Kind="InputPin" />
+              <Pin Id="734" Name="Pan Delta" Kind="InputPin" />
+              <Pin Id="735" Name="FOV Delta" Kind="InputPin" />
+              <NodeFragment Id="736" NameOfOperation="Create" />
+              <NodeFragment Id="737" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="586,203,95,13" Id="738">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="739" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="740" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="741" Name="Position" Kind="OutputPin" />
+              <Pin Id="742" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="743" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="744" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="745" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="746" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="747" NameOfOperation="Create" />
+              <NodeFragment Id="748" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="715,291,53,13" Id="749">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="750" Name="Keys" Kind="InputPin" />
+              <Pin Id="751" Name="Key Name" Kind="InputPin" />
+              <Pin Id="752" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="753" NameOfOperation="Create" />
+              <NodeFragment Id="754" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="715,369,56,13" Id="755">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TimerFlop" />
+              </p:NodeReference>
+              <Pin Id="756" Name="Set" Kind="InputPin" />
+              <Pin Id="757" Name="Reset" Kind="InputPin" />
+              <Pin Id="758" Name="Time" Kind="InputPin" />
+              <Pin Id="759" Name="Value" Kind="OutputPin" />
+              <Pin Id="760" Name="Running" Kind="OutputPin" />
+              <NodeFragment Id="761" NameOfOperation="Create" />
+              <NodeFragment Id="762" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="715,413,49,13" Id="763">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="764" Name="Value" Kind="InputPin" />
+              <Pin Id="765" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="766" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="767" NameOfOperation="Create" />
+              <NodeFragment Id="768" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="715,204,76,13" Id="769">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyboardState" />
+              </p:NodeReference>
+              <Pin Id="770" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="771" Name="Pressed Keys" Kind="OutputPin" />
+              <NodeFragment Id="772" NameOfOperation="Create" />
+              <NodeFragment Id="773" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="753,484,53,13" Id="774">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="775" Name="Keys" Kind="InputPin" />
+              <Pin Id="776" Name="Key Name" Kind="InputPin" />
+              <Pin Id="777" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="778" NameOfOperation="Create" />
+              <NodeFragment Id="779" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="433,408,85,13" Id="780">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="781" Name="Value" Kind="InputPin" />
+              <Pin Id="782" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="783" NameOfOperation="Create" />
+              <NodeFragment Id="784" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="433,444,39,13" Id="785">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Vector (Split)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="786" Name="Input" Kind="InputPin" />
+              <Pin Id="787" Name="X" Kind="OutputPin" />
+              <Pin Id="788" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="411,601,50,13" Id="789">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="790" Name="Input" Kind="InputPin" />
+              <Pin Id="791" Name="Input 2" Kind="InputPin" />
+              <Pin Id="792" Name="Enabled" Kind="InputPin" />
+              <Pin Id="793" Name="Input 3" Kind="InputPin" />
+              <Pin Id="794" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="464,601,50,13" Id="795">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="796" Name="Input" Kind="InputPin" />
+              <Pin Id="797" Name="Input 2" Kind="InputPin" />
+              <Pin Id="798" Name="Enabled" Kind="InputPin" />
+              <Pin Id="799" Name="Input 3" Kind="InputPin" />
+              <Pin Id="800" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="734,606,95,13" Id="801">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="802" Name="Input" Kind="InputPin" />
+              <Pin Id="803" Name="Input 2" Kind="InputPin" />
+              <Pin Id="804" Name="Enabled" Kind="InputPin" />
+              <Pin Id="805" Name="Input 3" Kind="InputPin" />
+              <Pin Id="806" Name="Input 4" Kind="InputPin" />
+              <Pin Id="807" Name="Input 5" Kind="InputPin" />
+              <Pin Id="808" Name="Input 6" Kind="InputPin" />
+              <Pin Id="809" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="734,647,29,13" Id="810">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="811" Name="Input" Kind="InputPin" />
+              <Pin Id="812" Name="Enabled" Kind="InputPin" />
+              <Pin Id="813" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="651,601,35,13" Id="814">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="815" Name="Input" Kind="InputPin" />
+              <Pin Id="816" Name="Scalar" Kind="InputPin" />
+              <Pin Id="817" Name="Enabled" Kind="InputPin" />
+              <Pin Id="818" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="549,349,85,13" Id="819">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="820" Name="Value" Kind="InputPin" />
+              <Pin Id="821" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="822" NameOfOperation="Create" />
+              <NodeFragment Id="823" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="577,601,65,13" Id="824">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="825" Name="Input" Kind="InputPin" />
+              <Pin Id="826" Name="Input 2" Kind="InputPin" />
+              <Pin Id="827" Name="Enabled" Kind="InputPin" />
+              <Pin Id="828" Name="Input 3" Kind="InputPin" />
+              <Pin Id="829" Name="Input 4" Kind="InputPin" />
+              <Pin Id="830" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="519,600,50,13" Id="831">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="832" Name="Input" Kind="InputPin" />
+              <Pin Id="833" Name="Input 2" Kind="InputPin" />
+              <Pin Id="834" Name="Enabled" Kind="InputPin" />
+              <Pin Id="835" Name="Input 3" Kind="InputPin" />
+              <Pin Id="836" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1145,587,108,13" Id="837">
+              <p:NodeReference LastCategoryFullName="Editors" LastSymbolSource="VL.Cameras.vl">
+                <Choice Kind="ProcessNode" Name="OrbitCameraControls" />
+              </p:NodeReference>
+              <Pin Id="838" Name="Camera Controls" Kind="InputPin" />
+              <Pin Id="839" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="840" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="841" Name="Enabled" Kind="InputPin" />
+              <Pin Id="842" Name="Camera Controls" Kind="OutputPin" />
+              <NodeFragment Id="843" NameOfOperation="Create" />
+              <NodeFragment Id="844" NameOfOperation="Join" />
+            </Node>
+            <ControlPoint Id="845" Bounds="248,132" />
+            <ControlPoint Id="846" Bounds="330,132" />
+            <ControlPoint Id="847" Bounds="399,132" />
+            <ControlPoint Id="848" Bounds="474,132" />
+            <ControlPoint Id="849" Bounds="569,132" />
+            <ControlPoint Id="850" Bounds="638,132" />
+            <ControlPoint Id="851" Bounds="700,132" />
+            <ControlPoint Id="852" Bounds="769,132" />
+            <ControlPoint Id="853" Bounds="840,132" />
+            <ControlPoint Id="854" Bounds="323,719" />
+            <ControlPoint Id="855" Bounds="692,719" />
+          </Canvas>
+          <Link Id="856" Ids="702,845" IsHidden="true" />
+          <Link Id="857" Ids="703,846" IsHidden="true" />
+          <Link Id="858" Ids="704,847" IsHidden="true" />
+          <Link Id="859" Ids="705,848" IsHidden="true" />
+          <Link Id="860" Ids="706,849" IsHidden="true" />
+          <Link Id="861" Ids="707,850" IsHidden="true" />
+          <Link Id="862" Ids="708,851" IsHidden="true" />
+          <Link Id="863" Ids="709,852" IsHidden="true" />
+          <Link Id="864" Ids="710,853" IsHidden="true" />
+          <Link Id="865" Ids="854,711" IsHidden="true" />
+          <Link Id="866" Ids="855,712" IsHidden="true" />
+          <Link Id="867" Ids="714,751" />
+          <Link Id="868" Ids="715,758" />
+          <Link Id="869" Ids="716,776" />
+          <Link Id="870" Ids="717,826" />
+          <Link Id="871" Ids="845,719" />
+          <Link Id="872" Ids="846,720" />
+          <Link Id="873" Ids="847,721" />
+          <Link Id="874" Ids="848,722" />
+          <Link Id="875" Ids="849,723" />
+          <Link Id="876" Ids="850,739" />
+          <Link Id="877" Ids="851,770" />
+          <Link Id="878" Ids="852,724" />
+          <Link Id="879" Ids="853,725" />
+          <Link Id="880" Ids="813,855" />
+          <Link Id="881" Ids="740,781" />
+          <Link Id="882" Ids="743,820" />
+          <Link Id="883" Ids="744,802" />
+          <Link Id="884" Ids="744,791" />
+          <Link Id="885" Ids="744,797" />
+          <Link Id="886" Ids="745,816" />
+          <Link Id="887" Ids="746,833" />
+          <Link Id="888" Ids="752,756" />
+          <Link Id="889" Ids="759,764" />
+          <Link Id="890" Ids="765,730" />
+          <Link Id="891" Ids="771,750" />
+          <Link Id="892" Ids="771,775" />
+          <Link Id="893" Ids="777,807" />
+          <Link Id="894" Ids="777,828" />
+          <Link Id="895" Ids="782,786" />
+          <Link Id="896" Ids="782,815" />
+          <Link Id="897" Ids="787,790" />
+          <Link Id="898" Ids="788,796" />
+          <Link Id="899" Ids="788,832" />
+          <Link Id="900" Ids="794,731" />
+          <Link Id="901" Ids="800,732" />
+          <Link Id="902" Ids="809,811" />
+          <Link Id="903" Ids="818,734" />
+          <Link Id="904" Ids="821,825" />
+          <Link Id="905" Ids="830,735" />
+          <Link Id="906" Ids="836,733" />
+          <Link Id="907" Ids="745,803" />
+          <Link Id="908" Ids="746,805" />
+          <Link Id="909" Ids="752,806" />
+          <Link Id="910" Ids="729,854" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="800,250" Id="911">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="912" Name="CameraControls2d" Category="Editors" IsGeneric="true">
+          <Slot Id="913" Name="Pan Delta" />
+          <Slot Id="914" Name="Zoom Delta" />
+          <Slot Id="915" Name="Zoom Target" />
+          <Slot Id="916" Name="Reset" />
+          <Slot Id="917" Name="Not Idle" />
+          <Patch Id="918" Name="Create" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="919" Name="Update" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="920" Name="Join" ParticipatingElements="996" IsGeneric="true">
+            <Pin Id="921" Name="Pan Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="922" Name="Zoom Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="923" Name="Zoom Target" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="924" Name="Reset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="925" Name="Idle" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <p:Info />
+          </Patch>
+          <Patch Id="926" Name="Split" ParticipatingElements="1000,1038,1039,1040,1041,1061" IsGeneric="true">
+            <Pin Id="927" Name="Pan Delta" Kind="OutputPin" />
+            <Pin Id="928" Name="Zoom Delta" Kind="OutputPin" />
+            <Pin Id="929" Name="Zoom Target" Kind="OutputPin" />
+            <Pin Id="930" Name="Reset" Kind="OutputPin" />
+            <Pin Id="931" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="932" Name="Combine" ParticipatingElements="959,963,968,974,978,984,990,1044,1045,1048,1051,1054" IsGeneric="true">
+            <Pin Id="933" Name="Pan Delta" Kind="InputPin" />
+            <Pin Id="934" Name="Zoom Delta" Kind="InputPin" />
+            <Pin Id="935" Name="Zoom Target" Kind="InputPin" />
+            <Pin Id="936" Name="Reset" Kind="InputPin" />
+            <Pin Id="937" Name="Idle" Kind="InputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="938" Position="800,250">
+            <Pad Id="939" SlotId="913" Bounds="313,432" />
+            <Pad Id="940" SlotId="913" Bounds="340,724" />
+            <Pad Id="941" SlotId="913" Bounds="315,841" />
+            <Pad Id="942" SlotId="913" Bounds="317,250" />
+            <Pad Id="943" SlotId="914" Bounds="398,432" />
+            <Pad Id="944" SlotId="914" Bounds="424,724" />
+            <Pad Id="945" SlotId="914" Bounds="383,250" />
+            <Pad Id="946" SlotId="914" Bounds="399,841" />
+            <Pad Id="947" SlotId="915" Bounds="498,432" />
+            <Pad Id="948" SlotId="915" Bounds="504,724" />
+            <Pad Id="949" SlotId="915" Bounds="471,250" />
+            <Pad Id="950" SlotId="915" Bounds="488,841" />
+            <Pad Id="951" SlotId="916" Bounds="609,432" />
+            <Pad Id="952" SlotId="916" Bounds="616,726" />
+            <Pad Id="953" SlotId="916" Bounds="591,250" />
+            <Pad Id="954" SlotId="916" Bounds="596,843" />
+            <Pad Id="955" SlotId="917" Bounds="706,432" />
+            <Pad Id="956" SlotId="917" Bounds="747,679" />
+            <Pad Id="957" SlotId="917" Bounds="692,262" />
+            <Pad Id="958" SlotId="917" Bounds="692,843" />
+            <Node Bounds="695,803" Id="959">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="960" Name="Input" Kind="InputPin" />
+              <Pin Id="961" Name="Enabled" Kind="InputPin" />
+              <Pin Id="962" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="594,760" Id="963">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="964" Name="Input" Kind="InputPin" />
+              <Pin Id="965" Name="Input 2" Kind="InputPin" />
+              <Pin Id="966" Name="Enabled" Kind="InputPin" />
+              <Pin Id="967" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="692,760" Id="968">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="969" Name="Input" Kind="InputPin" />
+              <Pin Id="970" Name="Input 2" Kind="InputPin" />
+              <Pin Id="971" Name="Input 3" Kind="InputPin" />
+              <Pin Id="972" Name="Enabled" Kind="InputPin" />
+              <Pin Id="973" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="728,717" Id="974">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="975" Name="Input" Kind="InputPin" />
+              <Pin Id="976" Name="Enabled" Kind="InputPin" />
+              <Pin Id="977" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="492,761" Id="978">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="979" Name="Input" Kind="InputPin" />
+              <Pin Id="980" Name="Input 2" Kind="InputPin" />
+              <Pin Id="981" Name="Input 3" Kind="InputPin" />
+              <Pin Id="982" Name="Enabled" Kind="InputPin" />
+              <Pin Id="983" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="400,761" Id="984">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="985" Name="Input" Kind="InputPin" />
+              <Pin Id="986" Name="Input 2" Kind="InputPin" />
+              <Pin Id="987" Name="Input 3" Kind="InputPin" />
+              <Pin Id="988" Name="Enabled" Kind="InputPin" />
+              <Pin Id="989" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="316,767" Id="990">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="991" Name="Input" Kind="InputPin" />
+              <Pin Id="992" Name="Input 2" Kind="InputPin" />
+              <Pin Id="993" Name="Input 3" Kind="InputPin" />
+              <Pin Id="994" Name="Enabled" Kind="InputPin" />
+              <Pin Id="995" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="694,230" Id="996">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="997" Name="Input" Kind="InputPin" />
+              <Pin Id="998" Name="Enabled" Kind="InputPin" />
+              <Pin Id="999" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="709,461" Id="1000">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1001" Name="Input" Kind="InputPin" />
+              <Pin Id="1002" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1003" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1004" Bounds="305,617" />
+            <ControlPoint Id="1005" Bounds="317,203" />
+            <ControlPoint Id="1006" Bounds="379,617" />
+            <ControlPoint Id="1007" Bounds="384,203" />
+            <ControlPoint Id="1008" Bounds="454,617" />
+            <ControlPoint Id="1009" Bounds="474,203" />
+            <ControlPoint Id="1010" Bounds="560,617" />
+            <ControlPoint Id="1011" Bounds="591,203" />
+            <ControlPoint Id="1012" Bounds="653,617" />
+            <ControlPoint Id="1013" Bounds="692,203" />
+            <ControlPoint Id="1014" Bounds="312,489" />
+            <ControlPoint Id="1015" Bounds="396,489" />
+            <ControlPoint Id="1016" Bounds="498,489" />
+            <ControlPoint Id="1017" Bounds="610,489" />
+            <ControlPoint Id="1018" Bounds="710,489" />
+          </Canvas>
+          <Link Id="1019" Ids="921,1005" IsHidden="true" />
+          <Link Id="1020" Ids="922,1007" IsHidden="true" />
+          <Link Id="1021" Ids="923,1009" IsHidden="true" />
+          <Link Id="1022" Ids="924,1011" IsHidden="true" />
+          <Link Id="1023" Ids="925,1013" IsHidden="true" />
+          <Link Id="1024" Ids="1014,927" IsHidden="true" />
+          <Link Id="1025" Ids="1015,928" IsHidden="true" />
+          <Link Id="1026" Ids="1016,929" IsHidden="true" />
+          <Link Id="1027" Ids="1017,930" IsHidden="true" />
+          <Link Id="1028" Ids="1018,931" IsHidden="true" />
+          <Link Id="1029" Ids="933,1004" IsHidden="true" />
+          <Link Id="1030" Ids="934,1006" IsHidden="true" />
+          <Link Id="1031" Ids="935,1008" IsHidden="true" />
+          <Link Id="1032" Ids="936,1010" IsHidden="true" />
+          <Link Id="1033" Ids="937,1012" IsHidden="true" />
+          <Link Id="1034" Ids="1005,942" />
+          <Link Id="1035" Ids="1007,945" />
+          <Link Id="1036" Ids="1009,949" />
+          <Link Id="1037" Ids="1011,953" />
+          <Link Id="1038" Ids="939,1014" />
+          <Link Id="1039" Ids="943,1015" />
+          <Link Id="1040" Ids="947,1016" />
+          <Link Id="1041" Ids="951,1017" />
+          <Link Id="1042" Ids="962,958" />
+          <Link Id="1043" Ids="967,954" />
+          <Link Id="1044" Ids="952,965" />
+          <Link Id="1045" Ids="956,975" />
+          <Link Id="1046" Ids="1010,964" />
+          <Link Id="1047" Ids="1012,969" />
+          <Link Id="1048" Ids="948,980" />
+          <Link Id="1049" Ids="1008,979" />
+          <Link Id="1050" Ids="983,950" />
+          <Link Id="1051" Ids="944,986" />
+          <Link Id="1052" Ids="1006,985" />
+          <Link Id="1053" Ids="989,946" />
+          <Link Id="1054" Ids="940,992" />
+          <Link Id="1055" Ids="1004,991" />
+          <Link Id="1056" Ids="995,941" />
+          <Link Id="1057" Ids="973,960" />
+          <Link Id="1058" Ids="977,970" />
+          <Link Id="1059" Ids="1013,997" />
+          <Link Id="1060" Ids="999,957" />
+          <Link Id="1061" Ids="955,1001" />
+          <Link Id="1062" Ids="1003,1018" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,300" Id="1063">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1064" Name="CameraControls3d" Category="Editors" IsGeneric="true">
+          <Slot Id="1065" Name="Longitude Delta" />
+          <Slot Id="1066" Name="Latitude Delta" />
+          <Slot Id="1067" Name="FOV Delta" />
+          <Slot Id="1068" Name="Interest Delta" />
+          <Slot Id="1069" Name="Distance Delta" />
+          <Slot Id="1070" Name="Reset" />
+          <Slot Id="1071" Name="Not Idle" />
+          <Patch Id="1072" Name="Create" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1073" Name="Join" ParticipatingElements="1179" IsGeneric="true" IsFragment="true">
+            <Pin Id="1074" Name="Longitude Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1075" Name="Latitude Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1076" Name="FOV Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1077" Name="Interest Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1078" Name="Distance Delta" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1079" Name="Reset" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1080" Name="Idle" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <p:Info />
+          </Patch>
+          <Patch Id="1081" Name="Split" ParticipatingElements="1175,1225,1226,1227,1228,1229,1236,1260" IsGeneric="true" IsFragment="true">
+            <Pin Id="1082" Name="Longitude Delta" Kind="OutputPin" />
+            <Pin Id="1083" Name="Latitude Delta" Kind="OutputPin" />
+            <Pin Id="1084" Name="FOV Delta" Kind="OutputPin" />
+            <Pin Id="1085" Name="Interest Delta" Kind="OutputPin" />
+            <Pin Id="1086" Name="Distance Delta" Kind="OutputPin" />
+            <Pin Id="1087" Name="Reset" Kind="OutputPin" />
+            <Pin Id="1088" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="1089" Name="Combine" ParticipatingElements="1126,1132,1138,1144,1150,1156,1161,1167,1171,1238,1239,1241,1244,1246,1255,1256" IsGeneric="true" IsFragment="true">
+            <Pin Id="1090" Name="Longitude Delta" Kind="InputPin" />
+            <Pin Id="1091" Name="Latitude Delta" Kind="InputPin" />
+            <Pin Id="1092" Name="FOV Delta" Kind="InputPin" />
+            <Pin Id="1093" Name="Interest Delta" Kind="InputPin" />
+            <Pin Id="1094" Name="Distance Delta" Kind="InputPin" />
+            <Pin Id="1095" Name="Reset" Kind="InputPin" />
+            <Pin Id="1096" Name="Idle" Kind="InputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1097" Position="100,300">
+            <Pad Id="1098" SlotId="1065" Bounds="383,519" />
+            <Pad Id="1099" SlotId="1065" Bounds="398,826" />
+            <Pad Id="1100" SlotId="1065" Bounds="373,943" />
+            <Pad Id="1101" SlotId="1065" Bounds="383,314" />
+            <Pad Id="1102" SlotId="1066" Bounds="477,518" />
+            <Pad Id="1103" SlotId="1066" Bounds="482,826" />
+            <Pad Id="1104" SlotId="1066" Bounds="457,943" />
+            <Pad Id="1105" SlotId="1066" Bounds="475,316" />
+            <Pad Id="1106" SlotId="1067" Bounds="559,518" />
+            <Pad Id="1107" SlotId="1067" Bounds="562,826" />
+            <Pad Id="1108" SlotId="1067" Bounds="539,316" />
+            <Pad Id="1109" SlotId="1067" Bounds="546,943" />
+            <Pad Id="1110" SlotId="1068" Bounds="648,826" />
+            <Pad Id="1111" SlotId="1068" Bounds="659,518" />
+            <Pad Id="1112" SlotId="1068" Bounds="609,315" />
+            <Pad Id="1113" SlotId="1068" Bounds="634,943" />
+            <Pad Id="1114" SlotId="1069" Bounds="733,827" />
+            <Pad Id="1115" SlotId="1069" Bounds="757,511" />
+            <Pad Id="1116" SlotId="1069" Bounds="709,943" />
+            <Pad Id="1117" SlotId="1069" Bounds="717,322" />
+            <Pad Id="1118" SlotId="1070" Bounds="836,826" />
+            <Pad Id="1119" SlotId="1070" Bounds="850,514" />
+            <Pad Id="1120" SlotId="1070" Bounds="811,320" />
+            <Pad Id="1121" SlotId="1070" Bounds="816,943" />
+            <Pad Id="1122" SlotId="1071" Bounds="915,509" />
+            <Pad Id="1123" SlotId="1071" Bounds="967,779" />
+            <Pad Id="1124" SlotId="1071" Bounds="906,326" />
+            <Pad Id="1125" SlotId="1071" Bounds="912,943" />
+            <Node Bounds="374,869" Id="1126">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1127" Name="Input" Kind="InputPin" />
+              <Pin Id="1128" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1129" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1130" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1131" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="458,863" Id="1132">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1133" Name="Input" Kind="InputPin" />
+              <Pin Id="1134" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1135" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1136" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1137" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="550,863" Id="1138">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1139" Name="Input" Kind="InputPin" />
+              <Pin Id="1140" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1141" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1142" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1143" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="634,861" Id="1144">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1145" Name="Input" Kind="InputPin" />
+              <Pin Id="1146" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1147" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1148" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1149" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="706,862" Id="1150">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1151" Name="Input" Kind="InputPin" />
+              <Pin Id="1152" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1153" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1154" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1155" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="814,860" Id="1156">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="1157" Name="Input" Kind="InputPin" />
+              <Pin Id="1158" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1159" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1160" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="912,860" Id="1161">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1162" Name="Input" Kind="InputPin" />
+              <Pin Id="1163" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1164" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1165" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1166" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="948,817" Id="1167">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1168" Name="Input" Kind="InputPin" />
+              <Pin Id="1169" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1170" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="915,903" Id="1171">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1172" Name="Input" Kind="InputPin" />
+              <Pin Id="1173" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1174" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="926,535" Id="1175">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1176" Name="Input" Kind="InputPin" />
+              <Pin Id="1177" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1178" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="907,295" Id="1179">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1180" Name="Input" Kind="InputPin" />
+              <Pin Id="1181" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1182" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1183" Bounds="327,718" />
+            <ControlPoint Id="1184" Bounds="383,267" />
+            <ControlPoint Id="1185" Bounds="426,718" />
+            <ControlPoint Id="1186" Bounds="477,267" />
+            <ControlPoint Id="1187" Bounds="512,718" />
+            <ControlPoint Id="1188" Bounds="566,267" />
+            <ControlPoint Id="1189" Bounds="585,718" />
+            <ControlPoint Id="1190" Bounds="639,267" />
+            <ControlPoint Id="1191" Bounds="669,718" />
+            <ControlPoint Id="1192" Bounds="723,267" />
+            <ControlPoint Id="1193" Bounds="757,718" />
+            <ControlPoint Id="1194" Bounds="811,267" />
+            <ControlPoint Id="1195" Bounds="850,718" />
+            <ControlPoint Id="1196" Bounds="904,267" />
+            <ControlPoint Id="1197" Bounds="370,566" />
+            <ControlPoint Id="1198" Bounds="467,566" />
+            <ControlPoint Id="1199" Bounds="556,566" />
+            <ControlPoint Id="1200" Bounds="655,566" />
+            <ControlPoint Id="1201" Bounds="746,566" />
+            <ControlPoint Id="1202" Bounds="862,566" />
+            <ControlPoint Id="1203" Bounds="925,566" />
+          </Canvas>
+          <Link Id="1204" Ids="1074,1184" IsHidden="true" />
+          <Link Id="1205" Ids="1075,1186" IsHidden="true" />
+          <Link Id="1206" Ids="1076,1188" IsHidden="true" />
+          <Link Id="1207" Ids="1077,1190" IsHidden="true" />
+          <Link Id="1208" Ids="1078,1192" IsHidden="true" />
+          <Link Id="1209" Ids="1079,1194" IsHidden="true" />
+          <Link Id="1210" Ids="1080,1196" IsHidden="true" />
+          <Link Id="1211" Ids="1197,1082" IsHidden="true" />
+          <Link Id="1212" Ids="1198,1083" IsHidden="true" />
+          <Link Id="1213" Ids="1199,1084" IsHidden="true" />
+          <Link Id="1214" Ids="1200,1085" IsHidden="true" />
+          <Link Id="1215" Ids="1201,1086" IsHidden="true" />
+          <Link Id="1216" Ids="1202,1087" IsHidden="true" />
+          <Link Id="1217" Ids="1203,1088" IsHidden="true" />
+          <Link Id="1218" Ids="1090,1183" IsHidden="true" />
+          <Link Id="1219" Ids="1091,1185" IsHidden="true" />
+          <Link Id="1220" Ids="1092,1187" IsHidden="true" />
+          <Link Id="1221" Ids="1093,1189" IsHidden="true" />
+          <Link Id="1222" Ids="1094,1191" IsHidden="true" />
+          <Link Id="1223" Ids="1095,1193" IsHidden="true" />
+          <Link Id="1224" Ids="1096,1195" IsHidden="true" />
+          <Link Id="1225" Ids="1119,1202" />
+          <Link Id="1226" Ids="1111,1200" />
+          <Link Id="1227" Ids="1106,1199" />
+          <Link Id="1228" Ids="1102,1198" />
+          <Link Id="1229" Ids="1098,1197" />
+          <Link Id="1230" Ids="1184,1101" />
+          <Link Id="1231" Ids="1186,1105" />
+          <Link Id="1232" Ids="1188,1108" />
+          <Link Id="1233" Ids="1190,1112" />
+          <Link Id="1234" Ids="1194,1120" />
+          <Link Id="1235" Ids="1192,1117" />
+          <Link Id="1236" Ids="1115,1201" />
+          <Link Id="1237" Ids="1185,1133" />
+          <Link Id="1238" Ids="1103,1134" />
+          <Link Id="1239" Ids="1107,1140" />
+          <Link Id="1240" Ids="1187,1139" />
+          <Link Id="1241" Ids="1110,1146" />
+          <Link Id="1242" Ids="1189,1145" />
+          <Link Id="1243" Ids="1191,1151" />
+          <Link Id="1244" Ids="1114,1152" />
+          <Link Id="1245" Ids="1193,1157" />
+          <Link Id="1246" Ids="1118,1158" />
+          <Link Id="1247" Ids="1195,1162" />
+          <Link Id="1248" Ids="1131,1100" />
+          <Link Id="1249" Ids="1137,1104" />
+          <Link Id="1250" Ids="1143,1109" />
+          <Link Id="1251" Ids="1149,1113" />
+          <Link Id="1252" Ids="1155,1116" />
+          <Link Id="1253" Ids="1160,1121" />
+          <Link Id="1254" Ids="1183,1127" />
+          <Link Id="1255" Ids="1099,1128" />
+          <Link Id="1256" Ids="1123,1168" />
+          <Link Id="1257" Ids="1170,1163" />
+          <Link Id="1258" Ids="1166,1172" />
+          <Link Id="1259" Ids="1174,1125" />
+          <Link Id="1260" Ids="1122,1176" />
+          <Link Id="1261" Ids="1178,1203" />
+          <Link Id="1262" Ids="1196,1180" />
+          <Link Id="1263" Ids="1182,1124" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="450,300" Id="1264">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1265" Name="CameraState2d" Category="Editors" IsGeneric="true">
+          <Slot Id="1266" Name="View" />
+          <Slot Id="1267" Name="Inverse View" />
+          <Slot Id="1268" Name="Zoom" />
+          <Slot Id="1269" Name="Not Idle" />
+          <Patch Id="1270" Name="Create" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1271" Name="Update" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1272" Name="Join" ParticipatingElements="1289" IsGeneric="true">
+            <Pin Id="1273" Name="View" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Matrix" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1274" Name="Inverse View" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Matrix" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1275" Name="Zoom" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1276" Name="Renderer Hovered" Kind="InputPin" Bounds="814,82">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="1277" Name="Idle" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <p:Info />
+          </Patch>
+          <Patch Id="1278" Name="Split" ParticipatingElements="1293" IsGeneric="true">
+            <Pin Id="1279" Name="View" Kind="OutputPin" />
+            <Pin Id="1280" Name="Inverse View" Kind="OutputPin" />
+            <Pin Id="1281" Name="Zoom" Kind="OutputPin" />
+            <Pin Id="1282" Name="Renderer Hovered" Kind="OutputPin" Bounds="811,178" />
+            <Pin Id="1283" Name="Idle" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1284" Position="450,300">
+            <Pad Id="1285" SlotId="1266" Bounds="365,133" />
+            <Pad Id="1286" SlotId="1267" Bounds="471,131" />
+            <Pad Id="1287" SlotId="1268" Bounds="571,129" />
+            <Pad Id="1288" SlotId="1269" Bounds="651,161" Value="true">
+              <p:ValueBoxSettings>
+                <p:showvalue p:Type="Boolean">false</p:showvalue>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="653,125,29,13" Id="1289">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1290" Name="Input" Kind="InputPin" />
+              <Pin Id="1291" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1292" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="653,182,29,13" Id="1293">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1294" Name="Input" Kind="InputPin" />
+              <Pin Id="1295" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1296" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1297" Bounds="367,91" />
+            <ControlPoint Id="1298" Bounds="473,91" />
+            <ControlPoint Id="1299" Bounds="573,91" />
+            <ControlPoint Id="1300" Bounds="653,91" />
+            <ControlPoint Id="1301" Bounds="366,201" />
+            <ControlPoint Id="1302" Bounds="472,203" />
+            <ControlPoint Id="1303" Bounds="572,201" />
+            <ControlPoint Id="1304" Bounds="652,224" />
+            <Pad Id="1305" SlotId="1330" Bounds="813,159">
+              <p:ValueBoxSettings />
+            </Pad>
+            <ControlPoint Id="1306" Bounds="810,82" />
+            <ControlPoint Id="1307" Bounds="815,221" />
+            <Node Bounds="814,123,29,13" Id="1308">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CommonLanguageRuntimeLibrary">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1309" Name="Input" Kind="InputPin" />
+              <Pin Id="1310" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="1311" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="815,187,29,13" Id="1312">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CommonLanguageRuntimeLibrary">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1313" Name="Input" Kind="InputPin" />
+              <Pin Id="1314" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="1315" Name="Output" Kind="OutputPin" />
+            </Node>
+          </Canvas>
+          <Link Id="1316" Ids="1273,1297" IsHidden="true" />
+          <Link Id="1317" Ids="1274,1298" IsHidden="true" />
+          <Link Id="1318" Ids="1275,1299" IsHidden="true" />
+          <Link Id="1319" Ids="1277,1300" IsHidden="true" />
+          <Link Id="1320" Ids="1301,1279" IsHidden="true" />
+          <Link Id="1321" Ids="1302,1280" IsHidden="true" />
+          <Link Id="1322" Ids="1303,1281" IsHidden="true" />
+          <Link Id="1323" Ids="1304,1283" IsHidden="true" />
+          <Link Id="1324" Ids="1297,1285" />
+          <Link Id="1325" Ids="1298,1286" />
+          <Link Id="1326" Ids="1299,1287" />
+          <Link Id="1327" Ids="1300,1290" />
+          <Link Id="1328" Ids="1292,1288" />
+          <Link Id="1329" Ids="1296,1304" />
+          <Slot Id="1330" Name="Renderer Not Hovered" />
+          <Link Id="1331" Ids="1306,1309" />
+          <Link Id="1332" Ids="1276,1306" IsHidden="true" />
+          <Link Id="1333" Ids="1285,1301" />
+          <Link Id="1334" Ids="1286,1302" />
+          <Link Id="1335" Ids="1287,1303" />
+          <Link Id="1336" Ids="1288,1294" />
+          <Link Id="1337" Ids="1305,1313" />
+          <Link Id="1338" Ids="1307,1282" IsHidden="true" />
+          <Link Id="1339" Ids="1311,1305" />
+          <Link Id="1340" Ids="1315,1307" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="800,300" Id="1341">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="1342" Name="CameraState3d" Category="Editors">
+          <Slot Id="1343" Name="View Projection">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Matrix" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1344" Name="View">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Matrix" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1345" Name="Projection">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Matrix" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1346" Name="Inverse View">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Matrix" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1347" Name="Position">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Vector3" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1348" Name="Interest">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Vector3" />
+              <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1349" Name="FOV">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1350" Name="Distance">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1351" Name="Four Rooms">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1352" Name="Active Viewport">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Slot Id="1353" Name="Not Idle">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Patch Id="1354" Name="Create" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1355" Name="Join" ParticipatingElements="1397" IsFragment="true">
+            <Pin Id="1356" Name="View Projection" Kind="InputPin" />
+            <Pin Id="1357" Name="View" Kind="InputPin" />
+            <Pin Id="1358" Name="Projection" Kind="InputPin" />
+            <Pin Id="1359" Name="Inverse View" Kind="InputPin" />
+            <Pin Id="1360" Name="Position" Kind="InputPin" />
+            <Pin Id="1361" Name="Interest" Kind="InputPin" />
+            <Pin Id="1362" Name="FOV" Kind="InputPin" />
+            <Pin Id="1363" Name="Distance" Kind="InputPin" />
+            <Pin Id="1364" Name="Four Rooms" Kind="InputPin" />
+            <Pin Id="1365" Name="Active Viewport" Kind="InputPin" />
+            <Pin Id="1366" Name="Idle" Kind="InputPin" />
+            <Pin Id="1367" Name="Renderer Hovered" Kind="InputPin" Bounds="1368,97" />
+            <p:Info />
+          </Patch>
+          <Patch Id="1368" Name="Split" ParticipatingElements="1393" IsFragment="true">
+            <Pin Id="1369" Name="View Projection" Kind="OutputPin" />
+            <Pin Id="1370" Name="View" Kind="OutputPin" />
+            <Pin Id="1371" Name="Projection" Kind="OutputPin" />
+            <Pin Id="1372" Name="Inverse View" Kind="OutputPin" />
+            <Pin Id="1373" Name="Position" Kind="OutputPin" />
+            <Pin Id="1374" Name="Interest" Kind="OutputPin" />
+            <Pin Id="1375" Name="FOV" Kind="OutputPin" />
+            <Pin Id="1376" Name="Distance" Kind="OutputPin" />
+            <Pin Id="1377" Name="Four Rooms" Kind="OutputPin" />
+            <Pin Id="1378" Name="Active Viewport" Kind="OutputPin" />
+            <Pin Id="1379" Name="Idle" Kind="OutputPin" />
+            <Pin Id="1380" Name="Renderer Hovered" Kind="OutputPin" Bounds="1367,215" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1381" Position="800,300">
+            <Pad Id="1382" SlotId="1343" Bounds="243,164" />
+            <Pad Id="1383" SlotId="1344" Bounds="360,161" />
+            <Pad Id="1384" SlotId="1345" Bounds="442,161" />
+            <Pad Id="1385" SlotId="1346" Bounds="532,161" />
+            <Pad Id="1386" SlotId="1347" Bounds="643,161" />
+            <Pad Id="1387" SlotId="1348" Bounds="735,161" />
+            <Pad Id="1388" SlotId="1349" Bounds="827,161" />
+            <Pad Id="1389" SlotId="1350" Bounds="904,161" />
+            <Pad Id="1390" SlotId="1351" Bounds="1007,168" />
+            <Pad Id="1391" SlotId="1352" Bounds="1111,163" />
+            <Pad Id="1392" SlotId="1353" Bounds="1439,162" />
+            <Node Bounds="1443,193,29,13" Id="1393">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1394" Name="Input" Kind="InputPin" />
+              <Pin Id="1395" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1396" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1444,129,29,13" Id="1397">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1398" Name="Input" Kind="InputPin" />
+              <Pin Id="1399" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1400" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="1401" Bounds="245,96" />
+            <ControlPoint Id="1402" Bounds="362,96" />
+            <ControlPoint Id="1403" Bounds="445,96" />
+            <ControlPoint Id="1404" Bounds="533,96" />
+            <ControlPoint Id="1405" Bounds="646,96" />
+            <ControlPoint Id="1406" Bounds="737,96" />
+            <ControlPoint Id="1407" Bounds="829,96" />
+            <ControlPoint Id="1408" Bounds="906,96" />
+            <ControlPoint Id="1409" Bounds="1009,96" />
+            <ControlPoint Id="1410" Bounds="1113,96" />
+            <ControlPoint Id="1411" Bounds="1442,97" />
+            <ControlPoint Id="1412" Bounds="244,223" />
+            <ControlPoint Id="1413" Bounds="361,223" />
+            <ControlPoint Id="1414" Bounds="442,223" />
+            <ControlPoint Id="1415" Bounds="532,225" />
+            <ControlPoint Id="1416" Bounds="641,223" />
+            <ControlPoint Id="1417" Bounds="736,223" />
+            <ControlPoint Id="1418" Bounds="828,223" />
+            <ControlPoint Id="1419" Bounds="905,223" />
+            <ControlPoint Id="1420" Bounds="1008,223" />
+            <ControlPoint Id="1421" Bounds="1112,223" />
+            <ControlPoint Id="1422" Bounds="1440,224" />
+            <Pad Id="1423" SlotId="1480" Bounds="1273,164">
+              <p:ValueBoxSettings />
+            </Pad>
+            <ControlPoint Id="1424" Bounds="1274,101" />
+            <ControlPoint Id="1425" Bounds="1276,225" />
+            <Node Bounds="1274,129,29,13" Id="1426">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CommonLanguageRuntimeLibrary">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1427" Name="Input" Kind="InputPin" />
+              <Pin Id="1428" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="1429" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1272,189,29,13" Id="1430">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CommonLanguageRuntimeLibrary">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1431" Name="Input" Kind="InputPin" />
+              <Pin Id="1432" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="1433" Name="Output" Kind="OutputPin" />
+            </Node>
+          </Canvas>
+          <Link Id="1434" Ids="1356,1401" IsHidden="true" />
+          <Link Id="1435" Ids="1357,1402" IsHidden="true" />
+          <Link Id="1436" Ids="1358,1403" IsHidden="true" />
+          <Link Id="1437" Ids="1359,1404" IsHidden="true" />
+          <Link Id="1438" Ids="1360,1405" IsHidden="true" />
+          <Link Id="1439" Ids="1361,1406" IsHidden="true" />
+          <Link Id="1440" Ids="1362,1407" IsHidden="true" />
+          <Link Id="1441" Ids="1363,1408" IsHidden="true" />
+          <Link Id="1442" Ids="1364,1409" IsHidden="true" />
+          <Link Id="1443" Ids="1365,1410" IsHidden="true" />
+          <Link Id="1444" Ids="1366,1411" IsHidden="true" />
+          <Link Id="1445" Ids="1412,1369" IsHidden="true" />
+          <Link Id="1446" Ids="1413,1370" IsHidden="true" />
+          <Link Id="1447" Ids="1414,1371" IsHidden="true" />
+          <Link Id="1448" Ids="1415,1372" IsHidden="true" />
+          <Link Id="1449" Ids="1416,1373" IsHidden="true" />
+          <Link Id="1450" Ids="1417,1374" IsHidden="true" />
+          <Link Id="1451" Ids="1418,1375" IsHidden="true" />
+          <Link Id="1452" Ids="1419,1376" IsHidden="true" />
+          <Link Id="1453" Ids="1420,1377" IsHidden="true" />
+          <Link Id="1454" Ids="1421,1378" IsHidden="true" />
+          <Link Id="1455" Ids="1422,1379" IsHidden="true" />
+          <Link Id="1456" Ids="1404,1385" />
+          <Link Id="1457" Ids="1402,1383" />
+          <Link Id="1458" Ids="1401,1382" />
+          <Link Id="1459" Ids="1403,1384" />
+          <Link Id="1460" Ids="1405,1386" />
+          <Link Id="1461" Ids="1406,1387" />
+          <Link Id="1462" Ids="1407,1388" />
+          <Link Id="1463" Ids="1408,1389" />
+          <Link Id="1464" Ids="1410,1391" />
+          <Link Id="1465" Ids="1409,1390" />
+          <Link Id="1466" Ids="1396,1422" />
+          <Link Id="1467" Ids="1411,1398" />
+          <Link Id="1468" Ids="1400,1392" />
+          <Link Id="1469" Ids="1382,1412" />
+          <Link Id="1470" Ids="1383,1413" />
+          <Link Id="1471" Ids="1384,1414" />
+          <Link Id="1472" Ids="1385,1415" />
+          <Link Id="1473" Ids="1386,1416" />
+          <Link Id="1474" Ids="1387,1417" />
+          <Link Id="1475" Ids="1388,1418" />
+          <Link Id="1476" Ids="1389,1419" />
+          <Link Id="1477" Ids="1390,1420" />
+          <Link Id="1478" Ids="1391,1421" />
+          <Link Id="1479" Ids="1392,1394" />
+          <Slot Id="1480" Name="Renderer Not Hovered">
+            <p:TypeAnnotation ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Link Id="1481" Ids="1424,1427" />
+          <Link Id="1482" Ids="1367,1424" IsHidden="true" />
+          <Link Id="1483" Ids="1423,1431" />
+          <Link Id="1484" Ids="1425,1380" IsHidden="true" />
+          <Link Id="1485" Ids="1429,1423" />
+          <Link Id="1486" Ids="1433,1425" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,350" Id="1487">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1488" Name="FlatCameraControls" Category="Editors" IsGeneric="true">
+          <Patch Id="1489" Name="Create" ParticipatingElements="1512,1517,1522,1528,1555,1569,1575,1581" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1490" Name="Join" ParticipatingElements="1513,1518,1523,1529,1530,1535,1541,1546,1556,1557,1570,1576,1582,1583,1590,1594,1607,1620,1621,1622,1623,1624" IsGeneric="true" IsFragment="true">
+            <Pin Id="1491" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="1492" Name="Keyboard Device" Kind="InputPin" />
+            <Pin Id="1493" Name="Zoom Speed" Kind="InputPin" />
+            <Pin Id="1494" Name="Enabled" Kind="InputPin" />
+            <Pin Id="1495" Name="CameraControls2d" Kind="InputPin" />
+            <Pin Id="1496" Name="Camera Controls" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1497" Position="100,350">
+            <Pad Id="1498" Comment="Key Name" Bounds="353,265,40,17" ShowValueBox="true" isIOBox="true" Value="&quot;ShiftKey&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1499" Comment="Scaling" Bounds="430,288" ShowValueBox="true" isIOBox="true" Value="4.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1500" Comment="Scaling" Bounds="569,290" ShowValueBox="true" isIOBox="true" Value="10.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1501" Comment="Key Name" Bounds="770,232,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;R&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1502" Comment="Time" Bounds="775,302" ShowValueBox="true" isIOBox="true" Value="0.5">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="110,199,95,13" Id="1503">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="1504" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="1505" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="1506" Name="Position" Kind="OutputPin" />
+              <Pin Id="1507" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="1508" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="1509" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="1510" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="1511" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="1512" NameOfOperation="Create" />
+              <NodeFragment Id="1513" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="284,198,76,13" Id="1514">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyboardState" />
+              </p:NodeReference>
+              <Pin Id="1515" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="1516" Name="Pressed Keys" Kind="OutputPin" />
+              <NodeFragment Id="1517" NameOfOperation="Create" />
+              <NodeFragment Id="1518" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="109,267,85,13" Id="1519">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="1520" Name="Value" Kind="InputPin" />
+              <Pin Id="1521" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="1522" NameOfOperation="Create" />
+              <NodeFragment Id="1523" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="284,310,53,13" Id="1524">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1525" Name="Keys" Kind="InputPin" />
+              <Pin Id="1526" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1527" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1528" NameOfOperation="Create" />
+              <NodeFragment Id="1529" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="110,319,35,13" Id="1530">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1531" Name="Input" Kind="InputPin" />
+              <Pin Id="1532" Name="Scalar" Kind="InputPin" />
+              <Pin Id="1533" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1534" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="414,323,50,13" Id="1535">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="/" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1536" Name="Input" Kind="InputPin" />
+              <Pin Id="1537" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1538" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1539" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1540" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="284,352,63,13" Id="1541">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="1542" Name="Condition" Kind="InputPin" />
+              <Pin Id="1543" Name="False" Kind="InputPin" />
+              <Pin Id="1544" Name="True" Kind="InputPin" />
+              <Pin Id="1545" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="549,330,50,13" Id="1546">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="/" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1547" Name="Input" Kind="InputPin" />
+              <Pin Id="1548" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1549" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1550" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1551" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="549,266,85,13" Id="1552">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="1553" Name="Value" Kind="InputPin" />
+              <Pin Id="1554" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="1555" NameOfOperation="Create" />
+              <NodeFragment Id="1556" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="284,393,50,13" Id="1557">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1558" Name="Input" Kind="InputPin" />
+              <Pin Id="1559" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1560" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1561" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1562" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="709,346,56,13" Id="1563">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TimerFlop" />
+              </p:NodeReference>
+              <Pin Id="1564" Name="Set" Kind="InputPin" />
+              <Pin Id="1565" Name="Reset" Kind="InputPin" />
+              <Pin Id="1566" Name="Time" Kind="InputPin" />
+              <Pin Id="1567" Name="Value" Kind="OutputPin" />
+              <Pin Id="1568" Name="Running" Kind="OutputPin" />
+              <NodeFragment Id="1569" NameOfOperation="Create" />
+              <NodeFragment Id="1570" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="709,268,53,13" Id="1571">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1572" Name="Keys" Kind="InputPin" />
+              <Pin Id="1573" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1574" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1575" NameOfOperation="Create" />
+              <NodeFragment Id="1576" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="709,390,49,13" Id="1577">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="1578" Name="Value" Kind="InputPin" />
+              <Pin Id="1579" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="1580" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="1581" NameOfOperation="Create" />
+              <NodeFragment Id="1582" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="596,440,65,13" Id="1583">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="1584" Name="Input" Kind="InputPin" />
+              <Pin Id="1585" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1586" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1587" Name="Input 4" Kind="InputPin" />
+              <Pin Id="1588" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1589" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="596,471,29,13" Id="1590">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1591" Name="Input" Kind="InputPin" />
+              <Pin Id="1592" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1593" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="30,511,95,22" Id="1594">
+              <p:NodeReference LastCategoryFullName="Editors.CameraControls2d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <CategoryReference Kind="Category" Name="CameraControls2d" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationNode" Name="Combine" />
+              </p:NodeReference>
+              <Pin Id="1595" Name="Input" Kind="InputPin" />
+              <Pin Id="1596" Name="Pan Delta" Kind="InputPin" />
+              <Pin Id="1597" Name="Zoom Delta" Kind="InputPin" />
+              <Pin Id="1598" Name="Zoom Target" Kind="InputPin" />
+              <Pin Id="1599" Name="Reset" Kind="InputPin" />
+              <Pin Id="1600" Name="Idle" Kind="InputPin" />
+              <Pin Id="1601" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1602" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="156,227,50,13" Id="1603">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="1604" Name="Value" Kind="InputPin" />
+              <Pin Id="1605" Name="Result" Kind="OutputPin" />
+              <Pin Id="1606" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="1607" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="1608" Bounds="107,153" />
+            <ControlPoint Id="1609" Bounds="283,153" />
+            <ControlPoint Id="1610" Bounds="409,153" />
+            <ControlPoint Id="1611" Bounds="522,153" />
+            <ControlPoint Id="1612" Bounds="23,153" />
+            <ControlPoint Id="1613" Bounds="29,573" />
+          </Canvas>
+          <Link Id="1614" Ids="1491,1608" IsHidden="true" />
+          <Link Id="1615" Ids="1492,1609" IsHidden="true" />
+          <Link Id="1616" Ids="1493,1610" IsHidden="true" />
+          <Link Id="1617" Ids="1494,1611" IsHidden="true" />
+          <Link Id="1618" Ids="1495,1612" IsHidden="true" />
+          <Link Id="1619" Ids="1613,1496" IsHidden="true" />
+          <Link Id="1620" Ids="1498,1526" />
+          <Link Id="1621" Ids="1499,1537" />
+          <Link Id="1622" Ids="1500,1548" />
+          <Link Id="1623" Ids="1501,1573" />
+          <Link Id="1624" Ids="1502,1566" />
+          <Link Id="1625" Ids="1505,1520" />
+          <Link Id="1626" Ids="1508,1553" />
+          <Link Id="1627" Ids="1511,1532" />
+          <Link Id="1628" Ids="1516,1572" />
+          <Link Id="1629" Ids="1516,1525" />
+          <Link Id="1630" Ids="1521,1531" />
+          <Link Id="1631" Ids="1527,1542" />
+          <Link Id="1632" Ids="1540,1544" />
+          <Link Id="1633" Ids="1545,1558" />
+          <Link Id="1634" Ids="1551,1559" />
+          <Link Id="1635" Ids="1554,1547" />
+          <Link Id="1636" Ids="1567,1578" />
+          <Link Id="1637" Ids="1574,1564" />
+          <Link Id="1638" Ids="1589,1591" />
+          <Link Id="1639" Ids="1608,1504" />
+          <Link Id="1640" Ids="1609,1515" />
+          <Link Id="1641" Ids="1610,1536" />
+          <Link Id="1642" Ids="1610,1543" />
+          <Link Id="1643" Ids="1534,1596" />
+          <Link Id="1644" Ids="1562,1597" />
+          <Link Id="1645" Ids="1505,1598" />
+          <Link Id="1646" Ids="1579,1599" />
+          <Link Id="1647" Ids="1602,1613" />
+          <Link Id="1648" Ids="1611,1601" />
+          <Link Id="1649" Ids="1593,1600" />
+          <Link Id="1650" Ids="1508,1604" />
+          <Link Id="1651" Ids="1574,1586" />
+          <Link Id="1652" Ids="1511,1585" />
+          <Link Id="1653" Ids="1605,1584" />
+          <Link Id="1654" Ids="1612,1595" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="450,350" Id="1655">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1656" Name="FlatCameraState" Category="Editors" IsGeneric="true">
+          <Slot Id="1657" Name="CameraState" />
+          <Patch Id="1658" Name="Create" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1659" Name="Update" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1660" Name="Join" ParticipatingElements="1669,1688" IsGeneric="true">
+            <Pin Id="1661" Name="View" Kind="InputPin" />
+            <Pin Id="1662" Name="Inverse View" Kind="InputPin" />
+            <Pin Id="1663" Name="Zoom" Kind="InputPin" />
+            <Pin Id="1664" Name="Idle" Kind="InputPin" />
+            <Pin Id="1665" Name="CameraState2d" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1666" Position="450,350">
+            <Pad Id="1667" SlotId="1657" Bounds="533,148" />
+            <Pad Id="1668" SlotId="1657" Bounds="528,254" />
+            <Node Bounds="586,194" Id="1669">
+              <p:NodeReference LastCategoryFullName="Editors.CameraState2d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="Editors" />
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="CameraState2d" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1670" Name="Input" Kind="InputPin" />
+              <Pin Id="1671" Name="View" Kind="InputPin" />
+              <Pin Id="1672" Name="Inverse View" Kind="InputPin" />
+              <Pin Id="1673" Name="Zoom" Kind="InputPin" />
+              <Pin Id="1674" Name="Renderer Hovered" Kind="InputPin" />
+              <Pin Id="1675" Name="Idle" Kind="InputPin" />
+              <Pin Id="1676" Name="Output" Kind="OutputPin" />
+              <Pin Id="1677" Name="Enabled" Kind="EnabledPin" />
+            </Node>
+            <ControlPoint Id="1678" Bounds="599,125" />
+            <ControlPoint Id="1679" Bounds="647,125" />
+            <ControlPoint Id="1680" Bounds="730,125" />
+            <ControlPoint Id="1681" Bounds="781,125" />
+            <ControlPoint Id="1682" Bounds="583,264" />
+          </Canvas>
+          <Link Id="1683" Ids="1661,1678" IsHidden="true" />
+          <Link Id="1684" Ids="1662,1679" IsHidden="true" />
+          <Link Id="1685" Ids="1663,1680" IsHidden="true" />
+          <Link Id="1686" Ids="1664,1681" IsHidden="true" />
+          <Link Id="1687" Ids="1682,1665" IsHidden="true" />
+          <Link Id="1688" Ids="1667,1670" />
+          <Link Id="1689" Ids="1678,1671" />
+          <Link Id="1690" Ids="1679,1672" />
+          <Link Id="1691" Ids="1680,1673" />
+          <Link Id="1692" Ids="1681,1675" />
+          <Link Id="1693" Ids="1676,1682" />
+          <Link Id="1694" Ids="1676,1668" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="800,350" Id="1695">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1696" Name="OrbitCameraControls" Category="Editors" IsGeneric="true">
+          <Patch Id="1697" Name="Create" ParticipatingElements="1742,1761,1766,1780,1785,1791,1806,1817" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1698" Name="Join" ParticipatingElements="1709,1720,1729,1733,1743,1744,1751,1762,1767,1768,1781,1786,1792,1793,1797,1807,1818,1830,1831,1832,1833" IsGeneric="true" IsFragment="true">
+            <Pin Id="1699" Name="Camera Controls" Kind="InputPin" />
+            <Pin Id="1700" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="1701" Name="Keyboard Device" Kind="InputPin" />
+            <Pin Id="1702" Name="Enabled" Kind="InputPin" />
+            <Pin Id="1703" Name="Camera Controls" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1704" Position="800,350">
+            <Pad Id="1705" Bounds="483,344" ShowValueBox="true" isIOBox="true" Value="0.099999994">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1706" Comment="Key Name" Bounds="702,229,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;ControlKey&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1707" Comment="Time" Bounds="669,106" ShowValueBox="true" isIOBox="true" Value="0.5">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1708" Comment="Key Name" Bounds="664,36,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;R&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="266,511" Id="1709">
+              <p:NodeReference LastCategoryFullName="Editors.CameraControls3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="CameraControls3d" />
+                <Choice Kind="OperationNode" Name="Combine" />
+              </p:NodeReference>
+              <Pin Id="1710" Name="Input" Kind="InputPin" />
+              <Pin Id="1711" Name="Longitude Delta" Kind="InputPin" />
+              <Pin Id="1712" Name="Latitude Delta" Kind="InputPin" />
+              <Pin Id="1713" Name="FOV Delta" Kind="InputPin" />
+              <Pin Id="1714" Name="Interest Delta" Kind="InputPin" />
+              <Pin Id="1715" Name="Distance Delta" Kind="InputPin" />
+              <Pin Id="1716" Name="Reset" Kind="InputPin" />
+              <Pin Id="1717" Name="Idle" Kind="InputPin" />
+              <Pin Id="1718" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="1719" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="622,386" Id="1720">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="1721" Name="Input" Kind="InputPin" />
+              <Pin Id="1722" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1723" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1724" Name="Input 4" Kind="InputPin" />
+              <Pin Id="1725" Name="Input 5" Kind="InputPin" />
+              <Pin Id="1726" Name="Input 6" Kind="InputPin" />
+              <Pin Id="1727" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1728" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="622,427" Id="1729">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1730" Name="Input" Kind="InputPin" />
+              <Pin Id="1731" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1732" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="539,381" Id="1733">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1734" Name="Input" Kind="InputPin" />
+              <Pin Id="1735" Name="Scalar" Kind="InputPin" />
+              <Pin Id="1736" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1737" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="641,264" Id="1738">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1739" Name="Keys" Kind="InputPin" />
+              <Pin Id="1740" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1741" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1742" NameOfOperation="Create" />
+              <NodeFragment Id="1743" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="465,381" Id="1744">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1745" Name="Input" Kind="InputPin" />
+              <Pin Id="1746" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1747" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1748" Name="Input 4" Kind="InputPin" />
+              <Pin Id="1749" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1750" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="407,380" Id="1751">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1752" Name="Input" Kind="InputPin" />
+              <Pin Id="1753" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1754" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1755" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1756" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="603,193" Id="1757">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="1758" Name="Value" Kind="InputPin" />
+              <Pin Id="1759" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="1760" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="1761" NameOfOperation="Create" />
+              <NodeFragment Id="1762" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="321,188" Id="1763">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="1764" Name="Value" Kind="InputPin" />
+              <Pin Id="1765" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="1766" NameOfOperation="Create" />
+              <NodeFragment Id="1767" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="352,381" Id="1768">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1769" Name="Input" Kind="InputPin" />
+              <Pin Id="1770" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1771" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1772" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1773" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="603,149" Id="1774">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TimerFlop" />
+              </p:NodeReference>
+              <Pin Id="1775" Name="Set" Kind="InputPin" />
+              <Pin Id="1776" Name="Reset" Kind="InputPin" />
+              <Pin Id="1777" Name="Time" Kind="InputPin" />
+              <Pin Id="1778" Name="Value" Kind="OutputPin" />
+              <Pin Id="1779" Name="Running" Kind="OutputPin" />
+              <NodeFragment Id="1780" NameOfOperation="Create" />
+              <NodeFragment Id="1781" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="437,129" Id="1782">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="1783" Name="Value" Kind="InputPin" />
+              <Pin Id="1784" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="1785" NameOfOperation="Create" />
+              <NodeFragment Id="1786" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="603,71" Id="1787">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1788" Name="Keys" Kind="InputPin" />
+              <Pin Id="1789" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1790" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1791" NameOfOperation="Create" />
+              <NodeFragment Id="1792" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="321,224" Id="1793">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Vector (Split)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1794" Name="Input" Kind="InputPin" />
+              <Pin Id="1795" Name="X" Kind="OutputPin" />
+              <Pin Id="1796" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="299,381" Id="1797">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1798" Name="Input" Kind="InputPin" />
+              <Pin Id="1799" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1800" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1801" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1802" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="603,-16" Id="1803">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyboardState" />
+              </p:NodeReference>
+              <Pin Id="1804" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="1805" Name="Pressed Keys" Kind="OutputPin" />
+              <NodeFragment Id="1806" NameOfOperation="Create" />
+              <NodeFragment Id="1807" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="466,-18" Id="1808">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="1809" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="1810" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="1811" Name="Position" Kind="OutputPin" />
+              <Pin Id="1812" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="1813" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="1814" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="1815" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="1816" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="1817" NameOfOperation="Create" />
+              <NodeFragment Id="1818" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="1819" Bounds="261,-53" />
+            <ControlPoint Id="1820" Bounds="465,-53" />
+            <ControlPoint Id="1821" Bounds="608,-53" />
+            <ControlPoint Id="1822" Bounds="863,-53" />
+            <ControlPoint Id="1823" Bounds="261,574" />
+          </Canvas>
+          <Link Id="1824" Ids="1699,1819" IsHidden="true" />
+          <Link Id="1825" Ids="1700,1820" IsHidden="true" />
+          <Link Id="1826" Ids="1701,1821" IsHidden="true" />
+          <Link Id="1827" Ids="1702,1822" IsHidden="true" />
+          <Link Id="1828" Ids="1823,1703" IsHidden="true" />
+          <Link Id="1829" Ids="1719,1823" />
+          <Link Id="1830" Ids="1705,1746" />
+          <Link Id="1831" Ids="1706,1740" />
+          <Link Id="1832" Ids="1707,1777" />
+          <Link Id="1833" Ids="1708,1789" />
+          <Link Id="1834" Ids="1728,1730" />
+          <Link Id="1835" Ids="1741,1725" />
+          <Link Id="1836" Ids="1741,1747" />
+          <Link Id="1837" Ids="1765,1794" />
+          <Link Id="1838" Ids="1765,1734" />
+          <Link Id="1839" Ids="1778,1758" />
+          <Link Id="1840" Ids="1784,1745" />
+          <Link Id="1841" Ids="1790,1775" />
+          <Link Id="1842" Ids="1790,1724" />
+          <Link Id="1843" Ids="1795,1798" />
+          <Link Id="1844" Ids="1796,1769" />
+          <Link Id="1845" Ids="1796,1752" />
+          <Link Id="1846" Ids="1805,1788" />
+          <Link Id="1847" Ids="1805,1739" />
+          <Link Id="1848" Ids="1810,1764" />
+          <Link Id="1849" Ids="1813,1783" />
+          <Link Id="1850" Ids="1814,1721" />
+          <Link Id="1851" Ids="1814,1799" />
+          <Link Id="1852" Ids="1814,1770" />
+          <Link Id="1853" Ids="1815,1735" />
+          <Link Id="1854" Ids="1815,1722" />
+          <Link Id="1855" Ids="1816,1753" />
+          <Link Id="1856" Ids="1816,1723" />
+          <Link Id="1857" Ids="1820,1809" />
+          <Link Id="1858" Ids="1821,1804" />
+          <Link Id="1859" Ids="1802,1711" />
+          <Link Id="1860" Ids="1773,1712" />
+          <Link Id="1861" Ids="1756,1715" />
+          <Link Id="1862" Ids="1750,1713" />
+          <Link Id="1863" Ids="1737,1714" />
+          <Link Id="1864" Ids="1759,1716" />
+          <Link Id="1865" Ids="1822,1718" />
+          <Link Id="1866" Ids="1732,1717" />
+          <Link Id="1867" Ids="1819,1710" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="100,400" Id="1868">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="1869" Name="SoftimageCameraControls" Category="Editors" IsGeneric="true">
+          <Patch Id="1870" Name="Create" ParticipatingElements="1899,1904,1920,1926,1932,1938,1949,1957,1999,2030" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="1871" Name="Join" ParticipatingElements="1886,1900,1905,1906,1912,1921,1927,1933,1939,1940,1950,1958,1959,1965,1971,1977,1983,1989,2000,2001,2006,2013,2020,2031,2032,2033,2034,2041,2047,2053,2057,2061,2067,2073,2096,2098,2100,2102,2107,2126,2129" IsGeneric="true" IsFragment="true">
+            <Pin Id="1872" Name="Camera Controls" Kind="InputPin" />
+            <Pin Id="1873" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="1874" Name="Keyboard Device" Kind="InputPin" />
+            <Pin Id="1875" Name="Enabled" Kind="InputPin" />
+            <Pin Id="1876" Name="Camera Controls" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="1877" Position="100,400">
+            <Pad Id="1878" Comment="Key Name" Bounds="608,235,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;R&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1879" Comment="Key Name" Bounds="871,244,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;Z&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1880" Comment="Key Name" Bounds="747,243,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;O&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1881" Comment="Key Name" Bounds="1004,249,29,14" ShowValueBox="true" isIOBox="true" Value="&quot;P&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1882" Comment="Time" Bounds="613,305" ShowValueBox="true" isIOBox="true" Value="0.5">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1883" Bounds="883,411" ShowValueBox="true" isIOBox="true" Value="1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1884" Bounds="959,456" ShowValueBox="true" isIOBox="true" Value="5.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="1885" Bounds="233,529" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="517,689,29,13" Id="1886">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="1887" Name="Input" Kind="InputPin" />
+              <Pin Id="1888" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1889" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="231,164,95,13" Id="1890">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="1891" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="1892" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="1893" Name="Position" Kind="OutputPin" />
+              <Pin Id="1894" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="1895" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="1896" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="1897" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="1898" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="1899" NameOfOperation="Create" />
+              <NodeFragment Id="1900" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="548,160,76,13" Id="1901">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyboardState" />
+              </p:NodeReference>
+              <Pin Id="1902" Name="Keyboard Device" Kind="InputPin" />
+              <Pin Id="1903" Name="Pressed Keys" Kind="OutputPin" />
+              <NodeFragment Id="1904" NameOfOperation="Create" />
+              <NodeFragment Id="1905" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="187,588,50,13" Id="1906">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1907" Name="Input" Kind="InputPin" />
+              <Pin Id="1908" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1909" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1910" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1911" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="216,427,39,13" Id="1912">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Vector (Split)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1913" Name="Input" Kind="InputPin" />
+              <Pin Id="1914" Name="X" Kind="OutputPin" />
+              <Pin Id="1915" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="548,271,53,13" Id="1916">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1917" Name="Keys" Kind="InputPin" />
+              <Pin Id="1918" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1919" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1920" NameOfOperation="Create" />
+              <NodeFragment Id="1921" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="811,280,53,13" Id="1922">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1923" Name="Keys" Kind="InputPin" />
+              <Pin Id="1924" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1925" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1926" NameOfOperation="Create" />
+              <NodeFragment Id="1927" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="687,279,53,13" Id="1928">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1929" Name="Keys" Kind="InputPin" />
+              <Pin Id="1930" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1931" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1932" NameOfOperation="Create" />
+              <NodeFragment Id="1933" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="944,285,53,13" Id="1934">
+              <p:NodeReference LastCategoryFullName="IO.Keyboard" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="KeyMatch" />
+              </p:NodeReference>
+              <Pin Id="1935" Name="Keys" Kind="InputPin" />
+              <Pin Id="1936" Name="Key Name" Kind="InputPin" />
+              <Pin Id="1937" Name="Is Down" Kind="OutputPin" />
+              <NodeFragment Id="1938" NameOfOperation="Create" />
+              <NodeFragment Id="1939" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="269,588,50,13" Id="1940">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1941" Name="Input" Kind="InputPin" />
+              <Pin Id="1942" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1943" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1944" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1945" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="216,391,85,13" Id="1946">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FrameDifference" />
+              </p:NodeReference>
+              <Pin Id="1947" Name="Value" Kind="InputPin" />
+              <Pin Id="1948" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="1949" NameOfOperation="Create" />
+              <NodeFragment Id="1950" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="548,349,56,13" Id="1951">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TimerFlop" />
+              </p:NodeReference>
+              <Pin Id="1952" Name="Set" Kind="InputPin" />
+              <Pin Id="1953" Name="Reset" Kind="InputPin" />
+              <Pin Id="1954" Name="Time" Kind="InputPin" />
+              <Pin Id="1955" Name="Value" Kind="OutputPin" />
+              <Pin Id="1956" Name="Running" Kind="OutputPin" />
+              <NodeFragment Id="1957" NameOfOperation="Create" />
+              <NodeFragment Id="1958" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="1029,369,50,13" Id="1959">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1960" Name="Input" Kind="InputPin" />
+              <Pin Id="1961" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1962" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1963" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1964" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="965,369,50,13" Id="1965">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1966" Name="Input" Kind="InputPin" />
+              <Pin Id="1967" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1968" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1969" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1970" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="349,586,50,13" Id="1971">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="1972" Name="Input" Kind="InputPin" />
+              <Pin Id="1973" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1974" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1975" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1976" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="876,368,50,13" Id="1977">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1978" Name="Input" Kind="InputPin" />
+              <Pin Id="1979" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1980" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1981" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1982" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="788,369,50,13" Id="1983">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1984" Name="Input" Kind="InputPin" />
+              <Pin Id="1985" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1986" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1987" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1988" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="688,371,50,13" Id="1989">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="1990" Name="Input" Kind="InputPin" />
+              <Pin Id="1991" Name="Input 2" Kind="InputPin" />
+              <Pin Id="1992" Name="Input 3" Kind="InputPin" />
+              <Pin Id="1993" Name="Enabled" Kind="InputPin" />
+              <Pin Id="1994" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="548,393,49,13" Id="1995">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="1996" Name="Value" Kind="InputPin" />
+              <Pin Id="1997" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="1998" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="1999" NameOfOperation="Create" />
+              <NodeFragment Id="2000" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="413,587,35,13" Id="2001">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="* (Scale)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="2002" Name="Input" Kind="InputPin" />
+              <Pin Id="2003" Name="Scalar" Kind="InputPin" />
+              <Pin Id="2004" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2005" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="883,452,65,13" Id="2006">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="2007" Name="Input" Kind="InputPin" />
+              <Pin Id="2008" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2009" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2010" Name="Input 4" Kind="InputPin" />
+              <Pin Id="2011" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2012" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="942,504,65,13" Id="2013">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="*" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="2014" Name="Input" Kind="InputPin" />
+              <Pin Id="2015" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2016" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2017" Name="Input 4" Kind="InputPin" />
+              <Pin Id="2018" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2019" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="885,543,50,13" Id="2020">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="2021" Name="Input" Kind="InputPin" />
+              <Pin Id="2022" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2023" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2024" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2025" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="559,605,45,13" Id="2026">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="FlipFlop" />
+              </p:NodeReference>
+              <Pin Id="2027" Name="Set Enabled" Kind="EnabledPin" />
+              <Pin Id="2028" Name="Reset Enabled" Kind="EnabledPin" />
+              <Pin Id="2029" Name="State" Kind="OutputPin" />
+              <NodeFragment Id="2030" NameOfOperation="Create" />
+              <NodeFragment Id="2031" NameOfOperation="Set" />
+              <NodeFragment Id="2032" NameOfOperation="Reset" />
+              <NodeFragment Id="2033" NameOfOperation="GetState" />
+            </Node>
+            <Node Bounds="652,506,65,13" Id="2034">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="2035" Name="Input" Kind="InputPin" />
+              <Pin Id="2036" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2037" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2038" Name="Input 4" Kind="InputPin" />
+              <Pin Id="2039" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2040" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="372,344,50,13" Id="2041">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="2042" Name="Input" Kind="InputPin" />
+              <Pin Id="2043" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2044" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2045" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2046" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="559,572,50,13" Id="2047">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="2048" Name="Input" Kind="InputPin" />
+              <Pin Id="2049" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2050" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2051" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2052" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="616,539,29,13" Id="2053">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="2054" Name="Input" Kind="InputPin" />
+              <Pin Id="2055" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2056" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="651,538,29,13" Id="2057">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="2058" Name="Input" Kind="InputPin" />
+              <Pin Id="2059" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2060" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="616,572,50,13" Id="2061">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="2062" Name="Input" Kind="InputPin" />
+              <Pin Id="2063" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2064" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2065" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2066" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="517,645,50,13" Id="2067">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="2068" Name="Input" Kind="InputPin" />
+              <Pin Id="2069" Name="Input 2" Kind="InputPin" />
+              <Pin Id="2070" Name="Input 3" Kind="InputPin" />
+              <Pin Id="2071" Name="Enabled" Kind="InputPin" />
+              <Pin Id="2072" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="126,780,125,22" Id="2073">
+              <p:NodeReference LastCategoryFullName="Editors.CameraControls3d" LastSymbolSource="VL.Cameras.vl">
+                <CategoryReference Kind="Category" Name="CameraControls3d" />
+                <Choice Kind="OperationNode" Name="Combine" />
+              </p:NodeReference>
+              <Pin Id="2074" Name="Input" Kind="InputPin" />
+              <Pin Id="2075" Name="Longitude Delta" Kind="InputPin" />
+              <Pin Id="2076" Name="Latitude Delta" Kind="InputPin" />
+              <Pin Id="2077" Name="FOV Delta" Kind="InputPin" />
+              <Pin Id="2078" Name="Interest Delta" Kind="InputPin" />
+              <Pin Id="2079" Name="Distance Delta" Kind="InputPin" />
+              <Pin Id="2080" Name="Reset" Kind="InputPin" />
+              <Pin Id="2081" Name="Idle" Kind="InputPin" />
+              <Pin Id="2082" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="2083" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Pad Id="2084" Bounds="130,645" ShowValueBox="true" isIOBox="true" />
+            <ControlPoint Id="2085" Bounds="83,118" />
+            <ControlPoint Id="2086" Bounds="228,118" />
+            <ControlPoint Id="2087" Bounds="545,118" />
+            <ControlPoint Id="2088" Bounds="720,118" />
+            <ControlPoint Id="2089" Bounds="125,848" />
+          </Canvas>
+          <Link Id="2090" Ids="1872,2085" IsHidden="true" />
+          <Link Id="2091" Ids="1873,2086" IsHidden="true" />
+          <Link Id="2092" Ids="1874,2087" IsHidden="true" />
+          <Link Id="2093" Ids="1875,2088" IsHidden="true" />
+          <Link Id="2094" Ids="2089,1876" IsHidden="true" />
+          <Link Id="2095" Ids="1914,1907" />
+          <Link Id="2096" Ids="1878,1918" />
+          <Link Id="2097" Ids="1903,1917" />
+          <Link Id="2098" Ids="1879,1924" />
+          <Link Id="2099" Ids="1903,1923" />
+          <Link Id="2100" Ids="1880,1930" />
+          <Link Id="2101" Ids="1903,1929" />
+          <Link Id="2102" Ids="1881,1936" />
+          <Link Id="2103" Ids="1903,1935" />
+          <Link Id="2104" Ids="1915,1941" />
+          <Link Id="2105" Ids="1948,1913" />
+          <Link Id="2106" Ids="1892,1947" />
+          <Link Id="2107" Ids="1882,1954" />
+          <Link Id="2108" Ids="1919,1952" />
+          <Link Id="2109" Ids="1937,1961" />
+          <Link Id="2110" Ids="1898,1960" />
+          <Link Id="2111" Ids="1937,1967" />
+          <Link Id="2112" Ids="1896,1966" />
+          <Link Id="2113" Ids="1915,1972" />
+          <Link Id="2114" Ids="1982,1973" />
+          <Link Id="2115" Ids="1925,1979" />
+          <Link Id="2116" Ids="1898,1978" />
+          <Link Id="2117" Ids="1925,1985" />
+          <Link Id="2118" Ids="1896,1984" />
+          <Link Id="2119" Ids="1994,1908" />
+          <Link Id="2120" Ids="1931,1991" />
+          <Link Id="2121" Ids="1896,1990" />
+          <Link Id="2122" Ids="1955,1996" />
+          <Link Id="2123" Ids="1988,2003" />
+          <Link Id="2124" Ids="1948,2002" />
+          <Link Id="2125" Ids="1970,2009" />
+          <Link Id="2126" Ids="1883,2008" />
+          <Link Id="2127" Ids="1915,2007" />
+          <Link Id="2128" Ids="1964,2016" />
+          <Link Id="2129" Ids="1884,2015" />
+          <Link Id="2130" Ids="1915,2014" />
+          <Link Id="2131" Ids="2019,2022" />
+          <Link Id="2132" Ids="2012,2021" />
+          <Link Id="2133" Ids="2086,1891" />
+          <Link Id="2134" Ids="2087,1902" />
+          <Link Id="2135" Ids="1994,1942" />
+          <Link Id="2136" Ids="1896,2042" />
+          <Link Id="2137" Ids="1898,2043" />
+          <Link Id="2138" Ids="2046,2048" />
+          <Link Id="2139" Ids="2040,2049" />
+          <Link Id="2140" Ids="2052,2027" />
+          <Link Id="2141" Ids="2046,2054" />
+          <Link Id="2142" Ids="2040,2058" />
+          <Link Id="2143" Ids="2056,2062" />
+          <Link Id="2144" Ids="2060,2063" />
+          <Link Id="2145" Ids="2066,2028" />
+          <Link Id="2146" Ids="1919,2068" />
+          <Link Id="2147" Ids="2029,2069" />
+          <Link Id="2148" Ids="2072,1887" />
+          <Link Id="2149" Ids="1931,2035" />
+          <Link Id="2150" Ids="1925,2036" />
+          <Link Id="2151" Ids="1937,2037" />
+          <Link Id="2152" Ids="2085,2074" />
+          <Link Id="2153" Ids="1911,2075" />
+          <Link Id="2154" Ids="1945,2076" />
+          <Link Id="2155" Ids="1976,2077" />
+          <Link Id="2156" Ids="2025,2079" />
+          <Link Id="2157" Ids="1997,2080" />
+          <Link Id="2158" Ids="1889,2081" />
+          <Link Id="2159" Ids="2088,2082" />
+          <Link Id="2160" Ids="2083,2089" />
+          <Link Id="2161" Ids="2005,2078" />
+          <Link Id="2162" Ids="1911,2084" />
+          <p:Info />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+</Document>

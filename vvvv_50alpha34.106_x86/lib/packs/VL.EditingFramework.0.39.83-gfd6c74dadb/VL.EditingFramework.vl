@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1138.5096">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.Core" Version="0.36.118-alpha-gd4e0de94f9" />
+  <NugetDependency Id="3" Location="VL.CoreLib" Version="0.36.118-alpha-gd4e0de94f9" />
+  <NugetDependency Id="4" Location="VL.CoreLib.VVVV" Version="0.36.118-alpha-gd4e0de94f9" />
+  <DocumentDependency Id="5" Location="./VL.BezierEditor.vl" IsForward="true" />
+  <DocumentDependency Id="6" Location="./VL.Cameras.vl" IsForward="true" />
+  <DocumentDependency Id="7" Location="./VL.Editors.vl" IsForward="true" />
+  <Patch Id="8">
+    <Canvas Id="9" />
+  </Patch>
+</Document>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.39">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.Core" Version="0.35.33" />
+  <Patch Id="4">
+    <Canvas Id="5">
+      <Node Bounds="100,200" Id="6">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="7" Name="ParticleSystem" Category="VVVV.2D">
+          <Patch Id="8" Name="Create" ParticipatingElements="46,52">
+            <p:Info />
+          </Patch>
+          <Patch Id="9" Name="Update" ParticipatingElements="47,48,49,53,54,94,95">
+            <Pin Id="10" Name="Emit Point" Kind="InputPin" />
+            <Pin Id="11" Name="Emit" Kind="InputPin" />
+            <Pin Id="12" Name="Target" Kind="InputPin" />
+            <Pin Id="13" Name="Initialize Grid" Kind="InputPin" />
+            <Pin Id="14" Name="Cell Size" Kind="InputPin" />
+            <Pin Id="15" Name="Separation" Kind="InputPin" />
+            <Pin Id="16" Name="NeighbourDistance" Kind="InputPin" />
+            <Pin Id="17" Name="Lifetime" Kind="InputPin" />
+            <Pin Id="18" Name="Gravity" Kind="InputPin" />
+            <Pin Id="19" Name="Friction" Kind="InputPin" />
+            <Pin Id="20" Name="Weight Seek" Kind="InputPin" />
+            <Pin Id="21" Name="Positions" Kind="OutputPin" />
+            <Pin Id="22" Name="Headings" Kind="OutputPin" />
+            <Pin Id="23" Name="Colors" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="24" Name="Destroy">
+            <p:Info />
+          </Patch>
+          <Canvas Id="25" Position="100,200">
+            <Pad Id="26" Comment="Lower Bounds" Bounds="98,231,40,24" ShowValueBox="true" isIOBox="true" Value="new vec(-1.0,-1.0)">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="27" Comment="Upper Bounds" Bounds="209,232,40,24" ShowValueBox="true" isIOBox="true" Value="new vec(1.0,1.0)">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="335,294,200,13" Id="28">
+              <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Boids.vl">
+                <Choice Kind="ProcessNode" Name="ParticleSystem" />
+                <CategoryReference Kind="Category" Name="Main" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="29" Name="Cell Size" Kind="InputPin" />
+              <Pin Id="30" Name="InitializeGrid Enabled" Kind="EnabledPin" />
+              <Pin Id="31" Name="Lower Bounds" Kind="InputPin" />
+              <Pin Id="32" Name="Upper Bounds" Kind="InputPin" />
+              <Pin Id="33" Name="SetBounds Enabled" Kind="EnabledPin" />
+              <Pin Id="34" Name="Emit Point" Kind="InputPin" />
+              <Pin Id="35" Name="Emit" Kind="InputPin" />
+              <Pin Id="36" Name="Target" Kind="InputPin" />
+              <Pin Id="37" Name="Separation" Kind="InputPin" />
+              <Pin Id="38" Name="NeighbourDistance" Kind="InputPin" />
+              <Pin Id="39" Name="Gravity" Kind="InputPin" />
+              <Pin Id="40" Name="Friction" Kind="InputPin" />
+              <Pin Id="41" Name="Lifetime" Kind="InputPin" />
+              <Pin Id="42" Name="Weight Seek" Kind="InputPin" />
+              <Pin Id="43" Name="Positions" Kind="OutputPin" />
+              <Pin Id="44" Name="Headings" Kind="OutputPin" />
+              <Pin Id="45" Name="Colors" Kind="OutputPin" />
+              <NodeFragment Id="46" NameOfOperation="Create" />
+              <NodeFragment Id="47" NameOfOperation="InitializeGrid" />
+              <NodeFragment Id="48" NameOfOperation="SetBounds" />
+              <NodeFragment Id="49" NameOfOperation="UpdateScene" />
+            </Node>
+            <Node Bounds="376,99,58,13" Id="50">
+              <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Boids.vl">
+                <Choice Kind="ProcessNode" Name="FirstFrame" />
+              </p:NodeReference>
+              <Pin Id="51" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="52" NameOfOperation="Create" />
+              <NodeFragment Id="53" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="378,163,35,13" Id="54">
+              <p:NodeReference LastCategoryFullName="Control.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="55" Name="Input" Kind="InputPin" />
+              <Pin Id="56" Name="Input 2" Kind="InputPin" />
+              <Pin Id="57" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="58" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="59" Bounds="94,32" />
+            <ControlPoint Id="60" Bounds="208,32" />
+            <ControlPoint Id="61" Bounds="297,32" />
+            <ControlPoint Id="62" Bounds="390,32" />
+            <ControlPoint Id="63" Bounds="498,32" />
+            <ControlPoint Id="64" Bounds="578,32" />
+            <ControlPoint Id="65" Bounds="652,32" />
+            <ControlPoint Id="66" Bounds="763,32" />
+            <ControlPoint Id="67" Bounds="843,32" />
+            <ControlPoint Id="68" Bounds="901,32" />
+            <ControlPoint Id="69" Bounds="998,32" />
+            <ControlPoint Id="70" Bounds="334,338" />
+            <ControlPoint Id="71" Bounds="415,338" />
+            <ControlPoint Id="72" Bounds="497,338" />
+          </Canvas>
+          <Link Id="73" Ids="10,59" IsHidden="true" />
+          <Link Id="74" Ids="11,60" IsHidden="true" />
+          <Link Id="75" Ids="12,61" IsHidden="true" />
+          <Link Id="76" Ids="13,62" IsHidden="true" />
+          <Link Id="77" Ids="14,63" IsHidden="true" />
+          <Link Id="78" Ids="15,64" IsHidden="true" />
+          <Link Id="79" Ids="16,65" IsHidden="true" />
+          <Link Id="80" Ids="17,66" IsHidden="true" />
+          <Link Id="81" Ids="18,67" IsHidden="true" />
+          <Link Id="82" Ids="19,68" IsHidden="true" />
+          <Link Id="83" Ids="20,69" IsHidden="true" />
+          <Link Id="84" Ids="70,21" IsHidden="true" />
+          <Link Id="85" Ids="71,22" IsHidden="true" />
+          <Link Id="86" Ids="72,23" IsHidden="true" />
+          <Link Id="87" Ids="64,37" />
+          <Link Id="88" Ids="65,38" />
+          <Link Id="89" Ids="68,40" />
+          <Link Id="90" Ids="67,39" />
+          <Link Id="91" Ids="66,41" />
+          <Link Id="92" Ids="43,70" />
+          <Link Id="93" Ids="44,71" />
+          <Link Id="94" Ids="27,32" />
+          <Link Id="95" Ids="26,31" />
+          <Link Id="96" Ids="63,29" />
+          <Link Id="97" Ids="60,35" />
+          <Link Id="98" Ids="45,72" />
+          <Link Id="99" Ids="62,56" />
+          <Link Id="100" Ids="58,30" />
+          <Link Id="101" Ids="58,33" />
+          <Link Id="102" Ids="51,55" />
+          <Link Id="103" Ids="59,34" />
+          <Link Id="104" Ids="61,36" />
+          <Link Id="105" Ids="69,42" />
+          <ProcessDefinition Id="106">
+            <Fragment Id="107" Patch="8" Enabled="true" />
+            <Fragment Id="108" Patch="9" Enabled="true" />
+            <Fragment Id="109" Patch="24" />
+          </ProcessDefinition>
+          <p:Info />
+          <p:Interfaces>
+            <TypeReference ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Disposable" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </TypeReference>
+          </p:Interfaces>
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <NugetDependency Id="110" Location="VL.Boids" Version="0.39.48-g7f98a3f5cc" />
+</Document>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1137.12717">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.21" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.35.21" />
+  <NugetDependency Id="5" Location="VL.Devices.Spacemouse" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="6" Location="VL.QRCode" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="7" Location="VL.Devices.TheEyeTribe" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="8" Location="VL.Devices.Leap" Version="0.35.42-alpha-gcc18a29bac" />
+  <Patch Id="9">
+    <Canvas Id="10">
+      <Node Bounds="100,200" Id="11">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="12" Name="MultiLevin" Category="VVVV.2d">
+          <Slot Id="13" Name="Levins" />
+          <Patch Id="14" Name="Create" ParticipatingElements="32,41" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="15" Name="Update" ParticipatingElements="33,34,42,43,47,53,55,101" IsFragment="true">
+            <Pin Id="16" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="17" Name="Clear" Kind="InputPin" />
+            <Pin Id="18" Name="Points" Kind="OutputPin" />
+            <Pin Id="19" Name="Counts" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="20" Position="100,200">
+            <Pad Id="21" SlotId="13" Bounds="173,122" />
+            <Pad Id="22" SlotId="13" Bounds="181,622" />
+            <Node Bounds="356,177,95,13" Id="23">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="24" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="25" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="26" Name="Position" Kind="OutputPin" />
+              <Pin Id="27" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="28" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="29" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="30" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="31" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="32" NameOfOperation="Create" />
+              <NodeFragment Id="33" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="391,627,57,13" Id="34">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Flatten" />
+              </p:NodeReference>
+              <Pin Id="35" Name="Input" Kind="InputPin" />
+              <Pin Id="36" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="419,213,66,13" Id="37">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="38" Name="Value" Kind="InputPin" />
+              <Pin Id="39" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="40" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="41" NameOfOperation="Create" />
+              <NodeFragment Id="42" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="254,177,33,22" Id="43">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Clear" />
+                <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="44" Name="Input" Kind="InputPin" />
+              <Pin Id="45" Name="Enabled" Kind="InputPin" />
+              <Pin Id="46" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="254,317,50,22" Id="47">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Insert" />
+                <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="48" Name="Input" Kind="InputPin" />
+              <Pin Id="49" Name="Index" Kind="InputPin" />
+              <Pin Id="50" Name="Item" Kind="InputPin" />
+              <Pin Id="51" Name="Enabled" Kind="InputPin" />
+              <Pin Id="52" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="283,249,55,22" Id="53">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased.Levin" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Levin" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="54" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="306,360,223,249" Id="55">
+              <p:NodeReference>
+                <Choice Kind="ForEachLoop" Name="ForEach" />
+              </p:NodeReference>
+              <ControlPoint Id="56" Bounds="317,365" Name="Input" Alignment="Top" />
+              <ControlPoint Id="57" Bounds="320,602" Name="Output" Alignment="Bottom" />
+              <ControlPoint Id="58" Bounds="394,602" Name="Points" Alignment="Bottom" />
+              <ControlPoint Id="59" Bounds="481,602" Name="Count" Alignment="Bottom" />
+              <Patch Id="60">
+                <Pad Id="61" Bounds="403,405" ShowValueBox="true" isIOBox="true" Value="0">
+                  <p:ValueBoxSettings />
+                  <p:TypeAnnotation ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="318,497,58,22" Id="62">
+                  <p:NodeReference LastCategoryFullName="Animation.FrameBased.Levin" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Update" />
+                    <CategoryReference Kind="Category" Name="Levin" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="63" Name="Input" Kind="InputPin" />
+                  <Pin Id="64" Name="Value" Kind="InputPin" />
+                  <Pin Id="65" Name="Insert" Kind="InputPin" />
+                  <Pin Id="66" Name="Clear" Kind="InputPin" />
+                  <Pin Id="67" Name="Output" Kind="OutputPin" />
+                  <Pin Id="68" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="366,466,50,13" Id="69">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                    <Choice Kind="OperationNode" Name="AND" />
+                  </p:NodeReference>
+                  <Pin Id="70" Name="Input" Kind="InputPin" />
+                  <Pin Id="71" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="72" Name="Input 3" Kind="InputPin" />
+                  <Pin Id="73" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="74" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="365,437,20,13" Id="75">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="=" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="76" Name="Input" Kind="InputPin" />
+                  <Pin Id="77" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="78" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="480,551,37,22" Id="79">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                    <Choice Kind="OperationNode" Name="Count" />
+                    <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="80" Name="Input" Kind="InputPin" />
+                  <Pin Id="81" Name="Count" Kind="OutputPin" />
+                </Node>
+                <Patch Id="82" Name="Create" />
+                <Patch Id="83" Name="Update" ParticipatingElements="62,69,75,79">
+                  <Pin Id="84" Name="Index" Kind="InputPin" Bounds="371,362" />
+                </Patch>
+                <Patch Id="85" Name="Destroy" />
+              </Patch>
+              <Pin Id="86" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="87" Bounds="355,100" />
+            <ControlPoint Id="88" Bounds="471,100" />
+            <ControlPoint Id="89" Bounds="393,667" />
+            <ControlPoint Id="90" Bounds="486,667" />
+          </Canvas>
+          <Link Id="91" Ids="16,87" IsHidden="true" />
+          <Link Id="92" Ids="17,88" IsHidden="true" />
+          <Link Id="93" Ids="89,18" IsHidden="true" />
+          <Link Id="94" Ids="90,19" IsHidden="true" />
+          <Link Id="95" Ids="87,24" />
+          <Link Id="96" Ids="57,22" />
+          <Link Id="97" Ids="58,35" />
+          <Link Id="98" Ids="36,89" />
+          <Link Id="99" Ids="29,71" />
+          <Link Id="100" Ids="29,38" />
+          <Link Id="101" Ids="21,44" />
+          <Link Id="102" Ids="88,45" />
+          <Link Id="103" Ids="25,64" />
+          <Link Id="104" Ids="39,51" />
+          <Link Id="105" Ids="54,50" />
+          <Link Id="106" Ids="52,56" />
+          <Link Id="107" Ids="46,48" />
+          <Link Id="108" Ids="59,90" />
+          <Link Id="109" Ids="56,63" />
+          <Link Id="110" Ids="67,57" />
+          <Link Id="111" Ids="68,58" />
+          <Link Id="112" Ids="84,76" />
+          <Link Id="113" Ids="78,70" />
+          <Link Id="114" Ids="74,65" />
+          <Link Id="115" Ids="61,77" />
+          <Link Id="116" Ids="68,80" />
+          <Link Id="117" Ids="81,59" />
+          <p:Info Summary="Basic template with one in/out" />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+</Document>

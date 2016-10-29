@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VLDOCUMENT Version="0.35.0.0">
+  <DEPENDENCIES>
+    <DEPENDENCY Name="VL.CoreLib" Version="0.35.33" />
+    <DEPENDENCY Name="VL.CoreLib.VVVV" Version="0.35.33" />
+    <DEPENDENCY Name="VL.Core" Version="0.35.33" />
+  </DEPENDENCIES>
+  <PATCHES>
+    <PATCH Name="VL-Particle" Category="VVVV.Value" IsDatatype="true" IsClosed="true" IsMutable="true">
+      <BODY Name="TemplatePatch">
+        <LAYERS>
+          <LAYER Name="Create" />
+          <LAYER Name="Update" />
+        </LAYERS>
+        <INLETS>
+          <INLET Name="Transform In" Layer="Update">
+            <POSITION x="101" y="68" />
+          </INLET>
+          <INLET Name="Size" Layer="Update">
+            <POSITION x="189" y="68" />
+          </INLET>
+        </INLETS>
+        <OUTLETS>
+          <OUTLET Name="Transform Out" Layer="Update">
+            <POSITION x="96" y="448" />
+          </OUTLET>
+          <OUTLET Name="Number" Layer="Update">
+            <POSITION x="280" y="448" />
+          </OUTLET>
+          <OUTLET Name="Color" Layer="Update">
+            <POSITION x="478" y="448" />
+          </OUTLET>
+        </OUTLETS>
+        <CONSTS>
+          <CONST Name="Reset Enabled" Layer="Update">
+            <POSITION x="196" y="301" />
+            <CONFIGURATION>
+              <BUTTONMODE><![CDATA[{"type":"ButtonModeEnum","value":1}]]></BUTTONMODE>
+            </CONFIGURATION>
+            <VALUE><![CDATA[false]]></VALUE>
+          </CONST>
+          <CONST Name="Down Enabled" Layer="Update">
+            <POSITION x="339" y="308" />
+            <VALUE><![CDATA[false]]></VALUE>
+          </CONST>
+          <CONST Name="Period" Layer="Update">
+            <POSITION x="308" y="163" />
+            <VALUE><![CDATA[{"type":"Float64 [Math]","value":1.0}]]></VALUE>
+          </CONST>
+          <CONST Name="Value" Layer="Update">
+            <POSITION x="497" y="256" />
+            <VALUE><![CDATA[0.9999994]]></VALUE>
+          </CONST>
+          <CONST Name="Alpha" Layer="Update">
+            <POSITION x="572" y="255" />
+            <VALUE><![CDATA[1.0]]></VALUE>
+          </CONST>
+          <CONST Name="Increment" Layer="Update" Type="Integer32">
+            <POSITION x="192.579742" y="329.6728" />
+            <VALUE><![CDATA[1]]></VALUE>
+          </CONST>
+        </CONSTS>
+        <REGIONS />
+        <NODES>
+          <PROCESS Name="Counter">
+            <POSITION x="275" y="359" />
+            <NODEREF LastCat="Animation.FrameBased" LastFile="Basics.vl">
+              <PROCESSNODE Name="Counter" />
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="Minimum" FragmentId="SetParams" />
+              <INPUT Name="Maximum" FragmentId="SetParams" />
+              <INPUT Name="Increment" FragmentId="SetParams" />
+              <INPUT Name="Default" FragmentId="SetParams" />
+              <INPUT Name="Mode" FragmentId="SetParams" />
+              <INPUT Name="SetParams Enabled" FragmentId="SetParams" IsEnabled="true" />
+              <INPUT Name="Up Enabled" FragmentId="Up" IsEnabled="true" />
+              <INPUT Name="Down Enabled" FragmentId="Down" IsEnabled="true" />
+              <INPUT Name="Reset Enabled" FragmentId="Reset" IsEnabled="true" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Value" FragmentId="GetValue" />
+              <OUPUT Name="Underflow" FragmentId="GetValue" />
+              <OUPUT Name="Overflow" FragmentId="GetValue" />
+            </OUTPUTS>
+            <FRAGMENTS>
+              <FRAGMENT Name="Create" />
+              <FRAGMENT Name="SetParams" />
+              <FRAGMENT Name="Up" />
+              <FRAGMENT Name="Down" />
+              <FRAGMENT Name="Reset" />
+              <FRAGMENT Name="GetValue" />
+            </FRAGMENTS>
+          </PROCESS>
+          <PROCESS Name="LFO">
+            <POSITION x="288" y="213" />
+            <NODEREF LastCat="Animation" LastFile="Basics.vl">
+              <PROCESSNODE Name="LFO" />
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="Time" FragmentId="Create" />
+              <INPUT Name="Period" FragmentId="Update" />
+              <INPUT Name="Time#1" FragmentId="Update" />
+              <INPUT Name="Pause" FragmentId="Update" />
+              <INPUT Name="Reset" FragmentId="Update" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Phase" FragmentId="Update" />
+              <OUPUT Name="New Cycle" FragmentId="Update" />
+              <OUPUT Name="Cycles" FragmentId="Update" />
+            </OUTPUTS>
+            <FRAGMENTS>
+              <FRAGMENT Name="Create" />
+              <FRAGMENT Name="Update" />
+            </FRAGMENTS>
+          </PROCESS>
+          <OPERATION Name="ToString" Layer="Update">
+            <POSITION x="282.4837" y="414.490417" />
+            <NODEREF LastCat="Primitive.Object" LastFile="VL.CoreLib.dll">
+              <OPERATIONNODE Name="ToString" />
+              <CATEGORY Name="Object" IsDirectParent="true" />
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="Input" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Result" />
+            </OUTPUTS>
+          </OPERATION>
+          <OPERATION Name="UniformScale" Layer="Update">
+            <POSITION x="100" y="284" />
+            <NODEREF LastCat="3D.Transform" LastFile="Basics.vl">
+              <OPERATIONNODE Name="UniformScale" />
+              <CATEGORY Name="Transform" IsDirectParent="true">
+                <CATEGORY Name="3D" IsDirectParent="true" />
+              </CATEGORY>
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="Input" />
+              <INPUT Name="Scaling" />
+              <INPUT Name="Enabled" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Output" />
+            </OUTPUTS>
+          </OPERATION>
+          <OPERATION Name="Random" Layer="Create">
+            <POSITION x="480" y="201" />
+            <NODEREF LastCat="Adaptive" LastFile="VL.CoreLib.dll">
+              <OPERATIONNODE Name="Random" />
+              <CATEGORY Name="Adaptive" IsDirectParent="true" />
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="From" />
+              <INPUT Name="To" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Output" />
+            </OUTPUTS>
+          </OPERATION>
+          <OPERATION Name="FromHSV" Layer="Update">
+            <POSITION x="479" y="316" />
+            <NODEREF LastCat="Color.RGBA" LastFile="VL.CoreLib.dll">
+              <OPERATIONNODE Name="FromHSV" Version="Floats" />
+            </NODEREF>
+            <INPUTS>
+              <INPUT Name="Hue" />
+              <INPUT Name="Saturation" />
+              <INPUT Name="Value" />
+              <INPUT Name="Alpha" />
+            </INPUTS>
+            <OUTPUTS>
+              <OUPUT Name="Result" />
+            </OUTPUTS>
+          </OPERATION>
+        </NODES>
+        <LINKS>
+          <Link source="Nodes/LFO/Outputs/New Cycle" sink="Nodes/Counter/Inputs/Up Enabled" />
+          <Link source="Constants/Reset Enabled" sink="Nodes/Counter/Inputs/Reset Enabled" />
+          <Link source="Constants/Down Enabled" sink="Nodes/Counter/Inputs/Down Enabled" />
+          <Link source="Constants/Period" sink="Nodes/LFO/Inputs/Period" />
+          <Link source="Nodes/Counter/Outputs/Value" sink="Nodes/ToString/Inputs/Input" />
+          <Link source="Nodes/UniformScale/Outputs/Output" sink="Outlets/Transform Out" />
+          <Link source="Inlets/Transform In" sink="Nodes/UniformScale/Inputs/Input" />
+          <Link source="Nodes/Random/Outputs/Output" sink="Nodes/FromHSV/Inputs/Hue" />
+          <Link source="Constants/Value" sink="Nodes/FromHSV/Inputs/Value" />
+          <Link source="Constants/Value" sink="Nodes/FromHSV/Inputs/Saturation" />
+          <Link source="Constants/Alpha" sink="Nodes/FromHSV/Inputs/Alpha" />
+          <Link source="Nodes/FromHSV/Outputs/Result" sink="Outlets/Color" />
+          <Link source="Inlets/Size" sink="Nodes/UniformScale/Inputs/Scaling" />
+          <Link source="Nodes/ToString/Outputs/Result" sink="Outlets/Number" />
+          <Link source="Constants/Increment" sink="Nodes/Counter/Inputs/Increment" />
+        </LINKS>
+      </BODY>
+    </PATCH>
+  </PATCHES>
+</VLDOCUMENT>

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1138.5096">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.Core" Version="0.35.33" />
+  <NugetDependency Id="4" Location="VL.CoreLib.VVVV" Version="0.35.33" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Node Bounds="100,200" Id="7">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="8" Name="Particle" Category="Main" IsGeneric="true">
+          <Slot Id="9" Name="Position" />
+          <Slot Id="10" Name="Velocity" />
+          <Patch Id="11" Name="Create" IsGeneric="true" IsFragment="true">
+            <Pin Id="12" Name="Position" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="13" Name="Speed" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <p:Info />
+          </Patch>
+          <Patch Id="14" Name="Update" ParticipatingElements="23,34,39,40" IsGeneric="true" IsFragment="true">
+            <Pin Id="15" Name="Position" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="16" Position="100,200">
+            <Pad Id="17" SlotId="9" Bounds="475,13" />
+            <Pad Id="18" SlotId="9" Bounds="226,38" />
+            <Pad Id="19" SlotId="9" Bounds="473,144" />
+            <Pad Id="20" SlotId="10" Bounds="564,17" />
+            <Pad Id="21" SlotId="10" Bounds="325,37" />
+            <Pad Id="22" SlotId="10" Bounds="569,138" />
+            <Node Bounds="513,78,35,13" Id="23">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                <Choice Kind="OperationNode" Name="+" />
+                <CategoryReference Kind="Category" Name="Adaptive" />
+              </p:NodeReference>
+              <Pin Id="24" Name="Input" Kind="InputPin" />
+              <Pin Id="25" Name="Input 2" Kind="InputPin" />
+              <Pin Id="26" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="27" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="28" Bounds="228,4" />
+            <ControlPoint Id="29" Bounds="324,4" />
+            <ControlPoint Id="30" Bounds="510,210" />
+          </Canvas>
+          <Link Id="31" Ids="12,28" IsHidden="true" />
+          <Link Id="32" Ids="13,29" IsHidden="true" />
+          <Link Id="33" Ids="30,15" IsHidden="true" />
+          <Link Id="34" Ids="17,24" />
+          <Link Id="35" Ids="28,18" />
+          <Link Id="36" Ids="29,21" />
+          <Link Id="37" Ids="27,19" />
+          <Link Id="38" Ids="27,30" />
+          <Link Id="39" Ids="20,22" />
+          <Link Id="40" Ids="20,25" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="450,200" Id="41">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="42" Name="VL-ParticleSystem" Category="VVVV.2D">
+          <Slot Id="43" Name="Particles" />
+          <Patch Id="44" Name="Create" ParticipatingElements="76" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="45" Name="Update" ParticipatingElements="56,60,77,78,82,111,139,140,141,147" IsFragment="true">
+            <Pin Id="46" Name="Mouse Device" Kind="InputPin" />
+            <Pin Id="47" Name="Particle Size" Kind="InputPin" />
+            <Pin Id="48" Name="Transform Out" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="49" Name="Destroy">
+            <p:Info />
+          </Patch>
+          <Canvas Id="50" Position="450,200">
+            <Pad Id="51" Comment="To" Bounds="301,43" ShowValueBox="true" isIOBox="true" Value="new vec(0.0100000035,-0.03)">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="52" Comment="From" Bounds="217,43" ShowValueBox="true" isIOBox="true" Value="new vec(-0.009999996,-0.01)">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="53" Bounds="240,394,43,15" ShowValueBox="true" isIOBox="true" Value="-1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="54" SlotId="43" Bounds="112,230" />
+            <Pad Id="55" SlotId="43" Bounds="110,552" />
+            <Node Bounds="167,504,52,13" Id="56">
+              <p:NodeReference LastSymbolSource="Basics.vl">
+                <Choice Kind="OperationNode" Name="Select" />
+                <FullNameCategoryReference ID="Collections.Spread" />
+              </p:NodeReference>
+              <Pin Id="57" Name="Input" Kind="InputPin" />
+              <Pin Id="58" Name="Alive Values" Kind="InputPin" />
+              <Pin Id="59" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="156,273,65,22" Id="60">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.dll">
+                <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationNode" Name="Concat" />
+              </p:NodeReference>
+              <Pin Id="61" Name="Input" Kind="InputPin" />
+              <Pin Id="62" Name="Input 2" Kind="InputPin" />
+              <Pin Id="63" Name="Input 3" Kind="InputPin" />
+              <Pin Id="64" Name="Input 4" Kind="InputPin" />
+              <Pin Id="65" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="66" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="154,-3,95,13" Id="67">
+              <p:NodeReference LastCategoryFullName="IO.Mouse" LastSymbolSource="Basics.vl">
+                <CategoryReference Kind="Category" Name="IO" />
+                <CategoryReference Kind="Category" Name="Mouse" />
+                <Choice Kind="ProcessNode" Name="MouseState" />
+              </p:NodeReference>
+              <Pin Id="68" Name="Mouse Device" Kind="InputPin" />
+              <Pin Id="69" Name="Normalized Position" Kind="OutputPin" />
+              <Pin Id="70" Name="Position" Kind="OutputPin" />
+              <Pin Id="71" Name="Client Area" Kind="OutputPin" />
+              <Pin Id="72" Name="WheelDelta" Kind="OutputPin" />
+              <Pin Id="73" Name="Left Pressed" Kind="OutputPin" />
+              <Pin Id="74" Name="Middle Pressed" Kind="OutputPin" />
+              <Pin Id="75" Name="Right Pressed" Kind="OutputPin" />
+              <NodeFragment Id="76" NameOfOperation="Create" />
+              <NodeFragment Id="77" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="417,264,39,13" Id="78">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="SharpDX.dll">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="79" Name="X" Kind="InputPin" />
+              <Pin Id="80" Name="Y" Kind="InputPin" />
+              <Pin Id="81" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="145,316,316,164" Id="82">
+              <p:NodeReference>
+                <Choice Kind="ForEachLoop" Name="ForEach" />
+              </p:NodeReference>
+              <ControlPoint Id="83" Bounds="155,322" Name="Particle" Alignment="Top" />
+              <ControlPoint Id="84" Bounds="155,473" Name="Particle" Alignment="Bottom" />
+              <ControlPoint Id="85" Bounds="229,473" Name="Alive" Alignment="Bottom" />
+              <ControlPoint Id="86" Bounds="356,473" Name="Transformation" Alignment="Bottom" />
+              <Patch Id="87">
+                <Node Bounds="157,355,58,22" Id="88">
+                  <p:NodeReference LastCategoryFullName="Main.Particle" LastSymbolSource="VVVV.Value.ParticleSystem.vl">
+                    <CategoryReference Kind="Category" Name="Particle" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationNode" Name="Update" />
+                  </p:NodeReference>
+                  <Pin Id="89" Name="Input" Kind="InputPin" />
+                  <Pin Id="90" Name="Output" Kind="OutputPin" />
+                  <Pin Id="91" Name="Position" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="358,407,91,13" Id="92">
+                  <p:NodeReference LastCategoryFullName="2D.Transform" LastSymbolSource="Basics.vl">
+                    <Choice Kind="OperationNode" Name="TransformSRT" />
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="93" Name="Input" Kind="InputPin" />
+                  <Pin Id="94" Name="Scaling" Kind="InputPin" />
+                  <Pin Id="95" Name="Rotation" Kind="InputPin" />
+                  <Pin Id="96" Name="Translation" Kind="InputPin" />
+                  <Pin Id="97" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="98" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="195,402,39,13" Id="99">
+                  <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="OperationNode" Name="Vector (Split)" />
+                    <CategoryReference Kind="Category" Name="Vector2" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="100" Name="Input" Kind="InputPin" />
+                  <Pin Id="101" Name="X" Kind="OutputPin" />
+                  <Pin Id="102" Name="Y" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="232,431,20,13" Id="103">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationNode" Name="&gt;" />
+                  </p:NodeReference>
+                  <Pin Id="104" Name="Input" Kind="InputPin" />
+                  <Pin Id="105" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="106" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Patch Id="107" Name="Create" />
+                <Patch Id="108" Name="Update" ParticipatingElements="88,92,99,103" />
+                <Patch Id="109" Name="Destroy" />
+              </Patch>
+              <Pin Id="110" Name="Break" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="157,68,120,134" Id="111">
+              <p:NodeReference>
+                <Choice Kind="ForLoop" Name="Loop" />
+              </p:NodeReference>
+              <Pin Id="112" Name="Iteration Count" Kind="InputPin" />
+              <ControlPoint Id="113" Bounds="167,195" Name="Particle" Alignment="Bottom" />
+              <Patch Id="114">
+                <Node Bounds="169,144,55,22" Id="115">
+                  <p:NodeReference LastCategoryFullName="Main.Particle" LastSymbolSource="VVVV.Value.ParticleSystem.vl">
+                    <CategoryReference Kind="Category" Name="Particle" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationNode" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="116" Name="Position" Kind="InputPin" />
+                  <Pin Id="117" Name="Speed" Kind="InputPin" />
+                  <Pin Id="118" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="218,110,47,13" Id="119">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="OperationNode" Name="Random" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="120" Name="From" Kind="InputPin" />
+                  <Pin Id="121" Name="To" Kind="InputPin" />
+                  <Pin Id="122" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Patch Id="123" Name="Create" />
+                <Patch Id="124" Name="Update" ParticipatingElements="115,119" />
+                <Patch Id="125" Name="Destroy" />
+              </Patch>
+              <Pin Id="126" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="127" Bounds="152,-32" />
+            <ControlPoint Id="128" Bounds="422,216" />
+            <ControlPoint Id="129" Bounds="352,543" />
+          </Canvas>
+          <Link Id="130" Ids="46,127" IsHidden="true" />
+          <Link Id="131" Ids="47,128" IsHidden="true" />
+          <Link Id="132" Ids="129,48" IsHidden="true" />
+          <Link Id="133" Ids="85,58" />
+          <Link Id="134" Ids="84,57" />
+          <Link Id="135" Ids="66,83" />
+          <Link Id="136" Ids="113,62" />
+          <Link Id="137" Ids="73,112" />
+          <Link Id="138" Ids="59,55" />
+          <Link Id="139" Ids="51,121" />
+          <Link Id="140" Ids="54,61" />
+          <Link Id="141" Ids="52,120" />
+          <Link Id="142" Ids="127,68" />
+          <Link Id="143" Ids="69,116" />
+          <Link Id="144" Ids="128,79" />
+          <Link Id="145" Ids="128,80" />
+          <Link Id="146" Ids="81,94" />
+          <Link Id="147" Ids="53,105" />
+          <Link Id="148" Ids="86,129" />
+          <Link Id="149" Ids="90,84" />
+          <Link Id="150" Ids="83,89" />
+          <Link Id="151" Ids="91,96" />
+          <Link Id="152" Ids="98,86" />
+          <Link Id="153" Ids="91,100" />
+          <Link Id="154" Ids="102,104" />
+          <Link Id="155" Ids="106,85" />
+          <Link Id="156" Ids="122,117" />
+          <Link Id="157" Ids="118,113" />
+          <p:Info />
+          <p:Interfaces>
+            <TypeReference ReferenceKind="App">
+              <Choice Kind="TypeFlag" Name="Disposable" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </TypeReference>
+          </p:Interfaces>
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+</Document>

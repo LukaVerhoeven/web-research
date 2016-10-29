@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1043.64077">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.Core" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.CoreLib" Version="0.35.33" />
+  <Patch Id="4">
+    <Canvas Id="5">
+      <Node Bounds="96,265" Id="6">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="7" Name="Keyframe" Category="Animation" IsGeneric="true">
+          <Slot Id="8" Name="Value" />
+          <Slot Id="9" Name="Timestamp" />
+          <Patch Id="10" Name="Create" IsGeneric="true" IsFragment="true">
+            <Pin Id="11" Name="Time" Kind="InputPin" Bounds="-4,0" />
+            <Pin Id="12" Name="Value" Kind="InputPin" Bounds="-4,0" />
+            <p:Info />
+          </Patch>
+          <Patch Id="13" Name="GetValue" ParticipatingElements="33" IsGeneric="true" IsFragment="true">
+            <Pin Id="14" Name="Value" Kind="OutputPin" Bounds="-4,0" />
+            <p:Info />
+          </Patch>
+          <Patch Id="15" Name="GetTimestamp" ParticipatingElements="22,36" IsGeneric="true" IsFragment="true">
+            <Pin Id="16" Name="Result" Kind="OutputPin" Bounds="-4,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="17" Position="96,265">
+            <Pad Id="18" SlotId="8" Bounds="149,274" />
+            <Pad Id="19" SlotId="8" Bounds="407,129" />
+            <Pad Id="20" SlotId="9" Bounds="259,276" />
+            <Pad Id="21" SlotId="9" Bounds="332,123" />
+            <Node Bounds="307,339" Id="22">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="23" Name="Input" Kind="InputPin" />
+              <Pin Id="24" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="25" Bounds="334,88" />
+            <ControlPoint Id="26" Bounds="407,88" />
+            <ControlPoint Id="27" Bounds="147,331" />
+            <ControlPoint Id="28" Bounds="304,385" />
+          </Canvas>
+          <Link Id="29" Ids="11,25" IsHidden="true" />
+          <Link Id="30" Ids="12,26" IsHidden="true" />
+          <Link Id="31" Ids="27,14" IsHidden="true" />
+          <Link Id="32" Ids="28,16" IsHidden="true" />
+          <Link Id="33" Ids="18,27" />
+          <Link Id="34" Ids="25,21" />
+          <Link Id="35" Ids="26,19" />
+          <Link Id="36" Ids="20,23" />
+          <Link Id="37" Ids="24,28" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="96,142" Id="38">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="39" Name="Sequencer" Category="Animation" IsGeneric="true">
+          <Patch Id="40" Name="Create" ParticipatingElements="60,70,82,95" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="41" Name="Update" ParticipatingElements="61,71,83,84,86,96,120,121,133" IsGeneric="true" IsFragment="true">
+            <Pin Id="42" Name="Value" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="43" Name="Clear" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="44" Name="Record" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="45" Name="Play" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="46" Name="Speed" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="47" Name="Seek" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="48" Name="Seek Time" Kind="InputPin" Bounds="-354,0" />
+            <Pin Id="49" Name="Value" Kind="OutputPin" Bounds="-354,0" />
+            <Pin Id="50" Name="Duration" Kind="OutputPin" Bounds="-354,0" />
+            <Pin Id="51" Name="Position" Kind="OutputPin" Bounds="-354,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="52" Position="96,142">
+            <Pad Id="53" Comment="Enabled" Bounds="1116,280" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="54" Comment="Enabled" Bounds="1094,637" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="55" Comment="Loop" Bounds="687,501" ShowValueBox="true" isIOBox="true" Value="true">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="1024,316" Id="56">
+              <p:NodeReference LastCategoryFullName="Runtime.Serialization" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Deserializer (Xml)" />
+              </p:NodeReference>
+              <Pin Id="57" Name="Serialized Value" Kind="InputPin" />
+              <Pin Id="58" Name="Enabled" Kind="InputPin" />
+              <Pin Id="59" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="60" NameOfOperation="Create" />
+              <NodeFragment Id="61" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="388,465" Id="62">
+              <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Track" />
+              </p:NodeReference>
+              <Pin Id="63" Name="Value" Kind="InputPin" />
+              <Pin Id="64" Name="Clear" Kind="InputPin" />
+              <Pin Id="65" Name="Record" Kind="InputPin" />
+              <Pin Id="66" Name="Initialize" Kind="InputPin" />
+              <Pin Id="67" Name="Initial Values" Kind="InputPin" />
+              <Pin Id="68" Name="Keyframes" Kind="OutputPin" />
+              <Pin Id="69" Name="Duration" Kind="OutputPin" />
+              <NodeFragment Id="70" NameOfOperation="Create" />
+              <NodeFragment Id="71" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="645,542" Id="72">
+              <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Playhead" />
+              </p:NodeReference>
+              <Pin Id="73" Name="Seek Time" Kind="InputPin" />
+              <Pin Id="74" Name="Seek Enabled" Kind="EnabledPin" />
+              <Pin Id="75" Name="Play" Kind="InputPin" />
+              <Pin Id="76" Name="Loop" Kind="InputPin" />
+              <Pin Id="77" Name="Loop Start" Kind="InputPin" />
+              <Pin Id="78" Name="Loop End" Kind="InputPin" />
+              <Pin Id="79" Name="Speed" Kind="InputPin" />
+              <Pin Id="80" Name="Time" Kind="InputPin" />
+              <Pin Id="81" Name="Position" Kind="OutputPin" />
+              <NodeFragment Id="82" NameOfOperation="Create" />
+              <NodeFragment Id="83" NameOfOperation="Seek" />
+              <NodeFragment Id="84" NameOfOperation="Step" />
+            </Node>
+            <Pad Id="85" Bounds="703,615" ShowValueBox="true" isIOBox="true" />
+            <Node Bounds="385,614" Id="86">
+              <p:NodeReference LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Sample" />
+                <FullNameCategoryReference ID="Animation" />
+              </p:NodeReference>
+              <Pin Id="87" Name="Input" Kind="InputPin" />
+              <Pin Id="88" Name="Time" Kind="InputPin" />
+              <Pin Id="89" Name="Value" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1016,676" Id="90">
+              <p:NodeReference LastCategoryFullName="Runtime.Serialization" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Serializer (Xml)" />
+              </p:NodeReference>
+              <Pin Id="91" Name="Value" Kind="InputPin" />
+              <Pin Id="92" Name="Indent" Kind="InputPin" />
+              <Pin Id="93" Name="Enabled" Kind="InputPin" />
+              <Pin Id="94" Name="Result" Kind="OutputPin" />
+              <NodeFragment Id="95" NameOfOperation="Create" />
+              <NodeFragment Id="96" NameOfOperation="Update" />
+            </Node>
+            <ControlPoint Id="97" Bounds="350,278" />
+            <ControlPoint Id="98" Bounds="418,278" />
+            <ControlPoint Id="99" Bounds="482,278" />
+            <ControlPoint Id="100" Bounds="617,278" />
+            <ControlPoint Id="101" Bounds="659,278" />
+            <ControlPoint Id="102" Bounds="732,278" />
+            <ControlPoint Id="103" Bounds="817,278" />
+            <ControlPoint Id="104" Bounds="380,672" />
+            <ControlPoint Id="105" Bounds="533,672" />
+            <ControlPoint Id="106" Bounds="643,672" />
+          </Canvas>
+          <Link Id="107" Ids="42,97" IsHidden="true" />
+          <Link Id="108" Ids="43,98" IsHidden="true" />
+          <Link Id="109" Ids="44,99" IsHidden="true" />
+          <Link Id="110" Ids="45,100" IsHidden="true" />
+          <Link Id="111" Ids="46,101" IsHidden="true" />
+          <Link Id="112" Ids="47,102" IsHidden="true" />
+          <Link Id="113" Ids="48,103" IsHidden="true" />
+          <Link Id="114" Ids="104,49" IsHidden="true" />
+          <Link Id="115" Ids="105,50" IsHidden="true" />
+          <Link Id="116" Ids="106,51" IsHidden="true" />
+          <Link Id="117" Ids="97,63" />
+          <Link Id="118" Ids="98,64" />
+          <Link Id="119" Ids="99,65" />
+          <Link Id="120" Ids="53,58" />
+          <Link Id="121" Ids="54,93" />
+          <Link Id="122" Ids="89,104" />
+          <Link Id="123" Ids="69,105" />
+          <Link Id="124" Ids="68,91" />
+          <Link Id="125" Ids="68,87" />
+          <Link Id="126" Ids="69,78" />
+          <Link Id="127" Ids="81,85" />
+          <Link Id="128" Ids="81,88" />
+          <Link Id="129" Ids="100,75" />
+          <Link Id="130" Ids="101,79" />
+          <Link Id="131" Ids="103,73" />
+          <Link Id="132" Ids="102,74" />
+          <Link Id="133" Ids="55,76" />
+          <Link Id="134" Ids="81,106" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="96,205" Id="135">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="136" Name="Track" Category="Animation" IsGeneric="true">
+          <Slot Id="137" Name="Spread" />
+          <Patch Id="138" Name="Create" ParticipatingElements="180,198" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="139" Name="Update" ParticipatingElements="150,154,159,163,169,172,181,182,183,188,199,200,238" IsGeneric="true" IsFragment="true">
+            <Pin Id="140" Name="Value" Kind="InputPin" Bounds="-704,0" />
+            <Pin Id="141" Name="Clear" Kind="InputPin" Bounds="-704,0" />
+            <Pin Id="142" Name="Record" Kind="InputPin" Bounds="-704,0" />
+            <Pin Id="143" Name="Initialize" Kind="InputPin" Bounds="-704,0" />
+            <Pin Id="144" Name="Initial Values" Kind="InputPin" Bounds="-704,0" />
+            <Pin Id="145" Name="Keyframes" Kind="OutputPin" Bounds="-704,0" />
+            <Pin Id="146" Name="Duration" Kind="OutputPin" Bounds="-704,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="147" Position="96,205">
+            <Pad Id="148" SlotId="137" Bounds="315,233" />
+            <Pad Id="149" SlotId="137" Bounds="352,542" />
+            <Node Bounds="419,340" Id="150">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="Clear" />
+                <CategoryReference Kind="Category" Name="SpreadBuilder" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="151" Name="Input" Kind="InputPin" />
+              <Pin Id="152" Name="Enabled" Kind="InputPin" />
+              <Pin Id="153" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="419,430" Id="154">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="Add" />
+                <CategoryReference Kind="Category" Name="SpreadBuilder" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="155" Name="Input" Kind="InputPin" />
+              <Pin Id="156" Name="Item" Kind="InputPin" />
+              <Pin Id="157" Name="Enabled" Kind="InputPin" />
+              <Pin Id="158" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="676,366" Id="159">
+              <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Keyframe" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="160" Name="Time" Kind="InputPin" />
+              <Pin Id="161" Name="Value" Kind="InputPin" />
+              <Pin Id="162" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="677,326" Id="163">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="-" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="164" Name="Input" Kind="InputPin" />
+              <Pin Id="165" Name="Input 2" Kind="InputPin" />
+              <Pin Id="166" Name="Input 3" Kind="InputPin" />
+              <Pin Id="167" Name="Enabled" Kind="InputPin" />
+              <Pin Id="168" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="677,243" Id="169">
+              <p:NodeReference LastCategoryFullName="Animation.Time" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <CategoryReference Kind="Category" Name="Time" />
+                <Choice Kind="OperationNode" Name="Seconds" />
+              </p:NodeReference>
+              <Pin Id="170" Name="Input" Kind="InputPin" />
+              <Pin Id="171" Name="Seconds" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="419,485" Id="172">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="SpreadBuilder" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="173" Name="Input" Kind="InputPin" />
+              <Pin Id="174" Name="Output" Kind="OutputPin" />
+              <Pin Id="175" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="702,292" Id="176">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="S+H" />
+              </p:NodeReference>
+              <Pin Id="177" Name="Value" Kind="InputPin" />
+              <Pin Id="178" Name="SetValue Enabled" Kind="EnabledPin" />
+              <Pin Id="179" Name="Value" Kind="OutputPin" />
+              <NodeFragment Id="180" NameOfOperation="Create" />
+              <NodeFragment Id="181" NameOfOperation="SetValue" />
+              <NodeFragment Id="182" NameOfOperation="GetValue" />
+            </Node>
+            <Node Bounds="419,301" Id="183">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SwitchInput" />
+              </p:NodeReference>
+              <Pin Id="184" Name="Condition" Kind="InputPin" />
+              <Pin Id="185" Name="False" Kind="InputPin" />
+              <Pin Id="186" Name="True" Kind="InputPin" />
+              <Pin Id="187" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="521,301" Id="188">
+              <p:NodeReference LastCategoryFullName="Control.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="189" Name="Input" Kind="InputPin" />
+              <Pin Id="190" Name="Input 2" Kind="InputPin" />
+              <Pin Id="191" Name="Input 3" Kind="InputPin" />
+              <Pin Id="192" Name="Enabled" Kind="InputPin" />
+              <Pin Id="193" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="679,191" Id="194">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="195" Name="Value" Kind="InputPin" />
+              <Pin Id="196" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="197" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="198" NameOfOperation="Create" />
+              <NodeFragment Id="199" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="575,527,100,100" Id="200">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationCallFlag" Name="Max (Selector)" />
+                <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+              </p:NodeReference>
+              <Pin Id="201" Name="Input" Kind="InputPin" />
+              <Pin Id="202" Name="Result" Kind="OutputPin" />
+              <Patch Id="203" Name="Selector" IsGeneric="true">
+                <Pin Id="204" Name="Source" Kind="InputPin" />
+                <Pin Id="205" Name="Result" Kind="OutputPin" />
+                <Node Bounds="580,571" Id="206">
+                  <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="GetTimestamp" />
+                  </p:NodeReference>
+                  <Pin Id="207" Name="Input" Kind="InputPin" />
+                  <Pin Id="208" Name="Result" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="209" Bounds="578,527" />
+                <ControlPoint Id="210" Bounds="578,627" />
+                <p:Info />
+              </Patch>
+            </Node>
+            <ControlPoint Id="211" Bounds="546,158" />
+            <ControlPoint Id="212" Bounds="614,158" />
+            <ControlPoint Id="213" Bounds="679,158" />
+            <ControlPoint Id="214" Bounds="739,158" />
+            <ControlPoint Id="215" Bounds="810,158" />
+            <ControlPoint Id="216" Bounds="461,663" />
+            <ControlPoint Id="217" Bounds="572,663" />
+          </Canvas>
+          <Link Id="218" Ids="204,209" IsHidden="true" />
+          <Link Id="219" Ids="210,205" IsHidden="true" />
+          <Link Id="220" Ids="140,211" IsHidden="true" />
+          <Link Id="221" Ids="141,212" IsHidden="true" />
+          <Link Id="222" Ids="142,213" IsHidden="true" />
+          <Link Id="223" Ids="143,214" IsHidden="true" />
+          <Link Id="224" Ids="144,215" IsHidden="true" />
+          <Link Id="225" Ids="216,145" IsHidden="true" />
+          <Link Id="226" Ids="217,146" IsHidden="true" />
+          <Link Id="227" Ids="211,161" />
+          <Link Id="228" Ids="213,157" />
+          <Link Id="229" Ids="174,149" />
+          <Link Id="230" Ids="153,155" />
+          <Link Id="231" Ids="158,173" />
+          <Link Id="232" Ids="162,156" />
+          <Link Id="233" Ids="168,160" />
+          <Link Id="234" Ids="179,165" />
+          <Link Id="235" Ids="175,216" />
+          <Link Id="236" Ids="175,201" />
+          <Link Id="237" Ids="202,217" />
+          <Link Id="238" Ids="148,185" />
+          <Link Id="239" Ids="214,184" />
+          <Link Id="240" Ids="215,186" />
+          <Link Id="241" Ids="193,152" />
+          <Link Id="242" Ids="212,189" />
+          <Link Id="243" Ids="213,195" />
+          <Link Id="244" Ids="196,190" />
+          <Link Id="245" Ids="187,151" />
+          <Link Id="246" Ids="171,177" />
+          <Link Id="247" Ids="171,164" />
+          <Link Id="248" Ids="196,178" />
+          <Link Id="249" Ids="209,207" />
+          <Link Id="250" Ids="208,210" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Canvas Id="251" Name="Utils" Position="395,204" DefaultCategory="Animation">
+        <Node Bounds="172,45,709,611" Id="252">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="253" Name="Sample" IsGeneric="true">
+            <Pin Id="254" Name="Input" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="255" Name="Time" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="256" Name="Value" Kind="OutputPin" Bounds="4,4" />
+            <Pad Id="257" Comment="Max" Bounds="572,442" ShowValueBox="true" isIOBox="true" Value="1.0">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="258" Comment="Constant" Bounds="396,568" ShowValueBox="true" isIOBox="true" Value="&quot;&lt; Imagine a Tweener here that gets the keyframes tweenmode and does accordingly&quot;">
+              <p:ValueBoxSettings>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="506,486,55,13" Id="259">
+              <p:NodeReference LastSymbolSource="Basics.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Clamp" />
+                <FullNameCategoryReference ID="Math.Ranges" />
+              </p:NodeReference>
+              <Pin Id="260" Name="Input" Kind="InputPin" />
+              <Pin Id="261" Name="Minimum" Kind="InputPin" />
+              <Pin Id="262" Name="Maximum" Kind="InputPin" />
+              <Pin Id="263" Name="Enabled" Kind="InputPin" />
+              <Pin Id="264" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="506,425,50,13" Id="265">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="-" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="266" Name="Input" Kind="InputPin" />
+              <Pin Id="267" Name="Input 2" Kind="InputPin" />
+              <Pin Id="268" Name="Input 3" Kind="InputPin" />
+              <Pin Id="269" Name="Enabled" Kind="InputPin" />
+              <Pin Id="270" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="404,478,67,22" Id="271">
+              <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="GetValue" />
+                <CategoryReference Kind="Category" Name="Keyframe" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="272" Name="Input" Kind="InputPin" />
+              <Pin Id="273" Name="Value" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="520,377,93,22" Id="274">
+              <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="GetTimestamp" />
+              </p:NodeReference>
+              <Pin Id="275" Name="Input" Kind="InputPin" />
+              <Pin Id="276" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="326,478,67,22" Id="277">
+              <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="GetValue" />
+                <CategoryReference Kind="Category" Name="Keyframe" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="278" Name="Input" Kind="InputPin" />
+              <Pin Id="279" Name="Value" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="326,563,50,13" Id="280">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Lerp" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="281" Name="Input" Kind="InputPin" />
+              <Pin Id="282" Name="Input 2" Kind="InputPin" />
+              <Pin Id="283" Name="Scalar" Kind="InputPin" />
+              <Pin Id="284" Name="Enabled" Kind="InputPin" />
+              <Pin Id="285" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="264,125,160,211" Id="286">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationCallFlag" Name="LastOrDefault (Predicate)" />
+                <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+              </p:NodeReference>
+              <Pin Id="287" Name="Input" Kind="InputPin" />
+              <Pin Id="288" Name="Default Value" Kind="InputPin" />
+              <Pin Id="289" Name="Output" Kind="OutputPin" />
+              <Pin Id="290" Name="Result" Kind="OutputPin" />
+              <Patch Id="291" Name="Predicate" IsGeneric="true">
+                <Pin Id="292" Name="Source" Kind="InputPin" Bounds="-39,0" />
+                <Pin Id="293" Name="Result" Kind="OutputPin" Bounds="-39,0" />
+                <Node Bounds="311,218,93,22" Id="294">
+                  <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="GetTimestamp" />
+                  </p:NodeReference>
+                  <Pin Id="295" Name="Input" Kind="InputPin" />
+                  <Pin Id="296" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="311,263,24,13" Id="297">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationNode" Name="&lt;=" />
+                  </p:NodeReference>
+                  <Pin Id="298" Name="Input" Kind="InputPin" />
+                  <Pin Id="299" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="300" Name="Result" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="301" Bounds="290,166" />
+                <ControlPoint Id="302" Bounds="307,295" />
+                <p:Info />
+              </Patch>
+            </Node>
+            <Node Bounds="516,129,160,212" Id="303">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationCallFlag" Name="FirstOrDefault (Predicate)" />
+                <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+              </p:NodeReference>
+              <Pin Id="304" Name="Input" Kind="InputPin" />
+              <Pin Id="305" Name="Default Value" Kind="InputPin" />
+              <Pin Id="306" Name="Output" Kind="OutputPin" />
+              <Pin Id="307" Name="Result" Kind="OutputPin" />
+              <Patch Id="308" Name="Predicate" IsGeneric="true">
+                <Pin Id="309" Name="Source" Kind="InputPin" Bounds="83,0" />
+                <Pin Id="310" Name="Result" Kind="OutputPin" Bounds="83,0" />
+                <Node Bounds="563,223,93,22" Id="311">
+                  <p:NodeReference LastCategoryFullName="Animation.Keyframe" LastSymbolSource="VL.Sequencer.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="GetTimestamp" />
+                  </p:NodeReference>
+                  <Pin Id="312" Name="Input" Kind="InputPin" />
+                  <Pin Id="313" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="563,268,20,13" Id="314">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="&gt;" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="315" Name="Input" Kind="InputPin" />
+                  <Pin Id="316" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="317" Name="Result" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="318" Bounds="542,170" />
+                <ControlPoint Id="319" Bounds="559,300" />
+                <p:Info />
+              </Patch>
+            </Node>
+            <ControlPoint Id="320" Bounds="324,86" />
+            <ControlPoint Id="321" Bounds="486,85" />
+            <ControlPoint Id="322" Bounds="330,616" />
+            <Link Id="323" Ids="264,283" />
+            <Link Id="324" Ids="270,260" />
+            <Link Id="325" Ids="273,282" />
+            <Link Id="326" Ids="276,267" />
+            <Link Id="327" Ids="279,281" />
+            <Link Id="328" Ids="290,275" />
+            <Link Id="329" Ids="290,278" />
+            <Link Id="330" Ids="307,272" />
+            <Link Id="331" Ids="320,287" />
+            <Link Id="332" Ids="320,304" />
+            <Link Id="333" Ids="321,299" />
+            <Link Id="334" Ids="321,316" />
+            <Link Id="335" Ids="285,322" />
+            <Link Id="336" Ids="321,266" />
+            <Link Id="337" Ids="257,262" />
+            <Link Id="338" Ids="301,295" />
+            <Link Id="339" Ids="296,298" />
+            <Link Id="340" Ids="300,302" />
+            <Link Id="341" Ids="318,312" />
+            <Link Id="342" Ids="313,315" />
+            <Link Id="343" Ids="317,319" />
+            <Link Id="344" Ids="254,320" IsHidden="true" />
+            <Link Id="345" Ids="255,321" IsHidden="true" />
+            <Link Id="346" Ids="322,256" IsHidden="true" />
+            <Link Id="347" Ids="292,301" IsHidden="true" />
+            <Link Id="348" Ids="302,293" IsHidden="true" />
+            <Link Id="349" Ids="309,318" IsHidden="true" />
+            <Link Id="350" Ids="319,310" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+</Document>

@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1168.51997">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.21" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.35.21" />
+  <NugetDependency Id="5" Location="VL.Devices.Spacemouse" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="6" Location="VL.QRCode" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="7" Location="VL.Devices.TheEyeTribe" Version="0.35.42-alpha-gcc18a29bac" />
+  <NugetDependency Id="8" Location="VL.Devices.Leap" Version="0.35.42-alpha-gcc18a29bac" />
+  <Patch Id="9">
+    <Canvas Id="10">
+      <Node Bounds="100,200" Id="11">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="12" Name="CubeTree" Category="VVVV.Transform">
+          <Slot Id="13" Name="Cubes" />
+          <Patch Id="14" Name="Create" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="15" Name="Update" ParticipatingElements="28,42,47,52,57,62,63,75,138" IsFragment="true">
+            <Pin Id="16" Name="Iteration Count" Kind="InputPin" />
+            <Pin Id="17" Name="Calc" Kind="InputPin" />
+            <Pin Id="18" Name="Translation Range" Kind="InputPin" />
+            <Pin Id="19" Name="Rotation Range" Kind="InputPin" />
+            <Pin Id="20" Name="Scaling Range" Kind="InputPin" />
+            <Pin Id="21" Name="Child Count" Kind="InputPin" />
+            <Pin Id="22" Name="Transformations" Kind="OutputPin" />
+            <Pin Id="23" Name="Colors" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="24" Position="100,200">
+            <Pad Id="25" Comment="-" Bounds="-60,205,228,16" ShowValueBox="true" isIOBox="true" Value="&quot;The RecursiveTree node/region is patched, you can right click on the label to see how its done&quot;">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="26" SlotId="13" Bounds="485,-83" />
+            <Pad Id="27" SlotId="13" Bounds="511,374" />
+            <Node Bounds="294,-85,110,13" Id="28">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="29" Name="Input" Kind="InputPin" />
+              <Pin Id="30" Name="Input 2" Kind="InputPin" />
+              <Pin Id="31" Name="Input 10" Kind="InputPin" />
+              <Pin Id="32" Name="Input 11" Kind="InputPin" />
+              <Pin Id="33" Name="Input 12" Kind="InputPin" />
+              <Pin Id="34" Name="Input 13" Kind="InputPin" />
+              <Pin Id="35" Name="Input 14" Kind="InputPin" />
+              <Pin Id="36" Name="Enabled" Kind="InputPin" />
+              <Pin Id="37" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="398,-121,50,13" Id="38">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="39" Name="Value" Kind="InputPin" />
+              <Pin Id="40" Name="Result" Kind="OutputPin" />
+              <Pin Id="41" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="42" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="266,-258,50,13" Id="43">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="44" Name="Value" Kind="InputPin" />
+              <Pin Id="45" Name="Result" Kind="OutputPin" />
+              <Pin Id="46" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="47" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="378,-156,50,13" Id="48">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="49" Name="Value" Kind="InputPin" />
+              <Pin Id="50" Name="Result" Kind="OutputPin" />
+              <Pin Id="51" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="52" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="339,-186,50,13" Id="53">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="54" Name="Value" Kind="InputPin" />
+              <Pin Id="55" Name="Result" Kind="OutputPin" />
+              <Pin Id="56" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="57" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="304,-220,50,13" Id="58">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="ProcessNode" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="59" Name="Value" Kind="InputPin" />
+              <Pin Id="60" Name="Result" Kind="OutputPin" />
+              <Pin Id="61" Name="Unchanged" Kind="OutputPin" />
+              <NodeFragment Id="62" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="438,409,100,103" Id="63">
+              <p:NodeReference>
+                <Choice Kind="ForEachLoop" Name="ForEach" />
+              </p:NodeReference>
+              <ControlPoint Id="64" Bounds="445,415" Alignment="Top" />
+              <ControlPoint Id="65" Bounds="445,505" Alignment="Bottom" />
+              <ControlPoint Id="66" Bounds="523,505" Alignment="Bottom" />
+              <Patch Id="67">
+                <Node Bounds="463,450,43,22" Id="68">
+                  <p:NodeReference LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                    <Choice Kind="OperationNode" Name="Split" />
+                    <FullNameCategoryReference ID="VVVV.Transform.TreeCube" />
+                  </p:NodeReference>
+                  <Pin Id="69" Name="Input" Kind="InputPin" />
+                  <Pin Id="70" Name="Transformation" Kind="OutputPin" />
+                  <Pin Id="71" Name="Color" Kind="OutputPin" />
+                </Node>
+                <Patch Id="72" Name="Update" ParticipatingElements="68" />
+                <Patch Id="73" Name="Destroy" />
+              </Patch>
+              <Pin Id="74" Name="Break" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="356,-48,439,383" Id="75">
+              <p:NodeReference>
+                <Choice Kind="If" Name="If" />
+              </p:NodeReference>
+              <Pin Id="76" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="77" Bounds="445,-42" Name="Cubes" Alignment="Top" />
+              <ControlPoint Id="78" Bounds="445,328" Name="Cubes" Alignment="Bottom" />
+              <Patch Id="79" Name="Then">
+                <Pad Id="80" Comment="Scaling" Bounds="700,23" ShowValueBox="true" isIOBox="true" Value="new vec(0.3,0.3000001,0.300000131)">
+                  <p:ValueBoxSettings />
+                  <p:TypeAnnotation ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                    <CategoryReference Kind="Category" Name="3D" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="699,80,42,13" Id="81">
+                  <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="SharpDX.Mathematics.dll" LastPackageId="SharpDX.Mathematics">
+                    <Choice Kind="OperationNode" Name="Scaling" />
+                  </p:NodeReference>
+                  <Pin Id="82" Name="Scale" Kind="InputPin" />
+                  <Pin Id="83" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="699,110,43,22" Id="84">
+                  <p:NodeReference LastCategoryFullName="VVVV.Transform.TreeCube" LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                    <Choice Kind="OperationNode" Name="Create" />
+                    <CategoryReference Kind="Category" Name="TreeCube" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="85" Name="Transformation" Kind="InputPin" />
+                  <Pin Id="86" Name="Color" Kind="InputPin" />
+                  <Pin Id="87" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="520,114,124,13" Id="88">
+                  <p:NodeReference LastCategoryFullName="VVVV.Transform" LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                    <Choice Kind="OperationNode" Name="RandomTransformations" />
+                  </p:NodeReference>
+                  <Pin Id="89" Name="Child Count" Kind="InputPin" />
+                  <Pin Id="90" Name="Translation Center" Kind="InputPin" />
+                  <Pin Id="91" Name="Translation Range" Kind="InputPin" />
+                  <Pin Id="92" Name="Rotation Center" Kind="InputPin" />
+                  <Pin Id="93" Name="Rotation Range" Kind="InputPin" />
+                  <Pin Id="94" Name="Scaling Center" Kind="InputPin" />
+                  <Pin Id="95" Name="Scaling Range" Kind="InputPin" />
+                  <Pin Id="96" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="441,152,263,136" Id="97">
+                  <p:NodeReference LastCategoryFullName="Collections" LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                    <Choice Kind="OperationCallFlag" Name="RecursiveTree" />
+                    <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+                  </p:NodeReference>
+                  <Pin Id="98" Name="Iteration Count" Kind="InputPin" />
+                  <Pin Id="99" Name="Initial Element" Kind="InputPin" />
+                  <Pin Id="100" Name="Result" Kind="OutputPin" />
+                  <Patch Id="101" Name="CreateChildren">
+                    <Pin Id="102" Name="Parent" Kind="InputPin" Bounds="1,0" />
+                    <Pin Id="103" Name="Iteration Level" Kind="InputPin" Bounds="1,0" />
+                    <Pin Id="104" Name="Children" Kind="OutputPin" Bounds="1,0" />
+                    <Node Bounds="453,236,72,13" Id="105">
+                      <p:NodeReference LastCategoryFullName="VVVV.Transform" LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                        <Choice Kind="OperationNode" Name="CubeIteration" />
+                      </p:NodeReference>
+                      <Pin Id="106" Name="Parent Cube" Kind="InputPin" />
+                      <Pin Id="107" Name="Transformations" Kind="InputPin" />
+                      <Pin Id="108" Name="Color" Kind="InputPin" />
+                      <Pin Id="109" Name="Children" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="527,191,35,22" Id="110">
+                      <p:NodeReference LastCategoryFullName="Color.RGBA" LastSymbolSource="SharpDX.Mathematics.dll" LastPackageId="SharpDX.Mathematics">
+                        <Choice Kind="OperationNode" Name="White" />
+                      </p:NodeReference>
+                      <Pin Id="111" Name="White" Kind="OutputPin" />
+                    </Node>
+                    <ControlPoint Id="112" Bounds="453,165" />
+                    <ControlPoint Id="113" Bounds="616,167" />
+                    <ControlPoint Id="114" Bounds="456,280" />
+                    <p:Info />
+                  </Patch>
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="115" Bounds="55,-314" />
+            <ControlPoint Id="116" Bounds="214,-314" />
+            <ControlPoint Id="117" Bounds="467,-314" />
+            <ControlPoint Id="118" Bounds="594,-314" />
+            <ControlPoint Id="119" Bounds="696,-314" />
+            <ControlPoint Id="120" Bounds="833,-314" />
+            <ControlPoint Id="121" Bounds="436,548" />
+            <ControlPoint Id="122" Bounds="544,548" />
+          </Canvas>
+          <Link Id="123" Ids="77,78" IsFeedback="true" />
+          <Link Id="124" Ids="102,112" IsHidden="true" />
+          <Link Id="125" Ids="103,113" IsHidden="true" />
+          <Link Id="126" Ids="114,104" IsHidden="true" />
+          <Link Id="127" Ids="16,115" IsHidden="true" />
+          <Link Id="128" Ids="17,116" IsHidden="true" />
+          <Link Id="129" Ids="18,117" IsHidden="true" />
+          <Link Id="130" Ids="19,118" IsHidden="true" />
+          <Link Id="131" Ids="20,119" IsHidden="true" />
+          <Link Id="132" Ids="21,120" IsHidden="true" />
+          <Link Id="133" Ids="121,22" IsHidden="true" />
+          <Link Id="134" Ids="122,23" IsHidden="true" />
+          <Link Id="135" Ids="116,29" />
+          <Link Id="136" Ids="115,98" />
+          <Link Id="137" Ids="120,89" />
+          <Link Id="138" Ids="26,77" />
+          <Link Id="139" Ids="78,27" />
+          <Link Id="140" Ids="120,39" />
+          <Link Id="141" Ids="115,44" />
+          <Link Id="142" Ids="117,91" />
+          <Link Id="143" Ids="118,93" />
+          <Link Id="144" Ids="119,95" />
+          <Link Id="145" Ids="117,59" />
+          <Link Id="146" Ids="118,54" />
+          <Link Id="147" Ids="119,49" />
+          <Link Id="148" Ids="78,64" />
+          <Link Id="149" Ids="40,34" />
+          <Link Id="150" Ids="37,76" />
+          <Link Id="151" Ids="45,30" />
+          <Link Id="152" Ids="60,31" />
+          <Link Id="153" Ids="55,32" />
+          <Link Id="154" Ids="50,33" />
+          <Link Id="155" Ids="66,122" />
+          <Link Id="156" Ids="65,121" />
+          <Link Id="157" Ids="64,69" />
+          <Link Id="158" Ids="71,66" />
+          <Link Id="159" Ids="70,65" />
+          <Link Id="160" Ids="80,82" />
+          <Link Id="161" Ids="83,85" />
+          <Link Id="162" Ids="87,99" />
+          <Link Id="163" Ids="100,78" />
+          <Link Id="164" Ids="96,107" />
+          <Link Id="165" Ids="109,114" />
+          <Link Id="166" Ids="112,106" />
+          <Link Id="167" Ids="111,108" />
+          <p:Info Summary="Basic template with one in/out" />
+        </Patch>
+      </Node>
+      <Canvas Id="168" Name="CubeTreeUtils" Position="450,200" DefaultCategory="VVVV.Transform">
+        <Node Bounds="102,-62,352,357" Id="169">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="170" Name="CubeIteration" IsGeneric="true">
+            <Pin Id="171" Name="Parent Cube" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="172" Name="Transformations" Kind="InputPin" Bounds="75,4" />
+            <Pin Id="173" Name="Color" Kind="InputPin" Bounds="167,4" />
+            <Pin Id="174" Name="Children" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="223,-5,43,22" Id="175">
+              <p:NodeReference LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                <Choice Kind="OperationNode" Name="Split" />
+                <FullNameCategoryReference ID="VVVV.Transform.TreeCube" />
+              </p:NodeReference>
+              <Pin Id="176" Name="Input" Kind="InputPin" />
+              <Pin Id="177" Name="Transformation" Kind="OutputPin" />
+              <Pin Id="178" Name="Color" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="158,51,206,192" Id="179">
+              <p:NodeReference>
+                <Choice Kind="ForEachLoop" Name="ForEach" />
+              </p:NodeReference>
+              <ControlPoint Id="180" Bounds="166,57" Name="Children" Alignment="Top" />
+              <ControlPoint Id="181" Bounds="283,57" Name="Transformation" Alignment="Top" />
+              <ControlPoint Id="182" Bounds="187,236" Name="Children" Alignment="Bottom" />
+              <Patch Id="183">
+                <Node Bounds="257,90,57,13" Id="184">
+                  <p:NodeReference LastCategoryFullName="3D.Matrix" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Transform" />
+                    <CategoryReference Kind="Category" Name="Matrix" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="185" Name="Input" Kind="InputPin" />
+                  <Pin Id="186" Name="Transformation" Kind="InputPin" />
+                  <Pin Id="187" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="188" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="257,132,43,22" Id="189">
+                  <p:NodeReference LastCategoryFullName="VVVV.Transform.TreeCube" LastSymbolSource="VVVV.Transform.CubeTree.vl">
+                    <Choice Kind="OperationNode" Name="Create" />
+                    <CategoryReference Kind="Category" Name="TreeCube" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="190" Name="Transformation" Kind="InputPin" />
+                  <Pin Id="191" Name="Color" Kind="InputPin" />
+                  <Pin Id="192" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="183,181,58,22" Id="193">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                    <CategoryReference Kind="Category" Name="SpreadBuilder" />
+                    <Choice Kind="OperationNode" Name="Add" />
+                  </p:NodeReference>
+                  <Pin Id="194" Name="Input" Kind="InputPin" />
+                  <Pin Id="195" Name="Item" Kind="InputPin" />
+                  <Pin Id="196" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="197" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Patch Id="198" Name="Update" ParticipatingElements="184,189,193" IsGeneric="true" />
+              </Patch>
+              <Pin Id="199" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="200" Bounds="228,-44" />
+            <ControlPoint Id="201" Bounds="316,-24" />
+            <ControlPoint Id="202" Bounds="410,66" />
+            <ControlPoint Id="203" Bounds="178,278" />
+            <Link Id="204" Ids="200,176" />
+            <Link Id="205" Ids="177,185" />
+            <Link Id="206" Ids="182,203" />
+            <Link Id="207" Ids="201,181" />
+            <Link Id="208" Ids="202,191" />
+            <Link Id="209" Ids="188,190" />
+            <Link Id="210" Ids="180,194" />
+            <Link Id="211" Ids="192,195" />
+            <Link Id="212" Ids="197,182" />
+            <Link Id="213" Ids="181,186" />
+            <Link Id="214" Ids="171,200" IsHidden="true" />
+            <Link Id="215" Ids="172,201" IsHidden="true" />
+            <Link Id="216" Ids="173,202" IsHidden="true" />
+            <Link Id="217" Ids="203,174" IsHidden="true" />
+            <Link Id="218" Ids="180,182" IsFeedback="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="619,-129,710,514" Id="219">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="220" Name="RandomTransformations" IsGeneric="true">
+            <Pin Id="221" Name="Child Count" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="222" Name="Translation Center" Kind="InputPin" Bounds="74,4" />
+            <Pin Id="223" Name="Translation Range" Kind="InputPin" Bounds="175,4" />
+            <Pin Id="224" Name="Rotation Center" Kind="InputPin" Bounds="274,4" />
+            <Pin Id="225" Name="Rotation Range" Kind="InputPin" Bounds="362,4" />
+            <Pin Id="226" Name="Scaling Center" Kind="InputPin" Bounds="447,4" />
+            <Pin Id="227" Name="Scaling Range" Kind="InputPin" Bounds="528,4" />
+            <Pin Id="228" Name="Output" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="1157,-36,90,13" Id="229">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="230" Name="Center" Kind="InputPin" />
+              <Pin Id="231" Name="Width" Kind="InputPin" />
+              <Pin Id="232" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="767,-41,90,13" Id="233">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="234" Name="Center" Kind="InputPin" />
+              <Pin Id="235" Name="Width" Kind="InputPin" />
+              <Pin Id="236" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="959,-41,90,13" Id="237">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="238" Name="Center" Kind="InputPin" />
+              <Pin Id="239" Name="Width" Kind="InputPin" />
+              <Pin Id="240" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="723,51,218,280" Id="241">
+              <p:NodeReference>
+                <Choice Kind="ForLoop" Name="Loop" />
+              </p:NodeReference>
+              <Pin Id="242" Name="Iteration Count" Kind="InputPin" />
+              <ControlPoint Id="243" Bounds="787,324" Alignment="Bottom" />
+              <Patch Id="244">
+                <Node Bounds="763,226,38,13" Id="245">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Rotate" />
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="246" Name="Input" Kind="InputPin" />
+                  <Pin Id="247" Name="Rotation" Kind="InputPin" />
+                  <Pin Id="248" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="249" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="735,177,52,13" Id="250">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Translate" />
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="251" Name="Input" Kind="InputPin" />
+                  <Pin Id="252" Name="Translation" Kind="InputPin" />
+                  <Pin Id="253" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="254" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="785,280,35,13" Id="255">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                    <Choice Kind="OperationNode" Name="Scale" />
+                  </p:NodeReference>
+                  <Pin Id="256" Name="Input" Kind="InputPin" />
+                  <Pin Id="257" Name="Scaling" Kind="InputPin" />
+                  <Pin Id="258" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="259" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="835,161,47,13" Id="260">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Random" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="261" Name="From" Kind="InputPin" />
+                  <Pin Id="262" Name="To" Kind="InputPin" />
+                  <Pin Id="263" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="758,134,47,13" Id="264">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Random" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="265" Name="From" Kind="InputPin" />
+                  <Pin Id="266" Name="To" Kind="InputPin" />
+                  <Pin Id="267" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="882,245,47,13" Id="268">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Random" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="269" Name="From" Kind="InputPin" />
+                  <Pin Id="270" Name="To" Kind="InputPin" />
+                  <Pin Id="271" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="842,120,30,22" Id="272">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <CategoryReference Kind="Category" Name="Range" />
+                    <Choice Kind="OperationNode" Name="Split" />
+                  </p:NodeReference>
+                  <Pin Id="273" Name="Input" Kind="InputPin" />
+                  <Pin Id="274" Name="From" Kind="OutputPin" />
+                  <Pin Id="275" Name="To" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="766,91,30,22" Id="276">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Split" />
+                    <CategoryReference Kind="Category" Name="Range" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="277" Name="Input" Kind="InputPin" />
+                  <Pin Id="278" Name="From" Kind="OutputPin" />
+                  <Pin Id="279" Name="To" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="890,202,30,22" Id="280">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Split" />
+                    <CategoryReference Kind="Category" Name="Range" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="281" Name="Input" Kind="InputPin" />
+                  <Pin Id="282" Name="From" Kind="OutputPin" />
+                  <Pin Id="283" Name="To" Kind="OutputPin" />
+                </Node>
+                <Patch Id="284" Name="Update" ParticipatingElements="245,250,255,260,264,268,272,276,280" IsGeneric="true" />
+              </Patch>
+              <Pin Id="285" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="286" Bounds="634,-109" />
+            <ControlPoint Id="287" Bounds="767,-111" />
+            <ControlPoint Id="288" Bounds="854,-69" />
+            <ControlPoint Id="289" Bounds="961,-111" />
+            <ControlPoint Id="290" Bounds="1047,-69" />
+            <ControlPoint Id="291" Bounds="1160,-112" />
+            <ControlPoint Id="292" Bounds="1245,-70" />
+            <ControlPoint Id="293" Bounds="787,367" />
+            <Link Id="294" Ids="286,242" />
+            <Link Id="295" Ids="243,293" />
+            <Link Id="296" Ids="290,239" />
+            <Link Id="297" Ids="288,235" />
+            <Link Id="298" Ids="292,231" />
+            <Link Id="299" Ids="240,273" />
+            <Link Id="300" Ids="236,277" />
+            <Link Id="301" Ids="232,281" />
+            <Link Id="302" Ids="291,230" />
+            <Link Id="303" Ids="289,238" />
+            <Link Id="304" Ids="287,234" />
+            <Link Id="305" Ids="259,243" />
+            <Link Id="306" Ids="267,252" />
+            <Link Id="307" Ids="263,247" />
+            <Link Id="308" Ids="274,261" />
+            <Link Id="309" Ids="275,262" />
+            <Link Id="310" Ids="278,265" />
+            <Link Id="311" Ids="279,266" />
+            <Link Id="312" Ids="282,269" />
+            <Link Id="313" Ids="283,270" />
+            <Link Id="314" Ids="249,256" />
+            <Link Id="315" Ids="254,246" />
+            <Link Id="316" Ids="271,257" />
+            <Link Id="317" Ids="221,286" IsHidden="true" />
+            <Link Id="318" Ids="222,287" IsHidden="true" />
+            <Link Id="319" Ids="223,288" IsHidden="true" />
+            <Link Id="320" Ids="224,289" IsHidden="true" />
+            <Link Id="321" Ids="225,290" IsHidden="true" />
+            <Link Id="322" Ids="226,291" IsHidden="true" />
+            <Link Id="323" Ids="227,292" IsHidden="true" />
+            <Link Id="324" Ids="293,228" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="1442,-160,762,621" Id="325">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="326" Name="LinearTransformations" IsGeneric="true">
+            <Pin Id="327" Name="Child Count" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="328" Name="Translation Center" Kind="InputPin" Bounds="74,4" />
+            <Pin Id="329" Name="Translation Range" Kind="InputPin" Bounds="175,4" />
+            <Pin Id="330" Name="Rotation Center" Kind="InputPin" Bounds="274,4" />
+            <Pin Id="331" Name="Rotation Range" Kind="InputPin" Bounds="362,4" />
+            <Pin Id="332" Name="Scaling Center" Kind="InputPin" Bounds="447,4" />
+            <Pin Id="333" Name="Scaling Range" Kind="InputPin" Bounds="528,4" />
+            <Pin Id="334" Name="Output" Kind="OutputPin" Bounds="4,4" />
+            <Pad Id="335" Comment="-" Bounds="1537,-54,40,15" ShowValueBox="true" isIOBox="true" Value="1">
+              <p:ValueBoxSettings />
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="2034,-13,90,13" Id="336">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="337" Name="Center" Kind="InputPin" />
+              <Pin Id="338" Name="Width" Kind="InputPin" />
+              <Pin Id="339" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1620,-20,90,13" Id="340">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="341" Name="Center" Kind="InputPin" />
+              <Pin Id="342" Name="Width" Kind="InputPin" />
+              <Pin Id="343" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1828,-9,90,13" Id="344">
+              <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="FromCenterWidth" />
+              </p:NodeReference>
+              <Pin Id="345" Name="Center" Kind="InputPin" />
+              <Pin Id="346" Name="Width" Kind="InputPin" />
+              <Pin Id="347" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1531,-9,50,13" Id="348">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="-" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="349" Name="Input" Kind="InputPin" />
+              <Pin Id="350" Name="Input 2" Kind="InputPin" />
+              <Pin Id="351" Name="Input 3" Kind="InputPin" />
+              <Pin Id="352" Name="Enabled" Kind="InputPin" />
+              <Pin Id="353" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1485,48,320,359" Id="354">
+              <p:NodeReference>
+                <Choice Kind="ForLoop" Name="Loop" />
+              </p:NodeReference>
+              <Pin Id="355" Name="Iteration Count" Kind="InputPin" />
+              <ControlPoint Id="356" Bounds="1563,400" Name="Output" Alignment="Bottom" />
+              <Patch Id="357">
+                <Node Bounds="1566,319,38,13" Id="358">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Rotate" />
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="359" Name="Input" Kind="InputPin" />
+                  <Pin Id="360" Name="Rotation" Kind="InputPin" />
+                  <Pin Id="361" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="362" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1531,272,52,13" Id="363">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Translate" />
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="364" Name="Input" Kind="InputPin" />
+                  <Pin Id="365" Name="Translation" Kind="InputPin" />
+                  <Pin Id="366" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="367" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1566,358,35,13" Id="368">
+                  <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                    <Choice Kind="OperationNode" Name="Scale" />
+                  </p:NodeReference>
+                  <Pin Id="369" Name="Input" Kind="InputPin" />
+                  <Pin Id="370" Name="Scaling" Kind="InputPin" />
+                  <Pin Id="371" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="372" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1684,171,30,22" Id="373">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <CategoryReference Kind="Category" Name="Range" />
+                    <Choice Kind="OperationNode" Name="Split" />
+                  </p:NodeReference>
+                  <Pin Id="374" Name="Input" Kind="InputPin" />
+                  <Pin Id="375" Name="From" Kind="OutputPin" />
+                  <Pin Id="376" Name="To" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1603,148,30,22" Id="377">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Split" />
+                    <CategoryReference Kind="Category" Name="Range" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="378" Name="Input" Kind="InputPin" />
+                  <Pin Id="379" Name="From" Kind="OutputPin" />
+                  <Pin Id="380" Name="To" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1755,217,30,22" Id="381">
+                  <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Split" />
+                    <CategoryReference Kind="Category" Name="Range" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="382" Name="Input" Kind="InputPin" />
+                  <Pin Id="383" Name="From" Kind="OutputPin" />
+                  <Pin Id="384" Name="To" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1641,273,50,13" Id="385">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Lerp" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="386" Name="Input" Kind="InputPin" />
+                  <Pin Id="387" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="388" Name="Scalar" Kind="InputPin" />
+                  <Pin Id="389" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="390" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1543,222,50,13" Id="391">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Lerp" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="392" Name="Input" Kind="InputPin" />
+                  <Pin Id="393" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="394" Name="Scalar" Kind="InputPin" />
+                  <Pin Id="395" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="396" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1743,286,50,13" Id="397">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationNode" Name="Lerp" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="398" Name="Input" Kind="InputPin" />
+                  <Pin Id="399" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="400" Name="Scalar" Kind="InputPin" />
+                  <Pin Id="401" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="402" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="1518,133,50,13" Id="403">
+                  <p:NodeReference LastCategoryFullName="Primitive.Float32" LastSymbolSource="Builtin">
+                    <CategoryReference Kind="Category" Name="Float32" />
+                    <Choice Kind="OperationNode" Name="/" />
+                  </p:NodeReference>
+                  <Pin Id="404" Name="Input" Kind="InputPin" />
+                  <Pin Id="405" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="406" Name="Input 3" Kind="InputPin" />
+                  <Pin Id="407" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="408" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Patch Id="409" Name="Update" ParticipatingElements="358,363,368,373,377,381,385,391,397,403" IsGeneric="true">
+                  <Pin Id="410" Name="Index" Kind="InputPin" Bounds="1487,50" />
+                </Patch>
+              </Patch>
+              <Pin Id="411" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="412" Bounds="1485,-143" />
+            <ControlPoint Id="413" Bounds="1621,-116" />
+            <ControlPoint Id="414" Bounds="1707,-60" />
+            <ControlPoint Id="415" Bounds="1830,-116" />
+            <ControlPoint Id="416" Bounds="1914,-60" />
+            <ControlPoint Id="417" Bounds="2035,-116" />
+            <ControlPoint Id="418" Bounds="2120,-60" />
+            <ControlPoint Id="419" Bounds="1561,443" />
+            <Link Id="420" Ids="412,355" />
+            <Link Id="421" Ids="356,419" />
+            <Link Id="422" Ids="339,382" />
+            <Link Id="423" Ids="343,378" />
+            <Link Id="424" Ids="347,374" />
+            <Link Id="425" Ids="412,349" />
+            <Link Id="426" Ids="335,350" />
+            <Link Id="427" Ids="353,405" />
+            <Link Id="428" Ids="413,341" />
+            <Link Id="429" Ids="415,345" />
+            <Link Id="430" Ids="417,337" />
+            <Link Id="431" Ids="418,338" />
+            <Link Id="432" Ids="416,346" />
+            <Link Id="433" Ids="414,342" />
+            <Link Id="434" Ids="372,356" />
+            <Link Id="435" Ids="375,386" />
+            <Link Id="436" Ids="376,387" />
+            <Link Id="437" Ids="390,360" />
+            <Link Id="438" Ids="379,392" />
+            <Link Id="439" Ids="380,393" />
+            <Link Id="440" Ids="396,365" />
+            <Link Id="441" Ids="383,398" />
+            <Link Id="442" Ids="384,399" />
+            <Link Id="443" Ids="402,370" />
+            <Link Id="444" Ids="410,404" />
+            <Link Id="445" Ids="408,388" />
+            <Link Id="446" Ids="408,394" />
+            <Link Id="447" Ids="408,400" />
+            <Link Id="448" Ids="362,369" />
+            <Link Id="449" Ids="367,359" />
+            <Link Id="450" Ids="327,412" IsHidden="true" />
+            <Link Id="451" Ids="328,413" IsHidden="true" />
+            <Link Id="452" Ids="329,414" IsHidden="true" />
+            <Link Id="453" Ids="330,415" IsHidden="true" />
+            <Link Id="454" Ids="331,416" IsHidden="true" />
+            <Link Id="455" Ids="332,417" IsHidden="true" />
+            <Link Id="456" Ids="333,418" IsHidden="true" />
+            <Link Id="457" Ids="419,334" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="458" Name="RecursiveTree" Position="800,200" DefaultCategory="Collections">
+        <Node Bounds="430,401,472,652" Id="459">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="460" Name="RecursiveTree" IsGeneric="true">
+            <Pin Id="461" Name="Iteration Count" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="462" Name="CreateChildren" Kind="InputPin" Bounds="89,4" />
+            <Pin Id="463" Name="Initial Element" Kind="InputPin" Bounds="173,4" />
+            <Pin Id="464" Name="Result" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="636,488,58,22" Id="465">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <CategoryReference Kind="Category" Name="SpreadBuilder" />
+                <Choice Kind="OperationNode" Name="Add" />
+              </p:NodeReference>
+              <Pin Id="466" Name="Input" Kind="InputPin" />
+              <Pin Id="467" Name="Item" Kind="InputPin" />
+              <Pin Id="468" Name="Enabled" Kind="InputPin" />
+              <Pin Id="469" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="636,440,58,22" Id="470">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <CategoryReference Kind="Category" Name="SpreadBuilder" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="471" Name="Capacity" Kind="InputPin" />
+              <Pin Id="472" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="507,984,58,22" Id="473">
+              <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="SpreadBuilder" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="474" Name="Input" Kind="InputPin" />
+              <Pin Id="475" Name="Output" Kind="OutputPin" />
+              <Pin Id="476" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="473,552,318,404" Id="477">
+              <p:NodeReference>
+                <Choice Kind="ForLoop" Name="Loop" />
+              </p:NodeReference>
+              <Pin Id="478" Name="Iteration Count" Kind="InputPin" />
+              <ControlPoint Id="479" Bounds="481,558" Name="ElementList" Alignment="Top" />
+              <ControlPoint Id="480" Bounds="640,558" Name="LastElementList" Alignment="Top" />
+              <ControlPoint Id="481" Bounds="512,949" Name="ElementList" Alignment="Bottom" />
+              <ControlPoint Id="482" Bounds="630,949" Name="LastElementList" Alignment="Bottom" />
+              <Patch Id="483">
+                <Node Bounds="509,887,58,22" Id="484">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                    <Choice Kind="OperationNode" Name="AddRange" />
+                  </p:NodeReference>
+                  <Pin Id="485" Name="Input" Kind="InputPin" />
+                  <Pin Id="486" Name="Items" Kind="InputPin" />
+                  <Pin Id="487" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="488" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="553,591,58,22" Id="489">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                    <CategoryReference Kind="Category" Name="SpreadBuilder" />
+                    <Choice Kind="OperationNode" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="490" Name="Capacity" Kind="InputPin" />
+                  <Pin Id="491" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="548,643,193,166" Id="492">
+                  <p:NodeReference>
+                    <Choice Kind="ForEachLoop" Name="ForEach" />
+                  </p:NodeReference>
+                  <ControlPoint Id="493" Bounds="556,649" Name="NewElements" Alignment="Top" />
+                  <ControlPoint Id="494" Bounds="640,649" Name="Last Element" Alignment="Top" />
+                  <ControlPoint Id="495" Bounds="618,802" Name="NewElements" Alignment="Bottom" />
+                  <Patch Id="496">
+                    <Node Bounds="615,746,58,22" Id="497">
+                      <p:NodeReference LastCategoryFullName="Collections.Spread.SpreadBuilder" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                        <Choice Kind="OperationNode" Name="AddRange" />
+                      </p:NodeReference>
+                      <Pin Id="498" Name="Input" Kind="InputPin" />
+                      <Pin Id="499" Name="Items" Kind="InputPin" />
+                      <Pin Id="500" Name="Enabled" Kind="InputPin" />
+                      <Pin Id="501" Name="Output" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="695,692,35,13" Id="502">
+                      <p:NodeReference LastCategoryFullName="Control.Delegation" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                        <Choice Kind="OperationNode" Name="Apply (2 =&gt; 1)" />
+                      </p:NodeReference>
+                      <Pin Id="503" Name="Input" Kind="InputPin" />
+                      <Pin Id="504" Name="Input 2" Kind="InputPin" />
+                      <Pin Id="505" Name="Delegate" Kind="InputPin" />
+                      <Pin Id="506" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Patch Id="507" Name="Update" ParticipatingElements="497,502" IsGeneric="true" />
+                  </Patch>
+                  <Pin Id="508" Name="Break" Kind="OutputPin" />
+                </Node>
+                <Patch Id="509" Name="Update" ParticipatingElements="484,489,492" IsGeneric="true">
+                  <Pin Id="510" Name="Index" Kind="InputPin" Bounds="753,554" />
+                </Patch>
+              </Patch>
+              <Pin Id="511" Name="Break" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="512" Bounds="474,444" />
+            <ControlPoint Id="513" Bounds="814,630" />
+            <ControlPoint Id="514" Bounds="718,458" />
+            <ControlPoint Id="515" Bounds="564,1036" />
+            <Link Id="516" Ids="513,505" />
+            <Link Id="517" Ids="512,478" />
+            <Link Id="518" Ids="514,467" />
+            <Link Id="519" Ids="481,474" />
+            <Link Id="520" Ids="476,515" />
+            <Link Id="521" Ids="472,466" />
+            <Link Id="522" Ids="480,494" />
+            <Link Id="523" Ids="479,485" />
+            <Link Id="524" Ids="488,481" />
+            <Link Id="525" Ids="491,493" />
+            <Link Id="526" Ids="510,504" />
+            <Link Id="527" Ids="493,498" />
+            <Link Id="528" Ids="501,495" />
+            <Link Id="529" Ids="494,503" />
+            <Link Id="530" Ids="461,512" IsHidden="true" />
+            <Link Id="531" Ids="462,513" IsHidden="true" />
+            <Link Id="532" Ids="463,514" IsHidden="true" />
+            <Link Id="533" Ids="515,464" IsHidden="true" />
+            <Link Id="534" Ids="479,481" IsFeedback="true" />
+            <Link Id="535" Ids="480,482" IsFeedback="true" />
+            <Link Id="536" Ids="493,495" IsFeedback="true" />
+            <Link Id="537" Ids="506,499" />
+            <Link Id="538" Ids="495,486" />
+            <Link Id="539" Ids="495,482" />
+            <Link Id="540" Ids="469,479" />
+            <Link Id="541" Ids="469,480" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Node Bounds="100,250" Id="542">
+        <p:NodeReference>
+          <Choice Kind="RecordDefinition" Name="Record" />
+        </p:NodeReference>
+        <Patch Id="543" Name="TreeCube" Category="VVVV.Transform" IsGeneric="true">
+          <Slot Id="544" Name="Transformation" />
+          <Slot Id="545" Name="Color" />
+          <Patch Id="546" Name="Create" IsGeneric="true" IsFragment="true">
+            <Pin Id="547" Name="Transformation" Kind="InputPin" />
+            <Pin Id="548" Name="Color" Kind="InputPin" />
+            <p:Info />
+          </Patch>
+          <Patch Id="549" Name="Update" IsGeneric="true" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="550" Name="Split" ParticipatingElements="567,569" IsGeneric="true">
+            <Pin Id="551" Name="Transformation" Kind="OutputPin" />
+            <Pin Id="552" Name="Color" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="553" Position="100,250">
+            <Pad Id="554" SlotId="544" Bounds="469,130" />
+            <Pad Id="555" SlotId="544" Bounds="162,206" />
+            <Pad Id="556" SlotId="545" Bounds="579,137" />
+            <Pad Id="557" SlotId="545" Bounds="261,203" />
+            <ControlPoint Id="558" Bounds="162,107" />
+            <ControlPoint Id="559" Bounds="262,107" />
+            <ControlPoint Id="560" Bounds="469,206" />
+            <ControlPoint Id="561" Bounds="579,206" />
+          </Canvas>
+          <Link Id="562" Ids="547,558" IsHidden="true" />
+          <Link Id="563" Ids="548,559" IsHidden="true" />
+          <Link Id="564" Ids="560,551" IsHidden="true" />
+          <Link Id="565" Ids="561,552" IsHidden="true" />
+          <Link Id="566" Ids="558,555" />
+          <Link Id="567" Ids="554,560" />
+          <Link Id="568" Ids="559,557" />
+          <Link Id="569" Ids="556,561" />
+          <p:Info />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+</Document>

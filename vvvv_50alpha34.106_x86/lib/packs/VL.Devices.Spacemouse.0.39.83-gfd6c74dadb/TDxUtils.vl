@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1138.5096">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.Core" Version="0.36.54-alpha-ge7023a82a5" />
+  <NugetDependency Id="3" Location="VL.CoreLib" Version="0.36.54-alpha-ge7023a82a5" />
+  <PlatformDependency Id="4" Location="./TDx.TDxInput.dll.vlimport" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Canvas Id="7" Name="Vector3Utils" Position="100,200" DefaultCategory="Devices.SpaceMouse">
+        <Node Bounds="231,191,294,210" Id="8">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="9" Name="ToVector3 (AngleAxis)" IsGeneric="true">
+            <Pin Id="10" Name="IAngleAxis" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="IAngleAxis" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="11" Name="Rotation" Kind="OutputPin" Bounds="4,4" />
+            <Pin Id="12" Name="Angle" Kind="OutputPin" Bounds="58,4" />
+            <Node Bounds="307,252,20,13" Id="13">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IAngleAxis" LastSymbolSource="TDxInput.dll">
+                <Choice Kind="OperationNode" Name="Y" />
+                <CategoryReference Kind="Category" Name="IAngleAxis" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="14" Name="Input" Kind="InputPin" />
+              <Pin Id="15" Name="Output" Kind="OutputPin" />
+              <Pin Id="16" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="249,255,20,13" Id="17">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IAngleAxis" LastSymbolSource="TDxInput.dll">
+                <Choice Kind="OperationNode" Name="X" />
+                <CategoryReference Kind="Category" Name="IAngleAxis" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="18" Name="Input" Kind="InputPin" />
+              <Pin Id="19" Name="Output" Kind="OutputPin" />
+              <Pin Id="20" Name="X" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="378,253,20,13" Id="21">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IAngleAxis" LastSymbolSource="TDxInput.dll">
+                <Choice Kind="OperationNode" Name="Z" />
+                <CategoryReference Kind="Category" Name="IAngleAxis" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="22" Name="Input" Kind="InputPin" />
+              <Pin Id="23" Name="Output" Kind="OutputPin" />
+              <Pin Id="24" Name="Z" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="457,288,56,22" Id="25">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="26" Name="Input" Kind="InputPin" />
+              <Pin Id="27" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="376,302,56,22" Id="28">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="29" Name="Input" Kind="InputPin" />
+              <Pin Id="30" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="457,249,35,13" Id="31">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IAngleAxis" LastSymbolSource="TDxInput.dll">
+                <CategoryReference Kind="Category" Name="IAngleAxis" />
+                <Choice Kind="OperationNode" Name="Angle" />
+              </p:NodeReference>
+              <Pin Id="32" Name="Input" Kind="InputPin" />
+              <Pin Id="33" Name="Output" Kind="OutputPin" />
+              <Pin Id="34" Name="Angle" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="309,301,56,22" Id="35">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="36" Name="Input" Kind="InputPin" />
+              <Pin Id="37" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="243,300,56,22" Id="38">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="39" Name="Input" Kind="InputPin" />
+              <Pin Id="40" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="295,352,39,13" Id="41">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="42" Name="X" Kind="InputPin" />
+              <Pin Id="43" Name="Y" Kind="InputPin" />
+              <Pin Id="44" Name="Z" Kind="InputPin" />
+              <Pin Id="45" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="46" Bounds="247,208" />
+            <ControlPoint Id="47" Bounds="292,376" />
+            <ControlPoint Id="48" Bounds="454,376" />
+            <Link Id="49" Ids="46,18" />
+            <Link Id="50" Ids="45,47" />
+            <Link Id="51" Ids="27,48" />
+            <Link Id="52" Ids="15,22" />
+            <Link Id="53" Ids="16,36" />
+            <Link Id="54" Ids="19,14" />
+            <Link Id="55" Ids="20,39" />
+            <Link Id="56" Ids="23,32" />
+            <Link Id="57" Ids="24,29" />
+            <Link Id="58" Ids="30,44" />
+            <Link Id="59" Ids="34,26" />
+            <Link Id="60" Ids="37,43" />
+            <Link Id="61" Ids="40,42" />
+            <Link Id="62" Ids="10,46" IsHidden="true" />
+            <Link Id="63" Ids="47,11" IsHidden="true" />
+            <Link Id="64" Ids="48,12" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="-62,192,215,208" Id="65">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="66" Name="ToVector3" IsGeneric="true">
+            <Pin Id="67" Name="IVector3D" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="68" Name="Vector3" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="-46,253,20,13" Id="69">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IVector3D" LastSymbolSource="TDxInput.dll">
+                <CategoryReference Kind="Category" Name="IVector3D" />
+                <Choice Kind="OperationNode" Name="X" />
+              </p:NodeReference>
+              <Pin Id="70" Name="Input" Kind="InputPin" />
+              <Pin Id="71" Name="Output" Kind="OutputPin" />
+              <Pin Id="72" Name="X" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="28,249,20,13" Id="73">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IVector3D" LastSymbolSource="TDxInput.dll">
+                <CategoryReference Kind="Category" Name="IVector3D" />
+                <Choice Kind="OperationNode" Name="Y" />
+              </p:NodeReference>
+              <Pin Id="74" Name="Input" Kind="InputPin" />
+              <Pin Id="75" Name="Output" Kind="OutputPin" />
+              <Pin Id="76" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="20,293,56,22" Id="77">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="78" Name="Input" Kind="InputPin" />
+              <Pin Id="79" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="-46,292,56,22" Id="80">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="81" Name="Input" Kind="InputPin" />
+              <Pin Id="82" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="86,294,56,22" Id="83">
+              <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ToFloat32" />
+                <CategoryReference Kind="Category" Name="Float64" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="84" Name="Input" Kind="InputPin" />
+              <Pin Id="85" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="86,249,20,13" Id="86">
+              <p:NodeReference LastCategoryFullName="TDx.TDxInput.IVector3D" LastSymbolSource="TDxInput.dll">
+                <CategoryReference Kind="Category" Name="IVector3D" />
+                <Choice Kind="OperationNode" Name="Z" />
+              </p:NodeReference>
+              <Pin Id="87" Name="Input" Kind="InputPin" />
+              <Pin Id="88" Name="Output" Kind="OutputPin" />
+              <Pin Id="89" Name="Z" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="4,332,39,13" Id="90">
+              <p:NodeReference LastCategoryFullName="3D.Vector3" LastSymbolSource="SharpDX.dll" LastPackageId="SharpDX">
+                <Choice Kind="OperationNode" Name="Vector (Join)" />
+                <CategoryReference Kind="Category" Name="Vector3" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="91" Name="X" Kind="InputPin" />
+              <Pin Id="92" Name="Y" Kind="InputPin" />
+              <Pin Id="93" Name="Z" Kind="InputPin" />
+              <Pin Id="94" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="95" Bounds="-46,209" />
+            <ControlPoint Id="96" Bounds="0,382" />
+            <Link Id="97" Ids="95,70" />
+            <Link Id="98" Ids="94,96" />
+            <Link Id="99" Ids="71,74" />
+            <Link Id="100" Ids="72,81" />
+            <Link Id="101" Ids="75,87" />
+            <Link Id="102" Ids="76,78" />
+            <Link Id="103" Ids="79,92" />
+            <Link Id="104" Ids="82,91" />
+            <Link Id="105" Ids="85,93" />
+            <Link Id="106" Ids="89,84" />
+            <Link Id="107" Ids="67,95" IsHidden="true" />
+            <Link Id="108" Ids="96,68" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+</Document>

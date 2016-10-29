@@ -1,0 +1,147 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
+   <PATCH nodename="C:\Work\vl-testpacks\VL.Firmata\vvvv\nodes\modules\BoardConfig (Firmata ArduinoLeonardo Internal).v4p" systemname="BoardConfig (Firmata ArduinoLeonardo)" filename="C:\Work\vl-testpacks\VL.Firmata\vvvv\nodes\modules\BoardConfig (Firmata ArduinoLeonardo).v4p">
+   <BOUNDS type="Window" left="8595" top="2490" width="5235" height="6000">
+   </BOUNDS>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3015" top="510" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3015" top="510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="32">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="5" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="735" top="4635" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="735" top="4635" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Firmata Config|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="645" top="195" width="960" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="645" top="195" width="930" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Analog Pins|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1665" top="195" width="960" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1665" top="195" width="855" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Board Pins|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2985" top="195" width="960" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2985" top="195" width="855" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pin Count|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1695" top="510" width="840" height="2595">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1695" top="510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="12" visible="1" values="18,19,20,21,22,23,24,25,26,27,28,29">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="705" top="510" width="810" height="2580">
+   </BOUNDS>
+   <BOUNDS type="Node" left="705" top="510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="12" visible="1" values="0,1,2,3,4,5,6,7,8,9,10,11">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="34.101.0">
+   </PACK>
+   <NODE systemname="AnalogPinMapping (Firmata Join Internal)" filename="..\vl\VVVV.Devices.Firmata.vl" nodename="AnalogPinMapping (Firmata Join Internal)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="720" top="3435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   <PIN pinname="Analog Pin ID" visible="1">
+   </PIN>
+   <PIN pinname="Board Pin ID" visible="1">
+   </PIN>
+   <PIN pinname="Analog Pin Index" visible="1" slicecount="16" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15">
+   </PIN>
+   <PIN pinname="Board Pin Index" visible="1" slicecount="16" values="7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Analog Pin Index">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Board Pin Index">
+   </LINK>
+   <NODE systemname="FirmataConfig (Firmata Internal)" filename="..\vl\VVVV.Devices.Firmata.vl" nodename="FirmataConfig (Firmata Internal)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="720" top="3975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Pin Count" visible="1">
+   </PIN>
+   <PIN pinname="Firmata Config" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Pin Count">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Firmata Config" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Result" dstnodeid="6" dstpinname="Analog Pin Mapping">
+   </LINK>
+   </PATCH>

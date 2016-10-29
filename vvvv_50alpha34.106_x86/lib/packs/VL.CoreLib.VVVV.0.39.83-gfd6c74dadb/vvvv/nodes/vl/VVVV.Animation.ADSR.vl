@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1043.64077">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.35.33" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.35.33" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Node Bounds="100,200" Id="7">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="8" Name="ADSR (FrameBased)" Category="VVVV.Animation">
+          <Patch Id="9" Name="Create" ParticipatingElements="28,37" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="10" Name="Update" ParticipatingElements="29,30,31,32,38,39" IsFragment="true">
+            <Pin Id="11" Name="Enabled" Kind="InputPin" />
+            <Pin Id="12" Name="Attack Time" Kind="InputPin" />
+            <Pin Id="13" Name="Decay Time" Kind="InputPin" />
+            <Pin Id="14" Name="Sustain Level" Kind="InputPin" />
+            <Pin Id="15" Name="Slope" Kind="InputPin" />
+            <Pin Id="16" Name="Release Time" Kind="InputPin" />
+            <Pin Id="17" Name="Frame Rate" Kind="InputPin" />
+            <Pin Id="18" Name="Level" Kind="OutputPin" />
+            <Pin Id="19" Name="Stage" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="20" Position="100,200">
+            <Node Bounds="306,356" Id="21">
+              <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="Basics.vl">
+                <Choice Kind="ProcessNode" Name="ADSR" />
+                <CategoryReference Kind="Category" Name="FrameBased" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="22" Name="Settings" Kind="InputPin" />
+              <Pin Id="23" Name="SetParams Enabled" Kind="EnabledPin" />
+              <Pin Id="24" Name="Set Enabled" Kind="EnabledPin" />
+              <Pin Id="25" Name="Reset Enabled" Kind="EnabledPin" />
+              <Pin Id="26" Name="Level" Kind="OutputPin" />
+              <Pin Id="27" Name="Stage" Kind="OutputPin" />
+              <NodeFragment Id="28" NameOfOperation="Create" />
+              <NodeFragment Id="29" NameOfOperation="SetParams" />
+              <NodeFragment Id="30" NameOfOperation="Set" />
+              <NodeFragment Id="31" NameOfOperation="Reset" />
+              <NodeFragment Id="32" NameOfOperation="Step" />
+            </Node>
+            <Node Bounds="336,312" Id="33">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="Basics.vl">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="34" Name="Value" Kind="InputPin" />
+              <Pin Id="35" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="36" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="37" NameOfOperation="Create" />
+              <NodeFragment Id="38" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="307,221" Id="39">
+              <p:NodeReference LastCategoryFullName="Main.ADSRSettings" LastSymbolSource="Basics.vl">
+                <CategoryReference Kind="Category" Name="ADSRSettings" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="40" Name="Attack Time" Kind="InputPin" />
+              <Pin Id="41" Name="Decay Time" Kind="InputPin" />
+              <Pin Id="42" Name="Sustain Level" Kind="InputPin" />
+              <Pin Id="43" Name="Slope" Kind="InputPin" />
+              <Pin Id="44" Name="Release Time" Kind="InputPin" />
+              <Pin Id="45" Name="Frame Rate" Kind="InputPin" />
+              <Pin Id="46" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="47" Bounds="177,119" />
+            <ControlPoint Id="48" Bounds="265,119" />
+            <ControlPoint Id="49" Bounds="360,119" />
+            <ControlPoint Id="50" Bounds="468,119" />
+            <ControlPoint Id="51" Bounds="586,119" />
+            <ControlPoint Id="52" Bounds="665,119" />
+            <ControlPoint Id="53" Bounds="782,119" />
+            <ControlPoint Id="54" Bounds="304,389" />
+            <ControlPoint Id="55" Bounds="425,389" />
+          </Canvas>
+          <Link Id="56" Ids="11,47" IsHidden="true" />
+          <Link Id="57" Ids="12,48" IsHidden="true" />
+          <Link Id="58" Ids="13,49" IsHidden="true" />
+          <Link Id="59" Ids="14,50" IsHidden="true" />
+          <Link Id="60" Ids="15,51" IsHidden="true" />
+          <Link Id="61" Ids="16,52" IsHidden="true" />
+          <Link Id="62" Ids="17,53" IsHidden="true" />
+          <Link Id="63" Ids="54,18" IsHidden="true" />
+          <Link Id="64" Ids="55,19" IsHidden="true" />
+          <Link Id="65" Ids="26,54" />
+          <Link Id="66" Ids="47,34" />
+          <Link Id="67" Ids="35,24" />
+          <Link Id="68" Ids="36,25" />
+          <Link Id="69" Ids="27,55" />
+          <Link Id="70" Ids="48,40" />
+          <Link Id="71" Ids="46,22" />
+          <Link Id="72" Ids="49,41" />
+          <Link Id="73" Ids="50,42" />
+          <Link Id="74" Ids="51,43" />
+          <Link Id="75" Ids="52,44" />
+          <Link Id="76" Ids="53,45" />
+          <p:Info />
+        </Patch>
+      </Node>
+      <Node Bounds="101,258" Id="77">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="78" Name="ADSR (TimeBased)" Category="VVVV.Animation">
+          <Patch Id="79" Name="Create" ParticipatingElements="102,114" IsFragment="true">
+            <p:Info />
+          </Patch>
+          <Patch Id="80" Name="Update" ParticipatingElements="90,103,115,116,117,118" IsFragment="true">
+            <Pin Id="81" Name="Enabled" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="82" Name="Attack Time" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="83" Name="Decay Time" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="84" Name="Sustain Level" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="85" Name="Slope" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="86" Name="Release Time" Kind="InputPin" Bounds="-349,0" />
+            <Pin Id="87" Name="Level" Kind="OutputPin" Bounds="-349,0" />
+            <Pin Id="88" Name="Stage" Kind="OutputPin" Bounds="-349,0" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="89" Position="101,258">
+            <Node Bounds="371,211" Id="90">
+              <p:NodeReference LastCategoryFullName="Main.ADSRSettings" LastSymbolSource="Basics.vl">
+                <CategoryReference Kind="Category" Name="ADSRSettings" />
+                <Choice Kind="OperationNode" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="91" Name="Attack Time" Kind="InputPin" />
+              <Pin Id="92" Name="Decay Time" Kind="InputPin" />
+              <Pin Id="93" Name="Sustain Level" Kind="InputPin" />
+              <Pin Id="94" Name="Slope" Kind="InputPin" />
+              <Pin Id="95" Name="Release Time" Kind="InputPin" />
+              <Pin Id="96" Name="Frame Rate" Kind="InputPin" />
+              <Pin Id="97" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="400,302" Id="98">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="Basics.vl">
+                <Choice Kind="ProcessNode" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="99" Name="Value" Kind="InputPin" />
+              <Pin Id="100" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="101" Name="Down Edge" Kind="OutputPin" />
+              <NodeFragment Id="102" NameOfOperation="Create" />
+              <NodeFragment Id="103" NameOfOperation="Update" />
+            </Node>
+            <Node Bounds="370,346" Id="104">
+              <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="Basics.vl">
+                <Choice Kind="ProcessNode" Name="ADSR" />
+                <CategoryReference Kind="Category" Name="Animation" NeedsToBeDirectParent="true" IsGlobal="true" />
+              </p:NodeReference>
+              <Pin Id="105" Name="Settings" Kind="InputPin" />
+              <Pin Id="106" Name="SetParams Enabled" Kind="EnabledPin" />
+              <Pin Id="107" Name="Time" Kind="InputPin" />
+              <Pin Id="108" Name="Reset Enabled" Kind="EnabledPin" />
+              <Pin Id="109" Name="Time" Kind="InputPin" />
+              <Pin Id="110" Name="Set Enabled" Kind="EnabledPin" />
+              <Pin Id="111" Name="Time" Kind="InputPin" />
+              <Pin Id="112" Name="Stage" Kind="OutputPin" />
+              <Pin Id="113" Name="Level" Kind="OutputPin" />
+              <NodeFragment Id="114" NameOfOperation="Create" />
+              <NodeFragment Id="115" NameOfOperation="SetParams" />
+              <NodeFragment Id="116" NameOfOperation="Reset" />
+              <NodeFragment Id="117" NameOfOperation="Set" />
+              <NodeFragment Id="118" NameOfOperation="Step" />
+            </Node>
+            <ControlPoint Id="119" Bounds="241,109" />
+            <ControlPoint Id="120" Bounds="329,109" />
+            <ControlPoint Id="121" Bounds="424,109" />
+            <ControlPoint Id="122" Bounds="532,109" />
+            <ControlPoint Id="123" Bounds="650,109" />
+            <ControlPoint Id="124" Bounds="729,109" />
+            <ControlPoint Id="125" Bounds="368,379" />
+            <ControlPoint Id="126" Bounds="489,379" />
+          </Canvas>
+          <Link Id="127" Ids="81,119" IsHidden="true" />
+          <Link Id="128" Ids="82,120" IsHidden="true" />
+          <Link Id="129" Ids="83,121" IsHidden="true" />
+          <Link Id="130" Ids="84,122" IsHidden="true" />
+          <Link Id="131" Ids="85,123" IsHidden="true" />
+          <Link Id="132" Ids="86,124" IsHidden="true" />
+          <Link Id="133" Ids="125,87" IsHidden="true" />
+          <Link Id="134" Ids="126,88" IsHidden="true" />
+          <Link Id="135" Ids="119,99" />
+          <Link Id="136" Ids="120,91" />
+          <Link Id="137" Ids="121,92" />
+          <Link Id="138" Ids="122,93" />
+          <Link Id="139" Ids="123,94" />
+          <Link Id="140" Ids="124,95" />
+          <Link Id="141" Ids="113,125" />
+          <Link Id="142" Ids="112,126" />
+          <Link Id="143" Ids="97,105" />
+          <Link Id="144" Ids="100,110" />
+          <Link Id="145" Ids="101,108" />
+          <p:Info />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+</Document>

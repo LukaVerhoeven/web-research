@@ -1,0 +1,1 @@
+Fork of https://ccimetadata.codeplex.com/ with couple of bugfixes applied to Microsoft.Cci.ReflectionEmitter and Microsoft.Cci.ReflectionImporter

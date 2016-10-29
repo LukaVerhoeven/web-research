@@ -1,0 +1,1122 @@
+{
+  "Version": 2,
+  "Types": [
+    {
+      "TypeAttribute": {
+        "Name": "Enumerable",
+        "Category": "Collections",
+        "Help": "Provides a set of static (Shared in Visual Basic) methods for querying objects that implement T:System.Collections.Generic.IEnumerable`1.",
+        "ImportedHelp": "<member name=\"T:System.Linq.Enumerable\">\r\n  <summary>Provides a set of static (Shared in Visual Basic) methods for querying objects that implement <see cref=\"T:System.Collections.Generic.IEnumerable`1\" />.</summary>\r\n</member>"
+      },
+      "Members": [
+        {
+          "NodeAttribute": {
+            "Name": "Aggregate",
+            "Category": "Collections.Sequence",
+            "Help": "Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.TSource: The type of the elements of Input.\r\nTAccumulate: The type of the accumulator value.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Aggregate``2(System.Collections.Generic.IEnumerable{``0},``1,System.Func{``1,``0,``1})\">\r\n  <summary>Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</summary>\r\n  <returns>The final accumulator value.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to aggregate over.</param>\r\n  <param name=\"seed\">The initial accumulator value.</param>\r\n  <param name=\"func\">An accumulator function to be invoked on each element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TAccumulate\">The type of the accumulator value.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"func\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to aggregate over.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to aggregate over.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "TAccumulate",
+              "PinAttribute": {
+                "Help": "The initial accumulator value.",
+                "ImportedHelp": "<param name=\"seed\">The initial accumulator value.</param>"
+              },
+              "DotNetName": "seed"
+            },
+            {
+              "TypeFullName": "System.Func<TAccumulate, TSource, TAccumulate>",
+              "PinAttribute": {
+                "Name": "Accumulator",
+                "Help": "An accumulator function to be invoked on each element.",
+                "ImportedHelp": "<param name=\"func\">An accumulator function to be invoked on each element.</param>"
+              },
+              "DotNetName": "func"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "TAccumulate",
+            "PinAttribute": {
+              "Help": "The final accumulator value.",
+              "ImportedHelp": "<returns>The final accumulator value.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Aggregate"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "All",
+            "Category": "Collections.Sequence",
+            "Help": "Determines whether all elements of a sequence satisfy a condition.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.All``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})\">\r\n  <summary>Determines whether all elements of a sequence satisfy a condition.</summary>\r\n  <returns>true if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, false.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements to apply the predicate to.</param>\r\n  <param name=\"predicate\">A function to test each element for a condition.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the elements to apply the predicate to.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements to apply the predicate to.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each element for a condition.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each element for a condition.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Boolean",
+            "PinAttribute": {
+              "Help": "true if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, false.",
+              "ImportedHelp": "<returns>true if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, false.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "All"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Any",
+            "Category": "Collections.Sequence",
+            "Help": "Determines whether a sequence contains any elements.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Any``1(System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Determines whether a sequence contains any elements.</summary>\r\n  <returns>true if the source sequence contains any elements; otherwise, false.</returns>\r\n  <param name=\"source\">The <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to check for emptiness.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The T:System.Collections.Generic.IEnumerable`1 to check for emptiness.",
+                "ImportedHelp": "<param name=\"source\">The <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to check for emptiness.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Boolean",
+            "PinAttribute": {
+              "Help": "true if the source sequence contains any elements; otherwise, false.",
+              "ImportedHelp": "<returns>true if the source sequence contains any elements; otherwise, false.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Any"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Any",
+            "Version": "Predicate",
+            "Category": "Collections.Sequence",
+            "Help": "Determines whether any element of a sequence satisfies a condition.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Any``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})\">\r\n  <summary>Determines whether any element of a sequence satisfies a condition.</summary>\r\n  <returns>true if any elements in the source sequence pass the test in the specified predicate; otherwise, false.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements to apply the predicate to.</param>\r\n  <param name=\"predicate\">A function to test each element for a condition.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements to apply the predicate to.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements to apply the predicate to.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each element for a condition.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each element for a condition.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Boolean",
+            "PinAttribute": {
+              "Help": "true if any elements in the source sequence pass the test in the specified predicate; otherwise, false.",
+              "ImportedHelp": "<returns>true if any elements in the source sequence pass the test in the specified predicate; otherwise, false.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Any"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Cast",
+            "Category": "Collections.Sequence",
+            "Help": "Casts the elements of an T:System.Collections.IEnumerable to the specified type.TResult: The type to cast the elements of Input to.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Cast``1(System.Collections.IEnumerable)\">\r\n  <summary>Casts the elements of an <see cref=\"T:System.Collections.IEnumerable\" /> to the specified type.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains each element of the source sequence cast to the specified type.</returns>\r\n  <param name=\"source\">The <see cref=\"T:System.Collections.IEnumerable\" /> that contains the elements to be cast to type <paramref name=\"TResult\" />.</param>\r\n  <typeparam name=\"TResult\">The type to cast the elements of <paramref name=\"source\" /> to.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n  <exception cref=\"T:System.InvalidCastException\">An element in the sequence cannot be cast to type <paramref name=\"TResult\" />.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.IEnumerable",
+              "PinAttribute": {
+                "Help": "The T:System.Collections.IEnumerable that contains the elements to be cast to type TResult.",
+                "ImportedHelp": "<param name=\"source\">The <see cref=\"T:System.Collections.IEnumerable\" /> that contains the elements to be cast to type <paramref name=\"TResult\" />.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains each element of the source sequence cast to the specified type.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains each element of the source sequence cast to the specified type.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Cast"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Concat",
+            "Category": "Collections.Sequence",
+            "Help": "Concatenates two sequences.TSource: The type of the elements of the input sequences.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Concat``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Concatenates two sequences.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the concatenated elements of the two input sequences.</returns>\r\n  <param name=\"first\">The first sequence to concatenate.</param>\r\n  <param name=\"second\">The sequence to concatenate to the first sequence.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of the input sequences.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The first sequence to concatenate.",
+                "ImportedHelp": "<param name=\"first\">The first sequence to concatenate.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Name": "Input 2",
+                "Help": "The sequence to concatenate to the first sequence.",
+                "ImportedHelp": "<param name=\"second\">The sequence to concatenate to the first sequence.</param>"
+              },
+              "DotNetName": "second"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the concatenated elements of the two input sequences.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the concatenated elements of the two input sequences.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Concat"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Count",
+            "Category": "Collections.Sequence",
+            "Help": "Returns the number of elements in a sequence.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Count``1(System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Returns the number of elements in a sequence.</summary>\r\n  <returns>The number of elements in the input sequence.</returns>\r\n  <param name=\"source\">A sequence that contains elements to be counted.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n  <exception cref=\"T:System.OverflowException\">The number of elements in <paramref name=\"source\" /> is larger than <see cref=\"F:System.Int32.MaxValue\" />.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence that contains elements to be counted.",
+                "ImportedHelp": "<param name=\"source\">A sequence that contains elements to be counted.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Int32",
+            "PinAttribute": {
+              "Help": "The number of elements in the input sequence.",
+              "ImportedHelp": "<returns>The number of elements in the input sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Count"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Count",
+            "Version": "Predicate",
+            "Category": "Collections.Sequence",
+            "Help": "Returns a number that represents how many elements in the specified sequence satisfy a condition.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Count``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})\">\r\n  <summary>Returns a number that represents how many elements in the specified sequence satisfy a condition.</summary>\r\n  <returns>A number that represents how many elements in the sequence satisfy the condition in the predicate function.</returns>\r\n  <param name=\"source\">A sequence that contains elements to be tested and counted.</param>\r\n  <param name=\"predicate\">A function to test each element for a condition.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n  <exception cref=\"T:System.OverflowException\">The number of elements in <paramref name=\"source\" /> is larger than <see cref=\"F:System.Int32.MaxValue\" />.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence that contains elements to be tested and counted.",
+                "ImportedHelp": "<param name=\"source\">A sequence that contains elements to be tested and counted.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each element for a condition.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each element for a condition.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Int32",
+            "PinAttribute": {
+              "Help": "A number that represents how many elements in the sequence satisfy the condition in the predicate function.",
+              "ImportedHelp": "<returns>A number that represents how many elements in the sequence satisfy the condition in the predicate function.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Count"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "DefaultIfEmpty",
+            "Category": "Collections.Sequence",
+            "Help": "Returns the elements of the specified sequence or the specified value in a singleton collection if the sequence is empty.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.DefaultIfEmpty``1(System.Collections.Generic.IEnumerable{``0},``0)\">\r\n  <summary>Returns the elements of the specified sequence or the specified value in a singleton collection if the sequence is empty.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains <paramref name=\"defaultValue\" /> if <paramref name=\"source\" /> is empty; otherwise, <paramref name=\"source\" />.</returns>\r\n  <param name=\"source\">The sequence to return the specified value for if it is empty.</param>\r\n  <param name=\"defaultValue\">The value to return if the sequence is empty.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The sequence to return the specified value for if it is empty.",
+                "ImportedHelp": "<param name=\"source\">The sequence to return the specified value for if it is empty.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "TSource",
+              "PinAttribute": {
+                "Help": "The value to return if the sequence is empty.",
+                "ImportedHelp": "<param name=\"defaultValue\">The value to return if the sequence is empty.</param>"
+              },
+              "DotNetName": "defaultValue"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains Default Value if Input is empty; otherwise, Input.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains <paramref name=\"defaultValue\" /> if <paramref name=\"source\" /> is empty; otherwise, <paramref name=\"source\" />.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "DefaultIfEmpty"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Distinct",
+            "Category": "Collections.Sequence",
+            "Help": "Returns distinct elements from a sequence by using the default equality comparer to compare values.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Distinct``1(System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Returns distinct elements from a sequence by using the default equality comparer to compare values.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains distinct elements from the source sequence.</returns>\r\n  <param name=\"source\">The sequence to remove duplicate elements from.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The sequence to remove duplicate elements from.",
+                "ImportedHelp": "<param name=\"source\">The sequence to remove duplicate elements from.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains distinct elements from the source sequence.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains distinct elements from the source sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Distinct"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Empty",
+            "Category": "Collections.Sequence",
+            "ShowCategory": true,
+            "Help": "Returns an empty T:System.Collections.Generic.IEnumerable`1 that has the specified type argument.TResult: The type to assign to the type parameter of the returned generic T:System.Collections.Generic.IEnumerable`1.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Empty``1\">\r\n  <summary>Returns an empty <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that has the specified type argument.</summary>\r\n  <returns>An empty <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose type argument is <paramref name=\"TResult\" />.</returns>\r\n  <typeparam name=\"TResult\">The type to assign to the type parameter of the returned generic <see cref=\"T:System.Collections.Generic.IEnumerable`1\" />.</typeparam>\r\n</member>",
+            "IsDefaultValue": true
+          },
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An empty T:System.Collections.Generic.IEnumerable`1 whose type argument is TResult.",
+              "ImportedHelp": "<returns>An empty <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose type argument is <paramref name=\"TResult\" />.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Empty"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Except",
+            "Category": "Collections.Sequence",
+            "Help": "Produces the set difference of two sequences by using the default equality comparer to compare values.TSource: The type of the elements of the input sequences.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Except``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Produces the set difference of two sequences by using the default equality comparer to compare values.</summary>\r\n  <returns>A sequence that contains the set difference of the elements of two sequences.</returns>\r\n  <param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements that are not also in <paramref name=\"second\" /> will be returned.</param>\r\n  <param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements that also occur in the first sequence will cause those elements to be removed from the returned sequence.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of the input sequences.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements that are not also in Input 2 will be returned.",
+                "ImportedHelp": "<param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements that are not also in <paramref name=\"second\" /> will be returned.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Name": "Input 2",
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements that also occur in the first sequence will cause those elements to be removed from the returned sequence.",
+                "ImportedHelp": "<param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements that also occur in the first sequence will cause those elements to be removed from the returned sequence.</param>"
+              },
+              "DotNetName": "second"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "A sequence that contains the set difference of the elements of two sequences.",
+              "ImportedHelp": "<returns>A sequence that contains the set difference of the elements of two sequences.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Except"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "GroupBy",
+            "Category": "Collections.Sequence",
+            "Help": "Groups the elements of a sequence according to a specified key selector function.TSource: The type of the elements of Input.\r\nTKey: The type of the key returned by Key Selector.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.GroupBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})\">\r\n  <summary>Groups the elements of a sequence according to a specified key selector function.</summary>\r\n  <returns>An IEnumerable&lt;IGrouping&lt;TKey, TSource&gt;&gt; in C# or IEnumerable(Of IGrouping(Of TKey, TSource)) in Visual Basic where each <see cref=\"T:System.Linq.IGrouping`2\" /> object contains a sequence of objects and a key.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements to group.</param>\r\n  <param name=\"keySelector\">A function to extract the key for each element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TKey\">The type of the key returned by <paramref name=\"keySelector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"keySelector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements to group.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements to group.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, TKey>",
+              "PinAttribute": {
+                "Help": "A function to extract the key for each element.",
+                "ImportedHelp": "<param name=\"keySelector\">A function to extract the key for each element.</param>"
+              },
+              "DotNetName": "keySelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<System.Linq.IGrouping<TKey, TSource>>",
+            "PinAttribute": {
+              "Help": "An IEnumerable<IGrouping<TKey, TSource>> in C# or IEnumerable(Of IGrouping(Of TKey, TSource)) in Visual Basic where each Grouping object contains a sequence of objects and a key.",
+              "ImportedHelp": "<returns>An IEnumerable&lt;IGrouping&lt;TKey, TSource&gt;&gt; in C# or IEnumerable(Of IGrouping(Of TKey, TSource)) in Visual Basic where each <see cref=\"T:System.Linq.IGrouping`2\" /> object contains a sequence of objects and a key.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "GroupBy"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Intersect",
+            "Category": "Collections.Sequence",
+            "Help": "Produces the set intersection of two sequences by using the default equality comparer to compare values.TSource: The type of the elements of the input sequences.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Intersect``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Produces the set intersection of two sequences by using the default equality comparer to compare values.</summary>\r\n  <returns>A sequence that contains the elements that form the set intersection of two sequences.</returns>\r\n  <param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements that also appear in <paramref name=\"second\" /> will be returned.</param>\r\n  <param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements that also appear in the first sequence will be returned.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of the input sequences.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose distinct elements that also appear in Input 2 will be returned.",
+                "ImportedHelp": "<param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements that also appear in <paramref name=\"second\" /> will be returned.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Name": "Input 2",
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose distinct elements that also appear in the first sequence will be returned.",
+                "ImportedHelp": "<param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements that also appear in the first sequence will be returned.</param>"
+              },
+              "DotNetName": "second"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "A sequence that contains the elements that form the set intersection of two sequences.",
+              "ImportedHelp": "<returns>A sequence that contains the elements that form the set intersection of two sequences.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Intersect"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "OfType",
+            "Category": "Collections.Sequence",
+            "Help": "Filters the elements of an T:System.Collections.IEnumerable based on a specified type.TResult: The type to filter the elements of the sequence on.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.OfType``1(System.Collections.IEnumerable)\">\r\n  <summary>Filters the elements of an <see cref=\"T:System.Collections.IEnumerable\" /> based on a specified type.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence of type <paramref name=\"TResult\" />.</returns>\r\n  <param name=\"source\">The <see cref=\"T:System.Collections.IEnumerable\" /> whose elements to filter.</param>\r\n  <typeparam name=\"TResult\">The type to filter the elements of the sequence on.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.IEnumerable",
+              "PinAttribute": {
+                "Help": "The T:System.Collections.IEnumerable whose elements to filter.",
+                "ImportedHelp": "<param name=\"source\">The <see cref=\"T:System.Collections.IEnumerable\" /> whose elements to filter.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains elements from the input sequence of type TResult.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence of type <paramref name=\"TResult\" />.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "OfType"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "OrderBy",
+            "Category": "Collections.Sequence",
+            "Help": "Sorts the elements of a sequence in ascending order according to a key.TSource: The type of the elements of Input.\r\nTKey: The type of the key returned by Key Selector.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.OrderBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})\">\r\n  <summary>Sorts the elements of a sequence in ascending order according to a key.</summary>\r\n  <returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted according to a key.</returns>\r\n  <param name=\"source\">A sequence of values to order.</param>\r\n  <param name=\"keySelector\">A function to extract a key from an element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TKey\">The type of the key returned by <paramref name=\"keySelector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"keySelector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence of values to order.",
+                "ImportedHelp": "<param name=\"source\">A sequence of values to order.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, TKey>",
+              "PinAttribute": {
+                "Help": "A function to extract a key from an element.",
+                "ImportedHelp": "<param name=\"keySelector\">A function to extract a key from an element.</param>"
+              },
+              "DotNetName": "keySelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An IOrderedEnumerable whose elements are sorted according to a key.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted according to a key.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "OrderBy"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "OrderByDescending",
+            "Category": "Collections.Sequence",
+            "Help": "Sorts the elements of a sequence in descending order according to a key.TSource: The type of the elements of Input.\r\nTKey: The type of the key returned by Key Selector.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.OrderByDescending``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})\">\r\n  <summary>Sorts the elements of a sequence in descending order according to a key.</summary>\r\n  <returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted in descending order according to a key.</returns>\r\n  <param name=\"source\">A sequence of values to order.</param>\r\n  <param name=\"keySelector\">A function to extract a key from an element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TKey\">The type of the key returned by <paramref name=\"keySelector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"keySelector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence of values to order.",
+                "ImportedHelp": "<param name=\"source\">A sequence of values to order.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, TKey>",
+              "PinAttribute": {
+                "Help": "A function to extract a key from an element.",
+                "ImportedHelp": "<param name=\"keySelector\">A function to extract a key from an element.</param>"
+              },
+              "DotNetName": "keySelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An IOrderedEnumerable whose elements are sorted in descending order according to a key.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted in descending order according to a key.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "OrderByDescending"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Project",
+            "Category": "Collections.Sequence",
+            "Tags": "Select",
+            "Help": "Projects each element of a sequence into a new form by incorporating the element's index.TSource: The type of the elements of Input.\r\nTResult: The type of the value returned by Transformer.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Select``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,``1})\">\r\n  <summary>Projects each element of a sequence into a new form by incorporating the element's index.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements are the result of invoking the transform function on each element of <paramref name=\"source\" />.</returns>\r\n  <param name=\"source\">A sequence of values to invoke a transform function on.</param>\r\n  <param name=\"selector\">A transform function to apply to each source element; the second parameter of the function represents the index of the source element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TResult\">The type of the value returned by <paramref name=\"selector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"selector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence of values to invoke a transform function on.",
+                "ImportedHelp": "<param name=\"source\">A sequence of values to invoke a transform function on.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Int32, TResult>",
+              "PinAttribute": {
+                "Name": "Transformer",
+                "Help": "A transform function to apply to each source element; the second parameter of the function represents the index of the source element.",
+                "ImportedHelp": "<param name=\"selector\">A transform function to apply to each source element; the second parameter of the function represents the index of the source element.</param>"
+              },
+              "DotNetName": "selector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements are the result of invoking the transform function on each element of Input.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements are the result of invoking the transform function on each element of <paramref name=\"source\" />.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Select"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Project",
+            "Version": "Many",
+            "Category": "Collections.Sequence",
+            "Tags": "SelectMany",
+            "Help": "Projects each element of a sequence to an T:System.Collections.Generic.IEnumerable`1, and flattens the resulting sequences into one sequence. The index of each source element is used in the projected form of that element.TSource: The type of the elements of Input.\r\nTResult: The type of the elements of the sequence returned by Transformer.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.SelectMany``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}})\">\r\n  <summary>Projects each element of a sequence to an <see cref=\"T:System.Collections.Generic.IEnumerable`1\" />, and flattens the resulting sequences into one sequence. The index of each source element is used in the projected form of that element.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements are the result of invoking the one-to-many transform function on each element of an input sequence.</returns>\r\n  <param name=\"source\">A sequence of values to project.</param>\r\n  <param name=\"selector\">A transform function to apply to each source element; the second parameter of the function represents the index of the source element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TResult\">The type of the elements of the sequence returned by <paramref name=\"selector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"selector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence of values to project.",
+                "ImportedHelp": "<param name=\"source\">A sequence of values to project.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Int32, System.Collections.Generic.IEnumerable<TResult>>",
+              "PinAttribute": {
+                "Name": "Transformer",
+                "Help": "A transform function to apply to each source element; the second parameter of the function represents the index of the source element.",
+                "ImportedHelp": "<param name=\"selector\">A transform function to apply to each source element; the second parameter of the function represents the index of the source element.</param>"
+              },
+              "DotNetName": "selector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 whose elements are the result of invoking the one-to-many transform function on each element of an input sequence.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose elements are the result of invoking the one-to-many transform function on each element of an input sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "SelectMany"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Reverse",
+            "Category": "Collections.Sequence",
+            "Help": "Inverts the order of the elements in a sequence.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Reverse``1(System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Inverts the order of the elements in a sequence.</summary>\r\n  <returns>A sequence whose elements correspond to those of the input sequence in reverse order.</returns>\r\n  <param name=\"source\">A sequence of values to reverse.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "A sequence of values to reverse.",
+                "ImportedHelp": "<param name=\"source\">A sequence of values to reverse.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "A sequence whose elements correspond to those of the input sequence in reverse order.",
+              "ImportedHelp": "<returns>A sequence whose elements correspond to those of the input sequence in reverse order.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Reverse"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "SequenceEqual",
+            "Category": "Collections.Sequence",
+            "Help": "Determines whether two sequences are equal by comparing the elements by using the default equality comparer for their type.TSource: The type of the elements of the input sequences.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.SequenceEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Determines whether two sequences are equal by comparing the elements by using the default equality comparer for their type.</summary>\r\n  <returns>true if the two source sequences are of equal length and their corresponding elements are equal according to the default equality comparer for their type; otherwise, false.</returns>\r\n  <param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to compare to <paramref name=\"second\" />.</param>\r\n  <param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to compare to the first sequence.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of the input sequences.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to compare to Second.",
+                "ImportedHelp": "<param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to compare to <paramref name=\"second\" />.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to compare to the first sequence.",
+                "ImportedHelp": "<param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to compare to the first sequence.</param>"
+              },
+              "DotNetName": "second"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Boolean",
+            "PinAttribute": {
+              "Help": "true if the two source sequences are of equal length and their corresponding elements are equal according to the default equality comparer for their type; otherwise, false.",
+              "ImportedHelp": "<returns>true if the two source sequences are of equal length and their corresponding elements are equal according to the default equality comparer for their type; otherwise, false.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "SequenceEqual"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Skip",
+            "Category": "Collections.Sequence",
+            "Help": "Bypasses a specified number of elements in a sequence and then returns the remaining elements.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Skip``1(System.Collections.Generic.IEnumerable{``0},System.Int32)\">\r\n  <summary>Bypasses a specified number of elements in a sequence and then returns the remaining elements.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements that occur after the specified index in the input sequence.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to return elements from.</param>\r\n  <param name=\"count\">The number of elements to skip before returning the remaining elements.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to return elements from.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to return elements from.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Int32",
+              "PinAttribute": {
+                "Help": "The number of elements to skip before returning the remaining elements.",
+                "ImportedHelp": "<param name=\"count\">The number of elements to skip before returning the remaining elements.</param>"
+              },
+              "DotNetName": "count"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the elements that occur after the specified index in the input sequence.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements that occur after the specified index in the input sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Skip"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "SkipWhile",
+            "Category": "Collections.Sequence",
+            "Help": "Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements. The element's index is used in the logic of the predicate function.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.SkipWhile``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})\">\r\n  <summary>Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements. The element's index is used in the logic of the predicate function.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by <paramref name=\"predicate\" />.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to return elements from.</param>\r\n  <param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to return elements from.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to return elements from.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Int32, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each source element for a condition; the second parameter of the function represents the index of the source element.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by Predicate.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by <paramref name=\"predicate\" />.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "SkipWhile"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Take",
+            "Category": "Collections.Sequence",
+            "Help": "Returns a specified number of contiguous elements from the start of a sequence.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Take``1(System.Collections.Generic.IEnumerable{``0},System.Int32)\">\r\n  <summary>Returns a specified number of contiguous elements from the start of a sequence.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the specified number of elements from the start of the input sequence.</returns>\r\n  <param name=\"source\">The sequence to return elements from.</param>\r\n  <param name=\"count\">The number of elements to return.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The sequence to return elements from.",
+                "ImportedHelp": "<param name=\"source\">The sequence to return elements from.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Int32",
+              "PinAttribute": {
+                "Help": "The number of elements to return.",
+                "ImportedHelp": "<param name=\"count\">The number of elements to return.</param>"
+              },
+              "DotNetName": "count"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the specified number of elements from the start of the input sequence.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the specified number of elements from the start of the input sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Take"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "TakeWhile",
+            "Category": "Collections.Sequence",
+            "Help": "Returns elements from a sequence as long as a specified condition is true. The element's index is used in the logic of the predicate function.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.TakeWhile``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})\">\r\n  <summary>Returns elements from a sequence as long as a specified condition is true. The element's index is used in the logic of the predicate function.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence that occur before the element at which the test no longer passes.</returns>\r\n  <param name=\"source\">The sequence to return elements from.</param>\r\n  <param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "The sequence to return elements from.",
+                "ImportedHelp": "<param name=\"source\">The sequence to return elements from.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Int32, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each source element for a condition; the second parameter of the function represents the index of the source element.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains elements from the input sequence that occur before the element at which the test no longer passes.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence that occur before the element at which the test no longer passes.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "TakeWhile"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "ThenBy",
+            "Category": "Collections.Sequence",
+            "Help": "Performs a subsequent ordering of the elements in a sequence in ascending order according to a key.TSource: The type of the elements of Input.\r\nTKey: The type of the key returned by Key Selector.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})\">\r\n  <summary>Performs a subsequent ordering of the elements in a sequence in ascending order according to a key.</summary>\r\n  <returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted according to a key.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> that contains elements to sort.</param>\r\n  <param name=\"keySelector\">A function to extract a key from each element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TKey\">The type of the key returned by <paramref name=\"keySelector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"keySelector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An IOrderedEnumerable that contains elements to sort.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> that contains elements to sort.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, TKey>",
+              "PinAttribute": {
+                "Help": "A function to extract a key from each element.",
+                "ImportedHelp": "<param name=\"keySelector\">A function to extract a key from each element.</param>"
+              },
+              "DotNetName": "keySelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An IOrderedEnumerable whose elements are sorted according to a key.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted according to a key.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "ThenBy"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "ThenByDescending",
+            "Category": "Collections.Sequence",
+            "Help": "Performs a subsequent ordering of the elements in a sequence in descending order, according to a key.TSource: The type of the elements of Input.\r\nTKey: The type of the key returned by Key Selector.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})\">\r\n  <summary>Performs a subsequent ordering of the elements in a sequence in descending order, according to a key.</summary>\r\n  <returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted in descending order according to a key.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> that contains elements to sort.</param>\r\n  <param name=\"keySelector\">A function to extract a key from each element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <typeparam name=\"TKey\">The type of the key returned by <paramref name=\"keySelector\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"keySelector\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An IOrderedEnumerable that contains elements to sort.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> that contains elements to sort.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, TKey>",
+              "PinAttribute": {
+                "Help": "A function to extract a key from each element.",
+                "ImportedHelp": "<param name=\"keySelector\">A function to extract a key from each element.</param>"
+              },
+              "DotNetName": "keySelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Linq.IOrderedEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An IOrderedEnumerable whose elements are sorted in descending order according to a key.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Linq.IOrderedEnumerable`1\" /> whose elements are sorted in descending order according to a key.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "ThenByDescending"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "ToArray",
+            "Category": "Collections.Sequence",
+            "Help": "Creates an array from a T:System.Collections.Generic.IEnumerable`1.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.ToArray``1(System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Creates an array from a <see cref=\"T:System.Collections.Generic.IEnumerable`1\" />.</summary>\r\n  <returns>An array that contains the elements from the input sequence.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to create an array from.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to create an array from.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to create an array from.</param>"
+              },
+              "DotNetName": "source"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "TSource[]",
+            "PinAttribute": {
+              "Help": "An array that contains the elements from the input sequence.",
+              "ImportedHelp": "<returns>An array that contains the elements from the input sequence.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "ToArray"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Union",
+            "Category": "Collections.Sequence",
+            "Help": "Produces the set union of two sequences by using the default equality comparer.TSource: The type of the elements of the input sequences.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Union``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})\">\r\n  <summary>Produces the set union of two sequences by using the default equality comparer.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements from both input sequences, excluding duplicates.</returns>\r\n  <param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements form the first set for the union.</param>\r\n  <param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements form the second set for the union.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of the input sequences.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose distinct elements form the first set for the union.",
+                "ImportedHelp": "<param name=\"first\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements form the first set for the union.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Name": "Input 2",
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 whose distinct elements form the second set for the union.",
+                "ImportedHelp": "<param name=\"second\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> whose distinct elements form the second set for the union.</param>"
+              },
+              "DotNetName": "second"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains the elements from both input sequences, excluding duplicates.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains the elements from both input sequences, excluding duplicates.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Union"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Where",
+            "Category": "Collections.Sequence",
+            "Help": "Filters a sequence of values based on a predicate. Each element's index is used in the logic of the predicate function.TSource: The type of the elements of Input.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Where``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})\">\r\n  <summary>Filters a sequence of values based on a predicate. Each element's index is used in the logic of the predicate function.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence that satisfy the condition.</returns>\r\n  <param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to filter.</param>\r\n  <param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>\r\n  <typeparam name=\"TSource\">The type of the elements of <paramref name=\"source\" />.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"source\" /> or <paramref name=\"predicate\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+              "PinAttribute": {
+                "Help": "An T:System.Collections.Generic.IEnumerable`1 to filter.",
+                "ImportedHelp": "<param name=\"source\">An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> to filter.</param>"
+              },
+              "DotNetName": "source"
+            },
+            {
+              "TypeFullName": "System.Func<TSource, System.Int32, System.Boolean>",
+              "PinAttribute": {
+                "Help": "A function to test each source element for a condition; the second parameter of the function represents the index of the source element.",
+                "ImportedHelp": "<param name=\"predicate\">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>"
+              },
+              "DotNetName": "predicate"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TSource>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains elements from the input sequence that satisfy the condition.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains elements from the input sequence that satisfy the condition.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Where"
+        },
+        {
+          "NodeAttribute": {
+            "Name": "Zip",
+            "Version": "LINQ",
+            "Category": "Collections.Sequence",
+            "Help": "Applies a specified function to the corresponding elements of two sequences, producing a sequence of the results.TFirst: The type of the elements of the first input sequence.\r\nTSecond: The type of the elements of the second input sequence.\r\nTResult: The type of the elements of the result sequence.\r\n",
+            "ImportedHelp": "<member name=\"M:System.Linq.Enumerable.Zip``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``1,``2})\">\r\n  <summary>Applies a specified function to the corresponding elements of two sequences, producing a sequence of the results.</summary>\r\n  <returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains merged elements of two input sequences.</returns>\r\n  <param name=\"first\">The first sequence to merge.</param>\r\n  <param name=\"second\">The second sequence to merge.</param>\r\n  <param name=\"resultSelector\">A function that specifies how to merge the elements from the two sequences.</param>\r\n  <typeparam name=\"TFirst\">The type of the elements of the first input sequence.</typeparam>\r\n  <typeparam name=\"TSecond\">The type of the elements of the second input sequence.</typeparam>\r\n  <typeparam name=\"TResult\">The type of the elements of the result sequence.</typeparam>\r\n  <exception cref=\"T:System.ArgumentNullException\">\r\n    <paramref name=\"first\" /> or <paramref name=\"second\" /> is null.</exception>\r\n</member>"
+          },
+          "Parameters": [
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TFirst>",
+              "PinAttribute": {
+                "Help": "The first sequence to merge.",
+                "ImportedHelp": "<param name=\"first\">The first sequence to merge.</param>"
+              },
+              "DotNetName": "first"
+            },
+            {
+              "TypeFullName": "System.Collections.Generic.IEnumerable<TSecond>",
+              "PinAttribute": {
+                "Name": "Input 2",
+                "Help": "The second sequence to merge.",
+                "ImportedHelp": "<param name=\"second\">The second sequence to merge.</param>"
+              },
+              "DotNetName": "second"
+            },
+            {
+              "TypeFullName": "System.Func<TFirst, TSecond, TResult>",
+              "PinAttribute": {
+                "Help": "A function that specifies how to merge the elements from the two sequences.",
+                "ImportedHelp": "<param name=\"resultSelector\">A function that specifies how to merge the elements from the two sequences.</param>"
+              },
+              "DotNetName": "resultSelector"
+            }
+          ],
+          "ReturnValue": {
+            "TypeFullName": "System.Collections.Generic.IEnumerable<TResult>",
+            "PinAttribute": {
+              "Help": "An T:System.Collections.Generic.IEnumerable`1 that contains merged elements of two input sequences.",
+              "ImportedHelp": "<returns>An <see cref=\"T:System.Collections.Generic.IEnumerable`1\" /> that contains merged elements of two input sequences.</returns>"
+            },
+            "PinDirection": 1,
+            "DotNetName": "return"
+          },
+          "DotNetName": "Zip"
+        }
+      ],
+      "DotNetName": "System.Linq.Enumerable"
+    },
+    {
+      "TypeAttribute": {
+        "Name": "Grouping",
+        "Category": "Collections.Sequence",
+        "Help": "Represents a collection of objects that have a common key.TKey: The type of the key of the Grouping.This type parameter is covariant. That is, you can use either the type you specified or any type that is more derived. For more information about covariance and contravariance, see Covariance and Contravariance in Generics.\r\nTElement: The type of the values in the Grouping.\r\n",
+        "ImportedHelp": "<member name=\"T:System.Linq.IGrouping`2\">\r\n  <summary>Represents a collection of objects that have a common key.</summary>\r\n  <typeparam name=\"TKey\">The type of the key of the <see cref=\"T:System.Linq.IGrouping`2\" />.This type parameter is covariant. That is, you can use either the type you specified or any type that is more derived. For more information about covariance and contravariance, see Covariance and Contravariance in Generics.</typeparam>\r\n  <typeparam name=\"TElement\">The type of the values in the <see cref=\"T:System.Linq.IGrouping`2\" />.</typeparam>\r\n  <filterpriority>2</filterpriority>\r\n</member>"
+      },
+      "Members": [
+        {
+          "NodeAttribute": {
+            "Name": "Key",
+            "ShowCategory": true,
+            "Help": "Gets the key of the Grouping.",
+            "ImportedHelp": "<member name=\"P:System.Linq.IGrouping`2.Key\">\r\n  <summary>Gets the key of the <see cref=\"T:System.Linq.IGrouping`2\" />.</summary>\r\n  <returns>The key of the <see cref=\"T:System.Linq.IGrouping`2\" />.</returns>\r\n</member>"
+          },
+          "DotNetName": "Key"
+        }
+      ],
+      "DotNetName": "System.Linq.IGrouping`2"
+    },
+    {
+      "TypeAttribute": {
+        "Name": "IOrderedEnumerable",
+        "Category": "Collections.Sequence",
+        "Help": "Represents a sorted sequence.TElement: The type of the elements of the sequence.\r\n",
+        "ImportedHelp": "<member name=\"T:System.Linq.IOrderedEnumerable`1\">\r\n  <summary>Represents a sorted sequence.</summary>\r\n  <typeparam name=\"TElement\">The type of the elements of the sequence.</typeparam>\r\n  <filterpriority>2</filterpriority>\r\n</member>"
+      },
+      "Members": [],
+      "DotNetName": "System.Linq.IOrderedEnumerable`1"
+    }
+  ],
+  "IsGAC": true,
+  "DotNetName": "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+}

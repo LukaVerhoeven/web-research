@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.39">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.35.33" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.35.33" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Canvas Id="7" Name="Generators" Position="100,200" DefaultCategory="VVVV.2d">
+        <Node Bounds="350,123,257,146" Id="8">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="9" Name="RectangleSpread">
+            <Pin Id="10" Name="Center" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="11" Name="Size" Kind="InputPin" Bounds="49,4" DefaultValue="new vec(1.0,1.0)">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="12" Name="Subdivision Count" Kind="InputPin" Bounds="82,4" DefaultValue="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="13" Name="Output" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="396,182,102,13" Id="14">
+              <p:NodeReference LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="RectangleSpread" />
+                <FullNameCategoryReference ID="Collections.SpreadGenerators" />
+              </p:NodeReference>
+              <Pin Id="15" Name="Center" Kind="InputPin" />
+              <Pin Id="16" Name="Size" Kind="InputPin" />
+              <Pin Id="17" Name="Subdivision Count" Kind="InputPin" />
+              <Pin Id="18" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="19" Bounds="364,139" />
+            <ControlPoint Id="20" Bounds="451,139" />
+            <ControlPoint Id="21" Bounds="502,139" />
+            <ControlPoint Id="22" Bounds="407,250" />
+            <Link Id="23" Ids="19,15" />
+            <Link Id="24" Ids="20,16" />
+            <Link Id="25" Ids="21,17" />
+            <Link Id="26" Ids="18,22" />
+            <Link Id="27" Ids="10,19" IsHidden="true" />
+            <Link Id="28" Ids="11,20" IsHidden="true" />
+            <Link Id="29" Ids="12,21" IsHidden="true" />
+            <Link Id="30" Ids="22,13" IsHidden="true" />
+            <p:Info Summary="Generates a rectangle in 2d space." />
+          </Patch>
+        </Node>
+        <Node Bounds="696,131,365,136" Id="31">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="32" Name="StarSpread">
+            <Pin Id="33" Name="Center" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="34" Name="Radius 1" Kind="InputPin" Bounds="49,4" DefaultValue="0.5">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="35" Name="Radius 2" Kind="InputPin" Bounds="104,4" DefaultValue="1.0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="36" Name="Phase" Kind="InputPin" Bounds="159,4" />
+            <Pin Id="37" Name="Spike Count" Kind="InputPin" Bounds="200,4" DefaultValue="3">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="38" Name="Output" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="734,212,75,13" Id="39">
+              <p:NodeReference LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="StarSpread" />
+                <FullNameCategoryReference ID="Collections.SpreadGenerators" />
+              </p:NodeReference>
+              <Pin Id="40" Name="Center" Kind="InputPin" />
+              <Pin Id="41" Name="Radius 1" Kind="InputPin" />
+              <Pin Id="42" Name="Radius 2" Kind="InputPin" />
+              <Pin Id="43" Name="Phase" Kind="InputPin" />
+              <Pin Id="44" Name="Spike Count" Kind="InputPin" />
+              <Pin Id="45" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="46" Bounds="710,147" />
+            <ControlPoint Id="47" Bounds="770,147" />
+            <ControlPoint Id="48" Bounds="846,147" />
+            <ControlPoint Id="49" Bounds="921,147" />
+            <ControlPoint Id="50" Bounds="984,147" />
+            <ControlPoint Id="51" Bounds="736,248" />
+            <Link Id="52" Ids="46,40" />
+            <Link Id="53" Ids="47,41" />
+            <Link Id="54" Ids="48,42" />
+            <Link Id="55" Ids="49,43" />
+            <Link Id="56" Ids="50,44" />
+            <Link Id="57" Ids="45,51" />
+            <Link Id="58" Ids="33,46" IsHidden="true" />
+            <Link Id="59" Ids="34,47" IsHidden="true" />
+            <Link Id="60" Ids="35,48" IsHidden="true" />
+            <Link Id="61" Ids="36,49" IsHidden="true" />
+            <Link Id="62" Ids="37,50" IsHidden="true" />
+            <Link Id="63" Ids="51,38" IsHidden="true" />
+            <p:Info Summary="Generates a star in 2d space." />
+          </Patch>
+        </Node>
+        <Node Bounds="257,316,333,126" Id="64">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="65" Name="SpiralSpread">
+            <Pin Id="66" Name="Center" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="67" Name="Size" Kind="InputPin" Bounds="49,4" DefaultValue="new vec(1.0,1.0)">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="68" Name="Factor" Kind="InputPin" Bounds="82,4" />
+            <Pin Id="69" Name="Phase" Kind="InputPin" Bounds="125,4" />
+            <Pin Id="70" Name="Spread Count" Kind="InputPin" Bounds="166,4" DefaultValue="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="71" Name="Output" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="314,382,83,13" Id="72">
+              <p:NodeReference LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="SpiralSpread" />
+                <FullNameCategoryReference ID="Collections.SpreadGenerators" />
+              </p:NodeReference>
+              <Pin Id="73" Name="Center" Kind="InputPin" />
+              <Pin Id="74" Name="Size" Kind="InputPin" />
+              <Pin Id="75" Name="Factor" Kind="InputPin" />
+              <Pin Id="76" Name="Phase" Kind="InputPin" />
+              <Pin Id="77" Name="Count" Kind="InputPin" />
+              <Pin Id="78" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="79" Bounds="271,332" />
+            <ControlPoint Id="80" Bounds="330,332" />
+            <ControlPoint Id="81" Bounds="385,332" />
+            <ControlPoint Id="82" Bounds="448,332" />
+            <ControlPoint Id="83" Bounds="506,332" />
+            <ControlPoint Id="84" Bounds="314,423" />
+            <Link Id="85" Ids="79,73" />
+            <Link Id="86" Ids="78,84" />
+            <Link Id="87" Ids="80,74" />
+            <Link Id="88" Ids="81,75" />
+            <Link Id="89" Ids="82,76" />
+            <Link Id="90" Ids="83,77" />
+            <Link Id="91" Ids="66,79" IsHidden="true" />
+            <Link Id="92" Ids="67,80" IsHidden="true" />
+            <Link Id="93" Ids="68,81" IsHidden="true" />
+            <Link Id="94" Ids="69,82" IsHidden="true" />
+            <Link Id="95" Ids="70,83" IsHidden="true" />
+            <Link Id="96" Ids="84,71" IsHidden="true" />
+            <p:Info Summary="Generates a spiral in 2d space." />
+          </Patch>
+        </Node>
+        <Node Bounds="654,314,347,198" Id="97">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="98" Name="CircleSpread">
+            <Pin Id="99" Name="Center" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="100" Name="Size" Kind="InputPin" Bounds="49,4" DefaultValue="new vec(1.0,1.0)">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="101" Name="Factor" Kind="InputPin" Bounds="82,4" DefaultValue="1.0">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="102" Name="Phase" Kind="InputPin" Bounds="125,4" />
+            <Pin Id="103" Name="Spread Count" Kind="InputPin" Bounds="166,4" DefaultValue="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="104" Name="Output" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="741,395,84,13" Id="105">
+              <p:NodeReference LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="CircleSpread" />
+                <FullNameCategoryReference ID="Collections.SpreadGenerators" />
+              </p:NodeReference>
+              <Pin Id="106" Name="Center" Kind="InputPin" />
+              <Pin Id="107" Name="Size" Kind="InputPin" />
+              <Pin Id="108" Name="Factor" Kind="InputPin" />
+              <Pin Id="109" Name="Phase" Kind="InputPin" />
+              <Pin Id="110" Name="Count" Kind="InputPin" />
+              <Pin Id="111" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="112" Bounds="668,333" />
+            <ControlPoint Id="113" Bounds="748,333" />
+            <ControlPoint Id="114" Bounds="802,333" />
+            <ControlPoint Id="115" Bounds="859,333" />
+            <ControlPoint Id="116" Bounds="917,330" />
+            <ControlPoint Id="117" Bounds="746,493" />
+            <Link Id="118" Ids="111,117" />
+            <Link Id="119" Ids="114,108" />
+            <Link Id="120" Ids="116,110" />
+            <Link Id="121" Ids="115,109" />
+            <Link Id="122" Ids="112,106" />
+            <Link Id="123" Ids="113,107" />
+            <Link Id="124" Ids="99,112" IsHidden="true" />
+            <Link Id="125" Ids="100,113" IsHidden="true" />
+            <Link Id="126" Ids="101,114" IsHidden="true" />
+            <Link Id="127" Ids="102,115" IsHidden="true" />
+            <Link Id="128" Ids="103,116" IsHidden="true" />
+            <Link Id="129" Ids="117,104" IsHidden="true" />
+            <p:Info Summary="Generates a circle in 2d space." />
+          </Patch>
+        </Node>
+        <Node Bounds="260,494,268,125" Id="131">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="132" Name="HexGridPoints">
+            <Node Bounds="350,555,92,13" Id="137">
+              <p:NodeReference LastCategoryFullName="2D" LastSymbolSource="VL.CoreLib.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="HexGridPoints (2D)" />
+              </p:NodeReference>
+              <Pin Id="133" Name="Center" Kind="InputPin" />
+              <Pin Id="140" Name="Radius" Kind="InputPin" />
+              <Pin Id="141" Name="Even Lower" Kind="InputPin" />
+              <Pin Id="134" Name="Resolution" Kind="InputPin" />
+              <Pin Id="142" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="153" Bounds="332,512" />
+            <ControlPoint Id="154" Bounds="386,511" />
+            <ControlPoint Id="155" Bounds="458,510" />
+            <ControlPoint Id="156" Bounds="352,600" />
+            <Link Id="157" Ids="153,140" />
+            <Link Id="158" Ids="154,141" />
+            <Link Id="159" Ids="142,156" />
+            <Link Id="165" Ids="144,153" IsHidden="true" />
+            <Link Id="166" Ids="145,154" IsHidden="true" />
+            <Link Id="167" Ids="146,155" IsHidden="true" />
+            <Link Id="168" Ids="156,147" IsHidden="true" />
+            <Link Id="135" Ids="155,134" />
+            <ControlPoint Id="136" Bounds="274,513" />
+            <Link Id="138" Ids="136,133" />
+            <Link Id="139" Ids="143,136" IsHidden="true" />
+            <Pin Id="143" Name="Center" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="144" Name="Radius" Kind="InputPin" Bounds="49,4" DefaultValue="0.4999999">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="145" Name="Even Lower" Kind="InputPin" Bounds="95,4" />
+            <Pin Id="146" Name="Resolution" Kind="InputPin" Bounds="162,4" DefaultValue="new vec(0.0,1.0)">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+                <CategoryReference Kind="Category" Name="2D" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="147" Name="Result" Kind="OutputPin" Bounds="4,14" />
+            <p:Info Summary="Generates a hexagonal grid in 2d space." />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="130" Name="GridUtils" Position="450,200" DefaultCategory="VVVV.2d" />
+      <Canvas Id="169" Name="StringNodes" Position="800,200" DefaultCategory="VVVV.String">
+        <Node Id="170">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="171" Name="Except">
+            <Pin Id="172" Name="Input 1" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="173" Name="Input 2" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="174" Name="Output" Kind="OutputPin" />
+            <Node Bounds="252,384" Id="175">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="176" Name="Input" Kind="InputPin" />
+              <Pin Id="177" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="331,147" Id="178">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="179" Name="Input" Kind="InputPin" />
+              <Pin Id="180" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="251,197,100,100" Id="181">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="System.Core.dll">
+                <Choice Kind="OperationCallFlag" Name="Where" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+                <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+              </p:NodeReference>
+              <Pin Id="182" Name="Input" Kind="InputPin" />
+              <Pin Id="183" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="184" Name="Output" Kind="OutputPin" />
+              <Patch Id="185" Name="Predicate">
+                <Pin Id="186" Name="Source" Kind="InputPin" />
+                <Pin Id="187" Name="Result" Kind="OutputPin" />
+                <Node Bounds="333,246,100,100" Id="188">
+                  <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                    <Choice Kind="OperationCallFlag" Name="None (Predicate)" />
+                    <Choice Kind="RegionFlag" Name="HigherOrderRegion" />
+                  </p:NodeReference>
+                  <Pin Id="189" Name="Input" Kind="InputPin" />
+                  <Pin Id="190" Name="Result" Kind="OutputPin" />
+                  <Patch Id="191" Name="Predicate">
+                    <Pin Id="192" Name="Source" Kind="InputPin" />
+                    <Pin Id="193" Name="Result" Kind="OutputPin" />
+                    <Node Bounds="338,297" Id="194">
+                      <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                        <Choice Kind="OperationNode" Name="=" />
+                        <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="195" Name="Input" Kind="InputPin" />
+                      <Pin Id="196" Name="Input 2" Kind="InputPin" />
+                      <Pin Id="197" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <ControlPoint Id="198" Bounds="351,264" />
+                    <ControlPoint Id="199" Bounds="336,326" />
+                    <p:Info />
+                  </Patch>
+                </Node>
+                <ControlPoint Id="200" Bounds="338,197" />
+                <ControlPoint Id="201" Bounds="330,353" />
+                <p:Info />
+              </Patch>
+            </Node>
+            <ControlPoint Id="202" Bounds="246,115" />
+            <ControlPoint Id="203" Bounds="328,115" />
+            <ControlPoint Id="204" Bounds="249,424" />
+            <Link Id="205" Ids="177,204" />
+            <Link Id="206" Ids="202,182" />
+            <Link Id="207" Ids="203,179" />
+            <Link Id="208" Ids="184,176" />
+            <Link Id="209" Ids="180,189" />
+            <Link Id="210" Ids="190,201" />
+            <Link Id="211" Ids="200,195" />
+            <Link Id="212" Ids="197,199" />
+            <Link Id="213" Ids="198,196" />
+            <Link Id="214" Ids="172,202" IsHidden="true" />
+            <Link Id="215" Ids="173,203" IsHidden="true" />
+            <Link Id="216" Ids="204,174" IsHidden="true" />
+            <Link Id="217" Ids="186,200" IsHidden="true" />
+            <Link Id="218" Ids="201,187" IsHidden="true" />
+            <Link Id="219" Ids="192,198" IsHidden="true" />
+            <Link Id="220" Ids="199,193" IsHidden="true" />
+            <p:Info Summary="Returns a spread containing slices from Input 1 except slices from Input 2." />
+          </Patch>
+        </Node>
+        <Node Id="221">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="222" Name="Distinct">
+            <Pin Id="223" Name="Input" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="224" Name="Case Sensitive" Kind="InputPin" />
+            <Pin Id="225" Name="Output" Kind="OutputPin" />
+            <Node Bounds="496,153" Id="226">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="227" Name="Input" Kind="InputPin" />
+              <Pin Id="228" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="589,153" Id="229">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="Builtin">
+                <Choice Kind="OperationNode" Name="NOT" />
+              </p:NodeReference>
+              <Pin Id="230" Name="Input" Kind="InputPin" />
+              <Pin Id="231" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="232" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="496,406" Id="233">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Distinct" />
+                <CategoryReference Kind="Category" Name="Spread" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="234" Name="Input" Kind="InputPin" />
+              <Pin Id="235" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="236" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="492,229,265,140" Id="237">
+              <p:NodeReference>
+                <Choice Kind="If" Name="If" />
+              </p:NodeReference>
+              <Pin Id="238" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="239" Bounds="495,230" Name="Output" Alignment="Top" />
+              <ControlPoint Id="240" Bounds="495,370" Name="Output" Alignment="Bottom" />
+              <Patch Id="241" Name="Then">
+                <Node Bounds="544,252,126,35" Id="242">
+                  <p:NodeReference>
+                    <Choice Kind="ForEachLoop" Name="ForEach" />
+                  </p:NodeReference>
+                  <ControlPoint Id="243" Bounds="547,255" Name="String" Alignment="Top" />
+                  <ControlPoint Id="244" Bounds="546,334" Name="String" Alignment="Bottom" />
+                  <Patch Id="245">
+                    <Node Bounds="549,292" Id="246">
+                      <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="Builtin">
+                        <Choice Kind="OperationNode" Name="ToLower" />
+                        <CategoryReference Kind="Category" Name="String" NeedsToBeDirectParent="true">
+                          <p:OuterCategoryReference Kind="Category" Name="Primitive" NeedsToBeDirectParent="true" />
+                        </CategoryReference>
+                      </p:NodeReference>
+                      <Pin Id="247" Name="Input" Kind="InputPin" />
+                      <Pin Id="248" Name="Enabled" Kind="EnabledPin" />
+                      <Pin Id="249" Name="Output" Kind="OutputPin" />
+                    </Node>
+                    <Patch Id="250" Name="Update" ParticipatingElements="246" />
+                  </Patch>
+                  <Pin Id="251" Name="Break" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="252" Bounds="494,113" />
+            <ControlPoint Id="253" Bounds="591,113" />
+            <ControlPoint Id="254" Bounds="494,448" />
+            <Link Id="255" Ids="252,227" />
+            <Link Id="256" Ids="253,230" />
+            <Link Id="257" Ids="236,254" />
+            <Link Id="258" Ids="228,243" />
+            <Link Id="259" Ids="228,239" />
+            <Link Id="260" Ids="240,234" />
+            <Link Id="261" Ids="232,238" />
+            <Link Id="262" Ids="244,240" />
+            <Link Id="263" Ids="243,247" />
+            <Link Id="264" Ids="249,244" />
+            <Link Id="265" Ids="223,252" IsHidden="true" />
+            <Link Id="266" Ids="224,253" IsHidden="true" />
+            <Link Id="267" Ids="254,225" IsHidden="true" />
+            <Link Id="268" Ids="239,240" IsFeedback="true" />
+            <p:Info Summary="Returns a spread stripped of duplicates." />
+          </Patch>
+        </Node>
+        <Node Id="269">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="270" Name="Intersect">
+            <Pin Id="271" Name="Input 1" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="272" Name="Input 2" Kind="InputPin">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__23`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.39.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="273" Name="Output" Kind="OutputPin" />
+            <Node Bounds="795,182" Id="274">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="System.Core.dll">
+                <Choice Kind="OperationNode" Name="Intersect" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="275" Name="Input" Kind="InputPin" />
+              <Pin Id="276" Name="Input 2" Kind="InputPin" />
+              <Pin Id="277" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="278" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="796,249" Id="279">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="280" Name="Input" Kind="InputPin" />
+              <Pin Id="281" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="282" Bounds="790,121" />
+            <ControlPoint Id="283" Bounds="859,121" />
+            <ControlPoint Id="284" Bounds="793,301" />
+            <Link Id="285" Ids="282,275" />
+            <Link Id="286" Ids="283,276" />
+            <Link Id="287" Ids="281,284" />
+            <Link Id="288" Ids="278,280" />
+            <Link Id="289" Ids="271,282" IsHidden="true" />
+            <Link Id="290" Ids="272,283" IsHidden="true" />
+            <Link Id="291" Ids="284,273" IsHidden="true" />
+            <p:Info Summary="Returns all distinct elements that are found in each of the Input spreads." />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+  <p:Info />
+</Document>

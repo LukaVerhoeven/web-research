@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="1" Version="0.38.1043.64077">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <NugetDependency Id="2" Location="VL.CoreLib" Version="0.35.33" />
+  <NugetDependency Id="3" Location="VL.CoreLib.VVVV" Version="0.35.33" />
+  <NugetDependency Id="4" Location="VL.Core" Version="0.35.33" />
+  <Patch Id="5">
+    <Canvas Id="6">
+      <Canvas Id="7" Name="BezierPatch" Position="108,284" DefaultCategory="VVVV.BezierPatch">
+        <Node Bounds="55,183,279,146" Id="8">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="9" Name="BezierPatch (Join)">
+            <Pin Id="10" Name="Control 1" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="11" Name="Control 2" Kind="InputPin" Bounds="62,4" />
+            <Pin Id="12" Name="Control 3" Kind="InputPin" Bounds="120,4" />
+            <Pin Id="13" Name="Control 4" Kind="InputPin" Bounds="178,4" />
+            <Pin Id="14" Name="BezierPatch" Kind="OutputPin" Bounds="4,14">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierPatch" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="72,258,80,22" Id="15">
+              <p:NodeReference LastCategoryFullName="Math.BezierPatch.BezierPatch" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierPatch" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="BezierPatch" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="16" Name="Input" Kind="InputPin" />
+              <Pin Id="17" Name="Control 1" Kind="InputPin" />
+              <Pin Id="18" Name="Control 2" Kind="InputPin" />
+              <Pin Id="19" Name="Control 3" Kind="InputPin" />
+              <Pin Id="20" Name="Control 4" Kind="InputPin" />
+              <Pin Id="21" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="22" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="23" Bounds="83,200" />
+            <ControlPoint Id="24" Bounds="146,200" />
+            <ControlPoint Id="25" Bounds="208,200" />
+            <ControlPoint Id="26" Bounds="271,200" />
+            <ControlPoint Id="27" Bounds="70,311" />
+            <Link Id="28" Ids="23,17" />
+            <Link Id="29" Ids="24,18" />
+            <Link Id="30" Ids="25,19" />
+            <Link Id="31" Ids="22,27" />
+            <Link Id="32" Ids="26,20" />
+            <Link Id="33" Ids="10,23" IsHidden="true" />
+            <Link Id="34" Ids="11,24" IsHidden="true" />
+            <Link Id="35" Ids="12,25" IsHidden="true" />
+            <Link Id="36" Ids="13,26" IsHidden="true" />
+            <Link Id="37" Ids="27,14" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="460,175,260,177" Id="38">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="39" Name="BezierPatch (Split)">
+            <Pin Id="40" Name="BezierPatch" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierPatch" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="BezierSegment" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="41" Name="Control 1" Kind="OutputPin" Bounds="4,14" />
+            <Pin Id="42" Name="Control 2" Kind="OutputPin" Bounds="62,14" />
+            <Pin Id="43" Name="Control 3" Kind="OutputPin" Bounds="120,14" />
+            <Pin Id="44" Name="Control 4" Kind="OutputPin" Bounds="178,14" />
+            <Node Bounds="478,245,50,22" Id="45">
+              <p:NodeReference LastCategoryFullName="Math.BezierPatch.BezierPatch" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierPatch" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="BezierPatch" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="46" Name="Input" Kind="InputPin" />
+              <Pin Id="47" Name="Control 1" Kind="OutputPin" />
+              <Pin Id="48" Name="Control 2" Kind="OutputPin" />
+              <Pin Id="49" Name="Control 3" Kind="OutputPin" />
+              <Pin Id="50" Name="Control 4" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="51" Bounds="476,192" />
+            <ControlPoint Id="52" Bounds="475,334" />
+            <ControlPoint Id="53" Bounds="534,334" />
+            <ControlPoint Id="54" Bounds="596,334" />
+            <ControlPoint Id="55" Bounds="657,334" />
+            <Link Id="56" Ids="51,46" />
+            <Link Id="57" Ids="47,52" />
+            <Link Id="58" Ids="48,53" />
+            <Link Id="59" Ids="49,54" />
+            <Link Id="60" Ids="50,55" />
+            <Link Id="61" Ids="40,51" IsHidden="true" />
+            <Link Id="62" Ids="52,41" IsHidden="true" />
+            <Link Id="63" Ids="53,42" IsHidden="true" />
+            <Link Id="64" Ids="54,43" IsHidden="true" />
+            <Link Id="65" Ids="55,44" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="-184,194,160,124" Id="66">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="67" Name="Sample">
+            <Pin Id="68" Name="BezierPatch" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierPatch" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="69" Name="Scalar" Kind="InputPin" Bounds="72,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="70" Name="Position" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="-166,250,42,13" Id="71">
+              <p:NodeReference LastCategoryFullName="Math.BezierPatch" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Sample" />
+                <CategoryReference Kind="Category" Name="BezierPatch" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Math" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="72" Name="Input" Kind="InputPin" />
+              <Pin Id="73" Name="Scalar" Kind="InputPin" />
+              <Pin Id="74" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="75" Bounds="-169,211" />
+            <ControlPoint Id="76" Bounds="-71,211" />
+            <ControlPoint Id="77" Bounds="-169,300" />
+            <Link Id="78" Ids="75,72" />
+            <Link Id="79" Ids="74,77" />
+            <Link Id="80" Ids="76,73" />
+            <Link Id="81" Ids="68,75" IsHidden="true" />
+            <Link Id="82" Ids="69,76" IsHidden="true" />
+            <Link Id="83" Ids="77,70" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="835,191,188,149" Id="84">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="85" Name="BezierPatchSpread">
+            <Pin Id="86" Name="BezierPatch" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierPatch" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="87" Name="Count" Kind="InputPin" Bounds="72,4" />
+            <Pin Id="88" Name="Positions" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="853,260,94,13" Id="89">
+              <p:NodeReference LastCategoryFullName="Math.BezierPatch" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Math" />
+                <CategoryReference Kind="Category" Name="BezierPatch" />
+                <Choice Kind="OperationNode" Name="BezierPatchSpread" />
+              </p:NodeReference>
+              <Pin Id="90" Name="Bezier" Kind="InputPin" />
+              <Pin Id="91" Name="Outer" Kind="InputPin" />
+              <Pin Id="92" Name="Inner" Kind="InputPin" />
+              <Pin Id="93" Name="Positions" Kind="OutputPin" />
+              <Pin Id="94" Name="Normals" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="95" Bounds="850,208" />
+            <ControlPoint Id="96" Bounds="975,208" />
+            <ControlPoint Id="97" Bounds="852,322" />
+            <Link Id="98" Ids="93,97" />
+            <Link Id="99" Ids="95,90" />
+            <Link Id="100" Ids="96,91" />
+            <Link Id="101" Ids="96,92" />
+            <Link Id="102" Ids="86,95" IsHidden="true" />
+            <Link Id="103" Ids="87,96" IsHidden="true" />
+            <Link Id="104" Ids="97,88" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="123" Name="BezierSegment2d" Position="110,206" DefaultCategory="VVVV.BezierSegment">
+        <Node Bounds="361,79,280,154" Id="124">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="125" Name="BezierSegment (2d Join)">
+            <Pin Id="126" Name="Control 1" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="127" Name="Control 2" Kind="InputPin" Bounds="62,4" />
+            <Pin Id="128" Name="Control 3" Kind="InputPin" Bounds="120,4" />
+            <Pin Id="129" Name="Control 4" Kind="InputPin" Bounds="178,4" />
+            <Pin Id="130" Name="BezierSegment" Kind="OutputPin" Bounds="4,14">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="378,141,80,22" Id="131">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSegment" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierSegment" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="132" Name="Input" Kind="InputPin" />
+              <Pin Id="133" Name="Control 1" Kind="InputPin" />
+              <Pin Id="134" Name="Control 2" Kind="InputPin" />
+              <Pin Id="135" Name="Control 3" Kind="InputPin" />
+              <Pin Id="136" Name="Control 4" Kind="InputPin" />
+              <Pin Id="137" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="138" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="139" Bounds="390,96" />
+            <ControlPoint Id="140" Bounds="453,96" />
+            <ControlPoint Id="141" Bounds="515,96" />
+            <ControlPoint Id="142" Bounds="578,96" />
+            <ControlPoint Id="143" Bounds="376,215" />
+            <Link Id="144" Ids="142,136" />
+            <Link Id="145" Ids="141,135" />
+            <Link Id="146" Ids="140,134" />
+            <Link Id="147" Ids="139,133" />
+            <Link Id="148" Ids="138,143" />
+            <Link Id="149" Ids="126,139" IsHidden="true" />
+            <Link Id="150" Ids="127,140" IsHidden="true" />
+            <Link Id="151" Ids="128,141" IsHidden="true" />
+            <Link Id="152" Ids="129,142" IsHidden="true" />
+            <Link Id="153" Ids="143,130" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="1114,79,188,154" Id="154">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="155" Name="BezierSegmentSpread (2d)">
+            <Pin Id="156" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="157" Name="Count" Kind="InputPin" Bounds="87,4" />
+            <Pin Id="158" Name="Positions" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="1131,141,109,13" Id="159">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Math" />
+                <CategoryReference Kind="Category" Name="Bezier" />
+                <Choice Kind="OperationNode" Name="BezierSegmentSpread" />
+              </p:NodeReference>
+              <Pin Id="160" Name="Bezier Segment" Kind="InputPin" />
+              <Pin Id="161" Name="Count" Kind="InputPin" />
+              <Pin Id="162" Name="Positions" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="164" Bounds="1129,96" />
+            <ControlPoint Id="165" Bounds="1254,96" />
+            <ControlPoint Id="166" Bounds="1131,215" />
+            <Link Id="167" Ids="164,160" />
+            <Link Id="168" Ids="165,161" />
+            <Link Id="169" Ids="162,166" />
+            <Link Id="170" Ids="156,164" IsHidden="true" />
+            <Link Id="171" Ids="157,165" IsHidden="true" />
+            <Link Id="172" Ids="166,158" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="43,102,160,124" Id="292">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="293" Name="Sample (2d)">
+            <Pin Id="294" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="295" Name="Scalar" Kind="InputPin" Bounds="87,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="296" Name="Position" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="60,157,42,13" Id="297">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Sample" />
+                <CategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Math" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="298" Name="Input" Kind="InputPin" />
+              <Pin Id="299" Name="Scalar" Kind="InputPin" />
+              <Pin Id="300" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="301" Bounds="58,119" />
+            <ControlPoint Id="302" Bounds="156,119" />
+            <ControlPoint Id="303" Bounds="58,208" />
+            <Link Id="304" Ids="301,298" />
+            <Link Id="305" Ids="302,299" />
+            <Link Id="306" Ids="300,303" />
+            <Link Id="307" Ids="294,301" IsHidden="true" />
+            <Link Id="308" Ids="295,302" IsHidden="true" />
+            <Link Id="309" Ids="303,296" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="751,79,260,154" Id="347">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="348" Name="BezierSegment (2d Split)">
+            <Pin Id="349" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="350" Name="Control 1" Kind="OutputPin" Bounds="4,14" />
+            <Pin Id="351" Name="Control 2" Kind="OutputPin" Bounds="62,14" />
+            <Pin Id="352" Name="Control 3" Kind="OutputPin" Bounds="120,14" />
+            <Pin Id="353" Name="Control 4" Kind="OutputPin" Bounds="178,14" />
+            <Node Bounds="769,141,62,22" Id="354">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSegment" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierSegment" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="355" Name="Input" Kind="InputPin" />
+              <Pin Id="356" Name="Control 4" Kind="OutputPin" />
+              <Pin Id="357" Name="Control 3" Kind="OutputPin" />
+              <Pin Id="358" Name="Control 2" Kind="OutputPin" />
+              <Pin Id="359" Name="Control 1" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="360" Bounds="766,96" />
+            <ControlPoint Id="361" Bounds="766,215" />
+            <ControlPoint Id="362" Bounds="825,215" />
+            <ControlPoint Id="363" Bounds="887,215" />
+            <ControlPoint Id="364" Bounds="948,215" />
+            <Link Id="365" Ids="360,355" />
+            <Link Id="366" Ids="359,361" />
+            <Link Id="367" Ids="358,362" />
+            <Link Id="368" Ids="357,363" />
+            <Link Id="369" Ids="356,364" />
+            <Link Id="370" Ids="349,360" IsHidden="true" />
+            <Link Id="371" Ids="361,350" IsHidden="true" />
+            <Link Id="372" Ids="362,351" IsHidden="true" />
+            <Link Id="373" Ids="363,352" IsHidden="true" />
+            <Link Id="374" Ids="364,353" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="408" Name="BezierSegment3d" Position="345,205" DefaultCategory="VVVV.BezierSegment">
+        <Node Bounds="134,80,280,151" Id="409">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="410" Name="BezierSegment (3d Join)">
+            <Pin Id="411" Name="Control 1" Kind="InputPin" Bounds="4,4" />
+            <Pin Id="412" Name="Control 2" Kind="InputPin" Bounds="62,4" />
+            <Pin Id="413" Name="Control 3" Kind="InputPin" Bounds="120,4" />
+            <Pin Id="414" Name="Control 4" Kind="InputPin" Bounds="178,4" />
+            <Pin Id="415" Name="BezierSegment" Kind="OutputPin" Bounds="4,14">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="151,160,80,22" Id="416">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSegment" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Join" />
+                <CategoryReference Kind="Category" Name="BezierSegment" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="417" Name="Input" Kind="InputPin" />
+              <Pin Id="418" Name="Control 1" Kind="InputPin" />
+              <Pin Id="419" Name="Control 2" Kind="InputPin" />
+              <Pin Id="420" Name="Control 3" Kind="InputPin" />
+              <Pin Id="421" Name="Control 4" Kind="InputPin" />
+              <Pin Id="422" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="423" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="424" Bounds="163,97" />
+            <ControlPoint Id="425" Bounds="226,97" />
+            <ControlPoint Id="426" Bounds="288,97" />
+            <ControlPoint Id="427" Bounds="351,97" />
+            <ControlPoint Id="428" Bounds="149,213" />
+            <Link Id="429" Ids="423,428" />
+            <Link Id="430" Ids="427,421" />
+            <Link Id="431" Ids="426,420" />
+            <Link Id="432" Ids="425,419" />
+            <Link Id="433" Ids="424,418" />
+            <Link Id="434" Ids="411,424" IsHidden="true" />
+            <Link Id="435" Ids="412,425" IsHidden="true" />
+            <Link Id="436" Ids="413,426" IsHidden="true" />
+            <Link Id="437" Ids="414,427" IsHidden="true" />
+            <Link Id="438" Ids="428,415" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="515,72,260,169" Id="439">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="440" Name="BezierSegment (3d Split)">
+            <Pin Id="441" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="442" Name="Control 1" Kind="OutputPin" Bounds="4,14" />
+            <Pin Id="443" Name="Control 2" Kind="OutputPin" Bounds="62,14" />
+            <Pin Id="444" Name="Control 3" Kind="OutputPin" Bounds="120,14" />
+            <Pin Id="445" Name="Control 4" Kind="OutputPin" Bounds="178,14" />
+            <Node Bounds="533,134,62,22" Id="446">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSegment" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierSegment" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="447" Name="Input" Kind="InputPin" />
+              <Pin Id="448" Name="Control 4" Kind="OutputPin" />
+              <Pin Id="449" Name="Control 3" Kind="OutputPin" />
+              <Pin Id="450" Name="Control 2" Kind="OutputPin" />
+              <Pin Id="451" Name="Control 1" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="452" Bounds="530,89" />
+            <ControlPoint Id="453" Bounds="530,223" />
+            <ControlPoint Id="454" Bounds="589,223" />
+            <ControlPoint Id="455" Bounds="651,223" />
+            <ControlPoint Id="456" Bounds="712,223" />
+            <Link Id="457" Ids="452,447" />
+            <Link Id="458" Ids="451,453" />
+            <Link Id="459" Ids="450,454" />
+            <Link Id="460" Ids="449,455" />
+            <Link Id="461" Ids="448,456" />
+            <Link Id="462" Ids="441,452" IsHidden="true" />
+            <Link Id="463" Ids="453,442" IsHidden="true" />
+            <Link Id="464" Ids="454,443" IsHidden="true" />
+            <Link Id="465" Ids="455,444" IsHidden="true" />
+            <Link Id="466" Ids="456,445" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="-130,84,160,124" Id="586">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="587" Name="Sample (3d)">
+            <Pin Id="588" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="589" Name="Scalar" Kind="InputPin" Bounds="87,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="590" Name="Position" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="-113,139,42,13" Id="591">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Sample" />
+                <CategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Math" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="592" Name="Input" Kind="InputPin" />
+              <Pin Id="593" Name="Scalar" Kind="InputPin" />
+              <Pin Id="594" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="595" Bounds="-115,101" />
+            <ControlPoint Id="596" Bounds="-17,101" />
+            <ControlPoint Id="597" Bounds="-115,190" />
+            <Link Id="598" Ids="595,592" />
+            <Link Id="599" Ids="596,593" />
+            <Link Id="600" Ids="594,597" />
+            <Link Id="601" Ids="588,595" IsHidden="true" />
+            <Link Id="602" Ids="589,596" IsHidden="true" />
+            <Link Id="603" Ids="597,590" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="879,84,188,149" Id="641">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="642" Name="BezierSegmentSpread (3d)">
+            <Pin Id="643" Name="BezierSegment" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSegment" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="644" Name="Count" Kind="InputPin" Bounds="87,4" />
+            <Pin Id="645" Name="Positions" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="897,153,109,13" Id="646">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="Math" />
+                <CategoryReference Kind="Category" Name="Bezier" />
+                <Choice Kind="OperationNode" Name="BezierSegmentSpread" />
+              </p:NodeReference>
+              <Pin Id="647" Name="Bezier Segment" Kind="InputPin" />
+              <Pin Id="648" Name="Count" Kind="InputPin" />
+              <Pin Id="649" Name="Positions" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="651" Bounds="894,101" />
+            <ControlPoint Id="652" Bounds="1019,101" />
+            <ControlPoint Id="653" Bounds="897,215" />
+            <Link Id="654" Ids="649,653" />
+            <Link Id="655" Ids="652,648" />
+            <Link Id="656" Ids="651,647" />
+            <Link Id="657" Ids="643,651" IsHidden="true" />
+            <Link Id="658" Ids="644,652" IsHidden="true" />
+            <Link Id="659" Ids="653,645" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="693" Name="BezierSpline2d" Position="107,139" DefaultCategory="VVVV.2d">
+        <Node Bounds="613,134,211,118" Id="694">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="695" Name="BezierSpread (BezierSpline)">
+            <Pin Id="696" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="697" Name="Count" Kind="InputPin" Bounds="43,4" DefaultValue="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="698" Name="Point" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="638,182,97,13" Id="699">
+              <p:NodeReference LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="BezierSplineSpread" />
+                <FullNameCategoryReference ID="Math.Bezier" />
+              </p:NodeReference>
+              <Pin Id="700" Name="Input" Kind="InputPin" />
+              <Pin Id="701" Name="Count" Kind="InputPin" />
+              <Pin Id="702" Name="Points" Kind="OutputPin" />
+              <Pin Id="703" Name="Segment Count" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="704" Bounds="628,151" />
+            <ControlPoint Id="705" Bounds="739,151" />
+            <ControlPoint Id="706" Bounds="640,231" />
+            <Link Id="707" Ids="704,700" />
+            <Link Id="708" Ids="705,701" />
+            <Link Id="709" Ids="702,706" />
+            <Link Id="710" Ids="696,704" IsHidden="true" />
+            <Link Id="711" Ids="697,705" IsHidden="true" />
+            <Link Id="712" Ids="706,698" IsHidden="true" />
+            <ControlPoint Id="713" Bounds="733,234" />
+            <Link Id="714" Ids="703,713" />
+            <Pin Id="715" Name="Segment Count" Kind="OutputPin" Bounds="42,14" />
+            <Link Id="716" Ids="713,715" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="397,135,104,175" Id="717">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="718" Name="BezierSpline (Join)">
+            <Pin Id="719" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="BezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="720" Name="BezierSpline" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="414,240,52,22" Id="721">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSpline" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="BezierSpline" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="722" Name="Input" Kind="InputPin" />
+              <Pin Id="723" Name="Knots" Kind="InputPin" />
+              <Pin Id="724" Name="Enabled" Kind="InputPin" />
+              <Pin Id="725" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="437,196,52,22" Id="726">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="727" Name="Input" Kind="InputPin" />
+              <Pin Id="728" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="729" Bounds="435,152" />
+            <ControlPoint Id="730" Bounds="412,292" />
+            <Link Id="731" Ids="725,730" />
+            <Link Id="732" Ids="729,727" />
+            <Link Id="733" Ids="728,723" />
+            <Link Id="734" Ids="719,729" IsHidden="true" />
+            <Link Id="735" Ids="730,720" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="859,134,302,410" Id="736">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="737" Name="ArcLength (BezierSpline)">
+            <Node Bounds="898,269,97,13" Id="742">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="BezierSplineSpread" />
+                <CategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="743" Name="Input" Kind="InputPin" />
+              <Pin Id="744" Name="Count" Kind="InputPin" />
+              <Pin Id="745" Name="Points" Kind="OutputPin" />
+              <Pin Id="746" Name="Segment Count" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="898,369,56,13" Id="747">
+              <p:NodeReference LastCategoryFullName="Math.Path" LastSymbolSource="VL.Paths.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ArcLength" />
+              </p:NodeReference>
+              <Pin Id="748" Name="Points" Kind="InputPin" />
+              <Pin Id="749" Name="Position On Curve" Kind="InputPin" />
+              <Pin Id="750" Name="Point" Kind="OutputPin" />
+              <Pin Id="751" Name="Segment Index" Kind="OutputPin" />
+              <Pin Id="752" Name="Total Length" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="753" Bounds="874,151" />
+            <ControlPoint Id="754" Bounds="964,151" />
+            <ControlPoint Id="755" Bounds="1092,152" />
+            <ControlPoint Id="756" Bounds="901,526" />
+            <Link Id="757" Ids="753,743" />
+            <Link Id="758" Ids="745,748" />
+            <Link Id="760" Ids="754,749" />
+            <Link Id="761" Ids="750,756" />
+            <Link Id="762" Ids="787,753" IsHidden="true" />
+            <Link Id="763" Ids="788,754" IsHidden="true" />
+            <Link Id="764" Ids="789,755" IsHidden="true" />
+            <Link Id="765" Ids="756,784" IsHidden="true" />
+            <ControlPoint Id="769" Bounds="1050,526" />
+            <Link Id="770" Ids="752,769" />
+            <Link Id="772" Ids="769,786" IsHidden="true" />
+            <Node Bounds="976,379,35,13" Id="792">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="793" Name="Input" Kind="InputPin" />
+              <Pin Id="794" Name="Input 2" Kind="InputPin" />
+              <Pin Id="795" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="796" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Pad Id="797" Bounds="1103,191" ShowValueBox="true" isIOBox="true" Value="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Link Id="798" Ids="797,794" />
+            <Node Bounds="924,413,80,90" Id="738">
+              <p:NodeReference>
+                <Choice Kind="RegionFlag" Name="Region" Fixed="true" />
+                <Choice Kind="2161727855497576448" Name="ForEach" />
+              </p:NodeReference>
+              <Pin Id="739" Name="Break" Kind="OutputPin" />
+              <ControlPoint Id="776" Bounds="948,419" Alignment="Top" />
+              <ControlPoint Id="777" Bounds="949,496" Alignment="Bottom" />
+              <Patch Id="740">
+                <Patch Id="741" Name="Create" />
+                <Patch Id="766" Name="Update" />
+                <Patch Id="767" Name="Destroy" />
+                <Node Bounds="946,448,35,13" Id="768">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="DIV" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="771" Name="Input" Kind="InputPin" />
+                  <Pin Id="773" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="774" Name="Enabled" Kind="EnabledPin" />
+                  <Pin Id="775" Name="Output" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Link Id="778" Ids="751,776" />
+            <Link Id="779" Ids="776,771" />
+            <Link Id="780" Ids="775,777" />
+            <ControlPoint Id="781" Bounds="950,526" />
+            <Link Id="782" Ids="777,781" />
+            <Link Id="783" Ids="781,785" IsHidden="true" />
+            <Pin Id="784" Name="Point" Kind="OutputPin" Bounds="4,14" />
+            <Pin Id="785" Name="Segment Index" Kind="OutputPin" Bounds="42,14" />
+            <Pin Id="786" Name="Total Length" Kind="OutputPin" Bounds="126,14" />
+            <Pin Id="787" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="788" Name="Position" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="789" Name="Resolution" Kind="InputPin" Bounds="95,4" DefaultValue="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Node Bounds="976,345,35,13" Id="791">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="DIV" />
+              </p:NodeReference>
+              <Pin Id="799" Name="Input" Kind="InputPin" />
+              <Pin Id="800" Name="Input 2" Kind="InputPin" />
+              <Pin Id="801" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="802" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="991,311,35,13" Id="803">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="806" Name="Input" Kind="InputPin" />
+              <Pin Id="807" Name="Input 2" Kind="InputPin" />
+              <Pin Id="808" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="809" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="810" Ids="797,807" />
+            <Link Id="811" Ids="746,806" />
+            <Link Id="812" Ids="809,800" />
+            <Link Id="759" Ids="755,744" />
+            <Link Id="790" Ids="755,799" />
+            <Link Id="804" Ids="802,793" />
+            <Link Id="805" Ids="796,773" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="390,374,81,127" Id="813">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="814" Name="BezierSpline (Split)">
+            <Pin Id="815" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="816" Name="Result" Kind="OutputPin" Bounds="4,14" />
+            <Node Bounds="407,432,52,22" Id="817">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSpline" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierSpline" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="818" Name="Input" Kind="InputPin" />
+              <Pin Id="819" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="820" Bounds="406,391" />
+            <ControlPoint Id="821" Bounds="405,483" />
+            <Link Id="822" Ids="820,818" />
+            <Link Id="823" Ids="819,821" />
+            <Link Id="824" Ids="815,820" IsHidden="true" />
+            <Link Id="825" Ids="821,816" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="826" Name="BezierSpline3d" Position="346,139" DefaultCategory="VVVV.3d">
+        <Node Bounds="719,114,220,113" Id="827">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="828" Name="BezierSpread (BezierSpline)">
+            <Pin Id="829" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="830" Name="Count" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="831" Name="Positions" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="754,162,97,13" Id="832">
+              <p:NodeReference LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="BezierSplineSpread" />
+                <FullNameCategoryReference ID="Math.Bezier" />
+              </p:NodeReference>
+              <Pin Id="833" Name="Input" Kind="InputPin" />
+              <Pin Id="834" Name="Count" Kind="InputPin" />
+              <Pin Id="835" Name="Points" Kind="OutputPin" />
+              <Pin Id="836" Name="Segment Count" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="837" Bounds="734,131" />
+            <ControlPoint Id="838" Bounds="875,131" />
+            <ControlPoint Id="839" Bounds="754,209" />
+            <Link Id="840" Ids="838,834" />
+            <Link Id="841" Ids="837,833" />
+            <Link Id="842" Ids="835,839" />
+            <Link Id="843" Ids="829,837" IsHidden="true" />
+            <Link Id="844" Ids="830,838" IsHidden="true" />
+            <Link Id="845" Ids="839,831" IsHidden="true" />
+            <ControlPoint Id="846" Bounds="848,209" />
+            <Pin Id="847" Name="Segment Count" Kind="OutputPin" Bounds="61,4" />
+            <Link Id="848" Ids="846,847" IsHidden="true" />
+            <Link Id="849" Ids="836,846" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="497,114,105,168" Id="850">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="851" Name="BezierSpline (Join)">
+            <Pin Id="852" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="BezierKnot" />
+                    <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                      <TypeReference ReferenceKind="App">
+                        <Choice Kind="TypeFlag" Name="Vector3" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="853" Name="BezierSpline" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="538,162,52,22" Id="854">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="855" Name="Input" Kind="InputPin" />
+              <Pin Id="856" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="514,219,52,22" Id="857">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSpline" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <CategoryReference Kind="Category" Name="BezierSpline" />
+                <Choice Kind="OperationNode" Name="Join" />
+              </p:NodeReference>
+              <Pin Id="858" Name="Input" Kind="InputPin" />
+              <Pin Id="859" Name="Knots" Kind="InputPin" />
+              <Pin Id="860" Name="Enabled" Kind="InputPin" />
+              <Pin Id="861" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="862" Bounds="535,131" />
+            <ControlPoint Id="863" Bounds="512,264" />
+            <Link Id="864" Ids="862,855" />
+            <Link Id="865" Ids="861,863" />
+            <Link Id="866" Ids="856,859" />
+            <Link Id="867" Ids="852,862" IsHidden="true" />
+            <Link Id="868" Ids="863,853" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="1000,114,301,429" Id="869">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="870" Name="ArcLength (BezierSpline)">
+            <Pin Id="871" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="872" Name="Position" Kind="InputPin" Bounds="43,4" />
+            <Pin Id="873" Name="Resolution" Kind="InputPin" Bounds="95,4" />
+            <Pin Id="874" Name="Point" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="1041,234,97,13" Id="875">
+              <p:NodeReference LastCategoryFullName="Math.Bezier" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="BezierSplineSpread" />
+                <CategoryReference Kind="Category" Name="Bezier" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="876" Name="Input" Kind="InputPin" />
+              <Pin Id="877" Name="Count" Kind="InputPin" />
+              <Pin Id="878" Name="Points" Kind="OutputPin" />
+              <Pin Id="879" Name="Segment Count" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1042,277,56,13" Id="880">
+              <p:NodeReference LastSymbolSource="VL.Paths.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="ArcLength" />
+                <FullNameCategoryReference ID="Math.Path" />
+              </p:NodeReference>
+              <Pin Id="881" Name="Points" Kind="InputPin" />
+              <Pin Id="882" Name="Position On Curve" Kind="InputPin" />
+              <Pin Id="883" Name="Point" Kind="OutputPin" />
+              <Pin Id="884" Name="Segment Index" Kind="OutputPin" />
+              <Pin Id="885" Name="Total Length" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="886" Bounds="1015,131" />
+            <ControlPoint Id="887" Bounds="1105,131" />
+            <ControlPoint Id="888" Bounds="1232,131" />
+            <ControlPoint Id="889" Bounds="1040,525" />
+            <Link Id="890" Ids="887,882" />
+            <Link Id="891" Ids="886,876" />
+            <Link Id="892" Ids="883,889" />
+            <Link Id="893" Ids="878,881" />
+            <Link Id="894" Ids="871,886" IsHidden="true" />
+            <Link Id="895" Ids="872,887" IsHidden="true" />
+            <Link Id="896" Ids="873,888" IsHidden="true" />
+            <Link Id="897" Ids="889,874" IsHidden="true" />
+            <ControlPoint Id="898" Bounds="1193,513" />
+            <Node Bounds="1068,402,80,80" Id="899">
+              <p:NodeReference>
+                <Choice Kind="RegionFlag" Name="Region" Fixed="true" />
+                <Choice Kind="2161727855497576448" Name="ForEach" />
+              </p:NodeReference>
+              <Pin Id="900" Name="Break" Kind="OutputPin" />
+              <ControlPoint Id="901" Bounds="1093,408" Alignment="Top" />
+              <ControlPoint Id="902" Bounds="1092,475" Alignment="Bottom" />
+              <Patch Id="903">
+                <Patch Id="904" Name="Create" />
+                <Patch Id="905" Name="Update" />
+                <Patch Id="906" Name="Destroy" />
+                <Node Bounds="1091,437,35,13" Id="907">
+                  <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="DIV" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="908" Name="Input" Kind="InputPin" />
+                  <Pin Id="909" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="910" Name="Enabled" Kind="EnabledPin" />
+                  <Pin Id="911" Name="Output" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="912" Bounds="1095,515" />
+            <Pin Id="913" Name="Segment Index" Kind="OutputPin" Bounds="42,4" />
+            <Pin Id="914" Name="Total Length" Kind="OutputPin" Bounds="126,4" />
+            <Node Bounds="1117,324,35,13" Id="915">
+              <p:NodeReference LastCategoryFullName="Adaptive" LastSymbolSource="VL.CoreLib.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="DIV" />
+              </p:NodeReference>
+              <Pin Id="916" Name="Input" Kind="InputPin" />
+              <Pin Id="917" Name="Input 2" Kind="InputPin" />
+              <Pin Id="918" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="919" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1133,283,35,13" Id="920">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="921" Name="Input" Kind="InputPin" />
+              <Pin Id="922" Name="Input 2" Kind="InputPin" />
+              <Pin Id="923" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="924" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="925" Ids="898,914" IsHidden="true" />
+            <Link Id="926" Ids="901,908" />
+            <Link Id="927" Ids="911,902" />
+            <Link Id="928" Ids="902,912" />
+            <Link Id="929" Ids="912,913" IsHidden="true" />
+            <Link Id="931" Ids="924,917" />
+            <Link Id="932" Ids="884,901" />
+            <Link Id="933" Ids="885,898" />
+            <Pad Id="939" Bounds="1245,148" ShowValueBox="true" isIOBox="true" Value="1">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Link Id="943" Ids="939,922" />
+            <Link Id="945" Ids="879,921" />
+            <Node Bounds="1118,368,35,13" Id="930">
+              <p:NodeReference LastCategoryFullName="Math.Ranges" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <CategoryReference Kind="Category" Name="Ranges" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="934" Name="Input" Kind="InputPin" />
+              <Pin Id="935" Name="Input 2" Kind="InputPin" />
+              <Pin Id="936" Name="Enabled" Kind="EnabledPin" />
+              <Pin Id="937" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="938" Ids="939,935" />
+            <Link Id="940" Ids="919,934" />
+            <Link Id="941" Ids="937,909" />
+            <Link Id="942" Ids="888,877" />
+            <Link Id="944" Ids="888,916" />
+            <p:Info />
+          </Patch>
+        </Node>
+        <Node Bounds="499,331,81,122" Id="946">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="947" Name="BezierSpline (Split)">
+            <Pin Id="948" Name="Input" Kind="InputPin" Bounds="4,4">
+              <p:TypeAnnotation ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="BezierSpline" />
+                <p:TypeArguments p:Assembly="VL.Lang" p:Type="VL.Model.Internal.XmlElementReader+&lt;ReadRange&gt;d__16`1[[VL.Model.ITypeReference`1[[VL.Lang.Symbols.ITypeSymbol, VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]], VL.Lang, Version=0.38.0.0, Culture=neutral, PublicKeyToken=null]]">
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Vector3" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="949" Name="Result" Kind="OutputPin" Bounds="4,4" />
+            <Node Bounds="516,384,52,22" Id="950">
+              <p:NodeReference LastCategoryFullName="Math.Bezier.BezierSpline" LastSymbolSource="VL.Bezier.Cubic.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="OperationNode" Name="Split" />
+                <CategoryReference Kind="Category" Name="BezierSpline" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="951" Name="Input" Kind="InputPin" />
+              <Pin Id="952" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="953" Bounds="514,348" />
+            <ControlPoint Id="954" Bounds="514,435" />
+            <Link Id="955" Ids="953,951" />
+            <Link Id="956" Ids="952,954" />
+            <Link Id="957" Ids="948,953" IsHidden="true" />
+            <Link Id="958" Ids="954,949" IsHidden="true" />
+            <p:Info />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+  <p:Info />
+</Document>

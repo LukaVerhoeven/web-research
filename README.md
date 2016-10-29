@@ -66,3 +66,8 @@ Camera motion detection vervangen als input van de muis en gebruiken om interact
 15/10 <br />
 Texturesharing leren voor het exporteren van videomatteriaal
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/mapping.JPG)
+
+29/10 <br />
+DX Texture bleek verouderde techniek te zijn en daarom dat het waarschijnlijk niet werkte.<br />
+Nieuw -> Spout. maar dit werkt alleen op de alpha versie van vvvv. probleem(geen input in Resolume)
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/spouttesten.PNG)

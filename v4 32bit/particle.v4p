@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Luka\Desktop\v4 32bit\particle.v4p" componentmode="InAWindow" scrollx="2745" scrolly="0">
+   <PATCH nodename="C:\Users\Luka\Dropbox\school\3de-jaar\web research\web-research\v4 32bit\particle.v4p" componentmode="InAWindow" scrollx="2745" scrolly="0">
    <BOUNDS height="13575" left="4635" top="1245" type="Window" width="19365">
    </BOUNDS>
    <NODE id="36" nodename="Translate (Transform)">
@@ -181,7 +181,7 @@
    <NODE id="15" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
    <BOUNDS type="Node" height="0" left="14010" top="5025" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -191,7 +191,7 @@
    <NODE id="16" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
    <BOUNDS type="Node" height="0" left="13680" top="3915" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -592,40 +592,6 @@
    </LINK>
    <LINK srcnodeid="34" srcpinname="Output" dstnodeid="25" dstpinname="Attractor Y">
    </LINK>
-   <NODE systemname="VideoIn (DShow9)" nodename="VideoIn (DShow9)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="16710" top="345" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Video Format" slicecount="1" values="MJPG">
-   </PIN>
-   <PIN pinname="Preview" visible="1">
-   </PIN>
-   <PIN pinname="Video" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Trautner (FreeFrame DShow9)" filename="%VVVV%\lib\nodes\freeframes\Trautner.dll" nodename="Trautner (FreeFrame DShow9)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="16485" top="1155" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Video Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Video Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Contour (FreeFrame DShow9)" filename="%VVVV%\lib\nodes\freeframes\Contour.dll" nodename="Contour (FreeFrame DShow9)" componentmode="Hidden" id="80">
-   <BOUNDS type="Node" left="16440" top="1995" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Video Input" visible="1">
-   </PIN>
-   <PIN pinname="Video Output" visible="1">
-   </PIN>
-   <PIN pinname="Contours X" visible="1">
-   </PIN>
-   <PIN pinname="Contours Y" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="79" srcpinname="Video Output" dstnodeid="80" dstpinname="Video Input">
-   </LINK>
-   <LINK srcnodeid="78" srcpinname="Video" dstnodeid="79" dstpinname="Video Input">
-   </LINK>
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="20160" top="4425" width="100" height="100">
    </BOUNDS>
@@ -637,13 +603,11 @@
    <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="82">
    <BOUNDS type="Node" left="20190" top="3705" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Video" visible="1">
+   <PIN pinname="Video" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="Video Output" dstnodeid="82" dstpinname="Video">
-   </LINK>
    <LINK srcnodeid="82" srcpinname="Texture Out" dstnodeid="81" dstpinname="Texture">
    </LINK>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="83">
@@ -658,11 +622,7 @@
    </NODE>
    <LINK srcnodeid="81" srcpinname="Layer" dstnodeid="83" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="Contours X" dstnodeid="16" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="80" srcpinname="Contours Y" dstnodeid="15" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
+   <NODE id="84" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="18285" top="2625" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="18285" top="2625" width="0" height="0">
@@ -672,6 +632,116 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
+   <NODE id="80" systemname="Contour (FreeFrame DShow9)" filename="%VVVV%\lib\nodes\freeframes\Contour.dll" nodename="Contour (FreeFrame DShow9)" componentmode="Hidden">
+   <BOUNDS type="Node" left="16440" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Video Input" visible="1">
+   </PIN>
+   <PIN pinname="Video Output" visible="1">
+   </PIN>
+   <PIN pinname="Contours X" visible="1">
+   </PIN>
+   <PIN pinname="Contours Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="88" systemname="VideoIn (DShow9)" nodename="VideoIn (DShow9)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="16185" top="465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" pintype="Input" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Video Format" slicecount="1" pintype="Input" visible="1" values="MJPG">
+   </PIN>
+   <PIN pinname="Video" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Expose Graph to ROT" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reference Clock" pintype="Configuration" slicecount="1" values="Default">
+   </PIN>
+   <PIN pinname="Force Preview Output (via SmartT)" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Property Page" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Framerate" pintype="Input" visible="1" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Width" pintype="Input" visible="1" slicecount="1" values="320">
+   </PIN>
+   <PIN pinname="Height" pintype="Input" visible="1" slicecount="1" values="240">
+   </PIN>
+   <PIN pinname="Analog Video Standard" pintype="Input" visible="1" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Analog Video Input" pintype="Input" visible="1" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Driver" pintype="Input" visible="1" slicecount="1" values="|Lenovo EasyCamera|">
+   </PIN>
+   <PIN pinname="Brightness" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Contrast" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Hue" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Saturation" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Sharpness" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Gamma" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="ColorEnable" pintype="Input" visible="-1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="WhiteBalance" pintype="Input" visible="-1" slicecount="1" values="4500">
+   </PIN>
+   <PIN pinname="Backlight Compensation" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Gain" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Trigger Mode" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Trigger" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Pan" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Tilt" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Roll" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Zoom" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Exposure" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Iris" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Focus" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Adjust System Time" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Preview" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Stream Capabilities" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Actual StreamFormat" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="79" systemname="Trautner (FreeFrame DShow9)" filename="%VVVV%\lib\nodes\freeframes\Trautner.dll" nodename="Trautner (FreeFrame DShow9)" componentmode="Hidden">
+   <PIN pinname="Video Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="16485" top="1155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Video Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Video" dstnodeid="79" dstpinname="Video Input">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Video Output" dstnodeid="80" dstpinname="Video Input">
+   </LINK>
    <LINK srcnodeid="80" srcpinname="Contours Y" dstnodeid="84" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Contours Y" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Contours X" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Video Output" dstnodeid="82" dstpinname="Video">
    </LINK>
    </PATCH>

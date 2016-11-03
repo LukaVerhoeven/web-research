@@ -1,33 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Luka\Desktop\v4 32bit\ShareTextureInfo (OpenGl, Interop) help.v4p" systemname="share_texture" filename="D:\Dokumente\Projekte\Entwicklung\Video\DX\dx_opengl_texture\vvvv\share_texture.v4p" scrollx="0" scrolly="1440">
-   <BOUNDS type="Window" left="3030" top="3540" width="16905" height="7200">
+   <PATCH nodename="C:\Users\Luka\Dropbox\school\3de-jaar\web research\web-research\v4 32bit\vvvv_45beta34.2_x86\ShareTextureInfo (OpenGl, Interop) help.v4p" systemname="share_texture" filename="D:\Dokumente\Projekte\Entwicklung\Video\DX\dx_opengl_texture\vvvv\share_texture.v4p" scrollx="0" scrolly="1080">
+   <BOUNDS type="Window" left="9420" top="3900" width="16905" height="7200">
    </BOUNDS>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="1">
-   <BOUNDS type="Node" left="240" top="2505" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="240" top="2505" width="3930" height="2970">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5700" top="4590" width="6240" height="5010">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" visible="1" values="1921">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" visible="1" values="1080">
-   </PIN>
-   <PIN pinname="Windowed Swap Effect" slicecount="1" values="discard">
-   </PIN>
-   <PIN pinname="Windowed Backbuffer Count" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clip Device" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="default">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="SharedTexture (EX9.Texture)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="SharedTexture (EX9.Texture)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="2880" top="990" width="100" height="100">
    </BOUNDS>
@@ -134,8 +108,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="EX9 Out" dstnodeid="9" dstpinname="Source">
-   </LINK>
    <NODE systemname="MAINLOOP (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="14040" top="915" width="100" height="100">
    </BOUNDS>
@@ -218,36 +190,6 @@
    </NODE>
    <LINK srcnodeid="128" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum background fpsS">
    </LINK>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="129">
-   <BOUNDS type="Node" left="7665" top="2505" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7665" top="2505" width="3930" height="2970">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5700" top="4590" width="6240" height="5010">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" visible="1" values="1920">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" visible="1" values="1080">
-   </PIN>
-   <PIN pinname="Windowed Swap Effect" slicecount="1" values="discard">
-   </PIN>
-   <PIN pinname="Windowed Backbuffer Count" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clip Device" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="default">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="View" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE systemname="Teapot (EX9.Geometry)" nodename="Teapot (EX9.Geometry)" componentmode="Hidden" id="130">
    <BOUNDS type="Node" left="7815" top="1365" width="100" height="100">
    </BOUNDS>
@@ -276,10 +218,6 @@
    <PIN pinname="Initial Yaw" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="132" srcpinname="View" dstnodeid="129" dstpinname="View">
-   </LINK>
-   <LINK srcnodeid="132" srcpinname="Projection" dstnodeid="129" dstpinname="Projection">
-   </LINK>
    <NODE systemname="Fill (EX9.RenderState)" nodename="Fill (EX9.RenderState)" componentmode="Hidden" id="133">
    <BOUNDS type="Node" left="7650" top="645" width="100" height="100">
    </BOUNDS>
@@ -317,7 +255,7 @@
    </BOUNDS>
    <PIN pinname="sharedMemoryName" slicecount="1" values="vvvvToResolume/MainRenderer1">
    </PIN>
-   <PIN pinname="Name for sharing" slicecount="1" values="vvvvToResolume/MainRenderer1" visible="1">
+   <PIN pinname="Name for sharing" slicecount="1" visible="1" values="vvvvToResolume/MainRenderer1">
    </PIN>
    <PIN pinname="Force Update" slicecount="1" values="0">
    </PIN>
@@ -325,7 +263,7 @@
    <LINK srcnodeid="9" srcpinname="Texture Out" dstnodeid="137" dstpinname="Texture">
    </LINK>
    <NODE id="120" systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden">
-   <PIN pinname="Source" visible="1">
+   <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -334,8 +272,6 @@
    <PIN pinname="Format" slicecount="1" values="A8R8G8B8">
    </PIN>
    </NODE>
-   <LINK srcnodeid="129" srcpinname="EX9 Out" dstnodeid="120" dstpinname="Source">
-   </LINK>
    <NODE id="138" systemname="ShareTextureInfo (OpenGL, Interop)" filename="ShareTextureInfo (OpenGL, Interop).v4p" nodename="ShareTextureInfo (OpenGL, Interop).v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Texture" visible="1" pintype="Input">
    </PIN>
@@ -357,7 +293,7 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
-   <PIN pinname="Name for sharing" slicecount="1" values="vvvvToResolume/MainRenderer2" visible="1">
+   <PIN pinname="Name for sharing" slicecount="1" visible="1" values="vvvvToResolume/MainRenderer2">
    </PIN>
    <PIN pinname="Force Update" slicecount="1" values="0">
    </PIN>
@@ -381,10 +317,6 @@
    <LINK srcnodeid="133" srcpinname="Render State Out" dstnodeid="140" dstpinname="Render State">
    </LINK>
    <LINK srcnodeid="130" srcpinname="Mesh" dstnodeid="140" dstpinname="Mesh">
-   </LINK>
-   <LINK srcnodeid="140" srcpinname="Layer" dstnodeid="129" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="1" dstpinname="Layers">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="142" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1605" top="6990" width="2820" height="405">
@@ -420,4 +352,48 @@
    </LINK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="146">
+   <BOUNDS type="Node" left="5175" top="2925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5175" top="2925" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15720" top="6870" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="146" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="146" srcpinname="EX9 Out" dstnodeid="9" dstpinname="Source">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="147">
+   <BOUNDS type="Node" left="9630" top="3105" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9630" top="3105" width="3390" height="2160">
+   </BOUNDS>
+   <BOUNDS type="Window" left="21735" top="5835" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Layer" dstnodeid="147" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="View" dstnodeid="147" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="Projection" dstnodeid="147" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="EX9 Out" dstnodeid="120" dstpinname="Source">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="148">
+   <BOUNDS type="Node" left="12510" top="6345" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>

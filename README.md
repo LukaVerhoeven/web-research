@@ -71,3 +71,7 @@ Texturesharing leren voor het exporteren van videomatteriaal
 DX Texture bleek verouderde techniek te zijn en daarom dat het waarschijnlijk niet werkte.<br />
 Nieuw -> Spout. maar dit werkt alleen op de alpha versie van vvvv. probleem(geen input in Resolume)
 ![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/spouttesten.PNG)
+
+29/10 <br />
+aangezien spout niet comptibel is. heb ik me verder verdiept op de DX sharedtexture node. en is het uiteindelijk geslaagd om een bridge te maken tussen vvvv en Resolume.
+![alt text](https://raw.githubusercontent.com/LukaVerhoeven/web-research/master/sharedtextureinfo.PNG)
